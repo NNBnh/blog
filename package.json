@@ -1,6 +1,7 @@
 {
   "name": "nnbblog",
   "version": "0.0.0",
+  "description": "NNB's blog",
   "scripts": {
     "dev": "eleventy --serve",
     "build": "eleventy"
