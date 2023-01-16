@@ -11,7 +11,7 @@ const pluginRss = require('@11ty/eleventy-plugin-rss');
 const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
 module.exports = (eleventyConfig) => {
-  eleventyConfig.addPlugin(pluginTOC)
+  eleventyConfig.addPlugin(pluginTOC, { ul: true });
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
 
@@ -19,7 +19,7 @@ module.exports = (eleventyConfig) => {
     html: true,
     linkify: true
   }).use(markdownItAnchor, {
-    permalink: markdownItAnchor.permalink.ariaHidden(),
+    permalink: markdownItAnchor.permalink.ariaHidden({ class: 'btn-mono' }),
     slugify: eleventyConfig.getFilter('slugify')
   });
   eleventyConfig.setLibrary('md', markdownLibrary);

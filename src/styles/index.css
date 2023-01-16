@@ -2,23 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'JetBrainsMono';
+  src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Regular.woff') format('woff'),
+    url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/ttf/JetBrainsMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 @layer components {
   .btn-mono {
-    @apply duration-200 opacity-50 hover:opacity-100;
-  }
-  .bg-blur {
-    @apply bg-base-300 bg-opacity-75 backdrop-blur;
+    @apply font-mono font-bold duration-200 opacity-50 hover:opacity-100 no-underline;
   }
   .toc {
-    @apply menu menu-vertical;
+    @apply menu;
   }
-  .header-anchor {
-    @apply no-underline btn-mono;
-  }
-  .prose {
-    @apply text-justify;
-  }
-  .prose img {
-    @apply mx-auto;
+  .toc ul ul {
+    @apply ml-4;
   }
 }

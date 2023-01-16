@@ -11,8 +11,9 @@ layout: layouts/base.njk
     <h1 class="my-16 text-2xl sm:text-4xl font-bold">{{ title }}</h1>
     <div
       class="
-        absolute bottom-0 p-2 w-full md:flex items-end justify-between gap-4
-        font-mono font-bold text-left sm:text-2xl
+        absolute bottom-0 p-2 w-full
+        md:flex items-end justify-between gap-4
+        text-left sm:text-2xl
       "
     >
       <a class="btn-mono" href="{{ path | url }}">
@@ -30,22 +31,44 @@ layout: layouts/base.njk
       </a>
       <p class="md:text-right">
         {% for tag in tags %}
-          <a
-            class="btn-mono"
-            href="{{ '/tags/' ~ tag | url }}"
-          >#{{ tag }}</a>
+          <a class="btn-mono" href="{{ '/tags/' ~ tag | url }}">
+            #{{ tag }}
+          </a>
         {% endfor %}
       </p>
     </div>
   </div>
 </header>
 
-<div class="flex">
-  <div class="hidden xl:block w-80 bg-base-300">
-    {{ content | toc | safe }}{# #TODO Fix h3.. #}
+<div class="flex w-full min-h-screen">
+  <label for="main-drawer" class="xl:hidden btn btn-square fixed bottom-0 right-0 m-4 drop-shadow">
+    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" /></svg>
+  </label>
+  <div class="hidden xl:block w-80 bg-base-200">
+    <nav class="h-fit sticky top-0 max-h-screen overflow-y-auto">
+      {{ content | toc | safe }}
+    </nav>
   </div>
-  <main class="prose mx-auto mt-16 mb-32 px-8 max-w-4xl">
-    {{ content | safe }}{# #TODO #}
-  </main>
+  <div class="mx-auto my-16 px-4">
+    <main class="prose mb-32 max-w-3xl min-w-0">
+      {{ content | safe }}
+    </main>
+    <script
+      src="https://giscus.app/client.js"
+      data-repo="NNBnh/blog"
+      data-repo-id="R_kgDOImRM7Q"
+      data-category="Comments"
+      data-category-id="DIC_kwDOImRM7c4CTBWV"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="dark_dimmed"
+      data-lang="en"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async
+    ></script>
+  </div>
 </div>
-

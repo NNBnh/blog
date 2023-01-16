@@ -1,20 +1,10 @@
-<div class="navbar text-neutral-content">
-  <div class="navbar-start"></div>
-  <div class="navbar-center">
-    <a
-      class="btn btn-ghost normal-case text-2xl"
-      href="{{ '/' | url }}"
-    >
-      <div>
-        <span class="text-sm">NN</span>Blog
-      </div>
-    </a>
-  </div>
-  <div class="navbar-end">
-    {% if content | toc %}
-      <label for="main-drawer" class="xl:hidden btn btn-square btn-ghost">
-        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" /></svg>
-      </label>
-    {% endif %}
-  </div>
-</div>
+<nav class="navbar w-full absolute z-10 justify-center text-neutral-content">
+  <a
+    class="btn btn-ghost normal-case text-2xl"
+    href="{{ '/' | url }}"
+  >
+    <div>
+      <span class="text-sm">NN</span>Blog
+    </div>
+  </a>
+</nav>
