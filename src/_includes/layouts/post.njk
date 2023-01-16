@@ -2,6 +2,50 @@
 layout: layouts/base.njk
 ---
 
-<div class="prose">
-  {{ content | safe }}
+<header
+  class="hero min-h-[24rem] lg:min-h-[20rem] bg-fixed bg-bottom relative"
+  style="background-image: url({{ thumbnail }});"
+>
+  <div class="hero-overlay bg-opacity-50"></div>
+  <div class="hero-content text-center text-neutral-content">
+    <h1 class="my-16 text-2xl sm:text-4xl font-bold">{{ title }}</h1>
+    <div
+      class="
+        absolute bottom-0 p-2 w-full md:flex items-end justify-between gap-4
+        font-mono font-bold text-left sm:text-2xl
+      "
+    >
+      <a class="btn-mono" href="{{ path | url }}">
+        <time datetime="{{ date | htmlDateString }}">
+          {{ date.toLocaleDateString() }}
+        </time>
+        {% if updated %}
+          <p class="inline-block">
+            -&gt;
+            <time datetime="{{ updated | htmlDateString }}">
+              {{ updated.toLocaleDateString() }}
+            </time>
+          </p>
+        {% endif %}
+      </a>
+      <p class="md:text-right">
+        {% for tag in tags %}
+          <a
+            class="btn-mono"
+            href="{{ '/tags/' ~ tag | url }}"
+          >#{{ tag }}</a>
+        {% endfor %}
+      </p>
+    </div>
+  </div>
+</header>
+
+<div class="flex">
+  <div class="hidden xl:block w-80 bg-base-300">
+    {{ content | toc | safe }}{# #TODO Fix h3.. #}
+  </div>
+  <main class="prose mx-auto mt-16 mb-32 px-8 max-w-4xl">
+    {{ content | safe }}{# #TODO #}
+  </main>
 </div>
+

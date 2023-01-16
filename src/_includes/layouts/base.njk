@@ -11,21 +11,37 @@
   <style>
     {{css | postcss | safe}}
   </style>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body>
   <div class="drawer drawer-end">
     <input id="main-drawer" type="checkbox" class="drawer-toggle" />
-    <div class="drawer-content" style="max-height: unset !important">
-      {% include "navbar.njk" %}
+    <div
+      class="drawer-content"
+      x-data="{
+        scrolled: false,
+        handleScroll() {
+          this.scrolled = $el.scrollTop > 0
+        }
+      }"
+      x-init="handleScroll()"
+      @scroll="handleScroll"
+    >
+      <div
+        class="fixed w-full z-10 duration-200"
+        :class="scrolled ? 'bg-blur shadow' : ''"
+      >
+        {% include "navbar.njk" %}
+      </div>
       {{ content | safe }}
+      {% include "footer.njk" %}
     </div>
     <div class="drawer-side">
       <label for="main-drawer" class="drawer-overlay"></label>
-      <ul class="menu p-4 w-80 bg-base-100">
-        {{ content | toc | safe }}
-      </ul>
+      <div class="xl:hidden w-80 bg-blur">
+        {{ content | toc | safe }}{# #TODO Fix h3.. #}
+      </div>
     </div>
   </div>
-  {% include "footer.njk" %}
 </body>
 </html>
