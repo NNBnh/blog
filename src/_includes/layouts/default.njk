@@ -14,12 +14,12 @@
     {{ css | postcss | safe }}
   </style>
 </head>
-<body class="bg-fixed" style="background-image: url({{ image }});">
+<body class="bg-fixed bg-cover bg-center" style="background-image: url({{ image }});">
   <div class="drawer drawer-end">
     <input id="main-drawer" type="checkbox" class="drawer-toggle" />
     <div class="drawer-content relative">
       {% include "navbar.njk" %}
-      <div class="min-h-screen">{{ content | safe }}</div>
+      {{ content | safe }}
       {% include "footer.njk" %}
     </div>
     {% if content | toc %}

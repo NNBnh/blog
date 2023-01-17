@@ -2,7 +2,7 @@
   class="hero min-h-[20rem] relative"
   style="background-image: url({{ image }});"
 >
-  <div class="hero-overlay bg-opacity-75"></div>
+  <div class="hero-overlay bg-opacity-75 shadow-inner"></div>
   <div class="hero-content text-center text-neutral-content">
     <div class="my-16">
       <h1 class="font-bold">
@@ -25,11 +25,11 @@
     >
       {% if date %}
         <a href="{{ path | url }}">
-          {% include "post_date.njk" %}
+          {% include "post/date.njk" %}
         </a>
       {% endif %}
       <p class="md:text-right">
-        {% include "post_tags.njk" %}
+        {% include "post/tags.njk" %}
       </p>
     </div>
   </div>

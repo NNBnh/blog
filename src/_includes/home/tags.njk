@@ -2,8 +2,8 @@
   {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
   <a
     class="
-      btn btn-accent normal-case font-mono
-      origin-bottom-left hover:-rotate-6 hover:scale-110
+      tag btn btn-accent normal-case font-mono
+      hover:rotate-6 hover:scale-110
       drop-shadow hover:drop-shadow-xl
     "
     href="{{ tagUrl | url }}"

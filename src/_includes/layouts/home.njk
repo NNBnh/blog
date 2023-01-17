@@ -2,21 +2,29 @@
 layout: layouts/default.njk
 ---
 
-<div class="min-h-screen backdrop-blur bg-base-100 bg-opacity-75 relative">
+<div
+  class="
+    home backdrop-blur min-h-body bg-base-100
+    bg-opacity-{% if tag %}90{% else %}75{% endif %}
+  "
+>
   {{ content | safe }}
   <div class="pb-24 flex flex-col lg:flex-row">
     <div
       class="
-        my-8 md:my-16 p-4 lg:pt-0 lg:w-48
+        lg:mt-16 p-8 pb-0 lg:pb-8 lg:py-0
         flex flex-row lg:flex-col flex-wrap
         items-start justify-center lg:justify-start gap-4
       "
     >
-      {% include "tags_list.njk" %}
+      {% include "home/tags.njk" %}
     </div>
-    <div class="mx-auto lg:mt-16 px-4 flex flex-wrap justify-center gap-8"> {# #TODO fix item center #}
+    <div class="mx-auto lg:mt-8 px-4 h-fit flex flex-wrap justify-center gap-x-8">
       {% set posts = collections[ tag ] or collections.posts %}
-      {% include "posts_list.njk" %}
+      {% include "home/posts.njk" %}
+      {% for ghost in "0123456789" %}
+        <div class="w-96"></div>
+      {% endfor %}
     </div>
   </div>
 </div>

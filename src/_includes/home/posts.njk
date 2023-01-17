@@ -7,13 +7,17 @@
     "
   >
     <figure>
-      <img class="aspect-[2/1] duration-200 group-hover:blur" src="{{ post.data.image }}" alt="Thumbnail" />
+      <img
+        class="aspect-[2/1] duration-200 group-hover:blur"
+        src="{{ post.data.image }}"
+        alt="Thumbnail"
+      />
     </figure>
     <div class="card-body">
       <div>
         {% set date = post.date %}
         {% set updated = post.data.updated %}
-        {% include "post_date.njk" %}
+        {% include "post/date.njk" %}
       </div>
       <h2
         class="
@@ -25,7 +29,7 @@
       </h2>
       <div class="card-actions justify-end text-sm sm:text-md">
         {% set tags = post.data.tags %}
-        {% include "post_tags.njk" %}
+        {% include "post/tags.njk" %}
       </div>
     </div>
   </article>
