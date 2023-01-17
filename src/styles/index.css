@@ -4,7 +4,8 @@
 
 @font-face {
   font-family: 'JetBrainsMono';
-  src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2') format('woff2'),
+  src:
+    url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2') format('woff2'),
     url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Regular.woff') format('woff'),
     url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/ttf/JetBrainsMono-Regular.ttf') format('truetype');
   font-weight: 400;
@@ -22,7 +23,9 @@
     @apply link link-hover w-16;
   }
   .social-icon {
-    @apply duration-200 hover:scale-150 hover:-rotate-6 hover:-translate-y-1 drop-shadow hover:drop-shadow-xl;
+    @apply
+      duration-200 hover:scale-150 hover:-rotate-6 hover:-translate-y-1
+      drop-shadow hover:drop-shadow-xl;
   }
   .social-icon svg {
     @apply w-8 h-8 fill-current;
@@ -38,8 +41,5 @@
   }
   .toc > ul ul {
     @apply ml-4;
-  }
-  .prose {
-    @apply text-justify;
   }
 }
