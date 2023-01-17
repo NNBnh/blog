@@ -1,0 +1,32 @@
+{% for post in posts | reverse %}
+  <article
+    class="
+      card card-compact image-full max-w-sm bg-base-100
+      group duration-200 outline outline-0 outline-primary shadow-xl
+      hover:scale-105 hover:rotate-3 hover:outline-4 hover:shadow-2xl
+    "
+  >
+    <figure>
+      <img class="aspect-[2/1] duration-200 group-hover:blur" src="{{ post.data.image }}" alt="Thumbnail" />
+    </figure>
+    <div class="card-body">
+      <div>
+        {% set date = post.date %}
+        {% set updated = post.data.updated %}
+        {% include "post_date.njk" %}
+      </div>
+      <h2
+        class="
+          card-title h-full items-center justify-center text-center
+          duration-200 group-hover:-rotate-6 group-hover:scale-110
+        "
+      >
+        <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+      </h2>
+      <div class="card-actions justify-end text-sm sm:text-md">
+        {% set tags = post.data.tags %}
+        {% include "post_tags.njk" %}
+      </div>
+    </div>
+  </article>
+{% endfor %}

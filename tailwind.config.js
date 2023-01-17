@@ -15,7 +15,7 @@ module.exports = {
           'info': '#8caaee',
           'success': '#a6d189',
           'warning': '#ef9f76',
-          'error': '#ea999c',
+          'error': '#ea999c'
         },
       },
     ],
@@ -31,8 +31,8 @@ module.exports = {
         'Consolas',
         '"Liberation Mono"',
         '"Courier New"',
-        'monospace',
-      ],
-    },
+        'monospace'
+      ]
+    }
   }
 };

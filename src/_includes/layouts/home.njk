@@ -1,0 +1,22 @@
+---
+layout: layouts/default.njk
+---
+
+<div class="min-h-screen backdrop-blur bg-base-100 bg-opacity-75 relative">
+  {{ content | safe }}
+  <div class="pb-24 flex flex-col lg:flex-row">
+    <div
+      class="
+        my-8 md:my-16 p-4 lg:pt-0 lg:w-48
+        flex flex-row lg:flex-col flex-wrap
+        items-start justify-center lg:justify-start gap-4
+      "
+    >
+      {% include "tags_list.njk" %}
+    </div>
+    <div class="mx-auto lg:mt-16 px-4 flex flex-wrap justify-center gap-8"> {# #TODO fix item center #}
+      {% set posts = collections[ tag ] or collections.posts %}
+      {% include "posts_list.njk" %}
+    </div>
+  </div>
+</div>

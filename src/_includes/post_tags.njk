@@ -1,0 +1,6 @@
+{% for tag in tags | filterTags %}
+  {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+  <a class="link-mono" href="{{ tagUrl | url }}">
+    #{{ tag }}
+  </a>
+{% endfor %}

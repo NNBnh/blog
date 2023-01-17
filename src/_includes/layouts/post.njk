@@ -1,74 +1,39 @@
 ---
-layout: layouts/base.njk
+layout: layouts/default.njk
 ---
 
-<header
-  class="hero min-h-[24rem] lg:min-h-[20rem] bg-fixed bg-bottom relative"
-  style="background-image: url({{ thumbnail }});"
->
-  <div class="hero-overlay bg-opacity-50"></div>
-  <div class="hero-content text-center text-neutral-content">
-    <h1 class="my-16 text-2xl sm:text-4xl font-bold">{{ title }}</h1>
-    <div
-      class="
-        absolute bottom-0 p-2 w-full
-        md:flex items-end justify-between gap-4
-        text-left sm:text-2xl
-      "
-    >
-      <a class="btn-mono" href="{{ path | url }}">
-        <time datetime="{{ date | htmlDateString }}">
-          {{ date.toLocaleDateString() }}
-        </time>
-        {% if updated %}
-          <p class="inline-block">
-            -&gt;
-            <time datetime="{{ updated | htmlDateString }}">
-              {{ updated.toLocaleDateString() }}
-            </time>
-          </p>
-        {% endif %}
-      </a>
-      <p class="md:text-right">
-        {% for tag in tags %}
-          <a class="btn-mono" href="{{ '/tags/' ~ tag | url }}">
-            #{{ tag }}
-          </a>
-        {% endfor %}
-      </p>
-    </div>
-  </div>
-</header>
+{% include "header.njk" %}
 
-<div class="flex w-full min-h-screen">
-  <label for="main-drawer" class="xl:hidden btn btn-square fixed bottom-0 right-0 m-4 drop-shadow">
-    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" /></svg>
-  </label>
-  <div class="hidden xl:block w-80 bg-base-200">
+<div class="flex w-full min-h-screen backdrop-blur-xl">
+  <div class="hidden xl:block w-80 bg-base-200 bg-opacity-90">
     <nav class="h-fit sticky top-0 max-h-screen overflow-y-auto">
       {{ content | toc | safe }}
     </nav>
   </div>
-  <div class="mx-auto my-16 px-4">
-    <main class="prose mb-32 max-w-3xl min-w-0">
-      {{ content | safe }}
-    </main>
-    <script
-      src="https://giscus.app/client.js"
-      data-repo="NNBnh/blog"
-      data-repo-id="R_kgDOImRM7Q"
-      data-category="Comments"
-      data-category-id="DIC_kwDOImRM7c4CTBWV"
-      data-mapping="pathname"
-      data-strict="0"
-      data-reactions-enabled="1"
-      data-emit-metadata="0"
-      data-input-position="top"
-      data-theme="dark_dimmed"
-      data-lang="en"
-      data-loading="lazy"
-      crossorigin="anonymous"
-      async
-    ></script>
+  <div class="w-full bg-base-100 bg-opacity-90">
+    <div class="mt-16 mb-24 px-4">
+      <main class="prose mx-auto max-w-3xl min-w-0">
+        {{ content | safe }}
+      </main>
+      <div class="mx-auto mt-32 max-w-3xl">
+        <script
+          src="https://giscus.app/client.js"
+          data-repo="NNBnh/blog"
+          data-repo-id="R_kgDOImRM7Q"
+          data-category="Comments"
+          data-category-id="DIC_kwDOImRM7c4CTBWV"
+          data-mapping="pathname"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="top"
+          data-theme="dark_dimmed"
+          data-lang="en"
+          data-loading="lazy"
+          crossorigin="anonymous"
+          async
+        ></script>
+      </div>
+    </div>
   </div>
 </div>

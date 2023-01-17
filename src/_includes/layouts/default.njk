@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ɴɴBlog | {{ title }}</title>
+  <meta name="description" content="{{ description or 'NNB\'s blog' }}">
   <link rel="icon" href="https://avatars.githubusercontent.com/u/43980777">
   {% set css %}
     {% include "src/styles/index.css" %}
@@ -12,9 +13,8 @@
   <style>
     {{ css | postcss | safe }}
   </style>
-  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body>
+<body class="bg-fixed" style="background-image: url({{ image }});">
   <div class="drawer drawer-end">
     <input id="main-drawer" type="checkbox" class="drawer-toggle" />
     <div class="drawer-content relative">
@@ -22,9 +22,20 @@
       <div class="min-h-screen">{{ content | safe }}</div>
       {% include "footer.njk" %}
     </div>
+    {% if content | toc %}
+      <label
+        for="main-drawer"
+        class="
+          xl:hidden btn btn-square hover:btn-primary shadow
+          fixed bottom-0 right-0 m-4
+        "
+      >
+        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" /></svg>
+      </label>
+    {% endif %}
     <div class="drawer-side">
       <label for="main-drawer" class="drawer-overlay"></label>
-      <nav class="w-80 bg-base-300 bg-opacity-75 backdrop-blur">
+      <nav class="w-80 bg-base-300 bg-opacity-75 backdrop-blur shadow">
         {{ content | toc | safe }}
       </nav>
     </div>

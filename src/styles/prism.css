@@ -81,3 +81,22 @@ pre[class*="language-"] {
 .token.entity {
   cursor: help;
 }
+
+.token.deleted {
+  background-color: #ea999c1A;
+}
+.token.inserted {
+  background-color: #a6d1891A;
+}
+
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+}

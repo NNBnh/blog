@@ -12,13 +12,22 @@
 }
 
 @layer components {
-  .btn-mono {
+  .link-mono {
     @apply font-mono font-bold duration-200 opacity-50 hover:opacity-100 no-underline;
+  }
+  .social-icon {
+    @apply duration-200 hover:scale-150 hover:-rotate-6 hover:-translate-y-1 drop-shadow hover:drop-shadow-xl;
+  }
+  .social-icon svg {
+    @apply w-8 h-8 fill-current;
   }
   .toc {
     @apply menu;
   }
-  .toc ul ul {
+  .toc > ul ul {
     @apply ml-4;
+  }
+  .prose {
+    @apply text-justify;
   }
 }
