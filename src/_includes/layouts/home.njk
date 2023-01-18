@@ -3,7 +3,9 @@ layout: layouts/default.njk
 ---
 
 <div class="home backdrop-blur min-h-screen bg-base-100 bg-opacity-60">
-  {{ content | safe }}
+  <header class="hero pt-16 min-h-[20rem] lg:min-h-[24rem]">
+    {{ content | safe }}
+  </header>
   <div class="pb-24 flex flex-col lg:flex-row">
     <div class="lg:hidden collapse collapse-arrow">
       <input type="checkbox" />

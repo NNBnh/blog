@@ -1,13 +1,6 @@
 {% for tag in collections.tags | sort %}
   {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-  <a
-    class="
-      tag btn btn-accent normal-case font-mono
-      hover:rotate-3 hover:scale-110
-      drop-shadow hover:drop-shadow-xl
-    "
-    href="{{ tagUrl | url }}"
-  >
+  <a class="tag btn btn-cool btn-secondary" href="{{ tagUrl | url }}">
     #{{ tag }}
   </a>
 {% endfor %}

@@ -13,6 +13,9 @@
 }
 
 @layer components {
+  .btn-cool {
+    @apply hover:rotate-3 hover:scale-110 drop-shadow hover:drop-shadow-xl normal-case;
+  }
   .social-icon {
     @apply
       duration-200 hover:scale-150 hover:-rotate-6 hover:-translate-y-1
