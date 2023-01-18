@@ -7,18 +7,18 @@ eleventyExcludeFromCollections: true
   <channel>
     <title>{{ metadata.title }}</title>
     <link>{{ metadata.url }}</link>
-    <atom:link href="{{ permalink | absoluteUrl(metadata.url) }}" rel="self" type="application/rss+xml" />
-    <description>{{ metadata.subtitle }}</description>
+    <atom:link href="{{ permalink | url(metadata.url) }}" rel="self" type="application/rss+xml" />
+    <description>{{ metadata.description }}</description>
     <language>{{ metadata.language }}</language>
     {%- for post in collections.posts | reverse %}
-    {%- set absolutePostUrl = post.url | absoluteUrl(metadata.url) %}
+    {%- set postUrl = post.url | url(metadata.url) %}
     <item>
       <title>{{ post.data.title }}</title>
-      <link>{{ absolutePostUrl }}</link>
-      <description>{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</description>
+      <link>{{ postUrl }}</link>
+      <description>{{ post.templateContent | htmlToAbsoluteUrls(postUrl) }}</description>
       <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
       <dc:creator>{{ metadata.author.name }}</dc:creator>
-      <guid>{{ absolutePostUrl }}</guid>
+      <guid>{{ postUrl }}</guid>
     </item>
     {%- endfor %}
   </channel>

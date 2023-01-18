@@ -1,6 +1,7 @@
+---
 title: NNBlog
-subtitle: NNB's blog
-language: en
+description: Blog that SuperB
+language: en #TODO
 url: https://NNBnh.github.io/blog
 author:
   name: NNB

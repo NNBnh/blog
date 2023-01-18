@@ -8,7 +8,7 @@ image: https://images.unsplash.com/photo-1570366583862-f91883984fde?w=320
   <a href="https://NNBnh.github.io">
     <img
       class="
-        w-48 lg:w-64 aspect-square
+        w-48 lg:w-64 aspect-square bg-base-100
         rounded-box duration-200 outline outline-2 outline-primary shadow-xl
         hover:scale-110 hover:rotate-6 hover:outline-8 hover:shadow-2xl
       "
@@ -17,11 +17,11 @@ image: https://images.unsplash.com/photo-1570366583862-f91883984fde?w=320
   </a>
   <div class="flex flex-col items-center md:items-start gap-4">
     <h1 class="text-4xl lg:text-6xl font-bold">NNB's Blog</h1>
-    <p class="py-2 lg:text-xl">Welcome to my blog!</p>
+    <p class="py-2 text-xl font-semibold italic">{{ metadata.description }}</p>
     <div class="flex gap-4">
-      <a class="btn btn-cool btn-primary"   href="https://NNBnh.github.io">About Me</a>
+      <a class="btn btn-cool btn-primary"   href="https://NNBnh.github.io" >About Me</a>
       <a class="btn btn-cool btn-secondary" href="https://github.com/NNBnh">My Projects</a>
-      <a class="btn btn-cool btn-accent"    href="https://NNBnh.itch.io">My Games</a>
+      <a class="btn btn-cool btn-accent"    href="https://NNBnh.itch.io"   >My Games</a>
     </div>
   </div>
 </div>

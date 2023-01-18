@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ɴɴBlog | {{ title }}</title>
-  <meta name="description" content="{{ description or 'NNB\'s blog' }}">
-  <link rel="icon" href="https://avatars.githubusercontent.com/u/43980777">
+  <meta name="description" content="{{ description or metadata.description }}" />
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/43980777" />
+  <meta property="og:site_name" content="ɴɴBlog" />
+  <meta property="og:title" content="{{ title }}" />
+  <meta property="og:description" content="{{ description or metadata.description }}" />
+  <meta property="og:image" content="{{ image }}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="{{ page.url | url }}" />
+  <meta property="og:locale" content="{# #TODO #}" />
+  <meta property="og:locale:alternate" content="{# #TODO #}" />
+  {% if layout == "layouts/post.njk" %}
+    <meta property="article:author" content="{{ metadata.author.name }}" />
+    <meta property="article:published_time" content="{{ date.toISOString() }}" />
+    {% if updated %}
+      <meta property="article:modified_time" content="{{ updated.toISOString() }}" />
+    {% endif %}
+    <meta property="article:section" content="{{ tags | filterTags | first }}" />
+    {% for tag in tags | filterTags %}
+      <meta property="article:tag" content="{{ tag }}" />
+    {% endfor %}
+  {% endif %}
   {% set css %}
     {% include "src/styles/index.css" %}
     {% include "src/styles/prism.css" %}
@@ -25,10 +44,7 @@
     {% if content | toc %}
       <label
         for="main-drawer"
-        class="
-          xl:hidden btn btn-square hover:btn-primary shadow
-          fixed bottom-0 right-0 m-4
-        "
+        class="xl:hidden btn btn-square hover:btn-primary m-4 shadow fixed bottom-0 right-0"
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm8.25 5.25a.75.75 0 01.75-.75h8.25a.75.75 0 010 1.5H12a.75.75 0 01-.75-.75z" clip-rule="evenodd" /></svg>
       </label>
