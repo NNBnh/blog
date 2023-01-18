@@ -2,28 +2,26 @@
 layout: layouts/default.njk
 ---
 
-<div
-  class="
-    home backdrop-blur min-h-body bg-base-100
-    bg-opacity-{% if tag %}90{% else %}75{% endif %}
-  "
->
+<div class="home backdrop-blur min-h-screen bg-base-100 bg-opacity-60">
   {{ content | safe }}
   <div class="pb-24 flex flex-col lg:flex-row">
-    <div
-      class="
-        lg:mt-16 p-8 pb-0 lg:pb-8 lg:py-0
-        flex flex-row lg:flex-col flex-wrap
-        items-start justify-center lg:justify-start gap-4
-      "
-    >
+    <div class="lg:hidden collapse collapse-arrow">
+      <input type="checkbox" />
+      <div class="collapse-title text-xl font-bold">
+        Tags list
+      </div>
+      <div class="collapse-content pt-4 flex flex-wrap justify-end sm:justify-center gap-4">
+        {% include "home/tags.njk" %}
+      </div>
+    </div>
+    <div class="mt-8 px-8 hidden lg:flex flex-col items-start justify-start gap-4">
       {% include "home/tags.njk" %}
     </div>
-    <div class="mx-auto lg:mt-8 px-4 h-fit flex flex-wrap justify-center gap-x-8">
-      {% set posts = collections[ tag ] or collections.posts %}
+    <div class="mx-auto px-4 h-fit flex flex-wrap justify-center gap-x-8">
+      {% set posts = collections[ tag | slugify ] or collections.posts %}
       {% include "home/posts.njk" %}
       {% for ghost in "0123456789" %}
-        <div class="w-96"></div>
+        <div class="w-full sm:w-96"></div>
       {% endfor %}
     </div>
   </div>

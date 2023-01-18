@@ -1,0 +1,53 @@
+update:
+  description:
+    en: Some announcement to make
+    vn: Thông báo cập nhật
+  image: https://images.unsplash.com/photo-1638793774237-0fd6b45a510f?w=320
+story:
+  description:
+    en: Story time!
+    vn: Góc kể chuyện
+  image: https://images.unsplash.com/photo-1586006349222-4f422913db20?w=320
+
+game-dev:
+  description:
+    en: Game development
+    vn: Thiết kế trò chơi
+  image: https://images.unsplash.com/photo-1585881728919-5c0ce925ad10?w=320
+web-dev:
+  description:
+    en: Web development
+    vn: Lập trình web
+  image: https://images.unsplash.com/photo-1653540798318-f3c5916c3f92?w=320
+tty:
+  description:
+    en: Terminal, command-line and shell-script
+    vn: Terminal, command-line và shell-script
+  image: https://images.unsplash.com/photo-1554921027-b91f0beeb07d?w=320
+
+os-rice:
+  description:
+    en: Linux rice, window manager, r/unixporn
+    vn: Độ Linux, window manager, r/unixporn
+  image: https://images.unsplash.com/photo-1549905314-a716f4556858?w=320
+input-device:
+  description:
+    en: Everything from ergonomic keyboards to touchpad
+    vn: Mọi thứ từ bàn phím công thái học đến touchpad
+  image: https://images.unsplash.com/photo-1653786146466-9ac4d30a47f1?w=320
+
+ruby:
+  description:
+    en: Ruby programming language
+    vn: Ngôn ngũ lập trình Ruby
+  image: https://images.unsplash.com/photo-1582966772505-07d227917b5e?w=320
+rust:
+  description:
+    en: Rust programming language
+    vn: Ngôn ngũ lập trình Rust
+  image: https://images.unsplash.com/photo-1600319760423-8872f2a46a5d?w=320
+godot:
+  description:
+    en: Godot game engine
+    vn: Phần mềm làm game Godot
+  image: https://images.unsplash.com/photo-1512463652975-81529bef542a?w=320

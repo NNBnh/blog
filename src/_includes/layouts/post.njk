@@ -2,13 +2,40 @@
 layout: layouts/default.njk
 ---
 
-{% include "header.njk" %}
+<header
+  class="hero min-h-[20rem] relative"
+  style="background-image: url({{ image }});"
+>
+  <div class="hero-overlay bg-opacity-75 shadow-inner"></div>
+  <div class="hero-content text-center">
+    <div class="my-16">
+      <h1 class="text-2xl sm:text-4xl font-bold">{{ title }}</h1>
+      {% if description %}
+        <p class="mt-4 sm:text-lg font-semibold">{{ description }}</p>
+      {% endif %}
+    </div>
+    <div
+      class="
+        absolute bottom-0 p-2 w-full
+        md:flex items-end justify-between gap-4
+        text-left sm:text-2xl
+      "
+    >
+      <a href="{{ path | url }}">
+        {% include "post/date.njk" %}
+      </a>
+      <p class="md:text-right">
+        {% include "post/tags.njk" %}
+      </p>
+    </div>
+  </div>
+</header>
 
-<div class="min-h-body flex backdrop-blur-xl">
+<div class="min-h-screen flex backdrop-blur-xl">
   <div class="hidden xl:block w-80 bg-base-200 bg-opacity-90">
-    <nav class="h-fit sticky top-0 max-h-screen overflow-y-auto">
+    <div class="h-fit sticky top-0 max-h-screen overflow-y-auto">
       {{ content | toc | safe }}
-    </nav>
+    </div>
   </div>
   <div class="w-full bg-base-100 bg-opacity-90">
     <div class="mt-16 mb-24 px-4">

@@ -2,8 +2,8 @@
   <article
     class="
       card card-compact image-full max-w-sm bg-base-100
-      group duration-200 outline outline-0 outline-primary shadow-xl
-      hover:scale-105 hover:rotate-3 hover:outline-4 hover:shadow-2xl
+      group duration-200 outline outline-2 outline-primary shadow-xl
+      hover:scale-105 hover:rotate-3 hover:outline-8 hover:shadow-2xl
     "
   >
     <figure>
@@ -19,14 +19,16 @@
         {% set updated = post.data.updated %}
         {% include "post/date.njk" %}
       </div>
-      <h2
+      <a
         class="
           card-title h-full items-center justify-center text-center
           duration-200 group-hover:-rotate-6 group-hover:scale-110
+          group-hover:font-black hover:text-primary
         "
+        href="{{ post.url | url }}"
       >
-        <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-      </h2>
+        <h2>{{ post.data.title }}</h2>
+      </a>
       <div class="card-actions justify-end text-sm sm:text-md">
         {% set tags = post.data.tags %}
         {% include "post/tags.njk" %}

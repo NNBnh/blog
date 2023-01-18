@@ -12,9 +12,24 @@ pagination:
   addAllPagesToCollections: true
 eleventyComputed:
   title: "#{{ tag }}"
-  description: "{{ tagsdata[ tag | slugify ].description }}"
-  image: "{{ tagsdata[ tag | slugify ].image }}"
+  description: "{{ tag_data[ tag | slugify ].description[ 'en' ] }}"
+  image: "{{ tag_data[ tag | slugify ].image }}"
 permalink: /tags/{{ tag | slugify }}/
 ---
 
-{% include "header.njk" %}
+<header class="pt-16 hero">
+  <div class="hero-content text-center">
+    <div class="my-8">
+      <a
+        class="
+          text-4xl sm:text-6xl font-mono font-bold
+          duration-200 hover:text-secondary
+        "
+        href="{{ path | url }}"
+      ><h1>#{{ tag }}</h1></a>
+      {% if description %}
+        <p class="mt-4 sm:text-lg font-semibold">{{ description }}</p>
+      {% endif %}
+    </div>
+  </div>
+</header>
