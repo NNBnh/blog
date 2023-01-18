@@ -2,7 +2,7 @@ const postcss = require('postcss');
 const tailwindcss = require('tailwindcss');
 const autoprefixer = require('autoprefixer');
 
-const yaml = require("js-yaml");
+const yaml = require('js-yaml');
 const { DateTime } = require('luxon');
 const markdownIt = require('markdown-it')
 const markdownItAnchor = require('markdown-it-anchor')
@@ -22,10 +22,21 @@ module.exports = eleventyConfig => {
     return new Date().getFullYear();
   });
 
-  function filterTags(tags) {
-    return (tags || []).filter(tag => ["all", 'nav', 'post', 'posts'].indexOf(tag) === -1);
+  function openGraphResize(imageUrl) {
+    try {
+      let openGraphUrl = new URL(imageUrl);
+      openGraphUrl.searchParams.set('w', 640);
+      return openGraphUrl.toString();
+    } catch (_) {
+      return;
+    }
   }
-  eleventyConfig.addFilter("filterTags", filterTags)
+  eleventyConfig.addFilter('openGraphResize', openGraphResize);
+
+  function filterTags(tags) {
+    return (tags || []).filter(tag => ['all', 'nav', 'post', 'posts'].indexOf(tag) === -1);
+  }
+  eleventyConfig.addFilter('filterTags', filterTags);
   eleventyConfig.addCollection('tags', collection => {
     let tagSet = new Set();
     collection.getAll().forEach(item => {
