@@ -9,7 +9,7 @@
   <meta property="og:site_name" content="ɴɴBlog" />
   <meta property="og:title" content="{{ title }}" />
   <meta property="og:description" content="{{ description or metadata.description }}" />
-  <meta property="og:image" content="{{ image | openGraphResize }}" />
+  <meta property="og:image" content="{% img image %}" />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="{{ page.url | url }}" />
   <meta property="og:locale" content="{# #TODO #}" />
@@ -33,7 +33,7 @@
     {{ css | postcss | safe }}
   </style>
 </head>
-<body class="bg-fixed bg-cover bg-center" style="background-image: url({{ image }});">
+<body class="bg-fixed bg-cover bg-center" style="background-image: url({% img image, 360 %});">
   <div class="drawer drawer-end">
     <input id="main-drawer" type="checkbox" class="drawer-toggle" />
     <div class="drawer-content relative">

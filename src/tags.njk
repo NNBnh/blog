@@ -14,7 +14,7 @@ eleventyComputed:
   title: "#{{ tag }}"
   description: "{{ tag_data[ tag | slugify ].description[ 'en' ] }}"
   image: "{{ tag_data[ tag | slugify ].image }}"
-permalink: /tags/{{ tag | slugify }}/
+permalink: "/tags/{{ tag | slugify }}/"
 ---
 
 <div class="hero-content text-center">

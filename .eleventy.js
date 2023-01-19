@@ -18,21 +18,6 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
 
-  eleventyConfig.addCollection('currentYear', () => {
-    return new Date().getFullYear();
-  });
-
-  function openGraphResize(imageUrl) {
-    try {
-      let openGraphUrl = new URL(imageUrl);
-      openGraphUrl.searchParams.set('w', 640);
-      return openGraphUrl.toString();
-    } catch (_) {
-      return;
-    }
-  }
-  eleventyConfig.addFilter('openGraphResize', openGraphResize);
-
   function filterTags(tags) {
     return (tags || []).filter(tag => ['all', 'nav', 'post', 'posts'].indexOf(tag) === -1);
   }
@@ -64,8 +49,12 @@ module.exports = eleventyConfig => {
   });
   eleventyConfig.addWatchTarget('./src/styles/**/*.css');
 
-  eleventyConfig.addFilter('htmlDateString', dateObj => {
-    return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd');
+  eleventyConfig.addShortcode('img', (url, size = 1280) => {
+    let imageUrl = new URL(url);
+    if(imageUrl.host === 'images.unsplash.com') {
+      if(!imageUrl.searchParams.has('w')) imageUrl.searchParams.set('w', size);
+    }
+    return imageUrl.toString();
   });
 
   return {

@@ -1,7 +1,7 @@
 ---
 layout: layouts/home.njk
 title: Home
-image: https://images.unsplash.com/photo-1570366583862-f91883984fde?w=320
+image: https://images.unsplash.com/photo-1570366583862-f91883984fde
 ---
 
 <div class="hero-content flex-col md:flex-row md:gap-8 lg:gap-16">
@@ -16,7 +16,7 @@ image: https://images.unsplash.com/photo-1570366583862-f91883984fde?w=320
     />
   </a>
   <div class="flex flex-col items-center md:items-start gap-4">
-    <h1 class="text-4xl lg:text-6xl font-bold">NNB's Blog</h1>
+    <h1 class="text-4xl lg:text-6xl font-bold">{{ metadata.author.name }}'s Blog</h1>
     <p class="py-2 text-xl font-semibold italic">{{ metadata.description }}</p>
     <div class="flex gap-4">
       <a class="btn btn-cool btn-primary"   href="https://NNBnh.github.io" >About Me</a>
