@@ -54,7 +54,7 @@ module.exports = eleventyConfig => {
   });
 
   eleventyConfig.addFilter('to_lang', (url, lang) => {
-    lang ||= 'en';
+    lang = lang || 'en';
     return url.replace(/^\/(en\/|vi\/|)/, `/${lang}/`);
   });
 
