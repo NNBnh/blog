@@ -1,9 +1,12 @@
+---
+permalink: "/{{ lang }}/feed.json"
+---
 {
   "version": "https://jsonfeed.org/version/1.1",
   "title": "{{ metadata.title }}",
   "language": "{{ lang }}",
   "home_page_url": "{{ metadata.url }}",
-  "feed_url": "{{ permalink | locale_url(metadata.url) }}",
+  "feed_url": "{{ permalink | url(metadata.url) }}",
   "description": "{{ metadata.description }}",
   "author": {
     "name": "{{ metadata.author.name }}",
@@ -11,7 +14,7 @@
   },
   "items": [
     {%- for post in collections.posts | reverse %}
-    {%- set postUrl = post.url | locale_url(metadata.url) %}
+    {%- set postUrl = post.url | url(metadata.url) %}
     {
       "id": "{{ postUrl }}",
       "url": "{{ postUrl }}",

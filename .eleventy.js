@@ -1,9 +1,8 @@
 const yaml = require('js-yaml');
-const { EleventyI18nPlugin } = require("@11ty/eleventy");
-const pluginTOC = require('eleventy-plugin-toc');
+const pluginTOC = require('eleventy-plugin-toc')
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-const markdownIt = require('markdown-it')
+const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
 const postcss = require('postcss');
 const tailwindcss = require('tailwindcss');
@@ -11,7 +10,6 @@ const autoprefixer = require('autoprefixer');
 
 module.exports = eleventyConfig => {
   eleventyConfig.addDataExtension('yaml', contents => yaml.load(contents));
-  eleventyConfig.addPlugin(EleventyI18nPlugin, { defaultLanguage: 'en' });
   eleventyConfig.addPlugin(pluginTOC, { ul: true });
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
@@ -55,11 +53,27 @@ module.exports = eleventyConfig => {
     return imageUrl.toString();
   });
 
+  eleventyConfig.addFilter('lang_url', (url) => {
+    const currentLang = url.startsWith('/vi') ? 'vi' : 'en';
+    return url.replace(
+      new RegExp(`^/${currentLang}`),
+      `/${currentLang === 'vi' ? 'en' : 'vi'}`
+    );
+  });
+
+  eleventyConfig.addFilter('lang_string', (object, lang) => {
+    if(typeof object === 'object') {
+      return object[lang];
+    } else {
+      return object;
+    }
+  });
+
   return {
     pathPrefix: '/blog/',
     dir: {
       input: 'src',
       output: 'dist'
-    }
+    },
   };
 };

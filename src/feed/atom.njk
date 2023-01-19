@@ -1,8 +1,11 @@
+---
+permalink: "/{{ lang }}/feed.xml"
+---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ metadata.url }}">
   <title>{{ metadata.title }}</title>
   <subtitle>{{ metadata.description }}</subtitle>
-  <link href="{{ permalink | locale_url(metadata.url) }}" rel="self"/>
+  <link href="{{ permalink | url(metadata.url) }}" rel="self"/>
   <link href="{{ metadata.url }}"/>
   <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
   <id>{{ metadata.url }}</id>
@@ -11,7 +14,7 @@
     <email>{{ metadata.author.email }}</email>
   </author>
   {%- for post in collections.posts | reverse %}
-  {%- set postUrl = post.url | locale_url(metadata.url) %}
+  {%- set postUrl = post.url | url(metadata.url) %}
   <entry>
     <title>{{ post.data.title }}</title>
     <link href="{{ postUrl }}"/>

@@ -1,6 +1,9 @@
 ---
 title: NNBlog
 description: Blog that SuperB
+languages:
+  - en
+  - vi
 url: https://NNBnh.github.io/blog
 author:
   name: NNB
