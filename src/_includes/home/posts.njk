@@ -27,7 +27,7 @@
         "
         href="{{ post.url | url }}"
       >
-        <h2>{{ post.data.title | langString(lang) }}</h2>
+        <h2>{{ post.data.title }}</h2>
       </a>
       <div class="card-actions justify-end text-sm sm:text-md">
         {% set tags = post.data.tags %}

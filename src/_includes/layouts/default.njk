@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ lang }}">
 <head>
   {% if not description %}
     {% set description = metadata.description %}
   {% endif %}
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ɴɴBlog | {{ title | langString(lang) }}</title>
-  <meta name="description" content="{{ description | langString(lang) }}" />
+  <title>ɴɴBlog | {{ title }}</title>
+  <meta name="description" content="{{ description }}" />
   <link rel="icon" href="https://avatars.githubusercontent.com/u/43980777" />
   <meta property="og:site_name" content="ɴɴBlog" />
-  <meta property="og:title" content="{{ title | langString(lang) }}" />
-  <meta property="og:description" content="{{ description | langString(lang) }}" />
-  <meta property="og:image" content="{% img image %}" />
+  <meta property="og:title" content="{{ title }}" />
+  <meta property="og:description" content="{{ description }}" />
+  {% if image %}
+    <meta property="og:image" content="{% img image %}" />
+  {% endif %}
   <meta property="og:type" content="article" />
   <meta property="og:url" content="{{ page.url | url }}" />
   <meta property="og:locale" content="{{ lang }}" />
@@ -23,8 +25,8 @@
     {% if updated %}
       <meta property="article:modified_time" content="{{ updated.toISOString() }}" />
     {% endif %}
-    <meta property="article:section" content="{{ tags | filterTags | first }}" />
-    {% for tag in tags | filterTags %}
+    <meta property="article:section" content="{{ tags | filter_tags | first }}" />
+    {% for tag in tags | filter_tags %}
       <meta property="article:tag" content="{{ tag }}" />
     {% endfor %}
   {% endif %}
@@ -36,7 +38,12 @@
     {{ css | postcss | safe }}
   </style>
 </head>
-<body class="bg-fixed bg-cover bg-center" style="background-image: url({% img image, 360 %});">
+<body
+  class="bg-fixed bg-cover bg-center"
+  {% if image %}
+    style="background-image: url({% img image, 360 %});"
+  {% endif %}
+>
   <div class="drawer drawer-end">
     <input id="main-drawer" type="checkbox" class="drawer-toggle" />
     <div class="drawer-content relative">
