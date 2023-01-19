@@ -1,6 +1,5 @@
 ---
-permalink: /feed.xml
-eleventyExcludeFromCollections: true
+permalink: "/{{ lang }}/feed.xml"
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ metadata.url }}">
@@ -21,7 +20,7 @@ eleventyExcludeFromCollections: true
     <link href="{{ postUrl }}"/>
     <updated>{{ post.date | dateToRfc3339 }}</updated>
     <id>{{ postUrl }}</id>
-    <content xml:lang="{{ metadata.language }}" type="html">{{ post.templateContent | htmlToAbsoluteUrls(postUrl) }}</content>
+    <content xml:lang="{{ lang }}" type="html">{{ post.templateContent | htmlToAbsoluteUrls(postUrl) }}</content>
   </entry>
   {%- endfor %}
 </feed>

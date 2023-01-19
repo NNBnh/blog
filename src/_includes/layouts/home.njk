@@ -10,7 +10,11 @@ layout: layouts/default.njk
     <div class="lg:hidden collapse collapse-arrow">
       <input type="checkbox" />
       <div class="collapse-title text-xl font-bold">
-        Tags list
+        {% if lang == 'vi' %}
+          Danh sách tags
+        {% else %}
+          Tags list
+        {% endif %}
       </div>
       <div class="collapse-content pt-4 flex flex-wrap justify-end sm:justify-center gap-4">
         {% include "home/tags.njk" %}

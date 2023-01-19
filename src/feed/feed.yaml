@@ -1,0 +1,6 @@
+---
+pagination:
+  data: metadata.languages
+  size: 1
+  alias: lang
+eleventyExcludeFromCollections: true

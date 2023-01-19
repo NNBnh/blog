@@ -1,0 +1,17 @@
+---
+layout: layouts/tag.njk
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - post
+    - posts
+    - tags
+  addAllPagesToCollections: true
+eleventyComputed:
+  title: "#{{ tag }}"
+  description: "{{ tags_data[ tag | slugify ].description | langString(lang) }}"
+  image: "{{ tags_data[ tag | slugify ].image }}"
+permalink: "/{{ lang }}/tags/{{ tag | slugify }}/"

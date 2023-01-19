@@ -1,7 +1,14 @@
 ---
 layout: layouts/home.njk
-title: Home
+pagination:
+  data: metadata.languages
+  size: 1
+  alias: lang
+title:
+  en: Home
+  vi: Trang chủ
 image: https://images.unsplash.com/photo-1570366583862-f91883984fde
+permalink: "/{{ lang }}/"
 ---
 
 <div class="hero-content flex-col md:flex-row md:gap-8 lg:gap-16">
@@ -19,9 +26,27 @@ image: https://images.unsplash.com/photo-1570366583862-f91883984fde
     <h1 class="text-4xl lg:text-6xl font-bold">{{ metadata.author.name }}'s Blog</h1>
     <p class="py-2 text-xl font-semibold italic">{{ metadata.description }}</p>
     <div class="flex gap-4">
-      <a class="btn btn-cool btn-primary"   href="https://NNBnh.github.io" >About Me</a>
-      <a class="btn btn-cool btn-secondary" href="https://github.com/NNBnh">My Projects</a>
-      <a class="btn btn-cool btn-accent"    href="https://NNBnh.itch.io"   >My Games</a>
+      <a class="btn btn-cool btn-primary" href="https://NNBnh.github.io">
+        {% if lang == 'vi' %}
+          Giới thiệu
+        {% else %}
+          About Me
+        {% endif %}
+      </a>
+      <a class="btn btn-cool btn-secondary" href="https://github.com/NNBnh">
+        {% if lang == 'vi' %}
+          Các dự án
+        {% else %}
+          My Projects
+        {% endif %}
+      </a>
+      <a class="btn btn-cool btn-accent" href="https://NNBnh.itch.io">
+        {% if lang == 'vi' %}
+          Các game
+        {% else %}
+          My Games
+        {% endif %}
+      </a>
     </div>
   </div>
 </div>

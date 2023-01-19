@@ -18,18 +18,6 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
 
-  function filterTags(tags) {
-    return (tags || []).filter(tag => ['all', 'nav', 'post', 'posts'].indexOf(tag) === -1);
-  }
-  eleventyConfig.addFilter('filterTags', filterTags);
-  eleventyConfig.addCollection('tags', collection => {
-    let tagSet = new Set();
-    collection.getAll().forEach(item => {
-      (item.data.tags || []).forEach(tag => tagSet.add(tag));
-    });
-    return filterTags([...tagSet]);
-  });
-
   let markdownLibrary = markdownIt({
     html: true,
     linkify: true
@@ -49,12 +37,40 @@ module.exports = eleventyConfig => {
   });
   eleventyConfig.addWatchTarget('./src/styles/**/*.css');
 
+  function filterTags(tags) {
+    return (tags || []).filter(tag => ['all', 'nav', 'post', 'posts'].indexOf(tag) === -1);
+  }
+  eleventyConfig.addFilter('filterTags', filterTags);
+  eleventyConfig.addCollection('tags', collection => {
+    let tagSet = new Set();
+    collection.getAll().forEach(item => {
+      (item.data.tags || []).forEach(tag => tagSet.add(tag));
+    });
+    return filterTags([...tagSet]);
+  });
+
   eleventyConfig.addShortcode('img', (url, size = 1280) => {
     let imageUrl = new URL(url);
     if(imageUrl.host === 'images.unsplash.com') {
       if(!imageUrl.searchParams.has('w')) imageUrl.searchParams.set('w', size);
     }
     return imageUrl.toString();
+  });
+
+  eleventyConfig.addShortcode('langSwitcher', (url) => {
+    const currentLang = url.startsWith('/vi') ? 'vi' : 'en';
+    return url.replace(
+      new RegExp(`^/${currentLang}`),
+      `/${currentLang === 'vi' ? 'en' : 'vi'}`
+    );
+  });
+
+  eleventyConfig.addFilter('langString', (object, lang) => {
+    if(typeof object === 'string' || object instanceof String) {
+      return object;
+    } else {
+      return object[lang];
+    }
   });
 
   return {

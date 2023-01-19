@@ -2,3 +2,8 @@
 layout: layouts/post.njk
 tags:
   - posts
+pagination:
+  data: metadata.languages
+  size: 1
+  alias: lang
+permalink: "/{{ lang }}/{{ page.filePathStem }}/"
