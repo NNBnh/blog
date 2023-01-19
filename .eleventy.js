@@ -53,12 +53,9 @@ module.exports = eleventyConfig => {
     return imageUrl.toString();
   });
 
-  eleventyConfig.addFilter('lang_url', (url) => {
-    const currentLang = url.startsWith('/vi') ? 'vi' : 'en';
-    return url.replace(
-      new RegExp(`^/${currentLang}`),
-      `/${currentLang === 'vi' ? 'en' : 'vi'}`
-    );
+  eleventyConfig.addFilter('to_lang', (url, lang) => {
+    lang ||= 'en';
+    return url.replace(/^\/(en\/|vi\/|)/, `/${lang}/`);
   });
 
   eleventyConfig.addFilter('lang_string', (object, lang) => {

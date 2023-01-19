@@ -3,13 +3,13 @@
     class="
       card card-compact image-full max-w-sm bg-base-100
       group duration-200 outline outline-2 outline-primary shadow-xl
-      hover:scale-105 hover:rotate-3 hover:outline-8 hover:shadow-2xl
+      hover:z-20 hover:scale-105 hover:rotate-3 hover:outline-8 hover:shadow-2xl
     "
   >
     <figure>
       <img
         class="aspect-[2/1] duration-200 group-hover:blur"
-        src="{{ post.data.image }}"
+        src="{% img post.data.image, 480 %}"
         alt="Thumbnail"
       />
     </figure>
@@ -25,7 +25,7 @@
           duration-200 group-hover:-rotate-6 group-hover:scale-110
           group-hover:font-black hover:text-primary
         "
-        href="{{ post.url | url }}"
+        href="{{ post.url | to_lang(lang) | url }}"
       >
         <h2>{{ post.data.title | lang_string(lang) }}</h2>
       </a>
