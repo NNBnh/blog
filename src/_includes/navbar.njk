@@ -7,7 +7,7 @@
         origin-top hover:translate-y-1 hover:scale-125 hover:rotate-3
         hover:btn-primary hover:shadow-xl
       "
-      href="{{ '/' | url }}"
+      href="{{ ('/' ~ (lang or 'en') ~ '/') | url }}"
     >
       <div>
         <span class="text-sm">NN</span>Blog
@@ -15,7 +15,7 @@
     </a>
   </div>
   <div class="navbar-end">
-    {% set switchLangUrl %}{% langSwitcher page.url %}{% endset %}
+    {% set switchLangUrl = page.url | lang_url %}
     <div
       class="sm:hidden tooltip tooltip-left"
       data-tip="{% if true %}Tiếng Việt{% else %}English{% endif %}"

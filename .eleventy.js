@@ -1,19 +1,16 @@
+const yaml = require('js-yaml');
+const pluginTOC = require('eleventy-plugin-toc')
+const pluginRss = require('@11ty/eleventy-plugin-rss');
+const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+const markdownIt = require('markdown-it');
+const markdownItAnchor = require('markdown-it-anchor');
 const postcss = require('postcss');
 const tailwindcss = require('tailwindcss');
 const autoprefixer = require('autoprefixer');
 
-const yaml = require('js-yaml');
-const { DateTime } = require('luxon');
-const markdownIt = require('markdown-it')
-const markdownItAnchor = require('markdown-it-anchor')
-
-const pluginTOC = require('eleventy-plugin-toc')
-const pluginRss = require('@11ty/eleventy-plugin-rss');
-const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
 module.exports = eleventyConfig => {
   eleventyConfig.addDataExtension('yaml', contents => yaml.load(contents));
-
   eleventyConfig.addPlugin(pluginTOC, { ul: true });
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
@@ -40,7 +37,7 @@ module.exports = eleventyConfig => {
   function filterTags(tags) {
     return (tags || []).filter(tag => ['all', 'nav', 'post', 'posts'].indexOf(tag) === -1);
   }
-  eleventyConfig.addFilter('filterTags', filterTags);
+  eleventyConfig.addFilter('filter_tags', filterTags);
   eleventyConfig.addCollection('tags', collection => {
     let tagSet = new Set();
     collection.getAll().forEach(item => {
@@ -57,7 +54,7 @@ module.exports = eleventyConfig => {
     return imageUrl.toString();
   });
 
-  eleventyConfig.addShortcode('langSwitcher', (url) => {
+  eleventyConfig.addFilter('lang_url', (url) => {
     const currentLang = url.startsWith('/vi') ? 'vi' : 'en';
     return url.replace(
       new RegExp(`^/${currentLang}`),
@@ -65,11 +62,11 @@ module.exports = eleventyConfig => {
     );
   });
 
-  eleventyConfig.addFilter('langString', (object, lang) => {
-    if(typeof object === 'string' || object instanceof String) {
-      return object;
-    } else {
+  eleventyConfig.addFilter('lang_string', (object, lang) => {
+    if(typeof object === 'object') {
       return object[lang];
+    } else {
+      return object;
     }
   });
 
