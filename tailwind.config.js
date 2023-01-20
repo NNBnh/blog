@@ -22,8 +22,16 @@ module.exports = {
   },
   theme: {
     fontFamily: {
+      serif: [
+        'Be Vietnam Pro',
+        'ui-serif',
+        'Georgia',
+        'Cambria',
+        '"Times New Roman"',
+        'Times', 'serif'
+      ],
       mono: [
-        'JetBrainsMono',
+        'JetBrains Mono',
         'ui-monospace',
         'SFMono-Regular',
         'Menlo',

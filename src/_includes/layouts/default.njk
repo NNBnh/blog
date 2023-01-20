@@ -8,6 +8,7 @@
   <title>ɴɴBlog{% if title %} | {{ title | lang_string }}{% endif %}</title>
   <meta name="description" content="{{ description | lang_string }}" />
   <link rel="icon" href="https://avatars.githubusercontent.com/u/43980777" />
+
   <meta property="og:site_name" content="ɴɴBlog" />
   <meta property="og:title" content="{{ title | lang_string }}" />
   <meta property="og:description" content="{{ description | lang_string }}" />
@@ -29,6 +30,7 @@
       <meta property="article:tag" content="{{ tag }}" />
     {% endfor %}
   {% endif %}
+
   {% set css %}
     {% include "src/styles/index.css" %}
     {% include "src/styles/prism.css" %}
@@ -36,7 +38,12 @@
   <style>
     {{ css | postcss | safe }}
   </style>
-  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css?family=Be+Vietnam+Pro:100,200,300,400,500,600,700,800,900&display=swap"
+    rel="stylesheet"
+  />
+  <link href="https://fonts.googleapis.com/css?family=JetBrains+Mono&display=swap" rel="stylesheet" />
+  <script>{% include "node_modules/alpinejs/dist/cdn.js" %}</script>
 </head>
 <body
   class="bg-fixed bg-cover bg-center"
@@ -45,7 +52,7 @@
   {% endif %}
 >
   <div class="drawer drawer-end">
-    <input id="main-drawer" type="checkbox" class="drawer-toggle" />
+    <input id="main-drawer" type="checkbox" class="drawer-toggle" aria-label="Drawer toggle" />
     <div class="drawer-content relative">
       {% include "navbar.njk" %}
       {{ content | safe }}

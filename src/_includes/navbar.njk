@@ -1,4 +1,4 @@
-<nav class="navbar w-full absolute z-10 justify-center">
+<nav class="navbar w-full absolute z-10 justify-center font-serif">
   <div class="navbar-start"></div>
   <div class="navbar-center">
     <a
@@ -7,7 +7,7 @@
         origin-top hover:translate-y-1 hover:scale-125 hover:rotate-3
         hover:btn-primary hover:shadow-xl
       "
-      href="{{ '/' | to_lang | url }}"
+      href="{{ ((not lang or page.url == '/') and '/' or '/' | to_lang) | url }}"
     >
       <div>
         <span class="text-sm">NN</span>Blog

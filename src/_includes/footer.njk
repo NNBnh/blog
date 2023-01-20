@@ -1,5 +1,5 @@
 <footer class="footer footer-center pt-16 pb-12 bg-base-300 text-base-content shadow-2xl relative">
-  <div class="absolute top-0 flex {# gap-4 sm: #}gap-8 -translate-y-1/2">
+  <div class="absolute top-0 flex gap-8 sm:gap-12 -translate-y-1/2">
     {% for social in footer.socials %}
       <a
         class="
@@ -29,10 +29,11 @@
       >{{ link.name }}</a>
     {% endfor %}
   </div>
-  <p>Copyright &copy; 2022 - {{ build.date.getFullYear() }}</p>
+  <p class="font-serif">Copyright &copy; 2022 - {{ build.date.getFullYear() }}</p>
 </footer>
 
-{# #FIXME
+{#
+  #FIXME
   <a class="hover:text-primary"></a>
   <a class="hover:text-secondary"></a>
   <a class="hover:text-accent"></a>

@@ -2,7 +2,7 @@
 layout: layouts/default.njk
 ---
 
-<div class="home min-h-screen backdrop-blur bg-base-100 bg-opacity-60">
+<div class="min-h-screen backdrop-blur bg-base-100 bg-opacity-60">
   <header class="hero pt-16 min-h-[20rem] lg:min-h-[24rem]">
     {{ content | safe }}
   </header>
@@ -19,7 +19,7 @@ layout: layouts/default.njk
     <div class="mt-8 px-8 hidden lg:flex flex-col items-start justify-start gap-4">
       {% include "home/tags.njk" %}
     </div>
-    <div class="mx-auto h-fit flex flex-wrap justify-center gap-x-4 lg:gap-x-8">
+    <div class="mx-4 sm:mx-auto h-fit flex flex-wrap justify-center gap-x-4 lg:gap-x-8">
       {% set posts = collections[ tag | slugify ] or collections.posts %}
       {% include "home/posts.njk" %}
       {% for ghost in "0123456789" %}
