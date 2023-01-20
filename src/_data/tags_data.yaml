@@ -3,12 +3,12 @@ update:
   description:
     en: Some announcement to make
     vi: Thông báo cập nhật
-  image: https://images.unsplash.com/photo-1638793774237-0fd6b45a510f
+  image: https://images.unsplash.com/photo-1512463652975-81529bef542a
 story:
   description:
     en: Story time!
     vi: Góc kể chuyện
-  image: https://images.unsplash.com/photo-1586006349222-4f422913db20
+  image: https://images.unsplash.com/photo-1530519507795-42213b27dabf
 
 game-dev:
   description:
@@ -51,4 +51,9 @@ godot:
   description:
     en: Godot game engine
     vi: Phần mềm làm game Godot
-  image: https://images.unsplash.com/photo-1512463652975-81529bef542a
+  image: https://images.unsplash.com/photo-1660499933064-b7cc3dad0b5d
+svelte:
+  description:
+    en: Cybernetically enhanced web apps
+    vi: Web framework Svelte / SvelteKit
+  image: https://images.unsplash.com/photo-1530774487274-f41219acc4f3

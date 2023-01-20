@@ -8,7 +8,7 @@ const postcss = require('postcss');
 const tailwindcss = require('tailwindcss');
 const autoprefixer = require('autoprefixer');
 
-module.exports = eleventyConfig => {
+module.exports = function(eleventyConfig) {
   eleventyConfig.addDataExtension('yaml', contents => yaml.load(contents));
   eleventyConfig.addPlugin(pluginTOC, { ul: true });
   eleventyConfig.addPlugin(pluginRss);
@@ -23,7 +23,7 @@ module.exports = eleventyConfig => {
   });
   eleventyConfig.setLibrary('md', markdownLibrary);
 
-  eleventyConfig.addNunjucksAsyncFilter('postcss', (cssCode, done) => {
+  eleventyConfig.addNunjucksAsyncFilter('postcss', function(cssCode, done) {
     postcss([tailwindcss(require('./tailwind.config.js')), autoprefixer()])
       .process(cssCode)
       .then(
@@ -37,7 +37,7 @@ module.exports = eleventyConfig => {
     return (tags || []).filter(tag => ['all', 'nav', 'post', 'posts'].indexOf(tag) === -1);
   }
   eleventyConfig.addFilter('filter_tags', filterTags);
-  eleventyConfig.addCollection('tags', collection => {
+  eleventyConfig.addCollection('tags', function(collection) {
     let tagSet = new Set();
     collection.getAll().forEach(item => {
       (item.data.tags || []).forEach(tag => tagSet.add(tag));
@@ -45,7 +45,7 @@ module.exports = eleventyConfig => {
     return filterTags([...tagSet]);
   });
 
-  eleventyConfig.addShortcode('img', (url, size = 1280) => {
+  eleventyConfig.addShortcode('img', function(url, size = 1280) {
     let imageUrl = new URL(url);
     if(imageUrl.host === 'images.unsplash.com') {
       if(!imageUrl.searchParams.has('w')) imageUrl.searchParams.set('w', size);
@@ -53,14 +53,19 @@ module.exports = eleventyConfig => {
     return imageUrl.toString();
   });
 
-  eleventyConfig.addFilter('to_lang', (url, lang) => {
-    lang = lang || 'en';
-    return url.replace(/^\/(en\/|vi\/|)/, `/${lang}/`);
+  // #TODO Improve
+  function getUrlLang(url) {
+    return (url.match(/^\/(en|vi)\//) || [null, 'en'])[1];
+  }
+  eleventyConfig.addFilter('to_lang', function(url, language = null) {
+    return url.replace(
+      /^\/(en\/|vi\/|)/,
+      `/${language || getUrlLang(this.page.url)}/`
+    );
   });
-
-  eleventyConfig.addFilter('lang_string', (object, lang) => {
-    if(typeof object === 'object') {
-      return object[lang];
+  eleventyConfig.addFilter('lang_string', function(object) {
+    if(object !== null && typeof object === 'object') {
+      return object[getUrlLang(this.page.url)];
     } else {
       return object;
     }

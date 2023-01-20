@@ -1,0 +1,21 @@
+---
+layout: layouts/default.njk
+image: https://images.unsplash.com/photo-1638793774237-0fd6b45a510f
+---
+
+<div
+  class="
+    min-h-[calc(100vh-12rem)] backdrop-blur bg-base-100 bg-opacity-60
+    flex flex-col md:flex-row items-center justify-center gap-16
+  "
+>
+  {% for language_code, language_name in metadata.languages %}
+    <a
+      class="
+        w-80 duration-200 hover:scale-125 hover:rotate-6 drop-shadow
+        text-center text-5xl sm:text-6xl font-thin hover:font-bold hover:text-primary
+      "
+      href="{{ '/' | to_lang(language_code) | url }}"
+    >{{ language_name }}</a>
+  {% endfor %}
+</div>

@@ -12,6 +12,6 @@ pagination:
   addAllPagesToCollections: true
 eleventyComputed:
   title: "#{{ tag }}"
-  description: "{{ tags_data[ tag | slugify ].description | lang_string(lang) }}"
-  image: "{{ tags_data[ tag | slugify ].image }}"
+  description: "{{ tags_data[ tag | slugify ].description | lang_string }}"
+  image: "{{ tags_data[ tag | slugify ].image or 'https://images.unsplash.com/photo-1597062985395-720978d2ca4e' }}"
 permalink: "/{{ lang }}/tags/{{ tag | slugify }}/"

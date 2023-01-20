@@ -16,25 +16,8 @@
   .btn-cool {
     @apply hover:rotate-3 hover:scale-110 drop-shadow hover:drop-shadow-xl normal-case;
   }
-  .social-icon {
-    @apply
-      duration-200 hover:scale-150 hover:-rotate-6 hover:-translate-y-1
-      drop-shadow hover:drop-shadow-xl;
-  }
-  .social-icon svg {
-    @apply w-8 h-8 fill-current;
-  }
   .link-mono {
     @apply font-mono font-bold duration-200 opacity-50 hover:opacity-100 no-underline;
-  }
-  .link-footer {
-    @apply link link-hover w-16;
-  }
-  .home .tag {
-    @apply lg:origin-bottom-left lg:hover:-rotate-6;
-  }
-  .home article {
-    @apply mt-8;
   }
   .toc {
     @apply menu;

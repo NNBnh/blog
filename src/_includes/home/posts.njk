@@ -1,7 +1,7 @@
 {% for post in posts | reverse %}
   <article
     class="
-      card card-compact image-full max-w-sm bg-base-100
+      card card-compact image-full mt-8 max-w-sm bg-base-100
       group duration-200 outline outline-2 outline-primary shadow-xl
       hover:z-20 hover:scale-105 hover:rotate-3 hover:outline-8 hover:shadow-2xl
     "
@@ -25,9 +25,9 @@
           duration-200 group-hover:-rotate-6 group-hover:scale-110
           group-hover:font-black hover:text-primary
         "
-        href="{{ post.url | to_lang(lang) | url }}"
+        href="{{ post.url | to_lang | url }}"
       >
-        <h2>{{ post.data.title | lang_string(lang) }}</h2>
+        <h2>{{ post.data.title | lang_string }}</h2>
       </a>
       <div class="card-actions justify-end text-sm sm:text-md">
         {% set tags = post.data.tags %}

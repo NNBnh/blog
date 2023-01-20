@@ -1,6 +1,6 @@
 {% for tag in tags | filter_tags %}
   <a
     class="link-mono"
-    href="{{ ('/tags/' ~ ( tag | slugify ) ~ '/') | to_lang(lang) | url }}"
+    href="{{ ('/tags/' ~ ( tag | slugify ) ~ '/') | to_lang | url }}"
   >#{{ tag }}</a>
 {% endfor %}
