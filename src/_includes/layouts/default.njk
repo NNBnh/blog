@@ -2,16 +2,16 @@
 {% set meta_lang = lang or 'en' %}
 <html lang="{{ meta_lang }}">
 <head>
-  {% set description = description or metadata.description %}
+  {% set description = description | lang_string or metadata.description %}
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ɴɴBlog{% if title %} | {{ title | lang_string }}{% endif %}</title>
-  <meta name="description" content="{{ description | lang_string }}" />
+  <meta name="description" content="{{ description }}" />
   <link rel="icon" href="https://avatars.githubusercontent.com/u/43980777" />
 
   <meta property="og:site_name" content="ɴɴBlog" />
   <meta property="og:title" content="{{ title | lang_string }}" />
-  <meta property="og:description" content="{{ description | lang_string }}" />
+  <meta property="og:description" content="{{ description }}" />
   {% if image %}
     <meta property="og:image" content="{% img image %}" />
   {% endif %}

@@ -31,7 +31,7 @@ permalink: "/{{ lang }}/"
   >
     <img
       class="
-        w-48 lg:w-64 aspect-square bg-base-100
+        mb-4 md:mb-0 w-48 lg:w-64 aspect-square bg-base-100
         rounded-3xl duration-200 outline outline-2 outline-primary shadow-xl
         hover:scale-110 hover:rotate-6 md:hover:rotate-0 hover:outline-8 hover:shadow-2xl
       "
@@ -39,7 +39,10 @@ permalink: "/{{ lang }}/"
       alt="About Me"
     />
   </a>
-  <div class="flex flex-col items-center md:items-start gap-4">
+  <div
+    class="flex flex-col items-center md:items-start gap-4 duration-200"
+    {{ hover('md:translate-x-4 lg:translate-x-0') }}
+  >
     <h1
       class="text-4xl md:text-6xl font-bold duration-200 origin-left"
       {{ hover('md:scale-150') }}
@@ -54,13 +57,13 @@ permalink: "/{{ lang }}/"
       class="py-2 text-xl font-semibold italic origin-left relative duration-200"
       {{ hover('md:scale-125') }}
     >
-      <span class="duration-200" {{ hover('md:opacity-0', '') }}>
-        {{ metadata.description }}
-      </span>
       <span
         class="absolute top-2 hidden md:inline duration-200 opacity-0 text-secondary"
         {{ hover('md:opacity-100', '') }}
       >{{ metadata.author.description }}</span>
+      <span class="duration-200" {{ hover('md:opacity-0', '') }}>
+        {{ metadata.description }}
+      </span>
     </p>
     <div class="flex gap-4">
       <span class="origin-top-left duration-200" {{ hover('md:scale-125') }}>

@@ -1,12 +1,12 @@
 <span class="link-mono group-hover:opacity-100">
   <time datetime="{{ date.toISOString() }}">
-    {{ date.toLocaleDateString() }}
+    {{ date.toLocaleDateString('en-GB') }}
   </time>
   {% if updated %}
     <p class="inline-block">
       -&gt;
       <time datetime="{{ updated.toISOString() }}">
-        {{ updated.toLocaleDateString() }}
+        {{ updated.toLocaleDateString('en-GB') }}
       </time>
     </p>
   {% endif %}

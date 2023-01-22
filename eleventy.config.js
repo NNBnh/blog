@@ -18,7 +18,10 @@ module.exports = function(eleventyConfig) {
     html: true,
     linkify: true
   }).use(markdownItAnchor, {
-    permalink: markdownItAnchor.permalink.ariaHidden({ class: 'link-mono' }),
+    permalink: markdownItAnchor.permalink.ariaHidden({
+      class: 'link-mono',
+      placement: 'before'
+    }),
     slugify: eleventyConfig.getFilter('slugify')
   });
   eleventyConfig.setLibrary('md', markdownLibrary);

@@ -20,7 +20,7 @@ layout: layouts/default.njk
       {% include "home/tags.njk" %}
     </div>
     <div class="mx-4 sm:mx-auto h-fit flex flex-wrap justify-center gap-x-4 lg:gap-x-8">
-      {% set posts = collections[ tag | slugify ] or collections.posts %}
+      {% set posts = collections[ tag ] or collections.posts %}
       {% include "home/posts.njk" %}
       {% for ghost in "0123456789" %}
         <div class="w-full sm:w-96"></div>

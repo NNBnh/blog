@@ -1,6 +1,6 @@
 {% for tag in collections.tags | sort %}
   <a
-    class="btn btn-cool btn-secondary lg:origin-bottom-left lg:hover:-rotate-6"
-    href="{{ ('/tags/' ~ ( tag | slugify ) ~ '/') | to_lang | url }}"
+    class="btn btn-cool btn-accent lg:origin-bottom-left lg:hover:-rotate-6"
+    href="{{ ('/tags/' ~ tag ~ '/') | to_lang | url }}"
   >#{{ tag }}</a>
 {% endfor %}

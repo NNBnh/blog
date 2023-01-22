@@ -12,12 +12,12 @@ story:
     vi: Góc kể chuyện
   image: https://images.unsplash.com/photo-1530519507795-42213b27dabf
 
-game-dev:
+game_dev:
   description:
     en: Game development
     vi: Thiết kế trò chơi
   image: https://images.unsplash.com/photo-1585881728919-5c0ce925ad10
-web-dev:
+web_dev:
   description:
     en: Web development
     vi: Lập trình web
@@ -28,12 +28,12 @@ tty:
     vi: Terminal, command-line và shell-script
   image: https://images.unsplash.com/photo-1554921027-b91f0beeb07d
 
-os-rice:
+os_rice:
   description:
     en: Linux rice, window manager, r/unixporn
     vi: Độ Linux, window manager, r/unixporn
-  image: https://images.unsplash.com/photo-1549905314-a716f4556858
-input-device:
+  image: https://images.unsplash.com/photo-1555979864-7a8f9b4fddf8
+input_device:
   description:
     en: Everything from ergonomic keyboards to touchpad
     vi: Mọi thứ từ bàn phím công thái học đến touchpad
@@ -53,7 +53,7 @@ godot:
   description:
     en: Godot game engine
     vi: Phần mềm làm game Godot
-  image: https://images.unsplash.com/photo-1660499933064-b7cc3dad0b5d
+  image: https://images.unsplash.com/photo-1549905314-a716f4556858
 svelte:
   description:
     en: Cybernetically enhanced web apps

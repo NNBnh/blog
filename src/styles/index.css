@@ -9,8 +9,11 @@
   .link-mono {
     @apply font-mono font-bold duration-200 opacity-50 hover:opacity-100 no-underline;
   }
+  article .link-mono {
+    @apply opacity-75;
+  }
   .toc {
-    @apply menu;
+    @apply menu font-serif;
   }
   .toc > ul ul {
     @apply ml-4;
