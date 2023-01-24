@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer components {
+  .min-h-body {
+    min-height: calc(100vh - 12rem);
+  }
   .btn-cool {
     @apply hover:rotate-3 hover:scale-110 drop-shadow hover:drop-shadow-xl normal-case;
   }
@@ -11,6 +14,9 @@
   }
   article .link-mono {
     @apply opacity-75;
+  }
+  .prose > p > img {
+    @apply mx-auto;
   }
   .toc {
     @apply menu font-serif;
