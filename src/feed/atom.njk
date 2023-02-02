@@ -16,7 +16,7 @@ permalink: "/{{ lang }}/feed.xml"
   {%- for post in collections.posts | reverse %}
   {%- set postUrl = post.url | url(metadata.url) %}
   <entry>
-    <title>{{ post.data.title }}</title>
+    <title>{{ post.data.title | lang_string }}</title>
     <link href="{{ postUrl }}"/>
     <updated>{{ post.date | dateToRfc3339 }}</updated>
     <id>{{ postUrl }}</id>

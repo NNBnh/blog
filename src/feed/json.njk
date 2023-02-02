@@ -18,7 +18,7 @@ permalink: "/{{ lang }}/feed.json"
     {
       "id": "{{ postUrl }}",
       "url": "{{ postUrl }}",
-      "title": "{{ post.data.title }}",
+      "title": "{{ post.data.title | lang_string }}",
       "content_html": {% if post.templateContent %}{{ post.templateContent | htmlToAbsoluteUrls(postUrl) | dump | safe }}{% else %}""{% endif %},
       "date_published": "{{ post.date | dateToRfc3339 }}"
     }

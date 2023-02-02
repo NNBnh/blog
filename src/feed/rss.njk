@@ -12,7 +12,7 @@ permalink: "/{{ lang }}/feed.rss"
     {%- for post in collections.posts | reverse %}
     {%- set postUrl = post.url | url(metadata.url) %}
     <item>
-      <title>{{ post.data.title }}</title>
+      <title>{{ post.data.title | lang_string }}</title>
       <link>{{ postUrl }}</link>
       <description>{{ post.templateContent | htmlToAbsoluteUrls(postUrl) }}</description>
       <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
