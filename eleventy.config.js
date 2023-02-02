@@ -56,7 +56,7 @@ module.exports = function(eleventyConfig) {
     return imageUrl.toString();
   });
 
-  // #TODO Improve
+  // TODO: Improve
   function getUrlLang(url) {
     return (url.match(/^\/(en|vi)\//) || [null, 'en'])[1];
   }
