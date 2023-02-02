@@ -5,7 +5,7 @@ permalink: "/{{ lang }}/feed.xml"
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ metadata.url }}">
   <title>{{ metadata.title }}</title>
   <subtitle>{{ metadata.description }}</subtitle>
-  <link href="{{ permalink | url(metadata.url) }}" rel="self"/>
+  <link href="{{ metadata.url ~ '/' ~ lang ~ '/feed.xml' }}" rel="self"/>
   <link href="{{ metadata.url }}"/>
   <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
   <id>{{ metadata.url }}</id>
@@ -14,7 +14,7 @@ permalink: "/{{ lang }}/feed.xml"
     <email>{{ metadata.author.email }}</email>
   </author>
   {%- for post in collections.posts | reverse %}
-  {%- set postUrl = post.url | url(metadata.url) %}
+  {%- set postUrl = metadata.url ~ post.url %}
   <entry>
     <title>{{ post.data.title | lang_string }}</title>
     <link href="{{ postUrl }}"/>

@@ -6,11 +6,11 @@ permalink: "/{{ lang }}/feed.rss"
   <channel>
     <title>{{ metadata.title }}</title>
     <link>{{ metadata.url }}</link>
-    <atom:link href="{{ permalink | url(metadata.url) }}" rel="self" type="application/rss+xml" />
+    <atom:link href="{{ metadata.url ~ '/' ~ lang ~ '/feed.xml' }}" rel="self" type="application/rss+xml" />
     <description>{{ metadata.description }}</description>
     <language>{{ lang }}</language>
     {%- for post in collections.posts | reverse %}
-    {%- set postUrl = post.url | url(metadata.url) %}
+    {%- set postUrl = metadata.url ~ post.url %}
     <item>
       <title>{{ post.data.title | lang_string }}</title>
       <link>{{ postUrl }}</link>

@@ -6,7 +6,7 @@ permalink: "/{{ lang }}/feed.json"
   "title": "{{ metadata.title }}",
   "language": "{{ lang }}",
   "home_page_url": "{{ metadata.url }}",
-  "feed_url": "{{ permalink | url(metadata.url) }}",
+  "feed_url": "{{ metadata.url ~ '/' ~ lang ~ '/feed.xml' }}",
   "description": "{{ metadata.description }}",
   "author": {
     "name": "{{ metadata.author.name }}",
@@ -14,7 +14,7 @@ permalink: "/{{ lang }}/feed.json"
   },
   "items": [
     {%- for post in collections.posts | reverse %}
-    {%- set postUrl = post.url | url(metadata.url) %}
+    {%- set postUrl = metadata.url ~ post.url %}
     {
       "id": "{{ postUrl }}",
       "url": "{{ postUrl }}",
