@@ -1,3 +1,5 @@
+const langs = ["vn", "en"];
+
 const yaml = require('js-yaml');
 const pluginTOC = require('eleventy-plugin-toc')
 const pluginRss = require('@11ty/eleventy-plugin-rss');
@@ -56,9 +58,8 @@ module.exports = function(eleventyConfig) {
     return imageUrl.toString();
   });
 
-  // TODO: Improve
   function getUrlLang(url) {
-    return (url.match(/^\/(en|vi)\//) || [null, 'en'])[1];
+    return (url.match(RegExp(`^/(${langs.join("|")})/`)) || [null, 'en'])[1];
   }
   eleventyConfig.addFilter('to_lang', function(url, language = null) {
     return url.replace(
