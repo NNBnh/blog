@@ -25,7 +25,7 @@ permalink: "/{{ lang }}/"
   {{ hover('md:rotate-6') }}
 >
   <a
-    href="https://NNBnh.github.io"
+    href="{{ metadata.author.url }}"
     aria-label="About Me"
     @mouseover="authorHover = true"
     @mouseover.away="authorHover = false"
@@ -68,7 +68,7 @@ permalink: "/{{ lang }}/"
     </p>
     <div class="flex gap-4">
       <span class="origin-top-left duration-200" {{ hover('md:scale-125') }}>
-        <a class="btn btn-cool btn-primary" href="https://NNBnh.github.io">
+        <a class="btn btn-cool btn-primary" href="{{ metadata.author.url }}">
           {% if lang == 'vi' %}Giới thiệu{% else %}About Me{% endif %}
         </a>
       </span>
