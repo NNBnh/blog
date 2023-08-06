@@ -1,4 +1,4 @@
-const langs = ["vn", "en"];
+const langs = ["vi", "en"];
 
 const yaml = require('js-yaml');
 const pluginTOC = require('eleventy-plugin-toc')
