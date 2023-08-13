@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="https://NNBnh.github.io/blog">
+  <title>NNBlog</title>
+  <subtitle>Blog that SuperB</subtitle>
+  <link href="https://NNBnh.github.io/blog/en/feed.xml" rel="self"/>
+  <link href="https://NNBnh.github.io/blog"/>
+  <updated>2023-08-12T00:00:00Z</updated>
+  <id>https://NNBnh.github.io/blog</id>
+  <author>
+    <name>NNB</name>
+    <email>nnbnh@protonmail.com</email>
+  </author>
+  <entry>
+    <title>My ideal distro</title>
+    <link href="https://NNBnh.github.io/blog/en/posts/13/"/>
+    <updated>2023-08-12T00:00:00Z</updated>
+    <id>https://NNBnh.github.io/blog/en/posts/13/</id>
+    <content xml:lang="en" type="html">&lt;h2 id=&quot;why-linux-in-the-first-place&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/13/#why-linux-in-the-first-place&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Why Linux in the first place?&lt;/h2&gt;
+&lt;p&gt;I choose Linux over Windows and MacOS because:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It is fast, lightweight.&lt;/li&gt;
+&lt;li&gt;It is &lt;a href=&quot;https://wikipedia.org/wiki/Free_and_open-source_software&quot;&gt;FOSS&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.privacytools.io/os&quot;&gt;It&#39;s the most privacy desktop OS&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;And most importantly it&#39;s customizability is endless.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;base-distro&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/13/#base-distro&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Base Distro&lt;/h2&gt;
+&lt;p&gt;My dotfiles is quite flexible, it can be easily adapted to almost any distro. But I still have preferences (in order): Arch-based &amp;gt; Ubuntu-based &amp;gt; Fedora-based &amp;gt; other.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://fedoraproject.org/&quot;&gt;Fedora&lt;/a&gt; seems to be more stable and up-to-date than &lt;a href=&quot;https://ubuntu.com/&quot;&gt;Ubuntu&lt;/a&gt;, but it doesn&#39;t have packages that aren&#39;t strictly open source, a few can still be installed but it&#39;s annoying.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://archlinux.org/&quot;&gt;Arch&lt;/a&gt; has the most packages &lt;em&gt;if&lt;/em&gt; including the AUR, which can sometimes be quite janky. Arch has a reputation for being easier to break than other distros, but I find all distros to break equally easy...&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://nixos.org/&quot;&gt;NixOS&lt;/a&gt; is very competitive to Arch in terms of package quantity and quality. But I find Nix to be is quite janky after ricing it!&lt;/p&gt;
+&lt;h2 id=&quot;desktop-environment&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/13/#desktop-environment&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Desktop Environment&lt;/h2&gt;
+&lt;p&gt;After using window manager for a while, I decided to go back to DE (detailed explanation &lt;a href=&quot;https://nnbnh.github.io/blog/en/posts/12/#5-maximalist&quot;&gt;here&lt;/a&gt;) because I wanted to find an easy and stable experience that &amp;quot;it just works&amp;quot;.&lt;/p&gt;
+&lt;p&gt;Some DEs like &lt;a href=&quot;https://www.lxde.org/&quot;&gt;LXDE&lt;/a&gt; and &lt;a href=&quot;https://xfce.org/&quot;&gt;XFCE&lt;/a&gt; are very light, too light in fact, it is not suitable for me because it is not as customizable as I want.&lt;/p&gt;
+&lt;p&gt;DEs like &lt;a href=&quot;https://elementary.io/&quot;&gt;Pantheon&lt;/a&gt; and &lt;a href=&quot;https://www.deepin.org/en/dde&quot;&gt;Deepin&lt;/a&gt; have a pretty good out-of-the-box experience, but it&#39;s quite limited when it come to customization. I recommend this DE if you love it at first sight and have no need for customization.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.kde.org/plasma-desktop&quot;&gt;KDE Plasma&lt;/a&gt; is easy to customize out-of-the-box, from the simplest things to the most advanced. Plasma is easy to configure, suitable for Linux newbies who want to rice. KDE apps are also feature-rich (e.g: &lt;a href=&quot;https://apps.kde.org/dolphin&quot;&gt;Dolphin&lt;/a&gt;) but its interface is a bit cramped.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://nnbnh.github.io/blog/en/posts/13/www.gnome.org&quot;&gt;Gnome&lt;/a&gt; design is very harmonious, consisted, minimalistic and elegant. Switching from Windows or other DE to Gnome initially feeling strange, but after a while you will understand the beauty of the design and a great workflow that Gnome brings to you. GNOME is actually no less than KDE but actually better when it comes to customization: Although GNOME is not officially supported, you can install &lt;a href=&quot;https://extensions.gnome.org/&quot;&gt;extensions&lt;/a&gt;. Gnome extensions are very diverse and extensive, it integrates well into DE. Gnome has extensions like &lt;a href=&quot;https://extensions.gnome.org/extension/1287/unite&quot;&gt;Unite&lt;/a&gt; while KDE can hardly config to do the same as convenience as Gnome.&lt;/p&gt;
+&lt;h2 id=&quot;other-requirements&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/13/#other-requirements&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Other requirements&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Bloat-free: Do not preinstall software like games, maps, image/video editors or even web browsers. Don&#39;t put a bunch of software that some people might or might not like, let the users choose the software they want themselves. The bloatware may be pre-installed in the live-image but leave it as an unchecked option during the installation process.&lt;/li&gt;
+&lt;li&gt;DE mustn&#39;t have any theming/branding presented, just the pure default theme DE.&lt;/li&gt;
+&lt;li&gt;The distro should preinstalled:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.flatpak.org/&quot;&gt;Flatpak&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://wikipedia.org/wiki/CJK_characters&quot;&gt;A CJK font&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;All type of video codex and firmware.&lt;/li&gt;
+&lt;li&gt;Archive format like &lt;a href=&quot;https://7-zip.org/&quot;&gt;7-Zip&lt;/a&gt;, &lt;a href=&quot;https://www.rarlab.com/&quot;&gt;Rar&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;CLI tools: &lt;a href=&quot;https://git-scm.com/&quot;&gt;Git&lt;/a&gt;, &lt;a href=&quot;https://ffmpeg.org/&quot;&gt;FFmpeg&lt;/a&gt;, &lt;a href=&quot;https://curl.se/&quot;&gt;Curl&lt;/a&gt; and &lt;a href=&quot;https://github.com/bugaevc/wl-clipboard&quot;&gt;WL-clipboard&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Vietnamese input method like &lt;a href=&quot;https://www.unikey.org/en&quot;&gt;Unikey&lt;/a&gt; or better.&lt;/li&gt;
+&lt;li&gt;Tools to tweaks the DE:
+&lt;ul&gt;
+&lt;li&gt;If it&#39;s Gnome then it should have &lt;a href=&quot;https://gitlab.gnome.org/GNOME/gnome-tweaks&quot;&gt;Gnome Tweaks&lt;/a&gt;, &lt;a href=&quot;https://github.com/mjakeman/extension-manager&quot;&gt;Extension Manager&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;If KDE then it&#39;s &lt;a href=&quot;https://store.kde.org/p/1005410&quot;&gt;Kvantum&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;A Good &lt;a href=&quot;https://www.winehq.org/&quot;&gt;Wine&lt;/a&gt; preset.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Distro shouldn&#39;t have &lt;a href=&quot;https://askubuntu.com/questions/93109/cant-write-to-ntfs-formatted-drives&quot;&gt;partition problem when dual-booting Windows&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;my-ideal-distro&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/13/#my-ideal-distro&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; My ideal distro&lt;/h2&gt;
+&lt;p&gt;And finally my pick is: &lt;a href=&quot;https://nobaraproject.org/&quot;&gt;Nobara&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Nobara is a gaming-focused distro, it doesn&#39;t check all the list and it&#39;s a bit janky at times. But it has the best out-of-the-box experience of all the distros I&#39;ve ever used.&lt;/p&gt;
+&lt;h3 id=&quot;honorable-mention&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/13/#honorable-mention&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Honorable Mention&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://vanillaos.org/&quot;&gt;Vanilla OS&lt;/a&gt; is a distro that allows users to install applications from any Linux distro from Arch, Fedora to NixOS. It checks a lot on the list but when I tried it earlier this year, it didn&#39;t seem to be ready yet... Vanilla was very janky, it freezes when I wake it up after suspend...&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://blendos.co/&quot;&gt;Blend OS&lt;/a&gt; is similar to vanilla but It&#39;s Arch-based and I hope it will become my favorite choice when I try it out in the near future.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Five stages of minimalism rice</title>
+    <link href="https://NNBnh.github.io/blog/en/posts/12/"/>
+    <updated>2023-08-10T00:00:00Z</updated>
+    <id>https://NNBnh.github.io/blog/en/posts/12/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;&lt;a href=&quot;https://www.reddit.com/r/unixporn/comments/s0cccz/berry_ayudark_my_super_rice&quot;&gt;&lt;img src=&quot;https://i.imgur.com/7DWRz1Z.webp&quot; alt=&quot;Berry Rice&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;While writing &lt;a href=&quot;https://nnbnh.github.io/blog/en/posts/9/&quot;&gt;Image viewer/media player for minimalist&lt;/a&gt; about the five stages of rice image viewer, I realized that those five stages are not just about rice image viewer, it&#39;s about minimalism rice as a whole. So I wrote this blog post to dive into the five stages of minimalist rice.&lt;/p&gt;
+&lt;h2 id=&quot;1-normie&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/12/#1-normie&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; 1. Normie&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://i.imgur.com/NTHZScu.webp&quot;&gt;&lt;img src=&quot;https://i.imgur.com/NTHZScu.webp&quot; alt=&quot;KDE Rice&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;These newbies have just installed Linux, specifically Ubuntu or Ubuntu-based with a popular DE like Gnome or KDE. They installed some extensions, themes, icons and felt quite satisfied with their setup, thinking that they would never thinker with the OS ever again.&lt;/p&gt;
+&lt;h2 id=&quot;2-beginner&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/12/#2-beginner&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; 2. Beginner&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://codeberg.org/NNB/dotfiles/releases/tag/v1.0.0&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/43980777/104730274-50495600-576c-11eb-9520-890cb45815d9.png&quot; alt=&quot;BSPWM Rice&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;After installing Linux and everything, that newbie must also watch a lot of Linux videos on Youtube, so his feed shows quite a lot of Linux Youtubers, he clicked on it and suddenly heard the three words &amp;quot;I use Arch&amp;quot; (four if you count &amp;quot;BTW&amp;quot;). They back up everything and distro-hop to Arch or an Arch-based distro. It wasn&#39;t long before they also discovered &lt;a href=&quot;https://www.reddit.com/r/unixporn&quot;&gt;r/unixporn&lt;/a&gt;, their eyes light up, they quickly install &lt;a href=&quot;https://github.com/baskerville/bspwm&quot;&gt;BSPWM&lt;/a&gt; + &lt;a href=&quot;https://polybar.github.io/&quot;&gt;Polybar&lt;/a&gt; or &lt;a href=&quot;https://hyprland.org/&quot;&gt;Hyprland&lt;/a&gt; + &lt;a href=&quot;https://github.com/Alexays/Waybar&quot;&gt;Waybar&lt;/a&gt; and spend 2-3 weeks to rice it.&lt;/p&gt;
+&lt;p&gt;Using tiling WM is dedicated to following the keyboard workflow, but the keyboard workflow on Linux can&#39;t be perfect without the terminal.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class=&quot;font-mono&quot;&gt;GUI != Cool&lt;br /&gt;
+TTY == Hackerman&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;They started learning how to use the shell, replacing most GUI apps with TUI/CLI apps and replacing the main shell with anything but Bash. They rice their prompt with &lt;a href=&quot;https://starship.rs/&quot;&gt;Starship&lt;/a&gt;, installs &lt;a href=&quot;https://github.com/sts10/rust-command-line-utilities#unix-to-rust-replacements-or-near-replacements&quot;&gt;Exa and other Rust-replacements CLI tool&lt;/a&gt;. Wouldn&#39;t be surprised if they&#39;ve spent months learning and configuring &lt;a href=&quot;https://neovim.io/&quot;&gt;NeoVim&lt;/a&gt; at this point.&lt;/p&gt;
+&lt;h2 id=&quot;3-minimalist&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/12/#3-minimalist&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; 3. Minimalist&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://discord.com/channels/635612648934735892/1033210791320625243/1033339746463789096&quot;&gt;&lt;img src=&quot;https://i.imgur.com/Sb9iZcz.webp&quot; alt=&quot;Cool Discord Rice&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://codeberg.org/NNB/dotfiles/releases/tag/v3.3.0&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/43980777/172338839-482602d7-d57b-4152-a368-2333cf4c0d79.png&quot; alt=&quot;HerbstLuftWM Rice&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;tiling-wm-is-bloat&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/12/#tiling-wm-is-bloat&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Tiling WM is bloat&lt;/h3&gt;
+&lt;p&gt;I used to use an advanced tiling WM but after I read &lt;a href=&quot;http://xahlee.info/linux/why_tiling_window_manager_sucks.html&quot;&gt;this post&lt;/a&gt;. When I first reading the post, I hate it, I think it is stupid, he just using the wrong way... But then I realize that my workflow rarely need tiling windows in a complex way to begin with:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;When I&#39;m using GUI app with mouse, I always maximize the apps.&lt;/li&gt;
+&lt;li&gt;When using the terminal or text editor, I just want to look at the focus window and see no value of looking at 3-4 terminal at the same time.&lt;/li&gt;
+&lt;li&gt;Tiling 3-4 windows on the screen make everything cramped, the only advantage of this is to easily interact things between windows with a mouse which contradict with the keyboard workflow.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Time to move to floating WM. The thing is that minimalist WMs like &lt;a href=&quot;https://github.com/dylanaraps/sowm&quot;&gt;SOWM&lt;/a&gt; and &lt;a href=&quot;https://berrywm.org/&quot;&gt;Berry&lt;/a&gt; are pretty janky (at least at the time of writing this) so go back to tiling WM we do, we just need to set the rule to make windows automatically float.&lt;/p&gt;
+&lt;h3 id=&quot;bar-is-also-bloat&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/12/#bar-is-also-bloat&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Bar is also bloat&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;*Sniff sniff*&lt;/em&gt; I smell bloat, and that smell comes from the bar. Switch to a lighter bar like &lt;a href=&quot;https://github.com/LemonBoy/bar&quot;&gt;Lemonbar&lt;/a&gt; or even &lt;a href=&quot;https://sw.kovidgoyal.net/kitty/kittens/panel/#command-line-interface&quot;&gt;turn the terminal into bar&lt;/a&gt; is unlikely to get rid of the stinky bloat smell.&lt;/p&gt;
+&lt;p&gt;The problem is that it takes up precious space on my screen, a 16 to 24 pixel-wide space that stretches from one end to the other of the screen is &lt;strong&gt;wasted&lt;/strong&gt; to display: the clock, workspaces, and some crappy information that I really don&#39;t need to check constantly. Unacceptable, throw the bar away!&lt;/p&gt;
+&lt;p&gt;You can show the list of workspaces and the clock only when switching workspaces or using keyboard shortcuts to &lt;a href=&quot;https://gist.github.com/NNBnh/5f6e601a6a82a6ed43b1959698758141?permalink_comment_id=3735888#gistcomment-3735888&quot;&gt;display it through a notification&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Or go the hardcore route and ditch it altogether, check the time on your watch, wall clock, or use the &lt;code&gt;date&lt;/code&gt; command XD. Workspaces are really not necessary when I always maximize windows and rarely tile them anyway. Just use a workspace-less desktop, no need to config, no need to display.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;4-extreme-minimalist&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/12/#4-extreme-minimalist&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; 4. Extreme Minimalist&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://codeberg.org/NNB/dotfiles/releases/tag/v3.5.0&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/43980777/218121026-2d2ddb94-5105-4df8-a6a9-8ab632b69ce3.png&quot; alt=&quot;TTY rice w/ Zellij&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;WM... is Bloat. We can also get rid of WM and login manager altogether. Use full TTY from Linux Kernel and type the command to open GUI app... &lt;a href=&quot;https://github.com/K4zoku/nowm&quot;&gt;NOWM&lt;/a&gt; or &lt;a href=&quot;https://git.disroot.org/root_informatica/wms&quot;&gt;[wms]&lt;/a&gt; will make the experience less miserable without WM.&lt;/p&gt;
+&lt;p&gt;Remember those TUI/CLI apps we installed at the beginner stage? We realize we don&#39;t need 80% of it, we would rather use the tools available in the POSIX standard to make the script more portable. Then we even removed the file manager!&lt;/p&gt;
+&lt;p&gt;The shell prompt is now just &amp;quot;&lt;code&gt;$&lt;/code&gt;&amp;quot;, &lt;code&gt;pwd&lt;/code&gt; is the only torch that lights us the way in the file system.&lt;/p&gt;
+&lt;p&gt;The rice is no longer minimalist, it has become the black hole. Few are brave enough to go beyond, but some legends continue, The few features that identifies them is that they do &lt;a href=&quot;https://www.linuxfromscratch.org/lfs&quot;&gt;Linux From Scratch&lt;/a&gt; and know what &lt;a href=&quot;https://wikipedia.org/wiki/Linux_framebuffer&quot;&gt;Linux framebuffer&lt;/a&gt; is.&lt;/p&gt;
+&lt;h2 id=&quot;5-maximalist&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/12/#5-maximalist&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; 5. Maximalist&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/Aylur/dotfiles/tree/gnome43&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/Aylur/dotfiles/gnome43/assets/rose.png&quot; alt=&quot;Gnome Rice&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;After a tiresome period of extreme minimalist rice, they have a different view of minimalism. They realize that using DE is very minimal in terms of time and effort. To be honest, DE is not that bloat, It has some features that although we don&#39;t always use, but having it is still very convenient in some situation. And if I don&#39;t install or configure anything but just use the default stuff from the DE, the dotfiles will be a lot more minimal!&lt;/p&gt;
+&lt;p&gt;And so they decided to go back to installing DE. But this time, with more experience and skill, their rice is better than ever. They even installed more fancy features, more personality, going against the previous minimalism... Finally they felt quite satisfied with their setup, thinking that they would never thinker with the OS ever again.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;Credit to &lt;a href=&quot;https://github.com/K4zoku&quot;&gt;Kazoku&lt;/a&gt; for the Rice images!&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Window&#39;s title</title>
+    <link href="https://NNBnh.github.io/blog/en/posts/11/"/>
+    <updated>2023-08-09T00:00:00Z</updated>
+    <id>https://NNBnh.github.io/blog/en/posts/11/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Window&#39;s title is the most underrated aspect of a desktop when in fact it&#39;s very useful:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It show information about the running programs in a standard way.&lt;/li&gt;
+&lt;li&gt;It displays the titles of multiple windows which help us identify similar open applications (like when you open a bunch of text file and they&#39;re all look similar).&lt;/li&gt;
+&lt;li&gt;It&#39;s easier for mouse user to interact with the window itself (not the application inside).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;But what is the best way to display window&#39;s title, let&#39;s take a look at some method.&lt;/p&gt;
+&lt;h2 id=&quot;key-terms&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/11/#key-terms&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Key terms&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Busy workspace: Workspace that have split layout container as it&#39;s first child.&lt;/li&gt;
+&lt;li&gt;Tabs workspace: Workspace that have tabs layout container as it&#39;s first child. Because I turn &lt;code&gt;smart_gaps on&lt;/code&gt; so a tabs workspace will not have gaps.&lt;/li&gt;
+&lt;li&gt;The bar: (Usually called taskbar) will be refer as information bar.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;legacy&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/11/#legacy&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Legacy&lt;/h2&gt;
+&lt;p&gt;This is the method that being used in Windows OS and most Linux&#39;s DE, it&#39;s display window&#39;s title both attach to the window itself and then show a list of windows on the information bar.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Busy workspace&lt;/th&gt;
+&lt;th&gt;Tabs workspace&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/43980777/108809472-7ff54480-75db-11eb-8bef-8cd640e1072a.png&quot; alt=&quot;bothBusy&quot; /&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/43980777/108809474-808ddb00-75db-11eb-8dbb-35b9fa59878f.png&quot; alt=&quot;bothTab&quot; /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&quot;pro&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/11/#pro&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Pro&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;This is a legacy design that most people get used to.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;con&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/11/#con&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Con&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The design is too old, it&#39;s look outdated:
+&lt;ul&gt;
+&lt;li&gt;Display windows title in two place is redundant.&lt;/li&gt;
+&lt;li&gt;And make the desktop cramped.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;fix&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/11/#fix&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Fix&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Just used other method...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;detach&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/11/#detach&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Detach&lt;/h2&gt;
+&lt;p&gt;Only show a list of windows on the information bar.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Busy workspace&lt;/th&gt;
+&lt;th&gt;Tabs workspace&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/43980777/108809488-84b9f880-75db-11eb-8015-2729e907d094.png&quot; alt=&quot;taskBusy&quot; /&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/43980777/108809489-85528f00-75db-11eb-9974-0956ba00ec1b.png&quot; alt=&quot;taskTab&quot; /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&quot;pro-1&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/11/#pro-1&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Pro&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;This method give you the biggest screen real estate.&lt;/li&gt;
+&lt;li&gt;And still shows you all the information: This is better than the &lt;em&gt;Attach method&lt;/em&gt; in tabs workspace because it can even show additional information (workspaces and clock).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;con-1&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/11/#con-1&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Con&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The problem is the way the information is presented, a list of title can show you how many windows and their name but not their location, so you end up confusing not knowing which title is correspond to which window... This defeat the whole purpose of display title for each window.&lt;/li&gt;
+&lt;li&gt;You can&#39;t even tell if the container have tabs or not.&lt;/li&gt;
+&lt;li&gt;It&#39;s hard for mouse user to interact with a window (drag and move window around).&lt;/li&gt;
+&lt;li&gt;Those titles can take a lot of space in the information bar, space that can be used to display &lt;code&gt;CPU&lt;/code&gt;, &lt;code&gt;MEM&lt;/code&gt;, &lt;code&gt;DISK&lt;/code&gt;, &lt;code&gt;TEMP&lt;/code&gt;, &lt;code&gt;PLAYING&lt;/code&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;fix-1&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/11/#fix-1&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Fix&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;quot;you can&#39;t even tell if the container have tabs or not&amp;quot;: You can make a container show title bar if it&#39;s has tabs but this is redundant to show title in two place.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;attach&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/11/#attach&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Attach&lt;/h2&gt;
+&lt;p&gt;Show window&#39;s title attach to the window itself.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Busy workspace&lt;/th&gt;
+&lt;th&gt;Tabs workspace&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/43980777/108809490-85eb2580-75db-11eb-8900-7c81a2f22a28.png&quot; alt=&quot;titleBusy&quot; /&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/43980777/108809492-8683bc00-75db-11eb-8fb7-8dbe4442787f.png&quot; alt=&quot;titleTab&quot; /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&quot;pro-2&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/11/#pro-2&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Pro&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Everything is simple and clear, you know exactly which title is correspond to which window.&lt;/li&gt;
+&lt;li&gt;It&#39;s easy for mouse user to interact with a window (drag and move window around).&lt;/li&gt;
+&lt;li&gt;If you have an information bar, this method leave more space to the information bar than &lt;em&gt;Detach method&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;con-2&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/11/#con-2&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Con&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;This method take a bit more screen real estate than &lt;em&gt;Detach method&lt;/em&gt; in specific conditions e.g: In the busy workspace, you can see most window&#39;s title bar just sit on the top of the screen but &lt;code&gt;win4&lt;/code&gt;&#39;s title bar (on image) take more space in the middle of the screen unlike &lt;em&gt;Detach method&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;If you have an information bar, this method will take as much screen real estate as &lt;em&gt;legacy method&lt;/em&gt; although that space is used more efficiently.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;fix-2&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/11/#fix-2&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Fix&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;About the screen real estate issue:
+&lt;ul&gt;
+&lt;li&gt;You can hide the information bar and only show it when holding the &lt;kbd class=&quot;kbd&quot;&gt;Super&lt;/kbd&gt; key like &lt;a href=&quot;https://user-images.githubusercontent.com/43980777/108533634-c57bee00-730b-11eb-9b18-f17b3ca91ce6.mp4&quot;&gt;this&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Or only show it when user switch workspace.&lt;/li&gt;
+&lt;li&gt;Make a hot corner for mouse user...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Auto hide the information bar can give user a clean and focus desktop but for some this is inconvenient. All of these problems can be solved through the last method.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;dynamic&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/11/#dynamic&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Dynamic&lt;/h2&gt;
+&lt;p&gt;Show window&#39;s title attach to the window itself but with a twist:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In tabs workspace, the tab show additional information on the left and right side of the tabs bar make the tabs workspace look like one in the &lt;em&gt;Detach method&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;In busy workspace, additional information will keep being display on the same position on a bar.
+&lt;ul&gt;
+&lt;li&gt;The bar can automatically be transparent like how &lt;a href=&quot;https://elementary.io/&quot;&gt;Elementary OS&lt;/a&gt;&#39;s bar work.&lt;/li&gt;
+&lt;li&gt;If the desktop have gaps equal or bigger than the bar, information bar can be blended into the gap-part.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Busy workspace&lt;/th&gt;
+&lt;th&gt;Tabs workspace&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/43980777/108809479-82579e80-75db-11eb-94de-e3f790ce07e4.png&quot; alt=&quot;loveBusy&quot; /&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/43980777/108809480-82f03500-75db-11eb-9302-94b3ab8c127b.png&quot; alt=&quot;loveTab&quot; /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&quot;pro-3&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/11/#pro-3&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Pro&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;This solved the information bar problem, additional information (workspaces and clock) will always be visible and still make the tabs workspace compact like the &lt;em&gt;Detach method&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;In a busy workspace, &amp;quot;if the desktop have gaps equal or bigger than the bar, information bar can be blended into the gap-part&amp;quot; which make the busy workspace as compact as in the &lt;em&gt;Attach method&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;con-3&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/11/#con-3&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Con&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Busy workspace&lt;/th&gt;
+&lt;th&gt;Tabs workspace&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/43980777/108809476-81267180-75db-11eb-93d1-cb540b6fab66.png&quot; alt=&quot;hateBusy&quot; /&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/43980777/108809478-81bf0800-75db-11eb-946a-6dd00a3b11fd.png&quot; alt=&quot;hateTab&quot; /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;The title bar and information bar must be in the same direction to the window, if not (e.g: title bar attach to the top of the window but the information bar is on the bottom of the screen) the title will jump around when transition between busy workspace and tabs workspace. This will break the consistency of the desktop.&lt;/li&gt;
+&lt;li&gt;If the desktop doesn&#39;t have gaps equal or bigger than the bar, the bar will be render fully in a busy workspace, and other than workspaces and clock, it display nothing... This bar took space on the desktop and used it inefficiency.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;fix-3&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/11/#fix-3&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Fix&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Just use that empty space on the information bar to display more stuffs (&lt;code&gt;CPU&lt;/code&gt;, &lt;code&gt;MEM&lt;/code&gt;, &lt;code&gt;DISK&lt;/code&gt;, &lt;code&gt;TEMP&lt;/code&gt;, &lt;code&gt;PLAYING&lt;/code&gt;...), then collapsed most of it to an arrow icon when switch to a tabs workspace.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;conclusion&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/11/#conclusion&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Conclusion&lt;/h2&gt;
+  &lt;div class=&quot;overflow-x-auto whitespace-nowrap&quot;&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Method&lt;/th&gt;
+&lt;th&gt;Busy workspace&lt;/th&gt;
+&lt;th&gt;Tabs workspace&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Legacy&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Cramped&lt;/td&gt;
+&lt;td&gt;Cramped&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Detach&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Confuse&lt;/td&gt;
+&lt;td&gt;Best&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Attach&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Good&lt;/td&gt;
+&lt;td&gt;Okay&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Dynamic&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Good (best if have gaps)&lt;/td&gt;
+&lt;td&gt;Best&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+  &lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Kera Desktop</title>
+    <link href="https://NNBnh.github.io/blog/en/posts/10/"/>
+    <updated>2023-08-09T00:00:00Z</updated>
+    <id>https://NNBnh.github.io/blog/en/posts/10/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;In 2021, I wrote a wiki article on my dotfiles repo called: &lt;a href=&quot;https://github.com/NNBnh/dotfiles/wiki/wm&quot;&gt;Windows manager Utopia&lt;/a&gt;. TL;DR it&#39;s the idea of using a web browser as a windows Manager. In it, I explain its benefits and features and theory how it might work...&lt;/p&gt;
+&lt;h2 id=&quot;the-project&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/10/#the-project&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; The project&lt;/h2&gt;
+&lt;p&gt;Then one day I saw &lt;a href=&quot;https://www.reddit.com/r/unixporn/comments/14591h2/kera_desktop_forget_it_i_just_made_my_own_desktop&quot;&gt;this post on r/unixporn&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;[Kera Desktop] Forget it, I just made my own desktop environment&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/Ad1YsFW.webp&quot; alt=&quot;Kera Desktop&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://desktop.kerahq.com/&quot;&gt;Kera Desktop&lt;/a&gt; is an independence DE, not only that, it also based on web technology The more I read the website of the project, the more I see that it has many great features and ideas as I expected!&lt;/p&gt;
+&lt;p&gt;I don&#39;t even have anything to add here because &lt;a href=&quot;https://desktop.kerahq.com/&quot;&gt;the project&#39;s website&lt;/a&gt; has already done a good job explaining it, I recommend everyone to visit their website right away!&lt;/p&gt;
+&lt;h2 id=&quot;performance-skeptical&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/10/#performance-skeptical&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Performance skeptical&lt;/h2&gt;
+&lt;p&gt;Many people when they hear &amp;quot;web-based&amp;quot; immediately doubt the project&#39;s performance, don&#39;t know if it will run on the Thinkpad with 0.5gb ram... I recommend you take a look at the &lt;a href=&quot;https://desktop.kerahq.com/faq&quot;&gt;project&#39;s FAQ&lt;/a&gt;. I guarantee it will answer most of your skeptical.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Image viewer/media player for minimalist</title>
+    <link href="https://NNBnh.github.io/blog/en/posts/9/"/>
+    <updated>2023-08-07T00:00:00Z</updated>
+    <id>https://NNBnh.github.io/blog/en/posts/9/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Here are my five stages of rice image viewer:&lt;/p&gt;
+&lt;h2 id=&quot;1-normie&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/9/#1-normie&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; 1. Normie&lt;/h2&gt;
+&lt;p&gt;These newbies have just installed Linux and use the default image viewer that comes with the DE. Since it already there, why not use it, right?&lt;/p&gt;
+&lt;h2 id=&quot;2-beginner&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/9/#2-beginner&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; 2. Beginner&lt;/h2&gt;
+&lt;p&gt;After installing Arch Linux (or Manjaro and pretending to use pure Arch) and setting up WM. The average r/unixporn enjoyer decided to install &lt;a href=&quot;https://github.com/muennich/sxiv&quot;&gt;SXIV&lt;/a&gt; after hearing that it was better than &lt;a href=&quot;https://feh.finalrewind.org/&quot;&gt;FEH&lt;/a&gt; from a Youtube video. But soon they realized that to configure SXIV, they had to edit the source code, and compile it themselves. Some continues to use it and adopts &lt;a href=&quot;https://suckless.org/philosophy&quot;&gt;the Suckless philosophy&lt;/a&gt;, others noticed the Suck**** inside of it and go on their journey to find a faster, lighter and easier to configure image viewer.&lt;/p&gt;
+&lt;h2 id=&quot;3-minimalist&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/9/#3-minimalist&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; 3. Minimalist&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://mpv.io/&quot;&gt;MPV&lt;/a&gt; is a media player that is as powerful as VLC but extremely lightweight/minimal. It&#39;s also secretly a good image viewer, use &lt;a href=&quot;https://github.com/occivink/mpv-image-viewer&quot;&gt;MPV Image Viewer&lt;/a&gt; to turn MPV into a perfect image viewer.&lt;/p&gt;
+&lt;p&gt;Of course if you only use MPV as then it&#39;s pretty bloat, but if you already used it as a media player then it&#39;s definitely lighter than having a dedicated image viewer (also who have an image viewer but not have a media player, right?). You can think of an image as a video, but it has no sound and only have one frame, so use the media player to view image still satisfies the UNIX philosophy &amp;quot;Programs that do one thing and do it well&amp;quot;.&lt;/p&gt;
+&lt;h2 id=&quot;4-extreme-minimalist&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/9/#4-extreme-minimalist&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; 4. Extreme Minimalist&lt;/h2&gt;
+&lt;p&gt;You can drag and drop media files into your web browser and it will play it. Realizing this, they quickly uninstall MPV and follow the path of suffering, path of extreme minimalism. There are a few formats it doesn&#39;t accept but it still be an acceptable solution... Or not, Using the browser can only view images in a very basic way, its experience is quite annoying. &amp;quot;Have I gone too far?&amp;quot;, &amp;quot;Is this too minimalistic?&amp;quot; they thought.&lt;/p&gt;
+&lt;h2 id=&quot;5-lazy&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/9/#5-lazy&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; 5. Lazy&lt;/h2&gt;
+&lt;p&gt;After rice Linux - minimalist style for a while, they start to get tired and have a different view of minimalism. They realize that using DE is very minimal in terms of time and effort. To be honest, DE is not that bloat, It has some features that although we don&#39;t always use, but having it is still very convenient in some situation. And if I don&#39;t install or configure anything but just use the default stuff from the DE, the dotfiles will be a lot more minimal!&lt;/p&gt;
+&lt;p&gt;And so they decided to go back to installing DE and use the default image viewer that comes with the DE. Since it already there, why not use it, right?&lt;/p&gt;
+&lt;h2 id=&quot;honorable-mention&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/9/#honorable-mention&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; 📢 Honorable Mention&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://imageglass.org/&quot;&gt;Image Glass&lt;/a&gt;: It&#39;s only run on Windows but it&#39;s is the best image viewer for Windows, it&#39;s well design with enough feature to even do some light modification but not too bloat.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>My graveyard of projects</title>
+    <link href="https://NNBnh.github.io/blog/en/posts/8/"/>
+    <updated>2023-08-06T00:00:00Z</updated>
+    <id>https://NNBnh.github.io/blog/en/posts/8/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;List of projects I abandon. Some is finished, other left unfinished. But it&#39;s all pointless, or I don&#39;t feel it&#39;s useful to me anymore.&lt;/p&gt;
+&lt;h2 id=&quot;utilities&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/8/#utilities&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Utilities&lt;/h2&gt;
+&lt;!--
+### [Terminal Explorer](https://github.com/NNBnh/terminal-explorer)
+
+
+  - Description: It&#39;s a CLI tool that mimics the way GUI&#39;s file manager do copy/cut/paste.
+  - Abandon reason: TODO
+
+--&gt;
+&lt;h3 id=&quot;superb-bootstrap&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/8/#superb-bootstrap&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; &lt;a href=&quot;https://github.com/NNBnh/superb-bootstrap&quot;&gt;Superb Bootstrap&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Description: SuperB Bootstrap is a bootstrap-system/dotfiles-manager framework that can be installed with just one command on a new *NIX system installation. Its flagship feature it that it can pick and install packages from available package managers and can even install more package managers if necessary.&lt;/li&gt;
+&lt;li&gt;Abandon reason: Although convenient, it&#39;s too unreliable. Also &lt;a href=&quot;https://search.nixos.org/packages&quot;&gt;Nixpkgs&lt;/a&gt;, &lt;a href=&quot;https://brew.sh/&quot;&gt;Brew&lt;/a&gt; and &lt;a href=&quot;https://flatpak.org/&quot;&gt;Flatpak&lt;/a&gt; exist. Even better: New distros like &lt;a href=&quot;https://vanillaos.org/&quot;&gt;Vanilla OS&lt;/a&gt; and &lt;a href=&quot;https://blendos.co/&quot;&gt;Blend OS&lt;/a&gt; can even allow you to install packages from multiple package managers from different distro.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;coderun&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/8/#coderun&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; &lt;a href=&quot;https://github.com/NNBnh/coderun&quot;&gt;Coderun&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Description: Code runner CLI that can run any languages. It recognizes the programming language from the file&#39;s extension and runs the file with the appropriate command.&lt;/li&gt;
+&lt;li&gt;Abandon reason: You&#39;d rather run the file by typing the appropriate command into the shell, which is more flexible and not much slower.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;clipb-kak&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/8/#clipb-kak&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; &lt;a href=&quot;https://github.com/NNBnh/clipb.kak&quot;&gt;Clipb.kak&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Description: Clipboard managers warper for Kakoune editor&lt;/li&gt;
+&lt;li&gt;Abandon reason: Just install &lt;a href=&quot;https://getclipboard.app/&quot;&gt;Clipboard&lt;/a&gt; and add this to your &lt;code&gt;kakrc&lt;/code&gt;:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;hook -group &#39;clipboard&#39; global WinCreate .* %{ evaluate-commands %sh{ printf &#39;%s&#39; &#39;set-register dquote %sh{ cb }&#39; } }
+hook -group &#39;clipboard&#39; global FocusIn   .* %{ evaluate-commands %sh{ printf &#39;%s&#39; &#39;set-register dquote %sh{ cb }&#39; } }
+hook -group &#39;clipboard&#39; global RegisterModified &#92;&amp;quot; %{ nop %sh{ printf &#39;%s&#39; &amp;quot;$clipboard&amp;quot; | cb &amp;amp; } }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;superb-mk&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/8/#superb-mk&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; &lt;a href=&quot;https://github.com/NNBnh/mk&quot;&gt;SuperB MK&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Description: Its a files and folders creation tool inspired by &lt;a href=&quot;https://github.com/tanrax/terminal-AdvancedNewFile&quot;&gt;&lt;strong&gt;Advanced New File&lt;/strong&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Abandon reason: I rarely find myself needing to create multiple folders and files with complex structure. If I need a template, I just init it&#39;s using a proper tool, or copy a template from some repo. Also, you can setup your text editor so that it automatically create parent directories if a file is opened on a path that does not exist (e.g: &lt;code&gt;mkparents&lt;/code&gt; options in Micro editor).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;superb-hr&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/8/#superb-hr&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; &lt;a href=&quot;https://github.com/NNBnh/hr&quot;&gt;SuperB HR&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Description: Horizontal ruler for terminal.&lt;/li&gt;
+&lt;li&gt;Abandon reason: This more of a shitpost than anything. Just put this into your shell config:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function-name function&quot;&gt;hr&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token for-or-select variable&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;${@&lt;span class=&quot;token operator&quot;&gt;:-&lt;/span&gt;─}&lt;/span&gt;&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token builtin class-name&quot;&gt;printf&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;&#92;033[?7l%*s&#92;033[?7h&#39;&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;${&lt;span class=&quot;token environment constant&quot;&gt;COLUMNS&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:-&lt;/span&gt;$(tput cols)}&lt;/span&gt;&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;s/ /&lt;span class=&quot;token variable&quot;&gt;$text&lt;/span&gt;/g&quot;&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token keyword&quot;&gt;done&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;my-sed-script-collections&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/8/#my-sed-script-collections&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; &lt;a href=&quot;https://github.com/NNBnh/sed-collections&quot;&gt;My Sed script collections&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Description: This is a collection of Sed scripts to help you filter text.&lt;/li&gt;
+&lt;li&gt;Abandon reason: I never actually used it, I just made it for fun...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;rice&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/8/#rice&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Rice&lt;/h2&gt;
+&lt;!--
+### [SuperB ST](https://github.com/NNBnh/superb-st)
+
+
+  - Description: ST-base terminal with enough patches.
+  - Abandon reason: TODO
+
+--&gt;
+&lt;h3 id=&quot;superb-ui&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/8/#superb-ui&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; &lt;a href=&quot;https://github.com/superb-ui&quot;&gt;SuperB UI&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Description: It&#39;s a UI and colors management method that export the colors hex through environment variables so any program that can read environment variables can use it.&lt;/li&gt;
+&lt;li&gt;Abandon reason: That&#39;s a bad idea... Environment variables are very slow, unstable, some applications/cases hard to read it. Use &lt;a href=&quot;https://github.com/tinted-theming&quot;&gt;Tinted Theming&lt;/a&gt;, &lt;a href=&quot;https://github.com/deviantfero/wpgtk&quot;&gt;Wpgtk&lt;/a&gt; or &lt;a href=&quot;https://github.com/dylanaraps/pywal&quot;&gt;Pywal&lt;/a&gt; instead.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!--
+### [DIYship](https://github.com/info-mono/diyship)
+
+
+  - Description: DIYship is a cross-shell prompt framework that let you write your prompt with any programing language for any shell.
+  - Abandon reason: TODO
+
+--&gt;
+&lt;h3 id=&quot;bmono&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/8/#bmono&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; &lt;a href=&quot;https://github.com/NNBnh/bmono&quot;&gt;Bmono&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Description: My goal is to make a Iosevka font that fix the &lt;a href=&quot;https://github.com/be5invis/Iosevka/issues/1326&quot;&gt;ligatures on Kitty bug&lt;/a&gt; and come with some tiny tweak to make it slicker.&lt;/li&gt;
+&lt;li&gt;Abandon reason: Now the &lt;a href=&quot;https://github.com/be5invis/Iosevka/pull/1403&quot;&gt;Kitty bug had been fixed&lt;/a&gt;, and you can tweak the font by using &lt;a href=&quot;https://github.com/be5invis/Iosevka/issues/1376&quot;&gt;stylistic sets/character variants&lt;/a&gt;, I no longer see the point of creating and maintaining a separate font.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;da-one&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/8/#da-one&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; &lt;a href=&quot;https://github.com/NNBnh/da-one&quot;&gt;Da One&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Description: A color scheme that vibrant and distinct but still maintain a pleasant harmony. It&#39;s design to work with terminal, meaning all accents tone have normal and bright colors.&lt;/li&gt;
+&lt;li&gt;Abandon reason: &lt;a href=&quot;https://github.com/catppuccin/catppuccin&quot;&gt;Catppuccin&lt;/a&gt; exist and it did exactly that but better. I saw Catppuccin when I was making Da One, I could just stop right away but I think I could make a better color scheme than Catppuccin (nope).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;other&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/8/#other&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Other&lt;/h2&gt;
+&lt;h3 id=&quot;orange-markup-language&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/8/#orange-markup-language&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; &lt;a href=&quot;https://github.com/NNBnh/orml&quot;&gt;Orange markup language&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Description: Orange markup language is an &amp;quot;original&amp;quot; markup language inspired by &lt;a href=&quot;https://pml-lang.dev/&quot;&gt;PML&lt;/a&gt;, design to replace both Markdown and HTML.&lt;/li&gt;
+&lt;li&gt;Abandon reason: After a while I start to realize that maybe we don&#39;t need another markdown language anymore:
+&lt;ul&gt;
+&lt;li&gt;For developer, HTML is the best choice because HTML&#39;s tags syntax is very clear.&lt;/li&gt;
+&lt;li&gt;For causal writing usage, Markdown and AsciiDoc is good enough.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Ruby and Me</title>
+    <link href="https://NNBnh.github.io/blog/en/posts/7/"/>
+    <updated>2023-08-06T00:00:00Z</updated>
+    <id>https://NNBnh.github.io/blog/en/posts/7/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Around February, after I posted &lt;a href=&quot;https://codeberg.org/NNB/dotfiles/releases/tag/v3.5.0&quot;&gt;rice v3.5.0&lt;/a&gt;, I promised to make a blog to explain how I use Ruby as a shell. Initially I want to explain it on an article, then it expanded into a website! Then a mountain of college work and internship job drop into my schedule... After all of that, I finally have time and energy to blogging again. So sorry and thank you everyone for waiting to follow my blog, I will try blogging more frequently!&lt;/p&gt;
+&lt;p&gt;Back to Ruby. As mentioned, the website that I created is &lt;a href=&quot;https://nnb.codeberg.page/ruby-on-shell&quot;&gt;Ruby on Shell&lt;/a&gt; and you can read it right now. This blog post will focus on how I discovered the power of Ruby and the process by which I created Ruby on Shell.&lt;/p&gt;
+&lt;h2 id=&quot;how-i-get-to-know-ruby&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/7/#how-i-get-to-know-ruby&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; How I get to know Ruby&lt;/h2&gt;
+&lt;p&gt;I was a naive programmer back then, thinking that I should just master one programming language and use it for everything (and that language was Python, a very normie choice...). I used &lt;a href=&quot;https://xon.sh/&quot;&gt;Xonsh&lt;/a&gt; (in short, it is a fusion between Python and Bash) as my main shell for a while, its interactive experience is quite good but scripting on Xonsh is a bit annoying. Because of Python&#39;s off-side rule and list comprehension, it&#39;s hard for me to scripting as short as I&#39;d like.&lt;/p&gt;
+&lt;p&gt;I want a full-fledged programming language like Python, Perl or Lua but with good scripting features like &lt;a href=&quot;https://www.nushell.sh/&quot;&gt;Nulshell&lt;/a&gt; or &lt;a href=&quot;https://elv.sh/&quot;&gt;Elvish&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Then one day I saw this line on &lt;a href=&quot;http://xahlee.info/comp/list_comprehension.html&quot;&gt;an article by Xah Lee about list comprehension&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre class=&quot;language-rb&quot;&gt;&lt;code class=&quot;language-rb&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0.&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;.9&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;select&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;n&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; n&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;even&lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;map&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;n&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;n&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note that this is not list comprehension, because it does not use a special syntax. But it captures the &lt;code&gt;map(f, filter(list,predicate))&lt;/code&gt; in ruby style.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I&#39;ve seen Xah Lee mention Ruby a few times, but that&#39;s the first time I&#39;ve read a Ruby code and understand what it does. Its syntax is very compact, I feel that I can script on this language easily. And I was correct, I&#39;ve dived into &lt;a href=&quot;https://nnb.codeberg.page/ruby-on-shell/#why-ruby&quot;&gt;why Ruby is a perfect choice for shell scripting in Ruby on Shell&lt;/a&gt; so I won&#39;t repeat it again.&lt;/p&gt;
+&lt;p&gt;Here are my few thoughts on Ruby before moving on to the next section:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I have been peeking at Lua for a while now, I even found a shell similar to Xonsh but using Lua as the core (&lt;a href=&quot;https://rosettea.github.io/Hilbish&quot;&gt;Hilbish&lt;/a&gt;). But I don&#39;t really like Lua because even though it&#39;s fast, light, and simple... Its Syntax is still quite verbose and isn&#39;t easy to chain functions from left to right like Ruby or other shells.&lt;/li&gt;
+&lt;li&gt;Currently, there is no language to easily run both Ruby and shell commands, so here is how I use Ruby in the terminal:
+&lt;ul&gt;
+&lt;li&gt;Use a POSIX shell as the main shell, and create a keybind in the shell to switch to Ruby for scripting.&lt;/li&gt;
+&lt;li&gt;In Ruby there is a syntax to call shell commands easily (wrap the command with backticks) so just enjoy shell scripting.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;ruby-on-shell-how-it-s-made&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/7/#ruby-on-shell-how-it-s-made&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Ruby on Shell - How It&#39;s Made&lt;/h2&gt;
+&lt;p&gt;Not difficult but very time consuming:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Make a list of standard CLI tools:&lt;/strong&gt; I found it from the POSIX documentation, the list of tools in Toybox, and a few other sources. Then put it all together and go through the list to see what should and shouldn&#39;t be on the list.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Find the alternative in Ruby:&lt;/strong&gt; Again go through everything on the list, find a similar function or library in Ruby and document it. Most of the time, I just need to add a link to an API, but some have to write a more detail instructions.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Build a proper website:&lt;/strong&gt; Although this is the &lt;em&gt;hardest&lt;/em&gt; part of the project, it only took me less than a week to finish the frontend... And about two weeks to writing the introduction.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;It was hard work, but it was worth it in the end. The process helped me increase my understanding of Ruby, plus now I have a pretty useful cheat-sheet.&lt;/p&gt;
+&lt;h2 id=&quot;the-future&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/7/#the-future&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; The Future&lt;/h2&gt;
+&lt;p&gt;I&#39;m currently working on a project called &lt;a href=&quot;https://codeberg.org/NNB/shell-on-ruby&quot;&gt;Shell on Ruby&lt;/a&gt; to make scripting and using shell commands on Ruby more convenient.&lt;/p&gt;
+&lt;p&gt;I&#39;m also occasionally peeking &lt;a href=&quot;https://crystal-lang.org/&quot;&gt;Crystal&lt;/a&gt;, its syntax is ~90% similar to Ruby but faster and has some better design than Ruby, but scripting on it isn&#39;t as convenient.&lt;/p&gt;
+&lt;p&gt;And that&#39;s all, I will continue my adventure on making a perfect scripting environment. See you in the next blogs.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Tabs vs Apps</title>
+    <link href="https://NNBnh.github.io/blog/en/posts/6/"/>
+    <updated>2023-02-13T00:00:00Z</updated>
+    <id>https://NNBnh.github.io/blog/en/posts/6/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;If you want to access a platform like YouTube, Facebook, Discord, Messenger... and it requires an internet connection to access it, 95% of you don&#39;t need to download its app, just use it directly through the browser. Whether on a desktop or a mobile.&lt;/p&gt;
+&lt;h2 id=&quot;why-not-apps&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/6/#why-not-apps&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Why not apps?&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;It&#39;s bloat.&lt;/li&gt;
+&lt;li&gt;App will have more access to user&#39;s personal data.&lt;/li&gt;
+&lt;li&gt;You cannot open multiple tabs at the same time.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;it-s-browser-tabs-good-enough&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/6/#it-s-browser-tabs-good-enough&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; It&#39;s browser tabs good enough?&lt;/h2&gt;
+&lt;p&gt;Yes, very good, in fact!&lt;/p&gt;
+&lt;h3 id=&quot;on-desktop&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/6/#on-desktop&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; On Desktop&lt;/h3&gt;
+&lt;p&gt;Most of us have been using web browsers to surf social media sites on the desktop. However, the same cannot be said for communication apps like Discord and Messenger. With these applications, people tend to download its own app because they think that they have to do so to use features such as notifications, toggle the mic when voice-call. But do you know that you can get these features even when using it on the web:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;All popular chat applications have a feature to show notifications on the web, but some (like Discord) don&#39;t show notifications by default, you just need to go to settings and enable it.&lt;/li&gt;
+&lt;li&gt;Speaking of Discord, you can also toggle the mic with keyboard shortcuts like you use on Discord without downloading it: (&lt;a href=&quot;https://superuser.com/questions/55598/super-key-to-pause-mute-mic-and-mute-speakers-in-windows&quot;&gt;Guide for setting up mic shortcuts on Windows with AutoHotKey&lt;/a&gt;, &lt;a href=&quot;https://askubuntu.com/questions/12100/command-to-mute-and-unmute-a-microphone&quot;&gt;Guide for doing the same on Linux&lt;/a&gt;). That way you can toggle the mic when used with any app, for the whole system.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;on-mobile&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/6/#on-mobile&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; On mobile&lt;/h3&gt;
+&lt;p&gt;Before 2014, most social medias website is unusable on mobile web browsers, often too laggy, and the interface are terrible compared to the apps. But over time, phones are now much faster now and websites have also significantly improved on browsers. Now day, accessing these platforms on a browser is even better than using apps:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If you use Brave or Firefox with &lt;a href=&quot;https://ublockorigin.com/&quot;&gt;uBlock Origin&lt;/a&gt;, you have ad-blocker!&lt;/li&gt;
+&lt;li&gt;You can leave YouTube playing on background.&lt;/li&gt;
+&lt;li&gt;Opening links to other websites is more convenient than switching back and forth between the app and the browser.&lt;/li&gt;
+&lt;li&gt;You can bookmark any websites and use a unified bookmark manager instead of using the save feature to save posts scattered in each social medias.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Minimalist window manager&#39;s jobs</title>
+    <link href="https://NNBnh.github.io/blog/en/posts/5/"/>
+    <updated>2023-02-11T00:00:00Z</updated>
+    <id>https://NNBnh.github.io/blog/en/posts/5/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;This is a follow-up to &lt;a href=&quot;https://nnbnh.github.io/blog/en/posts/4&quot;&gt;&amp;quot;Things to note when design a minimal CLI utility&amp;quot;&lt;/a&gt;, but this time it&#39;s about window manager.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/43980777/134518773-1862d6a4-3dea-4af7-a3aa-71cc79b91c71.png&quot; alt=&quot;Pixel Art&quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;configuration&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/5/#configuration&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Configuration&lt;/h2&gt;
+&lt;p&gt;I have covered this in detail on &lt;a href=&quot;https://nnbnh.github.io/blog/en/posts/4&quot;&gt;my previous blog&lt;/a&gt;, it just also applies to WM.&lt;/p&gt;
+&lt;h2 id=&quot;widgets&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/5/#widgets&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Widgets&lt;/h2&gt;
+&lt;p&gt;Widgets like bar, menu don&#39;t need and shouldn&#39;t be built-in to the windows manager. Because there is already tools out there that handle these widgets far better
+(&lt;a href=&quot;https://github.com/elkowar/eww&quot;&gt;EWW&lt;/a&gt;, &lt;a href=&quot;https://github.com/brndnmtthws/conky&quot;&gt;Conky&lt;/a&gt;, &lt;a href=&quot;https://wiki.archlinux.org/title/List_of_applications#Taskbars&quot;&gt;bars&lt;/a&gt;, &lt;a href=&quot;https://wiki.archlinux.org/title/List_of_applications#Application_launchers&quot;&gt;menus&lt;/a&gt;).
+The exception is if the WM has a whole widget&#39;s system like &lt;a href=&quot;https://awesomewm.org/&quot;&gt;AwesomeWM&lt;/a&gt; that can be used to config everything from wallpaper to window decorations.&lt;/p&gt;
+&lt;h2 id=&quot;wallpaper&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/5/#wallpaper&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Wallpaper&lt;/h2&gt;
+&lt;p&gt;WM should not &lt;em&gt;go out of it&#39;s way&lt;/em&gt; to handle wallpaper, leave it to the &lt;a href=&quot;https://wiki.archlinux.org/title/List_of_applications/Other#Wallpaper_setters&quot;&gt;wallpaper setters&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;hotkeys&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/5/#hotkeys&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Hotkeys&lt;/h2&gt;
+&lt;p&gt;The same go for hotkey, hotkey daemons exist!
+(&lt;a href=&quot;https://github.com/baskerville/sxhkd&quot;&gt;SXHKD&lt;/a&gt;, &lt;a href=&quot;https://github.com/jtroo/kanata&quot;&gt;Kanata&lt;/a&gt;, &lt;a href=&quot;https://github.com/kmonad/kmonad&quot;&gt;KMonad&lt;/a&gt;).
+The only exception are to config mouse buttons (with mod keys) to focus, move and resize windows.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Things to note when design a minimal CLI utility</title>
+    <link href="https://NNBnh.github.io/blog/en/posts/4/"/>
+    <updated>2023-02-02T00:00:00Z</updated>
+    <id>https://NNBnh.github.io/blog/en/posts/4/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;&lt;a href=&quot;https://wikipedia.org/wiki/Unix_philosophy&quot;&gt;The UNIX philosophy&lt;/a&gt; is emphasized when it comes to designing CLI tools because it helps to tie together disparate tools into a unified TTY ecosystem. Each tool just &lt;em&gt;&amp;quot;Do one thing and do it well&amp;quot;&lt;/em&gt;, which makes it possible for all tools to be harmoniously connected with each other. However, I still see many old and new CLI tools that have some redundant features. These features are included with the intention of making the tool more convenient to use, but users can already achieve it by piping to existed tools relatively convenient. Redundant features in a CLI tool only make the tool more cumbersome.&lt;/p&gt;
+&lt;h2 id=&quot;redirection&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/4/#redirection&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Redirection&lt;/h2&gt;
+&lt;p&gt;If your tool works with strings and not specifically with files, it doesn&#39;t need flags to read files like &lt;code&gt;-f&lt;/code&gt;, &lt;code&gt;--file&lt;/code&gt;, &lt;code&gt;-i&lt;/code&gt;, &lt;code&gt;--input&lt;/code&gt;... Because it&#39;s unnecessary and makes your tool a bit more complicated. You should instead allow your tool to read &lt;code&gt;stdin&lt;/code&gt;, this syntax can be used uniformly across tools and most shells have support for redirecting data from a file into tool:&lt;/p&gt;
+&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;tool &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; input.txt&lt;br /&gt;&lt;span class=&quot;token function&quot;&gt;cat&lt;/span&gt; input.txt &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; tool&lt;br /&gt;&lt;span class=&quot;token function&quot;&gt;cat&lt;/span&gt; input1.txt input2.txt &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; tool&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Similar to reading files, most shells have support for redirecting output to files:&lt;/p&gt;
+&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;tool &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; output.txt&lt;br /&gt;tool &lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt; output.txt&lt;br /&gt;tool &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;tee&lt;/span&gt; output1.txt output2.txt&lt;br /&gt;tool &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; input.txt &lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt; output.txt&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;clipboard&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/4/#clipboard&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Clipboard&lt;/h2&gt;
+&lt;p&gt;Your CLI tool should not have the features to get or set to the clipboard because people will use your tool in all kinds of environments, and you can&#39;t support every clipboard manager out there. But if users want your tool to interact with the clipboard, they&#39;ll be more likely to pipe it to the clipboard manager they&#39;re using:&lt;/p&gt;
+&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;cb &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; tool&lt;br /&gt;tool &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; cb&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;configuration&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/4/#configuration&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Configuration&lt;/h2&gt;
+&lt;p&gt;Don&#39;t invent a new format or new language just to config your tool:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If the config file only stores values, use JSON, TOML, YAML or even &lt;a href=&quot;https://kdl.dev/&quot;&gt;KDL&lt;/a&gt;. INI is fine, but it has some limitations and is not implement consistently. Using a common format is of course better for both developers and users. Dotfiles management tools like Home Manager can also work with these formats easier.&lt;/li&gt;
+&lt;li&gt;If it needs scripting, create a CLI interface so any language can call it. Or create a library / API for Lua, Python, Ruby... Don&#39;t create a dedicate programming language just to config your tool because that language will most likely limited, janky and just never be as good or as flexible as some proper languages.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;colored-outputs&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/4/#colored-outputs&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Colored outputs&lt;/h2&gt;
+&lt;p&gt;If your tool supports color rendering, please use &lt;a href=&quot;https://wikipedia.org/wiki/ANSI_escape_code&quot;&gt;3-bit and 4-bit color&lt;/a&gt; as the default! I know TTY&#39;s default color isn&#39;t pleasant, but most terminal users use themes, and when they use themes they want all programs to display with the colors in the theme, not a bunch of random colors. A lot of CLI tools out there that don&#39;t follow this and choose to use Monokai, Gruvbox or their own (often really odd) colors!&lt;/p&gt;
+&lt;h2 id=&quot;further-readings&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/4/#further-readings&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Further readings&lt;/h2&gt;
+&lt;p&gt;I highly recommend everyone to read &lt;a href=&quot;https://clig.dev/&quot;&gt;Command Line Interface Guidelines&lt;/a&gt;, the article is not only have a guide but also gives philosophy when designing CLI.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Pick a web browser</title>
+    <link href="https://NNBnh.github.io/blog/en/posts/3/"/>
+    <updated>2023-01-30T00:00:00Z</updated>
+    <id>https://NNBnh.github.io/blog/en/posts/3/</id>
+    <content xml:lang="en" type="html">&lt;h2 id=&quot;it-s-time-to-ditch-chrome&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/3/#it-s-time-to-ditch-chrome&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; It&#39;s time to ditch Chrome&lt;/h2&gt;
+&lt;p&gt;Chrome is currently the most popular browser, but that doesn&#39;t mean it&#39;s the best. It used to be the best, but now there are many of other browsers that are better in every way, from features to security (Chrome collects a lot of user data!).&lt;/p&gt;
+&lt;p&gt;If you are using Windows, using Edge is better than Chrome because Edge is also a Chromium-based browser, and it comes pre-installed anyway. Although, I wouldn&#39;t recommend using Edge because there are so many better options like:&lt;/p&gt;
+&lt;h2 id=&quot;firefox&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/3/#firefox&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; &lt;a href=&quot;https://www.mozilla.org/firefox/new&quot;&gt;Firefox&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/8HtSanJ.webp&quot; alt=&quot;Firefox&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.privacyguides.org/desktop-browsers/#firefox&quot;&gt;Firefox is the best privacy and security desktop browser&lt;/a&gt; &lt;a href=&quot;https://www.privacyguides.org/desktop-browsers/#recommended-configuration&quot;&gt;(but you can harden it more)&lt;/a&gt;. Not only that, it also has the best &lt;a href=&quot;https://youtu.be/a-V8GFtwjos&quot;&gt;dev-tools&lt;/a&gt;, anyone who does web-dev should also use Firefox.&lt;/p&gt;
+&lt;p&gt;Firefox is also the best in terms of customization:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Unlike most Chromium-based browsers, Firefox allows you to change the position of toolbar buttons.&lt;/li&gt;
+&lt;li&gt;You can easily create themes with &lt;a href=&quot;https://color.firefox.com/&quot;&gt;Firefox Color&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;If you want to change more advanced stuff, you can &lt;a href=&quot;https://www.reddit.com/r/firefox/wiki/userchrome&quot;&gt;customize Firefox with CSS&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Or use one of &lt;a href=&quot;https://github.com/topics/userchrome&quot;&gt;the beautiful themes developed by the community&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a href=&quot;https://github.com/akshat46/FlyingFox&quot;&gt;
+  &lt;figure&gt;
+    &lt;img class=&quot;w-full&quot; src=&quot;https://raw.githubusercontent.com/akshat46/FlyingFox/master/img/demo-hover.gif&quot; alt=&quot;FlyingFox&quot; /&gt;
+    &lt;figcaption class=&quot;text-center&quot;&gt;FlyingFox&lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/a&gt;
+&lt;a href=&quot;https://github.com/Etesam913/slick-fox&quot;&gt;
+  &lt;figure&gt;
+    &lt;img class=&quot;w-full&quot; src=&quot;https://i.imgur.com/h4DxrhC.gif&quot; alt=&quot;Slick-Fox&quot; /&gt;
+    &lt;figcaption class=&quot;text-center&quot;&gt;Slick-Fox&lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/a&gt;
+&lt;h2 id=&quot;some-chromium-based-alternatives&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/3/#some-chromium-based-alternatives&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Some Chromium-based alternatives&lt;/h2&gt;
+&lt;p&gt;Firefox is the best in many ways, but it&#39;s not a Chromium-based browser. This can be seen as a good thing because it breaks the monopoly that Chrome and Google hold in the web browser market. But some still need to use Chromium-based browser for a variety of reasons.&lt;/p&gt;
+&lt;h3 id=&quot;brave&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/3/#brave&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; &lt;a href=&quot;https://brave.com/&quot;&gt;Brave&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/ba0rBQ6.webp&quot; alt=&quot;Firefox&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Brave is &lt;a href=&quot;https://www.privacyguides.org/desktop-browsers/#brave&quot;&gt;second in terms of privacy and security&lt;/a&gt;, but its default setting is the most secure (it has a built-in ad-blocker), which is great for those who want security without the hassle of setting up.&lt;/p&gt;
+&lt;p&gt;Unlike Firefox on mobile, Brave on mobile is also very secure, using the same browser on all platforms is also very convenient for data synchronization, open tabs, etc.&lt;/p&gt;
+&lt;h3 id=&quot;vivaldi&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/3/#vivaldi&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; &lt;a href=&quot;https://vivaldi.com/&quot;&gt;Vivaldi&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/Qs9lalF.webp&quot; alt=&quot;Vivaldi&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Although it&#39;s not very private and secure, Vivaldi is the most feature-rich browser (kitchen-sink included!). It has calendar, email, contacts, split screen feature... Vivaldi is also very easy to customize, although it is not as advanced as Firefox CSS, it has a lot of customizations available out of the box.&lt;/p&gt;
+&lt;p&gt;At first, I quite liked it. But later on, I found it cumbersome. And although it is pretty customizable, I still do not find it as satisfying as to customize Firefox.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Become a Hackerman</title>
+    <link href="https://NNBnh.github.io/blog/en/posts/2/"/>
+    <updated>2023-01-24T00:00:00Z</updated>
+    <id>https://NNBnh.github.io/blog/en/posts/2/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;As a programmer, you need to master a lot of skills, one of which is to look cool. Here are some TTY tools that can help turn you into a &lt;em&gt;Hackerman&lt;/em&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;cool-retro-term&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/2/#cool-retro-term&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; &lt;a href=&quot;https://github.com/Swordfish90/cool-retro-term&quot;&gt;Cool Retro Term&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;cool-retro-term is a terminal emulator which mimics the look and feel of the old cathode tube screens. It has been designed to be eye-candy, customizable, and reasonably lightweight.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;sm:hidden&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/121322/32070717-16708784-ba42-11e7-8572-a8fcc10d7f7d.gif&quot; alt=&quot;Default Amber Cool Retro Term&quot; /&gt;
+&lt;img src=&quot;https://user-images.githubusercontent.com/121322/32070715-163a1c94-ba42-11e7-80bb-41fbf10fc634.gif&quot; alt=&quot;Default Green Cool Retro &amp;gt; Term&quot; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;hidden sm:block&quot;&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&amp;gt; Default Amber&lt;/th&gt;
+&lt;th&gt;$ Default Green&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/121322/32070717-16708784-ba42-11e7-8572-a8fcc10d7f7d.gif&quot; alt=&quot;Default Amber Cool Retro Term&quot; /&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/121322/32070715-163a1c94-ba42-11e7-80bb-41fbf10fc634.gif&quot; alt=&quot;Default Green Cool Retro &amp;gt; Term&quot; /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;h2 id=&quot;edex-ui&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/2/#edex-ui&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; &lt;a href=&quot;https://github.com/GitSquared/edex-ui&quot;&gt;eDEX-UI&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A cross-platform, customizable science fiction terminal emulator with advanced monitoring &amp;amp; touchscreen support.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/GitSquared/edex-ui/master/media/screenshot_default.png&quot; alt=&quot;eDEX-UI&quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;tdfgo&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/2/#tdfgo&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; &lt;a href=&quot;https://github.com/digitallyserviced/tdfgo&quot;&gt;Tdfgo&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/TheDraw&quot;&gt;TheDraw&lt;/a&gt; font parser and console text renderer.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/digitallyserviced/tdfgo/main/assets/tdfgocast.gif&quot; alt=&quot;Tdfgocast&quot; /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/digitallyserviced/tdfgo/main/assets/tdfgo-print-user.png&quot; alt=&quot;Tdfgo print user&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Some alternative:
+&lt;a href=&quot;http://www.figlet.org/&quot;&gt;FIGlet&lt;/a&gt;, &lt;a href=&quot;http://caca.zoy.org/wiki/toilet&quot;&gt;TOIlet&lt;/a&gt;
+with
+&lt;a href=&quot;https://github.com/xero/figlet-fonts&quot;&gt;Xero&#39;s fonts collection&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;btop&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/2/#btop&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; &lt;a href=&quot;https://github.com/aristocratos/btop&quot;&gt;Btop&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Resource monitor that shows usage and stats for processor, memory, disks, network and processes.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/eDvgKsI.webp&quot; alt=&quot;Btop&quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;unimatrix&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/2/#unimatrix&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; &lt;a href=&quot;https://github.com/will8211/unimatrix&quot;&gt;Unimatrix&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Python script to simulate the display from &amp;quot;The Matrix&amp;quot; in terminal.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/BHeqwCQ.webp&quot; alt=&quot;Unimatrix&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Some alternative:
+&lt;a href=&quot;https://github.com/abishekvashok/cmatrix&quot;&gt;Cmatrix&lt;/a&gt;, &lt;a href=&quot;https://github.com/st3w/neo&quot;&gt;Neo&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;no-more-secrets&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/2/#no-more-secrets&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; &lt;a href=&quot;https://github.com/bartobri/no-more-secrets&quot;&gt;No more secrets&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This project provides a command line tool called &lt;code&gt;nms&lt;/code&gt; that recreates the famous data decryption effect seen on screen in the 1992 hacker movie Sneakers. For reference, you can see this effect at 0:35 in &lt;a href=&quot;https://www.youtube.com/watch?v=F5bAa6gFvLs&amp;amp;t=35&quot;&gt;this movie clip&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.brianbarto.info/static/nms/nms.gif&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Also included in this project is a program called &lt;code&gt;sneakers&lt;/code&gt; that recreates what we see in the above movie clip.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.brianbarto.info/static/nms/sneakers.gif&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;genact&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/2/#genact&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; &lt;a href=&quot;https://github.com/svenstaro/genact&quot;&gt;Genact&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Pretend to be busy or waiting for your computer when you should actually be doing real work! Impress people with your insane multitasking skills. Just open a few instances of &lt;code&gt;genact&lt;/code&gt; and watch the show. &lt;code&gt;genact&lt;/code&gt; has multiple scenes that pretend to be doing something exciting or useful when in reality nothing is happening at all.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/svenstaro/genact/master/gifs/cc.gif&quot; alt=&quot;CC&quot; /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/svenstaro/genact/master/gifs/memdump.gif&quot; alt=&quot;Memdump&quot; /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/svenstaro/genact/master/gifs/cargo.gif&quot; alt=&quot;Cargo&quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;awesome-console-services&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/2/#awesome-console-services&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; &lt;a href=&quot;https://github.com/chubin/awesome-console-services&quot;&gt;Awesome console services&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A curated list of awesome console services (reachable via HTTP, HTTPS and other network protocols).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Notables are:&lt;/p&gt;
+&lt;h3 id=&quot;mapscii&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/2/#mapscii&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; &lt;a href=&quot;https://github.com/rastapasta/mapscii&quot;&gt;MapSCII&lt;/a&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;MapSCII is a Braille &amp;amp; ASCII world map renderer for your console.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;script id=&quot;asciicast-117813&quot; src=&quot;https://asciinema.org/a/117813.js&quot; async=&quot;&quot;&gt;&lt;/script&gt;
+&lt;p&gt;Try it out:&lt;/p&gt;
+&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;telnet mapscii.me&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;rickrollrc&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/2/#rickrollrc&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; &lt;a href=&quot;https://github.com/keroserene/rickrollrc&quot;&gt;Rickrollrc&lt;/a&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Bash script which &lt;a href=&quot;http://en.wikipedia.org/wiki/Rickrolling&quot;&gt;rickrolls&lt;/a&gt; your terminal by playing Rick Astley’s “Never Gonna Give You Up”.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/yDLaZna.png&quot; alt=&quot;rickroll in mac&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;To start rickrollin’ immediately:&lt;/p&gt;
+&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-sL&lt;/span&gt; https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;bash&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Here is the clandestine command you can give to your friends 😈:&lt;/p&gt;
+&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-sL&lt;/span&gt; http://bit.ly/10hA8iC &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;bash&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Setting from TTY</title>
+    <link href="https://NNBnh.github.io/blog/en/posts/1/"/>
+    <updated>2023-01-23T00:00:00Z</updated>
+    <id>https://NNBnh.github.io/blog/en/posts/1/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;This is just a small list of guides on system configuration from the command line instead of the bloated config app that come with the desktop environment.&lt;/p&gt;
+&lt;h2 id=&quot;system&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/1/#system&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; 🖥️ System&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://wiki.archlinux.org/title/Users_and_groups&quot;&gt;Users&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://wiki.archlinux.org/title/System_time&quot;&gt;Time&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://wiki.archlinux.org/title/Locale&quot;&gt;Locale&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://wiki.archlinux.org/title/Power_management&quot;&gt;Power&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://wiki.archlinux.org/title/Partitioning&quot;&gt;Partition&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;connect&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/1/#connect&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; 📶 Connect&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://wiki.archlinux.org/title/NetworkManager&quot;&gt;Wifi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://wiki.archlinux.org/title/Network_configuration&quot;&gt;Network&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://wiki.archlinux.org/title/Bluetooth&quot;&gt;Bluetooth&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;devices&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/1/#devices&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; 🖱️ Devices&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://cheat.sh/pactl&quot;&gt;Sound&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://wiki.archlinux.org/title/Category:Keyboard_configuration&quot;&gt;Keyboard&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://wiki.archlinux.org/title/Category:Mice&quot;&gt;Mouse&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://wiki.archlinux.org/title/Touchpad_Synaptics&quot;&gt;Touchpad&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://wiki.archlinux.org/title/Wacom_tablet&quot;&gt;Tablet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://wiki.archlinux.org/title/Touchscreen&quot;&gt;Touchscreen&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://wiki.archlinux.org/title/Xrandr&quot;&gt;Display&lt;/a&gt; (&lt;a href=&quot;https://sr.ht/~emersion/wlr-randr&quot;&gt;for Wayland&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>*First post!</title>
+    <link href="https://NNBnh.github.io/blog/en/posts/0/"/>
+    <updated>2023-01-22T00:00:00Z</updated>
+    <id>https://NNBnh.github.io/blog/en/posts/0/</id>
+    <content xml:lang="en" type="html">&lt;h2 id=&quot;hello-world&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/0/#hello-world&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Hello, World!&lt;/h2&gt;
+&lt;p&gt;Welcome to my blog! This isn&#39;t really my first time blogging, I&#39;ve written some articles on my &lt;a href=&quot;https://github.com/NNBnh/dotfiles/wiki&quot;&gt;Đotfiles&lt;/a&gt;&#39;s wiki before, but NNBlog is a fresh start. In the coming month, I will copy most articles from the Dotfiles to this site.&lt;/p&gt;
+&lt;h2 id=&quot;the-technical&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/0/#the-technical&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; The technical&lt;/h2&gt;
+&lt;p&gt;Before that, I wanted to show off a little bit about the technical side of this site. This is a static website generated using &lt;a href=&quot;https://www.11ty.dev/&quot;&gt;11ty (Eleventy)&lt;/a&gt;. 11ty is a light, simple and convenient JS framework. Its most important feature is that it allows the us to write the page in &lt;a href=&quot;https://wikipedia.org/wiki/Markdown&quot;&gt;Markdown&lt;/a&gt;. Not only that, it also has many features such as creating a table of contents, tag manager... This is quite ideal for a tinker like me.&lt;/p&gt;
+&lt;p&gt;I also use &lt;a href=&quot;https://daisyui.com/&quot;&gt;DaisyUI&lt;/a&gt; for styling and &lt;a href=&quot;https://alpinejs.dev/&quot;&gt;Alpine.js&lt;/a&gt; for a bit of interactive. Although, Alpine.js is a bit overkill at the moment (the only thing that needs it is an image hover effect on the homepage):&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/KZ93WrH.webp&quot; alt=&quot;Hover effect&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;But in the future I can give a small interactive parts in some articles.&lt;/p&gt;
+&lt;h2 id=&quot;support-multi-language&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnbnh.github.io/blog/en/posts/0/#support-multi-language&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Support multi-language&lt;/h2&gt;
+&lt;p&gt;Before, I only wrote in English because I wrote it on Github Wiki. But as you can see in the right corner of the Navbar there is a button to change to Vietnamese, I had blog in both English and Vietnamese! From now on, I will write in my native language first, then translate it to English. I&#39;m quite confident about my English listening/reading skill, but I&#39;m still a writing newbie, so &lt;a href=&quot;https://languagetool.org/&quot;&gt;LanguageTool&lt;/a&gt; (an open source grammar checker) has become an indispensable tool for me.&lt;/p&gt;
+&lt;p&gt;The common way to support multi-language in 11ty is to split it into two directories &lt;code&gt;en/&lt;/code&gt; and &lt;code&gt;vi/&lt;/code&gt;, the same post has separate files of each language on each directory. That method is fine, but I want more flexibility in managing and reusing the elements of the article. So I let 11ty paginate each Markdown file into two pages in English (with &lt;code&gt;lang = &#39;en&#39;&lt;/code&gt;) and Vietnamese (with &lt;code&gt;lang = &#39;vi&#39;&lt;/code&gt;) so I can write in a single file like this:&lt;/p&gt;
+&lt;pre class=&quot;language-liquid&quot;&gt;&lt;code class=&quot;language-liquid&quot;&gt;---&lt;br /&gt;title:&lt;br /&gt;  en: &quot;*First post!&quot;&lt;br /&gt;  vi: Blog post &quot;đầu tiên&quot;!&lt;br /&gt;description:&lt;br /&gt;  en: Made with 11ty&lt;br /&gt;  vi: Khai bút đầu năm bằng 11ty&lt;br /&gt;tags:&lt;br /&gt;  - update&lt;br /&gt;  - web_dev&lt;br /&gt;date: 2023-01-22&lt;br /&gt;image: https://images.unsplash.com/photo-1674240660273-a3496c4604fd&lt;br /&gt;---&lt;br /&gt;&lt;br /&gt;&lt;span class=&quot;token liquid language-liquid&quot;&gt;&lt;span class=&quot;token delimiter punctuation&quot;&gt;{%&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; lang &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;vi&#39;&lt;/span&gt; &lt;span class=&quot;token delimiter punctuation&quot;&gt;%}&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;  Xin chào!&lt;br /&gt;&lt;span class=&quot;token liquid language-liquid&quot;&gt;&lt;span class=&quot;token delimiter punctuation&quot;&gt;{%&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token delimiter punctuation&quot;&gt;%}&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;  Hello!&lt;br /&gt;&lt;span class=&quot;token liquid language-liquid&quot;&gt;&lt;span class=&quot;token delimiter punctuation&quot;&gt;{%&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;endif&lt;/span&gt; &lt;span class=&quot;token delimiter punctuation&quot;&gt;%}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;That&#39;s all folks, I hope you all look forward to reading my next blog posts, bye!&lt;/p&gt;
+</content>
+  </entry>
+</feed>
