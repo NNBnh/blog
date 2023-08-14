@@ -1,1 +1,1 @@
-[![Preview](https://i.imgur.com/Yj84MFX.webp)](https://nnb.codeberg.page/blog)
+[![Preview](https://i.imgur.com/dFHsmfX.webp)](https://nnb.codeberg.page/blog)
