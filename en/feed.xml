@@ -107,11 +107,11 @@ TTY == Hackerman&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;WM... is Bloat. We can also get rid of WM and login manager altogether. Use full TTY from Linux Kernel and type the command to open GUI app... &lt;a href=&quot;https://github.com/K4zoku/nowm&quot;&gt;NOWM&lt;/a&gt; or &lt;a href=&quot;https://git.disroot.org/root_informatica/wms&quot;&gt;[wms]&lt;/a&gt; will make the experience less miserable without WM.&lt;/p&gt;
 &lt;p&gt;Remember those TUI/CLI apps we installed at the beginner stage? We realize we don&#39;t need 80% of it, we would rather use the tools available in the POSIX standard to make the script more portable. Then we even removed the file manager!&lt;/p&gt;
 &lt;p&gt;The shell prompt is now just &amp;quot;&lt;code&gt;$&lt;/code&gt;&amp;quot;, &lt;code&gt;pwd&lt;/code&gt; is the only torch that lights us the way in the file system.&lt;/p&gt;
-&lt;p&gt;The rice is no longer minimalist, it has become the black hole. Few are brave enough to go beyond, but some legends continue, The few features that identifies them is that they do &lt;a href=&quot;https://www.linuxfromscratch.org/lfs&quot;&gt;Linux From Scratch&lt;/a&gt; and know what &lt;a href=&quot;https://wikipedia.org/wiki/Linux_framebuffer&quot;&gt;Linux framebuffer&lt;/a&gt; is.&lt;/p&gt;
+&lt;p&gt;The rice is no longer minimalist, it has become a black hole. Few are brave enough to go beyond, but some legends continue, The few features that identifies them is that they do &lt;a href=&quot;https://www.linuxfromscratch.org/lfs&quot;&gt;Linux From Scratch&lt;/a&gt; and know what &lt;a href=&quot;https://wikipedia.org/wiki/Linux_framebuffer&quot;&gt;Linux framebuffer&lt;/a&gt; is.&lt;/p&gt;
 &lt;h2 id=&quot;5-maximalist&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnb.codeberg.page/blog/en/posts/12/#5-maximalist&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; 5. Maximalist&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/Aylur/dotfiles/tree/gnome43&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/Aylur/dotfiles/gnome43/assets/rose.png&quot; alt=&quot;Gnome Rice&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;After a tiresome period of extreme minimalist rice, they have a different view of minimalism. They realize that using DE is very minimal in terms of time and effort. To be honest, DE is not that bloat, It has some features that although we don&#39;t always use, but having it is still very convenient in some situation. And if I don&#39;t install or configure anything but just use the default stuff from the DE, the dotfiles will be a lot more minimal!&lt;/p&gt;
-&lt;p&gt;And so they decided to go back to installing DE. But this time, with more experience and skill, their rice is better than ever. They even installed more fancy features, more personality, going against the previous minimalism... Finally they felt quite satisfied with their setup, thinking that they would never thinker with the OS ever again.&lt;/p&gt;
+&lt;p&gt;After a tiresome period of extreme minimalist rice, they have a different view of minimalism. They realize that using DE is very minimal in terms of time and effort. To be honest, DE is not that bloat, It has some features that although we don&#39;t always use, but having it is still very convenient in some situation. &amp;quot;And if I don&#39;t install or configure anything but just use the default stuff from the DE, the dotfiles will be a lot more minimal!&amp;quot;&lt;/p&gt;
+&lt;p&gt;And so they decided to go back to installing DE. But this time, with more experience and skill, their rice is better than ever. They even installed more fancy features, more personality, going against the previous minimalism... Finally they felt quite satisfied with their setup, thinking that they would never thinker with the OS ever again...&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;Credit to &lt;a href=&quot;https://github.com/K4zoku&quot;&gt;Kazoku&lt;/a&gt; for the Rice images!&lt;/p&gt;
 </content>
@@ -417,27 +417,21 @@ hook -group &#39;clipboard&#39; global RegisterModified &#92;&amp;quot; %{ nop %
 &lt;li&gt;Abandon reason: I never actually used it, I just made it for fun...&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;rice&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnb.codeberg.page/blog/en/posts/8/#rice&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Rice&lt;/h2&gt;
-&lt;!--
-### [SuperB ST](https://github.com/NNBnh/superb-st)
-
-
-  - Description: ST-base terminal with enough patches.
-  - Abandon reason: TODO
-
---&gt;
+&lt;h3 id=&quot;superb-st&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnb.codeberg.page/blog/en/posts/8/#superb-st&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; &lt;a href=&quot;https://github.com/NNBnh/superb-st&quot;&gt;SuperB ST&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Description: ST-base terminal with enough patches.&lt;/li&gt;
+&lt;li&gt;Abandon reason: Even though it&#39;s fast and minimalist, it&#39;s quite janky and maintaining / building the binary myself is quite exhausting to me.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&quot;superb-ui&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnb.codeberg.page/blog/en/posts/8/#superb-ui&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; &lt;a href=&quot;https://github.com/superb-ui&quot;&gt;SuperB UI&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Description: It&#39;s a UI and colors management method that export the colors hex through environment variables so any program that can read environment variables can use it.&lt;/li&gt;
 &lt;li&gt;Abandon reason: That&#39;s a bad idea... Environment variables are very slow, unstable, some applications/cases hard to read it. Use &lt;a href=&quot;https://github.com/tinted-theming&quot;&gt;Tinted Theming&lt;/a&gt;, &lt;a href=&quot;https://github.com/deviantfero/wpgtk&quot;&gt;Wpgtk&lt;/a&gt; or &lt;a href=&quot;https://github.com/dylanaraps/pywal&quot;&gt;Pywal&lt;/a&gt; instead.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!--
-### [DIYship](https://github.com/info-mono/diyship)
-
-
-  - Description: DIYship is a cross-shell prompt framework that let you write your prompt with any programing language for any shell.
-  - Abandon reason: TODO
-
---&gt;
+&lt;h3 id=&quot;diyship&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnb.codeberg.page/blog/en/posts/8/#diyship&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; &lt;a href=&quot;https://github.com/info-mono/diyship&quot;&gt;DIYship&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Description: DIYship is a cross-shell prompt framework that let you write your prompt with any programing language for any shell.&lt;/li&gt;
+&lt;li&gt;Abandon reason: Except for creating a prompt that competes with &lt;a href=&quot;https://starship.rs/&quot;&gt;Starship&lt;/a&gt;, no souls need DIYship...&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&quot;bmono&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnb.codeberg.page/blog/en/posts/8/#bmono&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; &lt;a href=&quot;https://github.com/NNBnh/bmono&quot;&gt;Bmono&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Description: My goal is to make a Iosevka font that fix the &lt;a href=&quot;https://github.com/be5invis/Iosevka/issues/1326&quot;&gt;ligatures on Kitty bug&lt;/a&gt; and come with some tiny tweak to make it slicker.&lt;/li&gt;
@@ -470,7 +464,7 @@ hook -group &#39;clipboard&#39; global RegisterModified &#92;&amp;quot; %{ nop %
 &lt;p&gt;Back to Ruby. As mentioned, the website that I created is &lt;a href=&quot;https://nnb.codeberg.page/ruby-on-shell&quot;&gt;Ruby on Shell&lt;/a&gt; and you can read it right now. This blog post will focus on how I discovered the power of Ruby and the process by which I created Ruby on Shell.&lt;/p&gt;
 &lt;h2 id=&quot;how-i-get-to-know-ruby&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnb.codeberg.page/blog/en/posts/7/#how-i-get-to-know-ruby&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; How I get to know Ruby&lt;/h2&gt;
 &lt;p&gt;I was a naive programmer back then, thinking that I should just master one programming language and use it for everything (and that language was Python, a very normie choice...). I used &lt;a href=&quot;https://xon.sh/&quot;&gt;Xonsh&lt;/a&gt; (in short, it is a fusion between Python and Bash) as my main shell for a while, its interactive experience is quite good but scripting on Xonsh is a bit annoying. Because of Python&#39;s off-side rule and list comprehension, it&#39;s hard for me to scripting as short as I&#39;d like.&lt;/p&gt;
-&lt;p&gt;I want a full-fledged programming language like Python, Perl or Lua but with good scripting features like &lt;a href=&quot;https://www.nushell.sh/&quot;&gt;Nulshell&lt;/a&gt; or &lt;a href=&quot;https://elv.sh/&quot;&gt;Elvish&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I want a full-fledged programming language like Python, Perl or Lua but with good scripting features like &lt;a href=&quot;https://www.nushell.sh/&quot;&gt;Nushell&lt;/a&gt; or &lt;a href=&quot;https://elv.sh/&quot;&gt;Elvish&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Then one day I saw this line on &lt;a href=&quot;http://xahlee.info/comp/list_comprehension.html&quot;&gt;an article by Xah Lee about list comprehension&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;pre class=&quot;language-rb&quot;&gt;&lt;code class=&quot;language-rb&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0.&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;.9&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;select&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;n&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; n&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;even&lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;map&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;n&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;n&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;

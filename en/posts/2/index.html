@@ -2879,13 +2879,16 @@ html {
   --tw-drop-shadow: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
-.btn-cool:hover {
-  --tw-rotate: 3deg;
-  --tw-scale-x: 1.1;
-  --tw-scale-y: 1.1;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  --tw-drop-shadow: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+@media (min-width: 1024px) {
+
+  .btn-cool:hover {
+    --tw-rotate: 3deg;
+    --tw-scale-x: 1.1;
+    --tw-scale-y: 1.1;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    --tw-drop-shadow: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  }
 }
 .link-mono {
   font-family: JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -2894,8 +2897,11 @@ html {
   opacity: 0.5;
   transition-duration: 200ms;
 }
-.link-mono:hover {
-  opacity: 1;
+@media (min-width: 1024px) {
+
+  .link-mono:hover {
+    opacity: 1;
+  }
 }
 article .link-mono {
   opacity: 0.75;
@@ -3635,201 +3641,81 @@ pre[class*="language-"] {
 	display: block;
 }
 
-.hover\:btn-primary:hover.btn-outline .badge {
-  --tw-border-opacity: 1;
-  border-color: hsl(var(--p) / var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: hsl(var(--p) / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: hsl(var(--pc) / var(--tw-text-opacity));
-}
+@media (min-width: 1024px) {
 
-.hover\:btn-primary:hover.btn-outline .badge-outline {
-  --tw-border-opacity: 1;
-  border-color: hsl(var(--p) / var(--tw-border-opacity));
-  background-color: transparent;
-  --tw-text-opacity: 1;
-  color: hsl(var(--p) / var(--tw-text-opacity));
-}
+  .lg\:hover\:btn-primary:hover.btn-outline .badge {
+    --tw-border-opacity: 1;
+    border-color: hsl(var(--p) / var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: hsl(var(--p) / var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: hsl(var(--pc) / var(--tw-text-opacity));
+  }
 
-.hover\:btn-primary:hover.btn-outline:hover .badge {
-  --tw-border-opacity: 1;
-  border-color: hsl(var(--pc) / var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: hsl(var(--pc) / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: hsl(var(--p) / var(--tw-text-opacity));
-}
+  .lg\:hover\:btn-primary:hover.btn-outline .badge-outline {
+    --tw-border-opacity: 1;
+    border-color: hsl(var(--p) / var(--tw-border-opacity));
+    background-color: transparent;
+    --tw-text-opacity: 1;
+    color: hsl(var(--p) / var(--tw-text-opacity));
+  }
 
-.hover\:btn-primary:hover.btn-outline:hover .badge.outline {
-  --tw-border-opacity: 1;
-  border-color: hsl(var(--pc) / var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: hsl(var(--pf, var(--p)) / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: hsl(var(--pc) / var(--tw-text-opacity));
-}
+  .lg\:hover\:btn-primary:hover.btn-outline:hover .badge {
+    --tw-border-opacity: 1;
+    border-color: hsl(var(--pc) / var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: hsl(var(--pc) / var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: hsl(var(--p) / var(--tw-text-opacity));
+  }
 
-.hover\:btn-primary:hover {
-  --tw-border-opacity: 1;
-  border-color: hsl(var(--p) / var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: hsl(var(--p) / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: hsl(var(--pc) / var(--tw-text-opacity));
-}
+  .lg\:hover\:btn-primary:hover.btn-outline:hover .badge.outline {
+    --tw-border-opacity: 1;
+    border-color: hsl(var(--pc) / var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: hsl(var(--pf, var(--p)) / var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: hsl(var(--pc) / var(--tw-text-opacity));
+  }
 
-.hover\:btn-primary:hover:hover,.hover\:btn-primary:hover.btn-active {
-  --tw-border-opacity: 1;
-  border-color: hsl(var(--pf, var(--p)) / var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: hsl(var(--pf, var(--p)) / var(--tw-bg-opacity));
-}
+  .lg\:hover\:btn-primary:hover {
+    --tw-border-opacity: 1;
+    border-color: hsl(var(--p) / var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: hsl(var(--p) / var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: hsl(var(--pc) / var(--tw-text-opacity));
+  }
 
-.hover\:btn-primary:hover:focus-visible {
-  outline: 2px solid hsl(var(--p));
-}
+  .lg\:hover\:btn-primary:hover:hover,.lg\:hover\:btn-primary:hover.btn-active {
+    --tw-border-opacity: 1;
+    border-color: hsl(var(--pf, var(--p)) / var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: hsl(var(--pf, var(--p)) / var(--tw-bg-opacity));
+  }
 
-.hover\:btn-primary:hover.btn-outline {
-  --tw-text-opacity: 1;
-  color: hsl(var(--p) / var(--tw-text-opacity));
-}
+  .lg\:hover\:btn-primary:hover:focus-visible {
+    outline: 2px solid hsl(var(--p));
+  }
 
-.hover\:btn-primary:hover.btn-outline:hover,.hover\:btn-primary:hover
+  .lg\:hover\:btn-primary:hover.btn-outline {
+    --tw-text-opacity: 1;
+    color: hsl(var(--p) / var(--tw-text-opacity));
+  }
+
+  .lg\:hover\:btn-primary:hover.btn-outline:hover,.lg\:hover\:btn-primary:hover
       .btn-outline.btn-active {
-  --tw-border-opacity: 1;
-  border-color: hsl(var(--pf, var(--p)) / var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: hsl(var(--pf, var(--p)) / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: hsl(var(--pc) / var(--tw-text-opacity));
-}
+    --tw-border-opacity: 1;
+    border-color: hsl(var(--pf, var(--p)) / var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: hsl(var(--pf, var(--p)) / var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: hsl(var(--pc) / var(--tw-text-opacity));
+  }
 
-.drawer-toggle:focus-visible ~ .drawer-content .hover\:btn-primary:hover.drawer-button {
-  outline: 2px solid hsl(var(--p));
-}
-
-.hover\:z-20:hover {
-  z-index: 20;
-}
-
-.hover\:-translate-y-1:hover {
-  --tw-translate-y: -0.25rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.hover\:translate-y-1:hover {
-  --tw-translate-y: 0.25rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.hover\:rotate-3:hover {
-  --tw-rotate: 3deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.hover\:rotate-6:hover {
-  --tw-rotate: 6deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.hover\:scale-105:hover {
-  --tw-scale-x: 1.05;
-  --tw-scale-y: 1.05;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.hover\:scale-110:hover {
-  --tw-scale-x: 1.1;
-  --tw-scale-y: 1.1;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.hover\:scale-125:hover {
-  --tw-scale-x: 1.25;
-  --tw-scale-y: 1.25;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.hover\:scale-150:hover {
-  --tw-scale-x: 1.5;
-  --tw-scale-y: 1.5;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.hover\:font-bold:hover {
-  font-weight: 700;
-}
-
-.hover\:text-accent:hover {
-  --tw-text-opacity: 1;
-  color: hsl(var(--a) / var(--tw-text-opacity));
-}
-
-.hover\:text-error:hover {
-  --tw-text-opacity: 1;
-  color: hsl(var(--er) / var(--tw-text-opacity));
-}
-
-.hover\:text-info:hover {
-  --tw-text-opacity: 1;
-  color: hsl(var(--in) / var(--tw-text-opacity));
-}
-
-.hover\:text-primary:hover {
-  --tw-text-opacity: 1;
-  color: hsl(var(--p) / var(--tw-text-opacity));
-}
-
-.hover\:text-secondary:hover {
-  --tw-text-opacity: 1;
-  color: hsl(var(--s) / var(--tw-text-opacity));
-}
-
-.hover\:text-warning:hover {
-  --tw-text-opacity: 1;
-  color: hsl(var(--wa) / var(--tw-text-opacity));
-}
-
-.hover\:shadow-2xl:hover {
-  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.hover\:shadow-xl:hover {
-  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.hover\:outline-8:hover {
-  outline-width: 8px;
-}
-
-.hover\:drop-shadow-xl:hover {
-  --tw-drop-shadow: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-.group:hover .group-hover\:-rotate-6 {
-  --tw-rotate: -6deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.group:hover .group-hover\:scale-110 {
-  --tw-scale-x: 1.1;
-  --tw-scale-y: 1.1;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.group:hover .group-hover\:opacity-100 {
-  opacity: 1;
-}
-
-.group:hover .group-hover\:blur {
-  --tw-blur: blur(8px);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  .drawer-toggle:focus-visible ~ .drawer-content .lg\:hover\:btn-primary:hover.drawer-button {
+    outline: 2px solid hsl(var(--p));
+  }
 }
 
 @media (min-width: 640px) {
@@ -3996,7 +3882,7 @@ pre[class*="language-"] {
     opacity: 1;
   }
 
-  .md\:hover\:rotate-0:hover {
+  .hover\:md\:rotate-0:hover {
     --tw-rotate: 0deg;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
@@ -4046,9 +3932,132 @@ pre[class*="language-"] {
          column-gap: 2rem;
   }
 
+  .lg\:hover\:z-20:hover {
+    z-index: 20;
+  }
+
+  .lg\:hover\:-translate-y-1:hover {
+    --tw-translate-y: -0.25rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .lg\:hover\:translate-y-1:hover {
+    --tw-translate-y: 0.25rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
   .lg\:hover\:-rotate-6:hover {
     --tw-rotate: -6deg;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .lg\:hover\:rotate-3:hover {
+    --tw-rotate: 3deg;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .lg\:hover\:rotate-6:hover {
+    --tw-rotate: 6deg;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .lg\:hover\:scale-105:hover {
+    --tw-scale-x: 1.05;
+    --tw-scale-y: 1.05;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .lg\:hover\:scale-110:hover {
+    --tw-scale-x: 1.1;
+    --tw-scale-y: 1.1;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .lg\:hover\:scale-125:hover {
+    --tw-scale-x: 1.25;
+    --tw-scale-y: 1.25;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .lg\:hover\:scale-150:hover {
+    --tw-scale-x: 1.5;
+    --tw-scale-y: 1.5;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .lg\:hover\:font-bold:hover {
+    font-weight: 700;
+  }
+
+  .lg\:hover\:text-accent:hover {
+    --tw-text-opacity: 1;
+    color: hsl(var(--a) / var(--tw-text-opacity));
+  }
+
+  .lg\:hover\:text-error:hover {
+    --tw-text-opacity: 1;
+    color: hsl(var(--er) / var(--tw-text-opacity));
+  }
+
+  .lg\:hover\:text-info:hover {
+    --tw-text-opacity: 1;
+    color: hsl(var(--in) / var(--tw-text-opacity));
+  }
+
+  .lg\:hover\:text-primary:hover {
+    --tw-text-opacity: 1;
+    color: hsl(var(--p) / var(--tw-text-opacity));
+  }
+
+  .lg\:hover\:text-secondary:hover {
+    --tw-text-opacity: 1;
+    color: hsl(var(--s) / var(--tw-text-opacity));
+  }
+
+  .lg\:hover\:text-warning:hover {
+    --tw-text-opacity: 1;
+    color: hsl(var(--wa) / var(--tw-text-opacity));
+  }
+
+  .lg\:hover\:shadow-2xl:hover {
+    --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .lg\:hover\:shadow-xl:hover {
+    --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .lg\:hover\:outline-8:hover {
+    outline-width: 8px;
+  }
+
+  .lg\:hover\:drop-shadow-xl:hover {
+    --tw-drop-shadow: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  }
+
+  .group:hover .lg\:group-hover\:-rotate-6 {
+    --tw-rotate: -6deg;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .group:hover .lg\:group-hover\:scale-110 {
+    --tw-scale-x: 1.1;
+    --tw-scale-y: 1.1;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .group:hover .lg\:group-hover\:opacity-100 {
+    opacity: 1;
+  }
+
+  .group:hover .lg\:group-hover\:blur {
+    --tw-blur: blur(8px);
+    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
   }
 }
 
@@ -4072,7 +4081,7 @@ pre[class*="language-"] {
   <link href="https://fonts.googleapis.com/css?family=JetBrains+Mono&display=swap" rel="stylesheet" />
 </head>
 <body
-  class="bg-fixed bg-cover bg-center"
+  class="bg-cover bg-fixed bg-center"
   
     style="background-image: url(https://i.imgur.com/F2yJyf8.webp);"
   
@@ -4080,15 +4089,11 @@ pre[class*="language-"] {
   <div class="drawer drawer-end">
     <input id="main-drawer" type="checkbox" class="drawer-toggle" aria-label="Drawer toggle" />
     <div class="drawer-content relative">
-      <nav class="navbar w-full absolute z-10 justify-center font-serif">
+      <nav class="navbar absolute z-10 w-full justify-center font-serif">
   <div class="navbar-start"></div>
   <div class="navbar-center">
     <a
-      class="
-        btn btn-ghost normal-case text-2xl font-bold
-        origin-top hover:translate-y-1 hover:scale-125 hover:rotate-3
-        hover:btn-primary hover:shadow-xl
-      "
+      class="btn-ghost btn origin-top text-2xl font-bold normal-case lg:hover:btn-primary lg:hover:translate-y-1 lg:hover:rotate-3 lg:hover:scale-125 lg:hover:shadow-xl"
       href="/blog/en/"
     >
       <div>
@@ -4100,18 +4105,18 @@ pre[class*="language-"] {
     
       
       <div
-        class="sm:hidden tooltip tooltip-left"
+        class="tooltip tooltip-left sm:hidden"
         data-tip="Tiếng Việt"
       >
-        <a class="btn btn-square btn-ghost" href="/blog/vi/posts/2/">
+        <a class="btn-ghost btn-square btn" href="/blog/vi/posts/2/">
           vn
         </a>
       </div>
       <a
-        class="hidden sm:inline-flex btn btn-ghost gap-2 text-lg normal-case"
+        class="btn-ghost btn hidden gap-2 text-lg normal-case sm:inline-flex"
         href="/blog/vi/posts/2/"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path fill-rule="evenodd" d="M9 2.25a.75.75 0 01.75.75v1.506a49.38 49.38 0 015.343.371.75.75 0 11-.186 1.489c-.66-.083-1.323-.151-1.99-.206a18.67 18.67 0 01-2.969 6.323c.317.384.65.753.998 1.107a.75.75 0 11-1.07 1.052A18.902 18.902 0 019 13.687a18.823 18.823 0 01-5.656 4.482.75.75 0 11-.688-1.333 17.323 17.323 0 005.396-4.353A18.72 18.72 0 015.89 8.598a.75.75 0 011.388-.568A17.21 17.21 0 009 11.224a17.17 17.17 0 002.391-5.165 48.038 48.038 0 00-8.298.307.75.75 0 01-.186-1.489 49.159 49.159 0 015.343-.371V3A.75.75 0 019 2.25zM15.75 9a.75.75 0 01.68.433l5.25 11.25a.75.75 0 01-1.36.634l-1.198-2.567h-6.744l-1.198 2.567a.75.75 0 01-1.36-.634l5.25-11.25A.75.75 0 0115.75 9zm-2.672 8.25h5.344l-2.672-5.726-2.672 5.726z" clip-rule="evenodd" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6"><path fill-rule="evenodd" d="M9 2.25a.75.75 0 01.75.75v1.506a49.38 49.38 0 015.343.371.75.75 0 11-.186 1.489c-.66-.083-1.323-.151-1.99-.206a18.67 18.67 0 01-2.969 6.323c.317.384.65.753.998 1.107a.75.75 0 11-1.07 1.052A18.902 18.902 0 019 13.687a18.823 18.823 0 01-5.656 4.482.75.75 0 11-.688-1.333 17.323 17.323 0 005.396-4.353A18.72 18.72 0 015.89 8.598a.75.75 0 011.388-.568A17.21 17.21 0 009 11.224a17.17 17.17 0 002.391-5.165 48.038 48.038 0 00-8.298.307.75.75 0 01-.186-1.489 49.159 49.159 0 015.343-.371V3A.75.75 0 019 2.25zM15.75 9a.75.75 0 01.68.433l5.25 11.25a.75.75 0 01-1.36.634l-1.198-2.567h-6.744l-1.198 2.567a.75.75 0 01-1.36-.634l5.25-11.25A.75.75 0 0115.75 9zm-2.672 8.25h5.344l-2.672-5.726-2.672 5.726z" clip-rule="evenodd" /></svg>
         Tiếng Việt
       </a>
     
@@ -4120,7 +4125,7 @@ pre[class*="language-"] {
 
       
 <header
-  class="hero min-h-[20rem] font-serif relative"
+  class="hero relative min-h-[20rem] font-serif"
   
     style="background-image: url(https://i.imgur.com/F2yJyf8.webp);"
   
@@ -4128,20 +4133,14 @@ pre[class*="language-"] {
   <div class="hero-overlay bg-opacity-75 shadow-inner"></div>
   <div class="hero-content text-center">
     <div class="my-16">
-      <h1 class="text-2xl sm:text-4xl font-bold">Become a Hackerman</h1>
+      <h1 class="text-2xl font-bold sm:text-4xl">Become a Hackerman</h1>
       
-        <p class="mt-4 sm:text-lg font-semibold">4E67-4E68-426E68</p>
+        <p class="mt-4 font-semibold sm:text-lg">4E67-4E68-426E68</p>
       
     </div>
-    <div
-      class="
-        absolute bottom-0 p-2 w-full
-        md:flex items-end justify-between gap-4
-        text-left sm:text-2xl
-      "
-    >
+    <div class="absolute bottom-0 w-full items-end justify-between gap-4 p-2 text-left sm:text-2xl md:flex">
       <a href=".">
-        <span class="link-mono group-hover:opacity-100">
+        <span class="link-mono lg:group-hover:opacity-100">
   <time datetime="2023-01-24T00:00:00.000Z">
     24/01/2023
   </time>
@@ -4149,7 +4148,7 @@ pre[class*="language-"] {
 </span>
 
       </a>
-      <p class="md:text-right font-mono">
+      <p class="font-mono md:text-right">
         
   <a
     class="link-mono"
@@ -4163,9 +4162,9 @@ pre[class*="language-"] {
 </header>
 
 
-<div class="min-h-screen flex backdrop-blur-xl">
-  <div class="hidden xl:block w-80 bg-base-200 bg-opacity-90">
-    <div class="h-fit sticky top-0 max-h-screen overflow-y-auto">
+<div class="flex min-h-screen backdrop-blur-xl">
+  <div class="hidden w-80 bg-base-200 bg-opacity-90 xl:block">
+    <div class="sticky top-0 h-fit max-h-screen overflow-y-auto">
       <nav class="toc" >
         <ul><li><a href="#cool-retro-term"># Cool Retro Term</a></li><li><a href="#edex-ui"># eDEX-UI</a></li><li><a href="#tdfgo"># Tdfgo</a></li><li><a href="#btop"># Btop</a></li><li><a href="#unimatrix"># Unimatrix</a></li><li><a href="#no-more-secrets"># No more secrets</a></li><li><a href="#genact"># Genact</a></li><li><a href="#awesome-console-services"># Awesome console services</a><ul><li><a href="#mapscii"># MapSCII</a></li><li><a href="#rickrollrc"># Rickrollrc</a></li></ul></li></ul>
       </nav>
@@ -4173,7 +4172,7 @@ pre[class*="language-"] {
   </div>
   <div class="w-full bg-base-100 bg-opacity-90">
     <div class="mt-16 mb-24 px-4">
-      <main class="prose mx-auto max-w-3xl min-w-0">
+      <main class="prose mx-auto min-w-0 max-w-3xl">
         <p>As a programmer, you need to master a lot of skills, one of which is to look cool. Here are some TTY tools that can help turn you into a <em>Hackerman</em>.</p>
 <h2 id="cool-retro-term" tabindex="-1"><a class="link-mono" href="#cool-retro-term" aria-hidden="true">#</a> <a href="https://github.com/Swordfish90/cool-retro-term">Cool Retro Term</a></h2>
 <blockquote>
@@ -4289,19 +4288,19 @@ with
   </div>
 </div>
 
-      <footer class="footer footer-center pt-16 pb-12 bg-base-300 text-base-content shadow-2xl relative">
-  <div class="absolute top-0 flex gap-8 sm:gap-12 -translate-y-1/2">
+      <footer class="footer footer-center relative bg-base-300 pt-16 pb-12 text-base-content shadow-2xl">
+  <div class="absolute top-0 flex -translate-y-1/2 gap-8 sm:gap-12">
     
       <a
         class="
-          duration-200 hover:scale-150 hover:rotate-6 hover:-translate-y-1
-          drop-shadow hover:drop-shadow-xl hover:text-primary
+          duration-200 lg:hover:scale-150 lg:hover:rotate-6 lg:hover:-translate-y-1
+          drop-shadow lg:hover:drop-shadow-xl lg:hover:text-primary
         "
         aria-label="Codeberg"
         href="https://codeberg.org/NNB"
       >
         <svg
-          class="w-8 h-8 fill-current"
+          class="h-8 w-8 fill-current"
           role="img"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
@@ -4313,14 +4312,14 @@ with
     
       <a
         class="
-          duration-200 hover:scale-150 hover:rotate-6 hover:-translate-y-1
-          drop-shadow hover:drop-shadow-xl hover:text-info
+          duration-200 lg:hover:scale-150 lg:hover:rotate-6 lg:hover:-translate-y-1
+          drop-shadow lg:hover:drop-shadow-xl lg:hover:text-info
         "
         aria-label="GitHub"
         href="https://github.com/NNBnh"
       >
         <svg
-          class="w-8 h-8 fill-current"
+          class="h-8 w-8 fill-current"
           role="img"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
@@ -4332,14 +4331,14 @@ with
     
       <a
         class="
-          duration-200 hover:scale-150 hover:rotate-6 hover:-translate-y-1
-          drop-shadow hover:drop-shadow-xl hover:text-secondary
+          duration-200 lg:hover:scale-150 lg:hover:rotate-6 lg:hover:-translate-y-1
+          drop-shadow lg:hover:drop-shadow-xl lg:hover:text-secondary
         "
         aria-label="Odysee"
         href="https://odysee.com/@nnb:3"
       >
         <svg
-          class="w-8 h-8 fill-current"
+          class="h-8 w-8 fill-current"
           role="img"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
@@ -4351,14 +4350,14 @@ with
     
       <a
         class="
-          duration-200 hover:scale-150 hover:rotate-6 hover:-translate-y-1
-          drop-shadow hover:drop-shadow-xl hover:text-error
+          duration-200 lg:hover:scale-150 lg:hover:rotate-6 lg:hover:-translate-y-1
+          drop-shadow lg:hover:drop-shadow-xl lg:hover:text-error
         "
         aria-label="Itch.io"
         href="https://NNBnh.itch.io"
       >
         <svg
-          class="w-8 h-8 fill-current"
+          class="h-8 w-8 fill-current"
           role="img"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
@@ -4370,14 +4369,14 @@ with
     
       <a
         class="
-          duration-200 hover:scale-150 hover:rotate-6 hover:-translate-y-1
-          drop-shadow hover:drop-shadow-xl hover:text-accent
+          duration-200 lg:hover:scale-150 lg:hover:rotate-6 lg:hover:-translate-y-1
+          drop-shadow lg:hover:drop-shadow-xl lg:hover:text-accent
         "
         aria-label="Buy Me A Coffee"
         href="https://www.buymeacoffee.com/NNBnh"
       >
         <svg
-          class="w-8 h-8 fill-current"
+          class="h-8 w-8 fill-current"
           role="img"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
@@ -4388,25 +4387,25 @@ with
       </a>
     
   </div>
-  <div class="grid grid-flow-col sm:gap-8 font-mono font-bold">
+  <div class="grid grid-flow-col font-mono font-bold sm:gap-8">
     
       <a
-        class="link link-hover w-16"
+        class="link-hover link w-16"
         href="mailto:nnbnh@protonmail.com"
       >Email</a>
     
       <a
-        class="link link-hover w-16"
+        class="link-hover link w-16"
         href="/blog/en/feed.xml"
       >Atom</a>
     
       <a
-        class="link link-hover w-16"
+        class="link-hover link w-16"
         href="/blog/en/feed.rss"
       >RSS</a>
     
       <a
-        class="link link-hover w-16"
+        class="link-hover link w-16"
         href="/blog/en/feed.json"
       >JSON</a>
     
@@ -4420,14 +4419,14 @@ with
     
       <label
         for="main-drawer"
-        class="xl:hidden btn btn-square hover:btn-primary m-4 shadow fixed bottom-0 right-0"
+        class="btn-square btn fixed bottom-0 right-0 m-4 shadow lg:hover:btn-primary xl:hidden"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm8.25 5.25a.75.75 0 01.75-.75h8.25a.75.75 0 010 1.5H12a.75.75 0 01-.75-.75z" clip-rule="evenodd" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6"><path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm8.25 5.25a.75.75 0 01.75-.75h8.25a.75.75 0 010 1.5H12a.75.75 0 01-.75-.75z" clip-rule="evenodd" /></svg>
       </label>
     
     <div class="drawer-side">
       <label for="main-drawer" class="drawer-overlay"></label>
-      <div class="w-80 bg-base-300 bg-opacity-75 backdrop-blur shadow">
+      <div class="w-80 bg-base-300 bg-opacity-75 shadow backdrop-blur">
         <nav class="toc" >
         <ul><li><a href="#cool-retro-term"># Cool Retro Term</a></li><li><a href="#edex-ui"># eDEX-UI</a></li><li><a href="#tdfgo"># Tdfgo</a></li><li><a href="#btop"># Btop</a></li><li><a href="#unimatrix"># Unimatrix</a></li><li><a href="#no-more-secrets"># No more secrets</a></li><li><a href="#genact"># Genact</a></li><li><a href="#awesome-console-services"># Awesome console services</a><ul><li><a href="#mapscii"># MapSCII</a></li><li><a href="#rickrollrc"># Rickrollrc</a></li></ul></li></ul>
       </nav>
