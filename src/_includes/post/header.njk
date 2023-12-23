@@ -1,5 +1,5 @@
 <header
-  class="hero min-h-[20rem] font-serif relative"
+  class="hero relative min-h-[20rem] font-serif"
   {% if image %}
     style="background-image: url({% img image, 1280 %});"
   {% endif %}
@@ -7,22 +7,16 @@
   <div class="hero-overlay bg-opacity-75 shadow-inner"></div>
   <div class="hero-content text-center">
     <div class="my-16">
-      <h1 class="text-2xl sm:text-4xl font-bold">{{ title | lang_string }}</h1>
+      <h1 class="text-2xl font-bold sm:text-4xl">{{ title | lang_string }}</h1>
       {% if description %}
-        <p class="mt-4 sm:text-lg font-semibold">{{ description | lang_string }}</p>
+        <p class="mt-4 font-semibold sm:text-lg">{{ description | lang_string }}</p>
       {% endif %}
     </div>
-    <div
-      class="
-        absolute bottom-0 p-2 w-full
-        md:flex items-end justify-between gap-4
-        text-left sm:text-2xl
-      "
-    >
+    <div class="absolute bottom-0 w-full items-end justify-between gap-4 p-2 text-left sm:text-2xl md:flex">
       <a href="{{ path | url }}">
         {% include "post/date.njk" %}
       </a>
-      <p class="md:text-right font-mono">
+      <p class="font-mono md:text-right">
         {% include "post/tags.njk" %}
       </p>
     </div>

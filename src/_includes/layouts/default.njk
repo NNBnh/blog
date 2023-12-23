@@ -45,7 +45,7 @@
   <link href="https://fonts.googleapis.com/css?family=JetBrains+Mono&display=swap" rel="stylesheet" />
 </head>
 <body
-  class="bg-fixed bg-cover bg-center"
+  class="bg-cover bg-fixed bg-center"
   {% if image %}
     style="background-image: url({% img image, 360 %});"
   {% endif %}
@@ -60,14 +60,14 @@
     {% if content | toc %}
       <label
         for="main-drawer"
-        class="xl:hidden btn btn-square hover:btn-primary m-4 shadow fixed bottom-0 right-0"
+        class="btn-square btn fixed bottom-0 right-0 m-4 shadow lg:hover:btn-primary xl:hidden"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm8.25 5.25a.75.75 0 01.75-.75h8.25a.75.75 0 010 1.5H12a.75.75 0 01-.75-.75z" clip-rule="evenodd" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6"><path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm8.25 5.25a.75.75 0 01.75-.75h8.25a.75.75 0 010 1.5H12a.75.75 0 01-.75-.75z" clip-rule="evenodd" /></svg>
       </label>
     {% endif %}
     <div class="drawer-side">
       <label for="main-drawer" class="drawer-overlay"></label>
-      <div class="w-80 bg-base-300 bg-opacity-75 backdrop-blur shadow">
+      <div class="w-80 bg-base-300 bg-opacity-75 shadow backdrop-blur">
         {{ content | toc | safe }}
       </div>
     </div>

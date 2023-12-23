@@ -18,10 +18,7 @@ permalink: "/{{ lang }}/"
 
 <div
   x-data="{ authorHover: false }"
-  class="
-    hero-content flex-col md:flex-row md:gap-8 lg:gap-16 font-serif
-    duration-200 origin-[6rem_50%] lg:origin-[8rem_50%]
-  "
+  class="hero-content origin-[6rem_50%] flex-col font-serif duration-200 md:flex-row md:gap-8 lg:origin-[8rem_50%] lg:gap-16"
   {{ hover('md:rotate-6') }}
 >
   <a
@@ -31,21 +28,17 @@ permalink: "/{{ lang }}/"
     @mouseover.away="authorHover = false"
   >
     <img
-      class="
-        mb-4 md:mb-0 w-48 lg:w-64 aspect-square bg-base-100
-        rounded-3xl duration-200 outline outline-2 outline-primary shadow-xl
-        hover:scale-110 hover:rotate-6 md:hover:rotate-0 hover:outline-8 hover:shadow-2xl
-      "
+      class="mb-4 aspect-square w-48 rounded-3xl bg-base-100 shadow-xl outline outline-2 outline-primary duration-200 md:mb-0 hover:md:rotate-0 lg:w-64 lg:hover:rotate-6 lg:hover:scale-110 lg:hover:shadow-2xl lg:hover:outline-8"
       src="https://codeberg.org/avatars/46ce1f9c36aeaf725cc13b3e99735120"
       alt="About Me"
     />
   </a>
   <div
-    class="flex flex-col items-center md:items-start gap-4 duration-200"
+    class="flex flex-col items-center gap-4 duration-200 md:items-start"
     {{ hover('md:translate-x-4 lg:translate-x-0') }}
   >
     <h1
-      class="text-4xl md:text-6xl font-bold duration-200 origin-left"
+      class="origin-left text-4xl font-bold duration-200 md:text-6xl"
       {{ hover('md:scale-150') }}
     >
       <span class="duration-200" {{ hover('md:text-accent md:font-black') }}>
@@ -55,11 +48,11 @@ permalink: "/{{ lang }}/"
       >'s Blog</span>
     </h1>
     <p
-      class="py-2 text-xl font-semibold italic origin-left relative duration-200"
+      class="relative origin-left py-2 text-xl font-semibold italic duration-200"
       {{ hover('md:scale-125') }}
     >
       <span
-        class="absolute top-2 hidden md:inline duration-200 opacity-0 text-secondary"
+        class="absolute top-2 hidden text-secondary opacity-0 duration-200 md:inline"
         {{ hover('md:opacity-100', '') }}
       >{{ metadata.author.description }}</span>
       <span class="duration-200" {{ hover('md:opacity-0', '') }}>
@@ -68,19 +61,19 @@ permalink: "/{{ lang }}/"
     </p>
     <div class="flex gap-4">
       <span class="origin-top-left duration-200" {{ hover('md:scale-125') }}>
-        <a class="btn btn-cool btn-primary" href="{{ metadata.author.url }}">
+        <a class="btn-cool btn-primary btn" href="{{ metadata.author.url }}">
           {% if lang == 'vi' %}Giới thiệu{% else %}About Me{% endif %}
         </a>
       </span>
       <a
-        class="btn btn-cool btn-secondary"
+        class="btn-cool btn-secondary btn"
         {{ hover('md:translate-x-6 md:-translate-y-2 md:opacity-10') }}
         href="https://codeberg.org/NNB"
       >
         {% if lang == 'vi' %}Các dự án{% else %}My Projects{% endif %}
       </a>
       <a
-        class="btn btn-cool btn-accent"
+        class="btn-cool btn-accent btn"
         {{ hover('md:scale-75 md:translate-x-2 md:-translate-y-5 md:opacity-10') }}
         href="https://NNBnh.itch.io"
       >

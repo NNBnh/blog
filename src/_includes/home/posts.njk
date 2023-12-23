@@ -1,14 +1,10 @@
 {% for post in posts | reverse %}
   <article
-    class="
-      card card-compact image-full mt-8 max-w-sm bg-base-100
-      group duration-200 outline outline-2 outline-secondary shadow-xl
-      hover:z-20 hover:scale-105 hover:rotate-3 hover:outline-8 hover:shadow-2xl
-    "
+    class="group card image-full card-compact mt-8 max-w-sm bg-base-100 shadow-xl outline outline-2 outline-secondary duration-200 lg:hover:z-20 lg:hover:rotate-3 lg:hover:scale-105 lg:hover:shadow-2xl lg:hover:outline-8"
   >
     <figure>
       <img
-        class="w-96 aspect-[2/1] duration-200 group-hover:blur"
+        class="aspect-[2/1] w-96 duration-200 lg:group-hover:blur"
         src="{% img post.data.image, 480 %}"
         alt="Thumbnail"
       />
@@ -20,16 +16,12 @@
         {% include "post/date.njk" %}
       </div>
       <a
-        class="
-          card-title px-4 h-full items-center justify-center
-          duration-200 group-hover:-rotate-6 group-hover:scale-110
-          text-center font-serif font-black hover:text-secondary
-        "
+        class="card-title h-full items-center justify-center px-4 text-center font-serif font-black duration-200 lg:hover:text-secondary lg:group-hover:-rotate-6 lg:group-hover:scale-110"
         href="{{ post.url | to_lang | url }}"
       >
         <h2>{{ post.data.title | lang_string }}</h2>
       </a>
-      <div class="card-actions min-h-[1.25rem] justify-end text-sm sm:text-md">
+      <div class="sm:text-md card-actions min-h-[1.25rem] justify-end text-sm">
         {% set tags = post.data.tags %}
         {% include "post/tags.njk" %}
       </div>

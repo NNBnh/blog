@@ -4,17 +4,11 @@ image: https://images.unsplash.com/photo-1638793774237-0fd6b45a510f
 ---
 
 <div
-  class="
-    min-h-body backdrop-blur bg-base-100 bg-opacity-60
-    flex flex-col md:flex-row items-center justify-center gap-16
-  "
+  class="min-h-body flex flex-col items-center justify-center gap-16 bg-base-100 bg-opacity-60 backdrop-blur md:flex-row"
 >
   {% for language_code, language_name in metadata.languages %}
     <a
-      class="
-        w-80 drop-shadow duration-200 hover:scale-125 hover:rotate-6 hover:text-primary
-        text-center text-5xl sm:text-6xl font-serif font-extralight hover:font-bold
-      "
+      class="w-80 text-center font-serif text-5xl font-extralight drop-shadow duration-200 sm:text-6xl lg:hover:rotate-6 lg:hover:scale-125 lg:hover:font-bold lg:hover:text-primary"
       href="{{ '/' | to_lang(language_code) | url }}"
     >{{ language_name }}</a>
   {% endfor %}

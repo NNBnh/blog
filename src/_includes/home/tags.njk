@@ -1,6 +1,6 @@
 {% for tag in collections.tags | sort %}
   <a
-    class="btn btn-cool btn-accent lg:origin-bottom-left lg:hover:-rotate-6"
+    class="btn-cool btn-accent btn lg:origin-bottom-left lg:hover:-rotate-6"
     href="{{ ('/tags/' ~ tag ~ '/') | to_lang | url }}"
   >#{{ tag }}</a>
 {% endfor %}

@@ -4,15 +4,15 @@ layout: layouts/default.njk
 
 {% include "post/header.njk" %}
 
-<div class="min-h-screen flex backdrop-blur-xl">
-  <div class="hidden xl:block w-80 bg-base-200 bg-opacity-90">
-    <div class="h-fit sticky top-0 max-h-screen overflow-y-auto">
+<div class="flex min-h-screen backdrop-blur-xl">
+  <div class="hidden w-80 bg-base-200 bg-opacity-90 xl:block">
+    <div class="sticky top-0 h-fit max-h-screen overflow-y-auto">
       {{ content | toc | safe }}
     </div>
   </div>
   <div class="w-full bg-base-100 bg-opacity-90">
     <div class="mt-16 mb-24 px-4">
-      <main class="prose mx-auto max-w-3xl min-w-0">
+      <main class="prose mx-auto min-w-0 max-w-3xl">
         {{ content | safe }}
       </main>
       <div class="mx-auto mt-32 max-w-3xl">

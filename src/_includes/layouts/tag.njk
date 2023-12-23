@@ -5,11 +5,11 @@ layout: layouts/home.njk
 <div class="hero-content text-center font-serif">
   <div class="my-8">
     <a
-      class="text-4xl sm:text-6xl font-mono font-bold duration-200 hover:text-accent"
+      class="font-mono text-4xl font-bold duration-200 sm:text-6xl lg:hover:text-accent"
       href="{{ path | url }}"
     ><h1>#{{ tag }}</h1></a>
     {% if description %}
-      <p class="mt-4 sm:text-lg font-semibold">{{ description }}</p>
+      <p class="mt-4 font-semibold sm:text-lg">{{ description }}</p>
     {% endif %}
   </div>
 </div>

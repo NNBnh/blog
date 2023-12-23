@@ -1,16 +1,16 @@
-<footer class="footer footer-center pt-16 pb-12 bg-base-300 text-base-content shadow-2xl relative">
-  <div class="absolute top-0 flex gap-8 sm:gap-12 -translate-y-1/2">
+<footer class="footer footer-center relative bg-base-300 pt-16 pb-12 text-base-content shadow-2xl">
+  <div class="absolute top-0 flex -translate-y-1/2 gap-8 sm:gap-12">
     {% for social in footer.socials %}
       <a
         class="
-          duration-200 hover:scale-150 hover:rotate-6 hover:-translate-y-1
-          drop-shadow hover:drop-shadow-xl hover:text-{{ social.color }}
+          duration-200 lg:hover:scale-150 lg:hover:rotate-6 lg:hover:-translate-y-1
+          drop-shadow lg:hover:drop-shadow-xl lg:hover:text-{{ social.color }}
         "
         aria-label="{{ social.name }}"
         href="{{ social.url }}"
       >
         <svg
-          class="w-8 h-8 fill-current"
+          class="h-8 w-8 fill-current"
           role="img"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
@@ -21,10 +21,10 @@
       </a>
     {% endfor %}
   </div>
-  <div class="grid grid-flow-col sm:gap-8 font-mono font-bold">
+  <div class="grid grid-flow-col font-mono font-bold sm:gap-8">
     {% for link in footer.links %}
       <a
-        class="link link-hover w-16"
+        class="link-hover link w-16"
         href="{{ link.url | to_lang | url }}"
       >{{ link.name }}</a>
     {% endfor %}
@@ -34,10 +34,10 @@
 
 {#
   #FIXME
-  <a class="hover:text-primary"></a>
-  <a class="hover:text-secondary"></a>
-  <a class="hover:text-accent"></a>
-  <a class="hover:text-info"></a>
-  <a class="hover:text-warning"></a>
-  <a class="hover:text-error"></a>
+  <a class="lg:hover:text-primary"></a>
+  <a class="lg:hover:text-secondary"></a>
+  <a class="lg:hover:text-accent"></a>
+  <a class="lg:hover:text-info"></a>
+  <a class="lg:hover:text-warning"></a>
+  <a class="lg:hover:text-error"></a>
 #}

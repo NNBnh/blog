@@ -7,10 +7,10 @@
     min-height: calc(100vh - 12rem);
   }
   .btn-cool {
-    @apply hover:rotate-3 hover:scale-110 drop-shadow hover:drop-shadow-xl normal-case;
+    @apply normal-case drop-shadow lg:hover:rotate-3 lg:hover:scale-110 lg:hover:drop-shadow-xl;
   }
   .link-mono {
-    @apply font-mono font-bold duration-200 opacity-50 hover:opacity-100 no-underline;
+    @apply font-mono font-bold no-underline opacity-50 duration-200 lg:hover:opacity-100;
   }
   article .link-mono {
     @apply opacity-75;
