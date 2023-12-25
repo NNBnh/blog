@@ -1143,6 +1143,36 @@ html {
 .menu > :where(li:focus) > :where(ul) {
   display: flex;
 }
+.modal {
+  pointer-events: none;
+  visibility: hidden;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  z-index: 999;
+  background-color: hsl(var(--nf, var(--n)) / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.4;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: transform, opacity, visibility;
+  overflow-y: hidden;
+  overscroll-behavior: contain;
+}
+:where(.modal) {
+  align-items: center;
+}
+.modal-open,
+.modal:target,
+.modal-toggle:checked + .modal {
+  pointer-events: auto;
+  visibility: visible;
+  opacity: 1;
+}
 .navbar {
   display: flex;
   align-items: center;
@@ -2158,6 +2188,14 @@ html {
   border-radius: 40px;
   margin-top: -25px;
 }
+.modal-open .modal-box,
+.modal-toggle:checked + .modal .modal-box,
+.modal:target .modal-box {
+  --tw-translate-y: 0px;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 @keyframes progress-loading {
 
   50% {
@@ -2443,6 +2481,14 @@ html {
   height: 4rem;
   width: 4rem;
   padding: 0px;
+}
+.kbd-sm {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  min-height: 1.6em;
+  min-width: 1.6em;
 }
 .btn-group .btn:not(:first-child):not(:last-child), .btn-group.btn-group-horizontal .btn:not(:first-child):not(:last-child) {
   border-top-left-radius: 0;
@@ -3460,6 +3506,9 @@ article .link-mono {
 .font-semibold {
   font-weight: 600;
 }
+.font-normal {
+  font-weight: 400;
+}
 .normal-case {
   text-transform: none;
 }
@@ -3473,6 +3522,10 @@ article .link-mono {
 .text-secondary {
   --tw-text-opacity: 1;
   color: hsl(var(--s) / var(--tw-text-opacity));
+}
+.text-success {
+  --tw-text-opacity: 1;
+  color: hsl(var(--su) / var(--tw-text-opacity));
 }
 .opacity-0 {
   opacity: 0;
@@ -4227,7 +4280,7 @@ với
 <a href="https://github.com/abishekvashok/cmatrix">Cmatrix</a>, <a href="https://github.com/st3w/neo">Neo</a>.</p>
 <h2 id="no-more-secrets" tabindex="-1"><a class="link-mono" href="#no-more-secrets" aria-hidden="true">#</a> <a href="https://github.com/bartobri/no-more-secrets">No more secrets</a></h2>
 <blockquote>
-<p><code>nms</code> tái dựng lại <a href="https://www.youtube.com/watch?v=F5bAa6gFvLs&amp;t=35">cảnh giải mã dữ liệu nổi tiếng trong phim Sneakers</a>.</p>
+<p><code>nms</code> tái dựng lại <a href="https://youtu.be/F5bAa6gFvLs?t=35">cảnh giải mã dữ liệu nổi tiếng trong phim Sneakers</a>.</p>
 </blockquote>
 <p><img src="https://www.brianbarto.info/static/nms/nms.gif" alt="Screenshot"></p>
 <blockquote>

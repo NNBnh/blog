@@ -7,6 +7,164 @@
     <description>Blog that SuperB</description>
     <language>en</language>
     <item>
+      <title>A rare $EDITOR hopping</title>
+      <link>https://nnb.codeberg.page/blog/en/posts/14/</link>
+      <description>&lt;p&gt;I never actually use 4chan before, but I found the greentext format to be quite interesting for story telling. So this time I will try writing a blog in this style, hope you enjoy!&lt;/p&gt;
+&lt;h2 id=&quot;emacs&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnb.codeberg.page/blog/en/posts/14/#emacs&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; &lt;a href=&quot;https://www.gnu.org/software/emacs&quot;&gt;Emacs&lt;/a&gt;&lt;/h2&gt;
+&lt;p class=&quot;text-success&quot;&gt;
+  &amp;gt; be me&lt;br /&gt;
+  &amp;gt; just switch from windows 10 to kde neon&lt;br /&gt;
+  &amp;gt; fall in love with it customizability&lt;br /&gt;
+  &amp;gt; discover &lt;a class=&quot;text-success&quot; href=&quot;http://xahlee.info/emacs/emacs/emacs.html&quot;&gt;xah blog about emacs&lt;/a&gt;&lt;br /&gt;
+  &amp;gt; also pp say that its the most customizable text editor&lt;br /&gt;
+  &amp;gt; install it&lt;br /&gt;
+&lt;/p&gt;
+&lt;p class=&quot;text-success&quot;&gt;
+  &amp;gt; emacs also come with a shitty tui and a clutter gui&lt;br /&gt;
+  &amp;gt; i minimize and customize the gui&lt;br /&gt;
+  &amp;gt; emacs is now as good as the default text editor that come with the de&lt;br /&gt;
+  &amp;gt; try out &lt;a class=&quot;text-success&quot; href=&quot;https://www.spacemacs.org/&quot;&gt;spacemacs&lt;/a&gt;&lt;br /&gt;
+  &amp;gt; dont like it&lt;br /&gt;
+  &amp;gt; its slow and way more bloat&lt;br /&gt;
+  &amp;gt; decide to rice emacs from scratch&lt;br /&gt;
+  &amp;gt; drown myself in the &lt;a class=&quot;text-success&quot; href=&quot;https://github.com/emacs-tw/awesome-emacs&quot;&gt;awesome emacs list&lt;/a&gt;&lt;br /&gt;
+  &amp;gt; install a LOT of packages to emacs&lt;br /&gt;
+  &amp;gt; spent months configuring emacs&lt;br /&gt;
+  &amp;gt; loving it&lt;br /&gt;
+&lt;/p&gt;
+&lt;p class=&quot;text-success&quot;&gt;
+  &amp;gt; emacs have a ton of features&lt;br /&gt;
+  &amp;gt; too much features&lt;br /&gt;
+  &amp;gt; humongously bloat!&lt;br /&gt;
+  &amp;gt; not just ide level of bloat&lt;br /&gt;
+  &amp;gt; but os level of bloat&lt;br /&gt;
+  &amp;gt; even have a builtin file manager&lt;br /&gt;
+  &amp;gt; and tetris&lt;br /&gt;
+&lt;/p&gt;
+&lt;p class=&quot;text-success&quot;&gt;
+  &amp;gt; slowly feel overwhelmed and exhausted in the emacs config rabbit hole&lt;br /&gt;
+  &amp;gt; still feel somewhat dissatisfied with the config...&lt;br /&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Learning about Emacs from XahLee&#39;s blogs, I discover &lt;a href=&quot;http://xahlee.info/kbd/keyboarding.html&quot;&gt;Xah Keyboard Guide&lt;/a&gt;, then of course learn about &lt;a href=&quot;http://xahlee.info/emacs/emacs/ergonomic_emacs_keybinding.html&quot;&gt;XahLee&#39;s ErgoEmacs Keybinding&lt;/a&gt; and &lt;a href=&quot;https://ergoemacs.github.io/&quot;&gt;Ergoemacs-mode&lt;/a&gt;, it&#39;s try to bind frequently used actions to easy to reach shortcut and use the commonly bound keys familiar to industry standard (e.g: &lt;kbd class=&quot;kbd kbd-sm&quot;&gt;Ctrl&lt;/kbd&gt; + &lt;kbd class=&quot;kbd kbd-sm&quot;&gt;z&lt;/kbd&gt; to undo, &lt;kbd class=&quot;kbd kbd-sm&quot;&gt;Ctrl&lt;/kbd&gt; + &lt;kbd class=&quot;kbd kbd-sm&quot;&gt;s&lt;/kbd&gt; to save). But it&#39;s heavy and breaks regularly, some of the binds I feel like missing or can be improved. So I decided to create &lt;a href=&quot;https://github.com/NNBnh/.emacs.d/blob/main/key.el&quot;&gt;my own bindings&lt;/a&gt;, unknowingly kickstart a length journey...&lt;/p&gt;
+&lt;p&gt;Because I want a better Emacs keybinds instead of except it&#39;s legacy design, I couldn&#39;t stand the default keybinds and spent way too much time and energy to learn as much about Lips and Emacs&#39;s actions to config... That is the reason why I feel exhausted and dissatisfied with Emacs. And also at the time, I didn&#39;t know about &lt;a href=&quot;https://github.com/doomemacs/doomemacs&quot;&gt;Doom Emacs&lt;/a&gt;, an Emacs framework that doesn&#39;t bloat.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;neovim&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnb.codeberg.page/blog/en/posts/14/#neovim&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; &lt;a href=&quot;https://neovim.io/&quot;&gt;NeoVim&lt;/a&gt;&lt;/h2&gt;
+&lt;p class=&quot;text-success&quot;&gt;
+  &amp;gt; watching some linux stuff on yt&lt;br /&gt;
+  &amp;gt; saw some cool hackerman-looking text editor&lt;br /&gt;
+  &amp;gt; its vim&lt;br /&gt;
+  &amp;gt; pp love vim&lt;br /&gt;
+  &amp;gt; specifically neovim&lt;br /&gt;
+  &amp;gt; try it out&lt;br /&gt;
+  &amp;gt; its very fast and light&lt;br /&gt;
+  &amp;gt; feel like a hackerman&lt;br /&gt;
+  &amp;gt; config nvim&lt;br /&gt;
+  &amp;gt; week later&lt;br /&gt;
+  &amp;gt; wow somehow nvim is geting closer to become my dream editor faster than emacs&lt;br /&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Emacs keybinds are weird, but Vi binds are otherworldly strange! Many keys feel redundant, some frequently used actions are place in awkward places...&lt;/p&gt;
+&lt;p&gt;Vim introduce me to modal text editing, it took a few days to get used to, after that, ... [&lt;strong&gt;Enlightenment~&lt;/strong&gt;], editing feel like dancing my fingers on the keyboard!&lt;/p&gt;
+&lt;p&gt;Vi binds ecosystem is huge with a lot of popular tools implementing it in one way or the other, one that learn Vi keys will benefit a lot by it&#39;s ecosystem. I of course ignoring it and continue my own keybinds saga.&lt;/p&gt;
+&lt;p&gt;This time I decide to turn the keybinds from my custom config into a big project, I create &lt;a href=&quot;https://github.com/NNBnh/bkey-old&quot;&gt;Bkey&lt;/a&gt; its a universal keybinds system design for almost all applications. By define each key on the keyboard with a meanings, the applications can bind there own set of shortcuts/actions to fit those meanings.&lt;/p&gt;
+&lt;p&gt;And come with it: &lt;a href=&quot;https://github.com/NNBnh/bkey-vim&quot;&gt;Bkey-Vim&lt;/a&gt; a Bkey implement for Vim.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;kakoune&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnb.codeberg.page/blog/en/posts/14/#kakoune&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; &lt;a href=&quot;https://kakoune.org/&quot;&gt;Kakoune&lt;/a&gt;&lt;/h2&gt;
+&lt;p class=&quot;text-success&quot;&gt;
+  &amp;gt; saw &lt;a class=&quot;text-success&quot; href=&quot;https://youtu.be/sbfCSHhopT4&quot;&gt;a video about kakoune by dt&lt;/a&gt;&lt;br /&gt;
+  &amp;gt; skeptical at first&lt;br /&gt;
+  &amp;gt; then realize its genius design&lt;br /&gt;
+  &amp;gt; switch editor for the third time&lt;br /&gt;
+  &amp;gt; kakoune is extremely minimalistic&lt;br /&gt;
+  &amp;gt; and have better default&lt;br /&gt;
+  &amp;gt; plus easier to config than previous editor&lt;br /&gt;
+  &amp;gt; its build from the ground up with &lt;a class=&quot;text-success&quot; href=&quot;https://kakoune.org/why-kakoune/why-kakoune.html&quot;&gt;its philosophy&lt;/a&gt;&lt;br /&gt;
+  &amp;gt; e.g: object followed by verb (like how thing should be)&lt;br /&gt;
+  &amp;gt; multiple selections is the best things ever introduced to text editors&lt;br /&gt;
+  &amp;gt; its easy to understand, fast, convenient, orthogonal, flexible and powerful&lt;br /&gt;
+  &amp;gt; boy i can never go back to those non multi selections editor every again&lt;br /&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;When switching to Kakoune, I decide to overhaul the Bkey project, rebrand it to &lt;a href=&quot;https://github.com/NNBnh/bmap&quot;&gt;Bmap&lt;/a&gt; and create &lt;a href=&quot;https://github.com/NNBnh/bmap.kak&quot;&gt;Bmap.kak&lt;/a&gt; a Bmap implement for Kakoune.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;other-tui-editors&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnb.codeberg.page/blog/en/posts/14/#other-tui-editors&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Other TUI editors&lt;/h2&gt;
+&lt;p class=&quot;text-success&quot;&gt;
+  &amp;gt; i also try out other tui editors later on:&lt;br /&gt;
+&lt;/p&gt;
+&lt;h3 id=&quot;helix&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnb.codeberg.page/blog/en/posts/14/#helix&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; &lt;a href=&quot;https://helix-editor.com/&quot;&gt;Helix&lt;/a&gt;&lt;/h3&gt;
+&lt;p class=&quot;text-success&quot;&gt;
+  &amp;gt; helix is like kakoune with builtin lsp tree sitter&lt;br /&gt;
+  &amp;gt; written in rust&lt;br /&gt;
+  &amp;gt; blazingly fast&lt;br /&gt;
+&lt;/p&gt;
+&lt;!-- &gt; [TODO](https://github.com/helix-editor/helix/issues/1179) --&gt;
+&lt;!-- &gt; --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I try to make &lt;a href=&quot;https://github.com/NNBnh/bmap-helix&quot;&gt;Bmap-Helix&lt;/a&gt; (unfinished).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;pepper&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnb.codeberg.page/blog/en/posts/14/#pepper&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; &lt;a href=&quot;https://vamolessa.itch.io/pepper&quot;&gt;Pepper&lt;/a&gt;&lt;/h3&gt;
+&lt;p class=&quot;text-success&quot;&gt;
+  &amp;gt; probably the best designed tui text editor that i know of&lt;br /&gt;
+  &amp;gt; its building up upon Kakoune philosophy&lt;br /&gt;
+  &amp;gt; but use caret style cursors (cursors can move past last line character and text is always inserted to its left)&lt;br /&gt;
+  &amp;gt; like cursors on any other gui apps&lt;br /&gt;
+  &amp;gt; its keybinds actions are elegantly and convenient&lt;br /&gt;
+  &amp;gt; pepper is bloat free&lt;br /&gt;
+  &amp;gt; its doesnt having any feature that could instead be implemented by integrating an external tool&lt;br /&gt;
+  &amp;gt; its more minimal than nvim and helix&lt;br /&gt;
+  &amp;gt; but still have enough features (like lsp support) out of the box unlike kakoune&lt;br /&gt;
+  &amp;gt; the downside its although pepper is open source&lt;br /&gt;
+  &amp;gt; its not free&lt;br /&gt;
+  &amp;gt; at the time i try it still very buggy and unpolish&lt;br /&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;And of course I ertend to make &lt;a href=&quot;https://github.com/NNBnh/bmap-pepper&quot;&gt;Bmap-Pepper&lt;/a&gt; (unfinished).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;!--
+## The problem with TUI
+
+TODO
+--&gt;
+&lt;h2 id=&quot;vscode&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnb.codeberg.page/blog/en/posts/14/#vscode&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; &lt;a href=&quot;https://code.visualstudio.com/&quot;&gt;VScode&lt;/a&gt;&lt;/h2&gt;
+&lt;p class=&quot;text-success&quot;&gt;
+  &amp;gt; thinking about switching back to gui editor&lt;br /&gt;
+  &amp;gt; then a desperate thought appear&lt;br /&gt;
+  &amp;gt; maybe vscode&lt;br /&gt;
+  &amp;gt; the normie editor&lt;br /&gt;
+  &amp;gt; is the answer&lt;br /&gt;
+  &amp;gt; install vscode&lt;br /&gt;
+  &amp;gt; probably the editor that come with the best default setting&lt;br /&gt;
+  &amp;gt; its not slow or heavy as pp said&lt;br /&gt;
+&lt;/p&gt;
+&lt;p class=&quot;text-success&quot;&gt;
+  &amp;gt; its keybinds is industry standard&lt;br /&gt;
+  &amp;gt; multi selections in vscode is not as good as powerful as kakoune but still extremely good&lt;br /&gt;
+  &amp;gt; switching back to non modal editing feel a bit slow&lt;br /&gt;
+  &amp;gt; but for me its not a drop in productivity at all&lt;br /&gt;
+  &amp;gt; i still have my skill navigate with my trusty arrow keys&lt;br /&gt;
+&lt;/p&gt;
+&lt;p class=&quot;text-success&quot;&gt;
+  &amp;gt; its have the best lps support&lt;br /&gt;
+  &amp;gt; and ton of other features&lt;br /&gt;
+  &amp;gt; yet none of it feel bloat&lt;br /&gt;
+  &amp;gt; vscodes plugins ecosystem is the biggest&lt;br /&gt;
+  &amp;gt; easy to learn and config&lt;br /&gt;
+  &amp;gt; start spending more time to code than tweaking the editor&lt;br /&gt;
+  &amp;gt; seem like its the most popular editor for reasons&lt;br /&gt;
+&lt;/p&gt;
+&lt;p class=&quot;text-success&quot;&gt;
+  &amp;gt; while everyone share about how they switch from vscode to neovim and emacs&lt;br /&gt;
+  &amp;gt; i do this:&lt;br /&gt;
+  &amp;gt; emacs &lt;code&gt;-&amp;gt;&lt;/code&gt; neovim &lt;code&gt;-&amp;gt;&lt;/code&gt; kakoune &lt;code&gt;-&amp;gt;&lt;/code&gt; helix &lt;code&gt;-&amp;gt;&lt;/code&gt; pepper &lt;code&gt;-&amp;gt;&lt;/code&gt; vscode&lt;br /&gt;
+  &amp;gt; now that is a rare &lt;code&gt;$EDITOR&lt;/code&gt; hopping&lt;br /&gt;
+&lt;/p&gt;
+</description>
+      <pubDate>Mon, 25 Dec 2023 07:00:00 +0000</pubDate>
+      <dc:creator>NNB</dc:creator>
+      <guid>https://nnb.codeberg.page/blog/en/posts/14/</guid>
+    </item>
+    <item>
       <title>My ideal distro</title>
       <link>https://nnb.codeberg.page/blog/en/posts/13/</link>
       <description>&lt;h2 id=&quot;why-linux-in-the-first-place&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnb.codeberg.page/blog/en/posts/13/#why-linux-in-the-first-place&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Why Linux in the first place?&lt;/h2&gt;
@@ -678,7 +836,7 @@ with
 &lt;a href=&quot;https://github.com/abishekvashok/cmatrix&quot;&gt;Cmatrix&lt;/a&gt;, &lt;a href=&quot;https://github.com/st3w/neo&quot;&gt;Neo&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&quot;no-more-secrets&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnb.codeberg.page/blog/en/posts/2/#no-more-secrets&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; &lt;a href=&quot;https://github.com/bartobri/no-more-secrets&quot;&gt;No more secrets&lt;/a&gt;&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;This project provides a command line tool called &lt;code&gt;nms&lt;/code&gt; that recreates the famous data decryption effect seen on screen in the 1992 hacker movie Sneakers. For reference, you can see this effect at 0:35 in &lt;a href=&quot;https://www.youtube.com/watch?v=F5bAa6gFvLs&amp;amp;t=35&quot;&gt;this movie clip&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This project provides a command line tool called &lt;code&gt;nms&lt;/code&gt; that recreates the famous data decryption effect seen on screen in the 1992 hacker movie Sneakers. For reference, you can see this effect at 0:35 in &lt;a href=&quot;https://youtu.be/F5bAa6gFvLs?t=35&quot;&gt;this movie clip&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&quot;https://www.brianbarto.info/static/nms/nms.gif&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
 &lt;blockquote&gt;
