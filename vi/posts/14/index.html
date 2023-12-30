@@ -23,6 +23,8 @@
     <meta property="article:author" content="NNB" />
     <meta property="article:published_time" content="2023-12-25T00:00:00.000Z" />
     
+      <meta property="article:modified_time" content="2023-12-30T00:00:00.000Z" />
+    
     <meta property="article:section" content="os_rice" />
     
       <meta property="article:tag" content="os_rice" />
@@ -3242,6 +3244,9 @@ article .link-mono {
 .mt-8 {
   margin-top: 2rem;
 }
+.block {
+  display: block;
+}
 .inline-block {
   display: inline-block;
 }
@@ -3510,8 +3515,11 @@ article .link-mono {
 .font-semibold {
   font-weight: 600;
 }
-.font-normal {
-  font-weight: 400;
+.uppercase {
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
 }
 .normal-case {
   text-transform: none;
@@ -4202,6 +4210,13 @@ pre[class*="language-"] {
     25/12/2023
   </time>
   
+    <p class="inline-block">
+      -&gt;
+      <time datetime="2023-12-30T00:00:00.000Z">
+        30/12/2023
+      </time>
+    </p>
+  
 </span>
 
       </a>
@@ -4233,163 +4248,156 @@ pre[class*="language-"] {
   <div class="hidden w-80 bg-base-200 bg-opacity-90 xl:block">
     <div class="sticky top-0 h-fit max-h-screen overflow-y-auto">
       <nav class="toc" >
-        <ul><li><a href="#emacs"># Emacs</a></li><li><a href="#neovim"># NeoVim</a></li><li><a href="#kakoune"># Kakoune</a></li><li><a href="#other-tui-editors"># Other TUI editors</a><ul><li><a href="#helix"># Helix</a></li><li><a href="#pepper"># Pepper</a></li></ul></li><li><a href="#vscode"># VScode</a></li></ul>
+        <ul><li><a href="#emacs"># Emacs</a></li><li><a href="#neovim"># NeoVim</a></li><li><a href="#kakoune"># Kakoune</a></li><li><a href="#nhung-tui-editor-khac"># Những TUI editor khác</a><ul><li><a href="#helix"># Helix</a></li><li><a href="#pepper"># Pepper</a></li></ul></li><li><a href="#van-de-nho-nho-voi-tui-editor"># Vấn đề nho nhỏ với TUI editor</a></li><li><a href="#vscode"># VScode</a></li></ul>
       </nav>
     </div>
   </div>
   <div class="w-full bg-base-100 bg-opacity-90">
     <div class="mt-16 mb-24 px-4">
       <main class="prose mx-auto min-w-0 max-w-3xl">
-        <p>I never actually use 4chan before, but I found the greentext format to be quite interesting for story telling. So this time I will try writing a blog in this style, hope you enjoy!</p>
+        <p>Mình chưa bao giờ thực sự sử dụng 4chan, nhưng thấy cái style greentext khá hay. Vì vậy lần này mình sẽ thử viết blog theo phong cách này, hi vọng mọi người sẽ thích!</p>
 <h2 id="emacs" tabindex="-1"><a class="link-mono" href="#emacs" aria-hidden="true">#</a> <a href="https://www.gnu.org/software/emacs">Emacs</a></h2>
-<p class="text-success">
-  &gt; be me<br/>
-  &gt; just switch from windows 10 to kde neon<br/>
-  &gt; fall in love with it customizability<br/>
-  &gt; discover <a class="text-success" href="http://xahlee.info/emacs/emacs/emacs.html">xah blog about emacs</a><br/>
-  &gt; also pp say that its the most customizable text editor<br/>
-  &gt; install it<br/>
-</p>
-<p class="text-success">
-  &gt; emacs also come with a shitty tui and a clutter gui<br/>
-  &gt; i minimize and customize the gui<br/>
-  &gt; emacs is now as good as the default text editor that come with the de<br/>
-  &gt; try out <a class="text-success" href="https://www.spacemacs.org">spacemacs</a><br/>
-  &gt; dont like it<br/>
-  &gt; its slow and way more bloat<br/>
-  &gt; decide to rice emacs from scratch<br/>
-  &gt; drown myself in the <a class="text-success" href="https://github.com/emacs-tw/awesome-emacs">awesome emacs list</a><br/>
-  &gt; install a LOT of packages to emacs<br/>
-  &gt; spent months configuring emacs<br/>
-  &gt; loving it<br/>
-</p>
-<p class="text-success">
-  &gt; emacs have a ton of features<br/>
-  &gt; too much features<br/>
-  &gt; humongously bloat!<br/>
-  &gt; not just ide level of bloat<br/>
-  &gt; but os level of bloat<br/>
-  &gt; even have a builtin file manager<br/>
-  &gt; and tetris<br/>
-</p>
-<p class="text-success">
-  &gt; slowly feel overwhelmed and exhausted in the emacs config rabbit hole<br/>
-  &gt; still feel somewhat dissatisfied with the config...<br/>
-</p>
-<blockquote>
-<p>Learning about Emacs from XahLee's blogs, I discover <a href="http://xahlee.info/kbd/keyboarding.html">Xah Keyboard Guide</a>, then of course learn about <a href="http://xahlee.info/emacs/emacs/ergonomic_emacs_keybinding.html">XahLee's ErgoEmacs Keybinding</a> and <a href="https://ergoemacs.github.io">Ergoemacs-mode</a>, it's try to bind frequently used actions to easy to reach shortcut and use the commonly bound keys familiar to industry standard (e.g: <kbd class="kbd kbd-sm">Ctrl</kbd> + <kbd class="kbd kbd-sm">z</kbd> to undo, <kbd class="kbd kbd-sm">Ctrl</kbd> + <kbd class="kbd kbd-sm">s</kbd> to save). But it's heavy and breaks regularly, some of the binds I feel like missing or can be improved. So I decided to create <a href="https://github.com/NNBnh/.emacs.d/blob/main/key.el">my own bindings</a>, unknowingly kickstart a length journey...</p>
-<p>Because I want a better Emacs keybinds instead of except it's legacy design, I couldn't stand the default keybinds and spent way too much time and energy to learn as much about Lips and Emacs's actions to config... That is the reason why I feel exhausted and dissatisfied with Emacs. And also at the time, I didn't know about <a href="https://github.com/doomemacs/doomemacs">Doom Emacs</a>, an Emacs framework that doesn't bloat.</p>
-</blockquote>
+  <p class="text-success">
+    &gt; vừa chuyển từ windows 10 sang kde neon<br/>
+    &gt; rất thích khả năng tùy chỉnh của nó<br/>
+    &gt; khám phá ra <a class="text-success" href="http://xahlee.info/emacs/emacs/emacs.html">xah blog về emacs</a><br/>
+    &gt; mn review bảo emacs là editor có khả năng tùy chỉnh rộng nhất<br/>
+    &gt; quá hợp với ước mong config mọi thứ của mình<br/>
+    &gt; cài emacs<br/>
+  </p>
+  <p class="text-success">
+    &gt; emacs có thể dùng như một cái TUI phèn<br/>
+    &gt; GUI mặc định khá chật<br/>
+    &gt; sau khi đơn giản hóa giao diện<br/>
+    &gt; emacs để mặc định ko tốt lắm<br/>
+    &gt; nhưng config tí là nó ổn như editor có sẵn trong de r<br/>
+    &gt; thử cài <a class="text-success" href="https://www.spacemacs.org">spacemacs</a><br/>
+    &gt; ko thấy ưa nó lắm<br/>
+    &gt; nó khá chậm và bloat<br/>
+    &gt; quyết định tự độ emacs từ con số ko<br/>
+    &gt; lao đầu vào nghiền ngẫm tất cả mọi thứ trong <a class="text-success" href="https://github.com/emacs-tw/awesome-emacs">danh sách awesome emacs</a><br/>
+    &gt; ko hiểu một phần ba những gì mình vừa đọc<br/>
+    &gt; cài một đống packages vào emacs<br/>
+    &gt; ko động tý gì vào một nửa trong số đấy<br/>
+    &gt; dành hàng tháng config emacs<br/>
+    &gt; đam mê nó<br/>
+  </p>
+  <p class="text-success">
+    &gt; emacs có rất nhiều tính năng<br/>
+    &gt; quá nhiều là đằng khác<br/>
+    &gt; rất cồng kềnh!<br/>
+    &gt; ko chỉ công kềnh so với các ide<br/>
+    &gt; mà nó đồ sộ như một hệ điều hành<br/>
+    &gt; có tích hợp cả file manager<br/>
+    &gt; và tetris :)<br/>
+  </p>
+  <p class="text-success">
+    &gt; dần dần bị choáng ngợp và kiệt quệ với việc config emacs<br/>
+    &gt; xong vẫn cảm thấy chưa thỏa mãn với cái editor...<br/>
+  </p>
+<p>học về Emacs qua blog của XahLee, mình lần theo dõi <a href="http://xahlee.info/kbd/keyboarding.html">Xah Keyboard Guide</a>, rồi đương nhiên lan ra xem <a href="http://xahlee.info/emacs/emacs/ergonomic_emacs_keybinding.html">ErgoEmacs Keybinding của XahLee</a> và <a href="https://ergoemacs.github.io">Ergoemacs-mode</a>, nó gán các hành động thường dừng vào shortcut dễ nhấn và gán các hành động tương tự ở các phần mềm khác vào các vị trí tương tự (e.g: <kbd class="kbd kbd-sm">Ctrl</kbd> + <kbd class="kbd kbd-sm">z</kbd> để undo, <kbd class="kbd kbd-sm">Ctrl</kbd> + <kbd class="kbd kbd-sm">s</kbd> để lưu). Nhưng nó rất nặng và hay bị hỏng, một số thiết kế mình thấy còn thiếu hoặc có thể cải thiện. Vì thế nên mình quyết định tự tạo <a href="https://github.com/NNBnh/.emacs.d/blob/main/key.el">bindings cho riêng mình</a>, không hề hay biết điều này vô tình bắt đầu một chuyến hành trình dài kỳ...</p>
+<p>Bởi vì mình mong muốn một bộ keybinds tốt hơn cho Emacs thay vì chấp nhận keybinds cổ của nó, mình không thể chấp nhận keybinds mặc định và dành quá nhiều thời gian và năng lực vào việc học lisp và config... Đấy là lý do mình cảm thấy kiệt quệ và bất mãn với Emacs. Và cũng vì vào thời điểm đó, mình không biết đến <a href="https://github.com/doomemacs/doomemacs">Doom Emacs</a>, một Emacs framework mà không bloat.</p>
 <h2 id="neovim" tabindex="-1"><a class="link-mono" href="#neovim" aria-hidden="true">#</a> <a href="https://neovim.io">NeoVim</a></h2>
-<p class="text-success">
-  &gt; watching some linux stuff on yt<br/>
-  &gt; saw some cool hackerman-looking text editor<br/>
-  &gt; its vim<br/>
-  &gt; pp love vim<br/>
-  &gt; specifically neovim<br/>
-  &gt; try it out<br/>
-  &gt; its very fast and light<br/>
-  &gt; feel like a hackerman<br/>
-  &gt; config nvim<br/>
-  &gt; week later<br/>
-  &gt; wow somehow nvim is geting closer to become my dream editor faster than emacs<br/>
-</p>
-<blockquote>
-<p>Emacs keybinds are weird, but Vi binds are otherworldly strange! Many keys feel redundant, some frequently used actions are place in awkward places...</p>
-<p>Vim introduce me to modal text editing, it took a few days to get used to, after that, ... [<strong>Enlightenment~</strong>], editing feel like dancing my fingers on the keyboard!</p>
-<p>Vi binds ecosystem is huge with a lot of popular tools implementing it in one way or the other, one that learn Vi keys will benefit a lot by it's ecosystem. I of course ignoring it and continue my own keybinds saga.</p>
-<p>This time I decide to turn the keybinds from my custom config into a big project, I create <a href="https://github.com/NNBnh/bkey-old">Bkey</a> its a universal keybinds system design for almost all applications. By define each key on the keyboard with a meanings, the applications can bind there own set of shortcuts/actions to fit those meanings.</p>
-<p>And come with it: <a href="https://github.com/NNBnh/bkey-vim">Bkey-Vim</a> a Bkey implement for Vim.</p>
-</blockquote>
+  <p class="text-success">
+    &gt; xem các thứ về linux trên yt<br/>
+    &gt; thấy một cái text editor trông rất hackerman<br/>
+    &gt; nó là vim<br/>
+    &gt; mn rất cuồng vim<br/>
+    &gt; cụ thể là neovim<br/>
+    &gt; cài nghịch thử<br/>
+    &gt; so với các GUI editor<br/>
+    &gt; con hàng này rất nhẹ và nhanh<br/>
+    &gt; cảm giác như là một hackerman<br/>
+    &gt; config nvim<br/>
+    &gt; chỉ tầm tuần sau<br/>
+    &gt; mình đã có thể config nvim trở thành editor lý tưởng hơn emacs đối với mình<br/>
+  </p>
+<p>Keybinds của Emacs rất lạ, nhưng Vi lại còn ảo ma hơn nữa! Rất nhiều nút được gán với hành động khá thừa thãi, một số hành động lại được gán vào các vị trí rất khó nhấn...</p>
+<p>Vim giới thiệu mình với một khái niệm mới gọi là modal text editing, đơn giản thì nó chia việc viết và edit và select vân vân thành các chế độ riêng và nhờ thế mình chỉ cần nhấn nút để thử hiện hành động thay vì nhấn giữ tổ hợp phím. Phải mất vài ngày để quen, nhưng khi đã giác ngộ được nó, dùng vim rất nhanh và nhẹ nhàng, edit cứ như cho tay nhảy hiphop trên bàn phím ý.</p>
+<p>Hệ sinh thái Vi bings cực kỳ lớn, hầu hết các công cụ lập trình đều hỗ trợ nó qua nhiều cách, học Vi sẽ rất là lợi vì có thể đem tốc độ đó đến mọi công cụ. minh đương nhiên cố thủ và tiếp tục sử thi keybinds của mình.</p>
+<p>Lần này mình quyết định biến keybinds cá nhân của mình thành một dự án lớn, mình tạo <a href="https://github.com/NNBnh/bkey-old">Bkey</a> nó là một hệ thống thiết kế keybinds phổ quát cho hầu hết các ứng dụng. Bằng cách gán ý nghĩa của từng phím trên bàn phím, các ứng dụng có thể liên kết bộ phím tắt vào để sao cho phù hợp với những ý nghĩa trong hệ thống này.</p>
 <h2 id="kakoune" tabindex="-1"><a class="link-mono" href="#kakoune" aria-hidden="true">#</a> <a href="https://kakoune.org">Kakoune</a></h2>
-<p class="text-success">
-  &gt; saw <a class="text-success" href="https://youtu.be/sbfCSHhopT4">a video about kakoune by dt</a><br/>
-  &gt; skeptical at first<br/>
-  &gt; then realize its genius design<br/>
-  &gt; switch editor for the third time<br/>
-  &gt; kakoune is extremely minimalistic<br/>
-  &gt; and have better default<br/>
-  &gt; plus easier to config than previous editor<br/>
-  &gt; its build from the ground up with <a class="text-success" href="https://kakoune.org/why-kakoune/why-kakoune.html">its philosophy</a><br/>
-  &gt; e.g: object followed by verb (like how thing should be)<br/>
-  &gt; multiple selections is the best things ever introduced to text editors<br/>
-  &gt; its easy to understand, fast, convenient, orthogonal, flexible and powerful<br/>
-  &gt; boy i can never go back to those non multi selections editor every again<br/>
-</p>
-<blockquote>
-<p>When switching to Kakoune, I decide to overhaul the Bkey project, rebrand it to <a href="https://github.com/NNBnh/bmap">Bmap</a> and create <a href="https://github.com/NNBnh/bmap.kak">Bmap.kak</a> a Bmap implement for Kakoune.</p>
-</blockquote>
-<h2 id="other-tui-editors" tabindex="-1"><a class="link-mono" href="#other-tui-editors" aria-hidden="true">#</a> Other TUI editors</h2>
-<p class="text-success">
-  &gt; i also try out other tui editors later on:<br/>
-</p>
+  <p class="text-success">
+    &gt; xem <a class="text-success" href="https://youtu.be/sbfCSHhopT4">vid về kakoune trên kênh của dt</a><br/>
+    &gt; ban đầu khá nghi ngờ<br/>
+    &gt; xong giác ngộ được thiết kế đột phá của nó<br/>
+    &gt; đổi editor lần thứ ba<br/>
+    &gt; kakoune cực kỳ tối giản<br/>
+    &gt; có cài đặt mặc định rất ổn<br/>
+    &gt; đồng thời dễ config hơn hẳn so với các editor trước<br/>
+    &gt; kakoune được xây dựng từ <a class="text-success" href="https://kakoune.org/why-kakoune/why-kakoune.html">triết lý của riêng nó</a><br/>
+    &gt; vd: bôi đen để khoanh vùng trước rồi mới làm hành động sau (điều mà vim làm ngược đời)<br/>
+    &gt; multiple selections là cái đột phá nhất<br/>
+    &gt; nó rất dễ hiểu, nhanh, tiện lợi, trực giao, linh hoạt và uy lực<br/>
+    &gt; giờ khó mà edit khi thiếu multi selections<br/>
+  </p>
+<p>Khi đổi sang Kakoune, mình quyết định làm một cú lột xác cho dự án Bkey, rebrand nó thành <a href="https://github.com/NNBnh/bmap">Bmap</a> và tạo <a href="https://github.com/NNBnh/bmap.kak">Bmap.kak</a> để dùng cho Kakoune.</p>
+<h2 id="nhung-tui-editor-khac" tabindex="-1"><a class="link-mono" href="#nhung-tui-editor-khac" aria-hidden="true">#</a> Những TUI editor khác</h2>
+<p>&gt; sau đấy mình đá qua một số editor khác:<br/></p>
 <h3 id="helix" tabindex="-1"><a class="link-mono" href="#helix" aria-hidden="true">#</a> <a href="https://helix-editor.com">Helix</a></h3>
-<p class="text-success">
-  &gt; helix is like kakoune with builtin lsp tree sitter<br/>
-  &gt; written in rust<br/>
-  &gt; blazingly fast<br/>
-</p>
-<!-- > [TODO](https://github.com/helix-editor/helix/issues/1179) -->
-<!-- > -->
-<blockquote>
-<p>I try to make <a href="https://github.com/NNBnh/bmap-helix">Bmap-Helix</a> (unfinished).</p>
-</blockquote>
+  <p class="text-success">
+    &gt; helix rất giống kakoune nhưng có tích hợp sẵn lsp và tree sitter<br/>
+    &gt; viết bằng rust<br/>
+    &gt; _blazingly fast_<br/>
+  </p>
+<p>Mình còn viết một đống yêu cầu tính năng và thay đổi vào <a href="https://github.com/helix-editor/helix/issues/1179">issues trên Github của Helix</a>, đương nhiên là nó bị từ chối.</p>
+<p>Mình có thử làm <a href="https://github.com/NNBnh/bmap-helix">Bmap-Helix</a> (không hoàn thiện).</p>
 <h3 id="pepper" tabindex="-1"><a class="link-mono" href="#pepper" aria-hidden="true">#</a> <a href="https://vamolessa.itch.io/pepper">Pepper</a></h3>
-<p class="text-success">
-  &gt; probably the best designed tui text editor that i know of<br/>
-  &gt; its building up upon Kakoune philosophy<br/>
-  &gt; but use caret style cursors (cursors can move past last line character and text is always inserted to its left)<br/>
-  &gt; like cursors on any other gui apps<br/>
-  &gt; its keybinds actions are elegantly and convenient<br/>
-  &gt; pepper is bloat free<br/>
-  &gt; its doesnt having any feature that could instead be implemented by integrating an external tool<br/>
-  &gt; its more minimal than nvim and helix<br/>
-  &gt; but still have enough features (like lsp support) out of the box unlike kakoune<br/>
-  &gt; the downside its although pepper is open source<br/>
-  &gt; its not free<br/>
-  &gt; at the time i try it still very buggy and unpolish<br/>
-</p>
-<blockquote>
-<p>And of course I ertend to make <a href="https://github.com/NNBnh/bmap-pepper">Bmap-Pepper</a> (unfinished).</p>
-</blockquote>
-<!--
-## The problem with TUI
-
-TODO
--->
+  <p class="text-success">
+    &gt; đây là TUI editor được thiết tốt nhất mà mình biết<br/>
+    &gt; nó được xây dựng dựa trên triết lý thiết kế của Kakoune<br/>
+    &gt; nhưng sử dụng con trỏ mỏng<br/>
+    &gt; (con trỏ ko phải là một cục vuông nằm ở trong một ký tự mà là một đường thẳng mỏng nằm giữa hai ký tự)<br/>
+    &gt; như con trỏ trong tất cả các ứng dụng GUI khác<br/>
+    &gt; các hành động của keybinds được thiết kế rất tiện lợi<br/>
+    &gt; pepper ko có bloat<br/>
+    &gt; nó ko có tính năng nào mà có thẻ được sử dụng hoặc tích hợp từ các công cụ bên ngoài cả<br/>
+    &gt; nó tối giản hơn nvim và helix<br/>
+    &gt; xong vẫn đủ tính năng (như hỗ trợ lsp) ngay từ ban đầu, ko như kakoune<br/>
+    &gt; điểm trừ là mặc dù pepper mở nguồn<br/>
+    &gt; nó ko free<br/>
+    &gt; và ở thời điểm nó rất buggy<br/>
+  </p>
+<p>Và đương nhiên mình có thử làm <a href="https://github.com/NNBnh/bmap-pepper">Bmap-Pepper</a> (không hoàn thiện).</p>
+<h2 id="van-de-nho-nho-voi-tui-editor" tabindex="-1"><a class="link-mono" href="#van-de-nho-nho-voi-tui-editor" aria-hidden="true">#</a> Vấn đề nho nhỏ với TUI editor</h2>
+<p>Bình thường đi lại quanh file system trong shell, khi mình edit file, mình muốn mở editor lên một cửa sổ mới và để shell ở lại để mình có thể làm các việc khác ngay tại vị trí hơn là thay thế shell hiện tại với editor. Mình có thể viết một cái script/alias/function để làm được điều đó, nhưng chả phải GUI editor như VScode đã mặc định mở lên như thế rồi hay sao.</p>
 <h2 id="vscode" tabindex="-1"><a class="link-mono" href="#vscode" aria-hidden="true">#</a> <a href="https://code.visualstudio.com">VScode</a></h2>
-<p class="text-success">
-  &gt; thinking about switching back to gui editor<br/>
-  &gt; then a desperate thought appear<br/>
-  &gt; maybe vscode<br/>
-  &gt; the normie editor<br/>
-  &gt; is the answer<br/>
-  &gt; install vscode<br/>
-  &gt; probably the editor that come with the best default setting<br/>
-  &gt; its not slow or heavy as pp said<br/>
-</p>
-<p class="text-success">
-  &gt; its keybinds is industry standard<br/>
-  &gt; multi selections in vscode is not as good as powerful as kakoune but still extremely good<br/>
-  &gt; switching back to non modal editing feel a bit slow<br/>
-  &gt; but for me its not a drop in productivity at all<br/>
-  &gt; i still have my skill navigate with my trusty arrow keys<br/>
-</p>
-<p class="text-success">
-  &gt; its have the best lps support<br/>
-  &gt; and ton of other features<br/>
-  &gt; yet none of it feel bloat<br/>
-  &gt; vscodes plugins ecosystem is the biggest<br/>
-  &gt; easy to learn and config<br/>
-  &gt; start spending more time to code than tweaking the editor<br/>
-  &gt; seem like its the most popular editor for reasons<br/>
-</p>
-<p class="text-success">
-  &gt; while everyone share about how they switch from vscode to neovim and emacs<br/>
-  &gt; i do this:<br/>
-  &gt; emacs <code>-&gt;</code> neovim <code>-&gt;</code> kakoune <code>-&gt;</code> helix <code>-&gt;</code> pepper <code>-&gt;</code> vscode<br/>
-  &gt; now that is a rare <code>$EDITOR</code> hopping<br/>
-</p>
+  <p class="text-success">
+    &gt; đang tính chuyển lại về dùng GUI editor<br/>
+    &gt; rồi một suy nghĩ tuyệt vọng thoáng qua<br/>
+    &gt; mình đã có nghiên cứu qua vscode<br/>
+    &gt; và thấy vscode có nhưng thiết kế rất đúng đắn<br/>
+    &gt; và lấy vscode làm mốc tiêu chuẩn để độ các editor khác đc như thế<br/>
+    &gt; có lẽ mình nên thử chuyển hẳn sang vscode<br/>
+    &gt; cái editor normie đó<br/>
+    &gt; chính là câu trả lời<br/>
+    &gt; ...<br/>
+    &gt; cài vscode<br/>
+    &gt; có lẽ đây là editor với cài đặt mặc định tốt nhất<br/>
+    &gt; nó ko quá nặng hay châm như mọi người hay nói<br/>
+  </p>
+  <p class="text-success">
+    &gt; keybinds của nó đi theo tiêu chuẩn phổ thông<br/>
+    &gt; multi selections trên vscode ko uy lực như kakoune nhưng vẫn rất tốt<br/>
+    &gt; quay trở lại non modal editing cảm giác hơi chậm một chút<br/>
+    &gt; nhưng mình ko cảm thấy nó thật sự giảm năng suất làm việc của mình một chút nào<br/>
+    &gt; có thể là vì mình vẫn còn kĩ năng dùng nút mũi tên điêu luyện<br/>
+  </p>
+  <p class="text-success">
+    &gt; nó có hỗ trợ lps tốt nhất<br/>
+    &gt; và một đống tính năng đi kèm khác<br/>
+    &gt; nhưng ko có tính năng nào là cảm giác thừa thãi hay cồng kềnh cả<br/>
+    &gt; vscode có số lượng plugins lớn nhất so với các editor<br/>
+    &gt; vscode rất dễ tiếp cận và config<br/>
+    &gt; mình bắt đầu dành nhiều thời gian để code hơn là tùy chỉnh editor<br/>
+    &gt; ko phải tự dưng vscode lại nổi tiếng nhất<br/>
+  </p>
+  <p class="text-success">
+    &gt; trong khi cả thế giới chia sẻ hành trình chuyển giao từ vscode sang neovim hoặc emacs<br/>
+    &gt; thì mình lại:<br/>
+    &gt; emacs -&gt; neovim -&gt; kakoune -&gt; helix -&gt; pepper -&gt; vscode<br/>
+    &gt; quả là một cú đổi <code class="text-success">$EDITOR</code> hiếm<br/>
+  </p>
 
       </main>
       <div class="mx-auto mt-32 max-w-3xl">
@@ -4556,7 +4564,7 @@ TODO
       <label for="main-drawer" class="drawer-overlay"></label>
       <div class="w-80 bg-base-300 bg-opacity-75 shadow backdrop-blur">
         <nav class="toc" >
-        <ul><li><a href="#emacs"># Emacs</a></li><li><a href="#neovim"># NeoVim</a></li><li><a href="#kakoune"># Kakoune</a></li><li><a href="#other-tui-editors"># Other TUI editors</a><ul><li><a href="#helix"># Helix</a></li><li><a href="#pepper"># Pepper</a></li></ul></li><li><a href="#vscode"># VScode</a></li></ul>
+        <ul><li><a href="#emacs"># Emacs</a></li><li><a href="#neovim"># NeoVim</a></li><li><a href="#kakoune"># Kakoune</a></li><li><a href="#nhung-tui-editor-khac"># Những TUI editor khác</a><ul><li><a href="#helix"># Helix</a></li><li><a href="#pepper"># Pepper</a></li></ul></li><li><a href="#van-de-nho-nho-voi-tui-editor"># Vấn đề nho nhỏ với TUI editor</a></li><li><a href="#vscode"># VScode</a></li></ul>
       </nav>
       </div>
     </div>

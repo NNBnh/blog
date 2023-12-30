@@ -85,11 +85,11 @@
     <lastmod>13/08/2023</lastmod>
   </url>
   <url>
-    <loc>/https:/nnb.codeberg.page/blog/blog/en/tags/story/</loc>
+    <loc>/https:/nnb.codeberg.page/blog/blog/en/tags/ruby/</loc>
     <lastmod>13/08/2023</lastmod>
   </url>
   <url>
-    <loc>/https:/nnb.codeberg.page/blog/blog/en/tags/ruby/</loc>
+    <loc>/https:/nnb.codeberg.page/blog/blog/en/tags/story/</loc>
     <lastmod>13/08/2023</lastmod>
   </url>
   <url>
@@ -113,11 +113,11 @@
     <lastmod>13/08/2023</lastmod>
   </url>
   <url>
-    <loc>/https:/nnb.codeberg.page/blog/blog/vi/tags/story/</loc>
+    <loc>/https:/nnb.codeberg.page/blog/blog/vi/tags/ruby/</loc>
     <lastmod>13/08/2023</lastmod>
   </url>
   <url>
-    <loc>/https:/nnb.codeberg.page/blog/blog/vi/tags/ruby/</loc>
+    <loc>/https:/nnb.codeberg.page/blog/blog/vi/tags/story/</loc>
     <lastmod>13/08/2023</lastmod>
   </url>
   <url>
@@ -127,5 +127,9 @@
   <url>
     <loc>/https:/nnb.codeberg.page/blog/blog/en/posts/14/</loc>
     <lastmod>25/12/2023</lastmod>
+  </url>
+  <url>
+    <loc>/https:/nnb.codeberg.page/blog/blog/en/posts/15/</loc>
+    <lastmod>30/12/2023</lastmod>
   </url>
 </urlset>

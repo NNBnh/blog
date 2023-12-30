@@ -3230,6 +3230,9 @@ article .link-mono {
 .mt-8 {
   margin-top: 2rem;
 }
+.block {
+  display: block;
+}
 .inline-block {
   display: inline-block;
 }
@@ -3498,8 +3501,11 @@ article .link-mono {
 .font-semibold {
   font-weight: 600;
 }
-.font-normal {
-  font-weight: 400;
+.uppercase {
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
 }
 .normal-case {
   text-transform: none;
@@ -4357,6 +4363,52 @@ pre[class*="language-"] {
     <figure>
       <img
         class="aspect-[2/1] w-96 duration-200 lg:group-hover:blur"
+        src="https://images.unsplash.com/photo-1505238680356-667803448bb6?w=480"
+        alt="Thumbnail"
+      />
+    </figure>
+    <div class="card-body">
+      <div>
+        
+        
+        <span class="link-mono lg:group-hover:opacity-100">
+  <time datetime="2023-12-30T00:00:00.000Z">
+    30/12/2023
+  </time>
+  
+</span>
+
+      </div>
+      <a
+        class="card-title h-full items-center justify-center px-4 text-center font-serif font-black duration-200 lg:hover:text-secondary lg:group-hover:-rotate-6 lg:group-hover:scale-110"
+        href="/blog/vi/posts/15/"
+      >
+        <h2>CLI, TUI và GUI</h2>
+      </a>
+      <div class="sm:text-md card-actions min-h-[1.25rem] justify-end text-sm">
+        
+        
+  <a
+    class="link-mono"
+    href="/blog/vi/tags/os_rice/"
+  >#os_rice</a>
+
+  <a
+    class="link-mono"
+    href="/blog/vi/tags/tty/"
+  >#tty</a>
+
+
+      </div>
+    </div>
+  </article>
+
+  <article
+    class="group card image-full card-compact mt-8 max-w-sm bg-base-100 shadow-xl outline outline-2 outline-secondary duration-200 lg:hover:z-20 lg:hover:rotate-3 lg:hover:scale-105 lg:hover:shadow-2xl lg:hover:outline-8"
+  >
+    <figure>
+      <img
+        class="aspect-[2/1] w-96 duration-200 lg:group-hover:blur"
         src="https://images.unsplash.com/photo-1588678488522-ef3e706b695a?w=480"
         alt="Thumbnail"
       />
@@ -4369,6 +4421,13 @@ pre[class*="language-"] {
   <time datetime="2023-12-25T00:00:00.000Z">
     25/12/2023
   </time>
+  
+    <p class="inline-block">
+      -&gt;
+      <time datetime="2023-12-30T00:00:00.000Z">
+        30/12/2023
+      </time>
+    </p>
   
 </span>
 

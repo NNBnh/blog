@@ -23,6 +23,8 @@
     <meta property="article:author" content="NNB" />
     <meta property="article:published_time" content="2023-12-25T00:00:00.000Z" />
     
+      <meta property="article:modified_time" content="2023-12-30T00:00:00.000Z" />
+    
     <meta property="article:section" content="os_rice" />
     
       <meta property="article:tag" content="os_rice" />
@@ -3242,6 +3244,9 @@ article .link-mono {
 .mt-8 {
   margin-top: 2rem;
 }
+.block {
+  display: block;
+}
 .inline-block {
   display: inline-block;
 }
@@ -3510,8 +3515,11 @@ article .link-mono {
 .font-semibold {
   font-weight: 600;
 }
-.font-normal {
-  font-weight: 400;
+.uppercase {
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
 }
 .normal-case {
   text-transform: none;
@@ -4202,6 +4210,13 @@ pre[class*="language-"] {
     25/12/2023
   </time>
   
+    <p class="inline-block">
+      -&gt;
+      <time datetime="2023-12-30T00:00:00.000Z">
+        30/12/2023
+      </time>
+    </p>
+  
 </span>
 
       </a>
@@ -4233,7 +4248,7 @@ pre[class*="language-"] {
   <div class="hidden w-80 bg-base-200 bg-opacity-90 xl:block">
     <div class="sticky top-0 h-fit max-h-screen overflow-y-auto">
       <nav class="toc" >
-        <ul><li><a href="#emacs"># Emacs</a></li><li><a href="#neovim"># NeoVim</a></li><li><a href="#kakoune"># Kakoune</a></li><li><a href="#other-tui-editors"># Other TUI editors</a><ul><li><a href="#helix"># Helix</a></li><li><a href="#pepper"># Pepper</a></li></ul></li><li><a href="#vscode"># VScode</a></li></ul>
+        <ul><li><a href="#emacs"># Emacs</a></li><li><a href="#neovim"># NeoVim</a></li><li><a href="#kakoune"># Kakoune</a></li><li><a href="#other-tui-editors"># Other TUI editors</a><ul><li><a href="#helix"># Helix</a></li><li><a href="#pepper"># Pepper</a></li></ul></li><li><a href="#the-tiny-problem-with-tui-editor"># The tiny problem with TUI editor</a></li><li><a href="#vscode"># VScode</a></li></ul>
       </nav>
     </div>
   </div>
@@ -4242,154 +4257,147 @@ pre[class*="language-"] {
       <main class="prose mx-auto min-w-0 max-w-3xl">
         <p>I never actually use 4chan before, but I found the greentext format to be quite interesting for story telling. So this time I will try writing a blog in this style, hope you enjoy!</p>
 <h2 id="emacs" tabindex="-1"><a class="link-mono" href="#emacs" aria-hidden="true">#</a> <a href="https://www.gnu.org/software/emacs">Emacs</a></h2>
-<p class="text-success">
-  &gt; be me<br/>
-  &gt; just switch from windows 10 to kde neon<br/>
-  &gt; fall in love with it customizability<br/>
-  &gt; discover <a class="text-success" href="http://xahlee.info/emacs/emacs/emacs.html">xah blog about emacs</a><br/>
-  &gt; also pp say that its the most customizable text editor<br/>
-  &gt; install it<br/>
-</p>
-<p class="text-success">
-  &gt; emacs also come with a shitty tui and a clutter gui<br/>
-  &gt; i minimize and customize the gui<br/>
-  &gt; emacs is now as good as the default text editor that come with the de<br/>
-  &gt; try out <a class="text-success" href="https://www.spacemacs.org">spacemacs</a><br/>
-  &gt; dont like it<br/>
-  &gt; its slow and way more bloat<br/>
-  &gt; decide to rice emacs from scratch<br/>
-  &gt; drown myself in the <a class="text-success" href="https://github.com/emacs-tw/awesome-emacs">awesome emacs list</a><br/>
-  &gt; install a LOT of packages to emacs<br/>
-  &gt; spent months configuring emacs<br/>
-  &gt; loving it<br/>
-</p>
-<p class="text-success">
-  &gt; emacs have a ton of features<br/>
-  &gt; too much features<br/>
-  &gt; humongously bloat!<br/>
-  &gt; not just ide level of bloat<br/>
-  &gt; but os level of bloat<br/>
-  &gt; even have a builtin file manager<br/>
-  &gt; and tetris<br/>
-</p>
-<p class="text-success">
-  &gt; slowly feel overwhelmed and exhausted in the emacs config rabbit hole<br/>
-  &gt; still feel somewhat dissatisfied with the config...<br/>
-</p>
-<blockquote>
+  <p class="text-success">
+    &gt; be me<br/>
+    &gt; just switch from windows 10 to kde neon<br/>
+    &gt; fall in love with it customizability<br/>
+    &gt; discover <a class="text-success" href="http://xahlee.info/emacs/emacs/emacs.html">xah blog about emacs</a><br/>
+    &gt; also pp say that its the most customizable text editor<br/>
+    &gt; fitting with the linux spirit that i desire<br/>
+    &gt; install it<br/>
+  </p>
+  <p class="text-success">
+    &gt; emacs also come with a shitty tui and a clutter gui<br/>
+    &gt; i minimize and customize the gui<br/>
+    &gt; emacs is now as good as the default text editor that come with the de<br/>
+    &gt; try out <a class="text-success" href="https://www.spacemacs.org">spacemacs</a><br/>
+    &gt; dont like it<br/>
+    &gt; its slow and way more bloat<br/>
+    &gt; decide to rice emacs from scratch<br/>
+    &gt; drown myself in the <a class="text-success" href="https://github.com/emacs-tw/awesome-emacs">awesome emacs list</a><br/>
+    &gt; install a LOT of packages to emacs<br/>
+    &gt; spent months configuring emacs<br/>
+    &gt; loving it<br/>
+  </p>
+  <p class="text-success">
+    &gt; emacs have a ton of features<br/>
+    &gt; too much features<br/>
+    &gt; humongously bloat!<br/>
+    &gt; not just ide level of bloat<br/>
+    &gt; but os level of bloat<br/>
+    &gt; even have a builtin file manager<br/>
+    &gt; and tetris<br/>
+  </p>
+  <p class="text-success">
+    &gt; slowly feel overwhelmed and exhausted in the emacs config rabbit hole<br/>
+    &gt; still feel somewhat dissatisfied with the config...<br/>
+  </p>
 <p>Learning about Emacs from XahLee's blogs, I discover <a href="http://xahlee.info/kbd/keyboarding.html">Xah Keyboard Guide</a>, then of course learn about <a href="http://xahlee.info/emacs/emacs/ergonomic_emacs_keybinding.html">XahLee's ErgoEmacs Keybinding</a> and <a href="https://ergoemacs.github.io">Ergoemacs-mode</a>, it's try to bind frequently used actions to easy to reach shortcut and use the commonly bound keys familiar to industry standard (e.g: <kbd class="kbd kbd-sm">Ctrl</kbd> + <kbd class="kbd kbd-sm">z</kbd> to undo, <kbd class="kbd kbd-sm">Ctrl</kbd> + <kbd class="kbd kbd-sm">s</kbd> to save). But it's heavy and breaks regularly, some of the binds I feel like missing or can be improved. So I decided to create <a href="https://github.com/NNBnh/.emacs.d/blob/main/key.el">my own bindings</a>, unknowingly kickstart a length journey...</p>
 <p>Because I want a better Emacs keybinds instead of except it's legacy design, I couldn't stand the default keybinds and spent way too much time and energy to learn as much about Lips and Emacs's actions to config... That is the reason why I feel exhausted and dissatisfied with Emacs. And also at the time, I didn't know about <a href="https://github.com/doomemacs/doomemacs">Doom Emacs</a>, an Emacs framework that doesn't bloat.</p>
-</blockquote>
 <h2 id="neovim" tabindex="-1"><a class="link-mono" href="#neovim" aria-hidden="true">#</a> <a href="https://neovim.io">NeoVim</a></h2>
-<p class="text-success">
-  &gt; watching some linux stuff on yt<br/>
-  &gt; saw some cool hackerman-looking text editor<br/>
-  &gt; its vim<br/>
-  &gt; pp love vim<br/>
-  &gt; specifically neovim<br/>
-  &gt; try it out<br/>
-  &gt; its very fast and light<br/>
-  &gt; feel like a hackerman<br/>
-  &gt; config nvim<br/>
-  &gt; week later<br/>
-  &gt; wow somehow nvim is geting closer to become my dream editor faster than emacs<br/>
-</p>
-<blockquote>
+  <p class="text-success">
+    &gt; watching some linux stuff on yt<br/>
+    &gt; saw some cool hackerman-looking text editor<br/>
+    &gt; its vim<br/>
+    &gt; pp love vim<br/>
+    &gt; specifically neovim<br/>
+    &gt; try it out<br/>
+    &gt; its very fast and light<br/>
+    &gt; feel like a hackerman<br/>
+    &gt; config nvim<br/>
+    &gt; just week later<br/>
+    &gt; i was able to config nvim to become a more ideal editor for me than emacs<br/>
+  </p>
 <p>Emacs keybinds are weird, but Vi binds are otherworldly strange! Many keys feel redundant, some frequently used actions are place in awkward places...</p>
-<p>Vim introduce me to modal text editing, it took a few days to get used to, after that, ... [<strong>Enlightenment~</strong>], editing feel like dancing my fingers on the keyboard!</p>
+<p>Vim introduce me to modal text editing. Simply put, it divides writing, editing and selecting and so on into separate modes, and so the user just need to press buttons to perform actions instead of holding down multiple keys combination. it took a few days to get used to, after that, ... [<strong>Enlightenment~</strong>], editing feel like dancing my fingers on the keyboard!</p>
 <p>Vi binds ecosystem is huge with a lot of popular tools implementing it in one way or the other, one that learn Vi keys will benefit a lot by it's ecosystem. I of course ignoring it and continue my own keybinds saga.</p>
-<p>This time I decide to turn the keybinds from my custom config into a big project, I create <a href="https://github.com/NNBnh/bkey-old">Bkey</a> its a universal keybinds system design for almost all applications. By define each key on the keyboard with a meanings, the applications can bind there own set of shortcuts/actions to fit those meanings.</p>
-<p>And come with it: <a href="https://github.com/NNBnh/bkey-vim">Bkey-Vim</a> a Bkey implement for Vim.</p>
-</blockquote>
+<p>This time I decide to turn the keybinds from my custom config into a big project, I create <a href="https://github.com/NNBnh/bkey-old">Bkey</a> its a universal keybinds system design for almost all applications. By define each key on the keyboard with a meaning, the applications can bind their own set of shortcuts/actions to fit those meanings. And come with it: <a href="https://github.com/NNBnh/bkey-vim">Bkey-Vim</a> a Bkey implement for Vim.</p>
 <h2 id="kakoune" tabindex="-1"><a class="link-mono" href="#kakoune" aria-hidden="true">#</a> <a href="https://kakoune.org">Kakoune</a></h2>
-<p class="text-success">
-  &gt; saw <a class="text-success" href="https://youtu.be/sbfCSHhopT4">a video about kakoune by dt</a><br/>
-  &gt; skeptical at first<br/>
-  &gt; then realize its genius design<br/>
-  &gt; switch editor for the third time<br/>
-  &gt; kakoune is extremely minimalistic<br/>
-  &gt; and have better default<br/>
-  &gt; plus easier to config than previous editor<br/>
-  &gt; its build from the ground up with <a class="text-success" href="https://kakoune.org/why-kakoune/why-kakoune.html">its philosophy</a><br/>
-  &gt; e.g: object followed by verb (like how thing should be)<br/>
-  &gt; multiple selections is the best things ever introduced to text editors<br/>
-  &gt; its easy to understand, fast, convenient, orthogonal, flexible and powerful<br/>
-  &gt; boy i can never go back to those non multi selections editor every again<br/>
-</p>
-<blockquote>
+  <p class="text-success">
+    &gt; saw <a class="text-success" href="https://youtu.be/sbfCSHhopT4">a video about kakoune by dt</a><br/>
+    &gt; skeptical at first<br/>
+    &gt; then realize its genius design<br/>
+    &gt; switch editor for the third time<br/>
+    &gt; kakoune is extremely minimalistic<br/>
+    &gt; and have better default<br/>
+    &gt; plus easier to config than previous editor<br/>
+    &gt; its build from the ground up with <a class="text-success" href="https://kakoune.org/why-kakoune/why-kakoune.html">its philosophy</a><br/>
+    &gt; e.g: object followed by verb (like how thing should be)<br/>
+    &gt; multiple selections is the best things ever introduced to text editors<br/>
+    &gt; its easy to understand, fast, convenient, orthogonal, flexible and powerful<br/>
+    &gt; boy i can never go back to those non multi selections editor every again<br/>
+  </p>
 <p>When switching to Kakoune, I decide to overhaul the Bkey project, rebrand it to <a href="https://github.com/NNBnh/bmap">Bmap</a> and create <a href="https://github.com/NNBnh/bmap.kak">Bmap.kak</a> a Bmap implement for Kakoune.</p>
-</blockquote>
 <h2 id="other-tui-editors" tabindex="-1"><a class="link-mono" href="#other-tui-editors" aria-hidden="true">#</a> Other TUI editors</h2>
-<p class="text-success">
-  &gt; i also try out other tui editors later on:<br/>
-</p>
+  <p class="text-success">
+    &gt; i also try out other tui editors later on:<br/>
+  </p>
 <h3 id="helix" tabindex="-1"><a class="link-mono" href="#helix" aria-hidden="true">#</a> <a href="https://helix-editor.com">Helix</a></h3>
-<p class="text-success">
-  &gt; helix is like kakoune with builtin lsp tree sitter<br/>
-  &gt; written in rust<br/>
-  &gt; blazingly fast<br/>
-</p>
-<!-- > [TODO](https://github.com/helix-editor/helix/issues/1179) -->
-<!-- > -->
-<blockquote>
+  <p class="text-success">
+    &gt; helix is like kakoune with builtin lsp and tree sitter<br/>
+    &gt; written in rust<br/>
+    &gt; blazingly fast<br/>
+  </p>
+<p>I also wrote a lengthy features requests and changes to <a href="https://github.com/helix-editor/helix/issues/1179">an issues on Helix's Github</a>, of course it got rejected.</p>
 <p>I try to make <a href="https://github.com/NNBnh/bmap-helix">Bmap-Helix</a> (unfinished).</p>
-</blockquote>
 <h3 id="pepper" tabindex="-1"><a class="link-mono" href="#pepper" aria-hidden="true">#</a> <a href="https://vamolessa.itch.io/pepper">Pepper</a></h3>
-<p class="text-success">
-  &gt; probably the best designed tui text editor that i know of<br/>
-  &gt; its building up upon Kakoune philosophy<br/>
-  &gt; but use caret style cursors (cursors can move past last line character and text is always inserted to its left)<br/>
-  &gt; like cursors on any other gui apps<br/>
-  &gt; its keybinds actions are elegantly and convenient<br/>
-  &gt; pepper is bloat free<br/>
-  &gt; its doesnt having any feature that could instead be implemented by integrating an external tool<br/>
-  &gt; its more minimal than nvim and helix<br/>
-  &gt; but still have enough features (like lsp support) out of the box unlike kakoune<br/>
-  &gt; the downside its although pepper is open source<br/>
-  &gt; its not free<br/>
-  &gt; at the time i try it still very buggy and unpolish<br/>
-</p>
-<blockquote>
+  <p class="text-success">
+    &gt; probably the best designed tui text editor that i know of<br/>
+    &gt; its building up upon Kakoune philosophy<br/>
+    &gt; but use caret style cursors<br/>
+    &gt; (cursor is not a block in a characters but a thin line between two characters)<br/>
+    &gt; like cursors on any other gui apps<br/>
+    &gt; its keybinds actions are elegantly and convenient<br/>
+    &gt; pepper is bloat free<br/>
+    &gt; its doesnt having any feature that could instead be implemented by integrating an external tool<br/>
+    &gt; its more minimal than nvim and helix<br/>
+    &gt; but still have enough features (like lsp support) out of the box unlike kakoune<br/>
+    &gt; the downside its although pepper is open source<br/>
+    &gt; its not free<br/>
+    &gt; at the time i try it still very buggy and unpolish<br/>
+  </p>
 <p>And of course I ertend to make <a href="https://github.com/NNBnh/bmap-pepper">Bmap-Pepper</a> (unfinished).</p>
-</blockquote>
-<!--
-## The problem with TUI
-
-TODO
--->
+<h2 id="the-tiny-problem-with-tui-editor" tabindex="-1"><a class="link-mono" href="#the-tiny-problem-with-tui-editor" aria-hidden="true">#</a> The tiny problem with TUI editor</h2>
+<p>Normally when I'm moving around the file system in the shell, if I want to edit some files, I want to open the editor in a new window and leave the shell in the back, so latter I can do other things on the same path rather than replacing the current shell with the editor. I could write a script/alias/function to do that, but isn't a GUI editor like VScode already opened files in a new window by default?</p>
 <h2 id="vscode" tabindex="-1"><a class="link-mono" href="#vscode" aria-hidden="true">#</a> <a href="https://code.visualstudio.com">VScode</a></h2>
-<p class="text-success">
-  &gt; thinking about switching back to gui editor<br/>
-  &gt; then a desperate thought appear<br/>
-  &gt; maybe vscode<br/>
-  &gt; the normie editor<br/>
-  &gt; is the answer<br/>
-  &gt; install vscode<br/>
-  &gt; probably the editor that come with the best default setting<br/>
-  &gt; its not slow or heavy as pp said<br/>
-</p>
-<p class="text-success">
-  &gt; its keybinds is industry standard<br/>
-  &gt; multi selections in vscode is not as good as powerful as kakoune but still extremely good<br/>
-  &gt; switching back to non modal editing feel a bit slow<br/>
-  &gt; but for me its not a drop in productivity at all<br/>
-  &gt; i still have my skill navigate with my trusty arrow keys<br/>
-</p>
-<p class="text-success">
-  &gt; its have the best lps support<br/>
-  &gt; and ton of other features<br/>
-  &gt; yet none of it feel bloat<br/>
-  &gt; vscodes plugins ecosystem is the biggest<br/>
-  &gt; easy to learn and config<br/>
-  &gt; start spending more time to code than tweaking the editor<br/>
-  &gt; seem like its the most popular editor for reasons<br/>
-</p>
-<p class="text-success">
-  &gt; while everyone share about how they switch from vscode to neovim and emacs<br/>
-  &gt; i do this:<br/>
-  &gt; emacs <code>-&gt;</code> neovim <code>-&gt;</code> kakoune <code>-&gt;</code> helix <code>-&gt;</code> pepper <code>-&gt;</code> vscode<br/>
-  &gt; now that is a rare <code>$EDITOR</code> hopping<br/>
-</p>
+  <p class="text-success">
+    &gt; thinking about switching back to gui editor<br/>
+    &gt; then a desperate thought appear<br/>
+    &gt; maybe vscode<br/>
+    &gt; the normie editor<br/>
+    &gt; is the answer<br/>
+    &gt; ...<br/>
+    &gt; i have take a look at vscode in the past<br/>
+    &gt; saw it have made a lot of right design decisions<br/>
+    &gt; and used it as a standard to improve my other editor config<br/>
+    &gt; maybe i should give it try<br/>
+    &gt; ...<br/>
+    &gt; install vscode<br/>
+    &gt; probably the editor that come with the best default setting<br/>
+    &gt; its not slow or heavy as pp said<br/>
+  </p>
+  <p class="text-success">
+    &gt; its keybinds is industry standard<br/>
+    &gt; multi selections in vscode is not as good as powerful as kakoune but still extremely good<br/>
+    &gt; switching back to non modal editing feel a bit slow<br/>
+    &gt; but for me its not a drop in productivity at all<br/>
+    &gt; i still have my skill navigate with my trusty arrow keys<br/>
+  </p>
+  <p class="text-success">
+    &gt; its have the best lps support<br/>
+    &gt; and ton of other features<br/>
+    &gt; yet none of it feel bloat<br/>
+    &gt; vscode plugins ecosystem is the biggest<br/>
+    &gt; easy to learn and config<br/>
+    &gt; start spending more time to code than tweaking the editor<br/>
+    &gt; seem like its the most popular editor for reasons<br/>
+  </p>
+  <p class="text-success">
+    &gt; while everyone share about how they switch from vscode to neovim and emacs<br/>
+    &gt; i do this:<br/>
+    &gt; emacs -&gt; neovim -&gt; kakoune -&gt; helix -&gt; pepper -&gt; vscode<br/>
+    &gt; now that is a rare <code class="text-success">$EDITOR</code> hopping<br/>
+  </p>
 
       </main>
       <div class="mx-auto mt-32 max-w-3xl">
@@ -4556,7 +4564,7 @@ TODO
       <label for="main-drawer" class="drawer-overlay"></label>
       <div class="w-80 bg-base-300 bg-opacity-75 shadow backdrop-blur">
         <nav class="toc" >
-        <ul><li><a href="#emacs"># Emacs</a></li><li><a href="#neovim"># NeoVim</a></li><li><a href="#kakoune"># Kakoune</a></li><li><a href="#other-tui-editors"># Other TUI editors</a><ul><li><a href="#helix"># Helix</a></li><li><a href="#pepper"># Pepper</a></li></ul></li><li><a href="#vscode"># VScode</a></li></ul>
+        <ul><li><a href="#emacs"># Emacs</a></li><li><a href="#neovim"># NeoVim</a></li><li><a href="#kakoune"># Kakoune</a></li><li><a href="#other-tui-editors"># Other TUI editors</a><ul><li><a href="#helix"># Helix</a></li><li><a href="#pepper"># Pepper</a></li></ul></li><li><a href="#the-tiny-problem-with-tui-editor"># The tiny problem with TUI editor</a></li><li><a href="#vscode"># VScode</a></li></ul>
       </nav>
       </div>
     </div>

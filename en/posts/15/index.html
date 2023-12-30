@@ -5,15 +5,15 @@
   
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ɴɴBlog | My keybind design</title>
+  <title>ɴɴBlog | CLI, TUI and GUI</title>
   <meta name="description" content="Blog that SuperB" />
   <link rel="icon" href="https://codeberg.org/NNB/pages/raw/branch/master/static/favicon.ico" />
 
   <meta property="og:site_name" content="ɴɴBlog" />
-  <meta property="og:title" content="My keybind design" />
+  <meta property="og:title" content="CLI, TUI and GUI" />
   <meta property="og:description" content="Blog that SuperB" />
   
-    <meta property="og:image" content="https://i.imgur.com/w5hshHv.webp" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1505238680356-667803448bb6?w=1280" />
   
   <meta property="og:type" content="article" />
   <meta property="og:url" content="/blog/en/posts/15/" />
@@ -21,11 +21,13 @@
   <meta property="og:locale:alternate" content="vi" />
   
     <meta property="article:author" content="NNB" />
-    <meta property="article:published_time" content="2023-12-25T00:00:00.000Z" />
+    <meta property="article:published_time" content="2023-12-30T00:00:00.000Z" />
     
-    <meta property="article:section" content="input_device" />
+    <meta property="article:section" content="os_rice" />
     
-      <meta property="article:tag" content="input_device" />
+      <meta property="article:tag" content="os_rice" />
+    
+      <meta property="article:tag" content="tty" />
     
   
 
@@ -1143,6 +1145,36 @@ html {
 .menu > :where(li:focus) > :where(ul) {
   display: flex;
 }
+.modal {
+  pointer-events: none;
+  visibility: hidden;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  z-index: 999;
+  background-color: hsl(var(--nf, var(--n)) / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.4;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: transform, opacity, visibility;
+  overflow-y: hidden;
+  overscroll-behavior: contain;
+}
+:where(.modal) {
+  align-items: center;
+}
+.modal-open,
+.modal:target,
+.modal-toggle:checked + .modal {
+  pointer-events: auto;
+  visibility: visible;
+  opacity: 1;
+}
 .navbar {
   display: flex;
   align-items: center;
@@ -1164,21 +1196,6 @@ html {
 .navbar-end {
   width: 50%;
   justify-content: flex-end;
-}
-.range {
-  height: 1.5rem;
-  width: 100%;
-  cursor: pointer;
-  -moz-appearance: none;
-       appearance: none;
-  -webkit-appearance: none;
-  --range-shdw: var(--bc);
-  overflow: hidden;
-  background-color: transparent;
-  border-radius: var(--rounded-box, 1rem);
-}
-.range:focus {
-  outline: none;
 }
 .select {
   display: inline-flex;
@@ -2173,6 +2190,14 @@ html {
   border-radius: 40px;
   margin-top: -25px;
 }
+.modal-open .modal-box,
+.modal-toggle:checked + .modal .modal-box,
+.modal:target .modal-box {
+  --tw-translate-y: 0px;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 @keyframes progress-loading {
 
   50% {
@@ -2192,53 +2217,6 @@ html {
   100% {
     box-shadow: 0 0 0 4px hsl(var(--b1)) inset, 0 0 0 4px hsl(var(--b1)) inset;
   }
-}
-.range:focus-visible::-webkit-slider-thumb {
-  --focus-shadow: 0 0 0 6px hsl(var(--b1)) inset, 0 0 0 2rem hsl(var(--range-shdw)) inset;
-}
-.range:focus-visible::-moz-range-thumb {
-  --focus-shadow: 0 0 0 6px hsl(var(--b1)) inset, 0 0 0 2rem hsl(var(--range-shdw)) inset;
-}
-.range::-webkit-slider-runnable-track {
-  height: 0.5rem;
-  width: 100%;
-  border-radius: var(--rounded-box, 1rem);
-  background-color: hsla(var(--bc) / 0.1);
-}
-.range::-moz-range-track {
-  height: 0.5rem;
-  width: 100%;
-  border-radius: var(--rounded-box, 1rem);
-  background-color: hsla(var(--bc) / 0.1);
-}
-.range::-webkit-slider-thumb {
-  background-color: hsl(var(--b1));
-  position: relative;
-  height: 1.5rem;
-  width: 1.5rem;
-  border-style: none;
-  border-radius: var(--rounded-box, 1rem);
-  appearance: none;
-  -webkit-appearance: none;
-  top: 50%;
-  color: hsl(var(--range-shdw));
-  transform: translateY(-50%);
-  --filler-size: 100rem;
-  --filler-offset: 0.6rem;
-  box-shadow: 0 0 0 3px hsl(var(--range-shdw)) inset, var(--focus-shadow, 0 0), calc(var(--filler-size) * -1 - var(--filler-offset)) 0 0 var(--filler-size);
-}
-.range::-moz-range-thumb {
-  background-color: hsl(var(--b1));
-  position: relative;
-  height: 1.5rem;
-  width: 1.5rem;
-  border-style: none;
-  border-radius: var(--rounded-box, 1rem);
-  top: 50%;
-  color: hsl(var(--range-shdw));
-  --filler-size: 100rem;
-  --filler-offset: 0.5rem;
-  box-shadow: 0 0 0 3px hsl(var(--range-shdw)) inset, var(--focus-shadow, 0 0), calc(var(--filler-size) * -1 - var(--filler-offset)) 0 0 var(--filler-size);
 }
 @keyframes rating-pop {
 
@@ -2505,6 +2483,14 @@ html {
   height: 4rem;
   width: 4rem;
   padding: 0px;
+}
+.kbd-sm {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  min-height: 1.6em;
+  min-width: 1.6em;
 }
 .btn-group .btn:not(:first-child):not(:last-child), .btn-group.btn-group-horizontal .btn:not(:first-child):not(:last-child) {
   border-top-left-radius: 0;
@@ -3254,6 +3240,9 @@ article .link-mono {
 .mt-8 {
   margin-top: 2rem;
 }
+.block {
+  display: block;
+}
 .inline-block {
   display: inline-block;
 }
@@ -3521,6 +3510,12 @@ article .link-mono {
 }
 .font-semibold {
   font-weight: 600;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
 }
 .normal-case {
   text-transform: none;
@@ -4149,7 +4144,7 @@ pre[class*="language-"] {
 <body
   class="bg-cover bg-fixed bg-center"
   
-    style="background-image: url(https://i.imgur.com/w5hshHv.webp);"
+    style="background-image: url(https://images.unsplash.com/photo-1505238680356-667803448bb6?w=360);"
   
 >
   <div class="drawer drawer-end">
@@ -4193,20 +4188,20 @@ pre[class*="language-"] {
 <header
   class="hero relative min-h-[20rem] font-serif"
   
-    style="background-image: url(https://i.imgur.com/w5hshHv.webp);"
+    style="background-image: url(https://images.unsplash.com/photo-1505238680356-667803448bb6?w=1280);"
   
 >
   <div class="hero-overlay bg-opacity-75 shadow-inner"></div>
   <div class="hero-content text-center">
     <div class="my-16">
-      <h1 class="text-2xl font-bold sm:text-4xl">My keybind design</h1>
+      <h1 class="text-2xl font-bold sm:text-4xl">CLI, TUI and GUI</h1>
       
     </div>
     <div class="absolute bottom-0 w-full items-end justify-between gap-4 p-2 text-left sm:text-2xl md:flex">
       <a href=".">
         <span class="link-mono lg:group-hover:opacity-100">
-  <time datetime="2023-12-25T00:00:00.000Z">
-    25/12/2023
+  <time datetime="2023-12-30T00:00:00.000Z">
+    30/12/2023
   </time>
   
 </span>
@@ -4216,8 +4211,13 @@ pre[class*="language-"] {
         
   <a
     class="link-mono"
-    href="/blog/en/tags/input_device/"
-  >#input_device</a>
+    href="/blog/en/tags/os_rice/"
+  >#os_rice</a>
+
+  <a
+    class="link-mono"
+    href="/blog/en/tags/tty/"
+  >#tty</a>
 
 
       </p>
@@ -4229,34 +4229,44 @@ pre[class*="language-"] {
 <div class="flex min-h-screen backdrop-blur-xl">
   <div class="hidden w-80 bg-base-200 bg-opacity-90 xl:block">
     <div class="sticky top-0 h-fit max-h-screen overflow-y-auto">
-      
+      <nav class="toc" >
+        <ul><li><a href="#definitions"># Definitions</a><ul><li><a href="#gui"># GUI</a></li><li><a href="#tui"># TUI</a></li><li><a href="#cli"># CLI</a></li></ul></li><li><a href="#cli-gui-and-tui"># CLI &gt; GUI (and TUI)</a></li></ul>
+      </nav>
     </div>
   </div>
   <div class="w-full bg-base-100 bg-opacity-90">
     <div class="mt-16 mb-24 px-4">
       <main class="prose mx-auto min-w-0 max-w-3xl">
-        <p>TODO</p>
-<!--
-https://github.com/NNBnh/dotfiles/wiki/keyboard
-https://www.reddit.com/r/ErgoMechKeyboards/comments/scfqlg/ergo_layout_in_a_60_case_with_rotary_encoder_and
-https://youtu.be/4sAeslM74U8?t=178
-
-Macro
-Multiple selections:
-- Move main cursor to next/previous search match.
-- Add cursor to the next/previous search match if inside a search range or make a new one.
-- Swap the anchor and position of all cursors.
-- Orientate all cursors such that their anchors come after their positions.
-- Remove main cursor if there's more than one cursor.
-- Clear all extra cursors and keep only the main cursor.
-- Splits all selection in lines.
-- Add a new cursor to the line below/above the bottom/top cursor.
-- Set next/previous cursor as main cursor.
-- Search inside selections and only keep/remove those ranges.
-- Filter selections and keep the ones that do/don't contain the search.
-- Pass each selection as stdin to a command line and substitute each for its stdout.
-- Align the cursor of each selection by inserting spaces before the first character of each selection.
--->
+        <h2 id="definitions" tabindex="-1"><a class="link-mono" href="#definitions" aria-hidden="true">#</a> Definitions</h2>
+<h3 id="gui" tabindex="-1"><a class="link-mono" href="#gui" aria-hidden="true">#</a> GUI</h3>
+<p><strong>GUI</strong> or <strong>G</strong>raphical <strong>U</strong>ser <strong>I</strong>nterface is user interface type that allows users to interact through visual and graphic such as images, buttons, tabs, scroll bars... It's everywhere, it is like the default type of interface, the definition of user interface is self. All websites, smartphone interfaces, and the default file manager on your computer are all using GUI.</p>
+<p><a href="https://en.wikipedia.org/wiki/Graphical_user_interface">(Read more on Wikipedia)</a></p>
+<h3 id="tui" tabindex="-1"><a class="link-mono" href="#tui" aria-hidden="true">#</a> TUI</h3>
+<p><strong>TUI</strong> or <strong>T</strong>ext-based <strong>U</strong>ser <strong>I</strong>nterface is like GUI but instead of having visual and graphic, everything is displayed in text. Characters can be bold, italic, underlined, uppercase, lowercase, blinking, with any foreground or/and background color... But the text must always be mono characters (on grid). We will mainly see this type of interface on software run on terminal such as text editor, media player, task manager...</p>
+<p><a href="https://en.wikipedia.org/wiki/Text-based_user_interface">(Read more on Wikipedia)</a></p>
+<h3 id="cli" tabindex="-1"><a class="link-mono" href="#cli" aria-hidden="true">#</a> CLI</h3>
+<p><strong>CLI</strong> or <strong>C</strong>ommand <strong>L</strong>ine <strong>I</strong>nterface is an interface where the only way to interact is to write commands through a prompt and send it, the software will then return a results, and the user is allowed to type and send commands again.</p>
+<p>Software that <strong>uses</strong> CLI typically includes shells such as Bash, Zsh, Nushell... Some REPL (read-eval-print loop) for programing languages like Python, Ruby, ... And other tools like <a href="https://wiki.archlinux.org/title/NetworkManager#Usage"><code>nmcli</code></a>, <a href="https://www.mankier.com/1/bc"><code>bc</code></a>, <a href="https://github.com/printfn/fend"><code>fend</code></a>, <a href="https://github.com/leo-arch/clifm"><code>clifm</code></a>... But note that software that uses the CLI interface to display content inside it is <strong>not</strong> CLI software, but it is TUI.</p>
+<p>CLI software is software run as command inside a shell, for example <a href="https://www.mankier.com/1/ls"><code>ls</code></a>, <a href="https://www.mankier.com/1/cp"><code>cp</code></a>, <a href="https://www.mankier.com/1/mv"><code>mv</code></a>, <a href="https://www.mankier.com/1/rm"><code>rm</code></a>, <a href="https://www.mankier.com/1/cal"><code>cal</code></a>, <a href="https://github.com/dylanaraps/neofetch"><code>neofetch</code></a>, ... The general pattern of CLI softwares are like:</p>
+<pre class="language-sh"><code class="language-sh"><span class="token builtin class-name">command</span> parameter <span class="token parameter variable">--flag</span></code></pre>
+<p><a href="https://en.wikipedia.org/wiki/Command-line_interface">(Read more on Wikipedia)</a></p>
+<h2 id="cli-gui-and-tui" tabindex="-1"><a class="link-mono" href="#cli-gui-and-tui" aria-hidden="true">#</a> CLI &gt; GUI (and TUI)</h2>
+<ul>
+<li>CLI seems difficult to use and learn at first. But once you get used to it, you can operate in shell really fast and flexible. Using CLI is like programming a simple software and runs it at the same time.</li>
+<li>Most CLI tool launch and process in a blink, reduce friction in your workflow.</li>
+<li>There is a giant library of cool and useful CLI tools that allow you to do things that few GUI/TUI software can do. Many tools give you the freedom to do all kinds of things with your computer. You can fix, change or break the entire operating system if you want.</li>
+<li>Using CLI is powerful in that we can connect separate software to work together by taking <code>stdout</code> (standard output) of a software and used it as <code>stdin</code> (standard input) for another software. We call this pipe/piping. Two or more software connected together in this way is called a pipeline.</li>
+</ul>
+<p>Here is an example of a pipeline (the <a href="https://www.mankier.com/1/echo"><code>echo</code></a> command prints a string. <a href="https://www.mankier.com/1/rev"><code>rev</code></a> reverses the input data. <a href="https://www.figlet.org"><code>figlet</code></a> turns strings into large ASCII letters. <a href="https://www.mankier.com/1/tee"><code>tee</code></a> read from standard input and write to standard output and files, which a &quot;files&quot; can be a terminal output. Finally, the command <a href="https://getclipboard.app"><code>cb</code></a> copy input data to the clipboard):</p>
+<pre><code>$ echo '!dlroW ,olleH' | rev | figlet | tee /dev/tty | cb
+ _   _      _ _         __        __         _     _ _
+| | | | ___| | | ___    \ \      / /__  _ __| | __| | |
+| |_| |/ _ \ | |/ _ \    \ \ /\ / / _ \| '__| |/ _` | |
+|  _  |  __/ | | (_) |    \ V  V / (_) | |  | | (_| |_|
+|_| |_|\___|_|_|\___( )    \_/\_/ \___/|_|  |_|\__,_(_)
+                    |/
+[✔] Copied 336B
+</code></pre>
 
       </main>
       <div class="mx-auto mt-32 max-w-3xl">
@@ -4412,10 +4422,19 @@ Multiple selections:
 
     </div>
     
+      <label
+        for="main-drawer"
+        class="btn-square btn fixed bottom-0 right-0 m-4 shadow lg:hover:btn-primary xl:hidden"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6"><path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm8.25 5.25a.75.75 0 01.75-.75h8.25a.75.75 0 010 1.5H12a.75.75 0 01-.75-.75z" clip-rule="evenodd" /></svg>
+      </label>
+    
     <div class="drawer-side">
       <label for="main-drawer" class="drawer-overlay"></label>
       <div class="w-80 bg-base-300 bg-opacity-75 shadow backdrop-blur">
-        
+        <nav class="toc" >
+        <ul><li><a href="#definitions"># Definitions</a><ul><li><a href="#gui"># GUI</a></li><li><a href="#tui"># TUI</a></li><li><a href="#cli"># CLI</a></li></ul></li><li><a href="#cli-gui-and-tui"># CLI &gt; GUI (and TUI)</a></li></ul>
+      </nav>
       </div>
     </div>
   </div>
