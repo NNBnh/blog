@@ -5,15 +5,15 @@
   
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ɴɴBlog | CLI, TUI và GUI</title>
+  <title>ɴɴBlog | Flappy Bird</title>
   <meta name="description" content="Blog that SuperB" />
   <link rel="icon" href="https://codeberg.org/NNB/pages/raw/branch/master/static/favicon.ico" />
 
   <meta property="og:site_name" content="ɴɴBlog" />
-  <meta property="og:title" content="CLI, TUI và GUI" />
+  <meta property="og:title" content="Flappy Bird" />
   <meta property="og:description" content="Blog that SuperB" />
   
-    <meta property="og:image" content="https://images.unsplash.com/photo-1505238680356-667803448bb6?w=1280" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1589994965851-a8f479c573a9?w=1280" />
   
   <meta property="og:type" content="article" />
   <meta property="og:url" content="/blog/vi/posts/16/" />
@@ -21,13 +21,13 @@
   <meta property="og:locale:alternate" content="en" />
   
     <meta property="article:author" content="NNB" />
-    <meta property="article:published_time" content="2023-12-26T00:00:00.000Z" />
+    <meta property="article:published_time" content="2024-01-30T00:00:00.000Z" />
     
-    <meta property="article:section" content="os_rice" />
+    <meta property="article:section" content="game_dev" />
     
-      <meta property="article:tag" content="os_rice" />
+      <meta property="article:tag" content="game_dev" />
     
-      <meta property="article:tag" content="tty" />
+      <meta property="article:tag" content="story" />
     
   
 
@@ -1145,6 +1145,36 @@ html {
 .menu > :where(li:focus) > :where(ul) {
   display: flex;
 }
+.modal {
+  pointer-events: none;
+  visibility: hidden;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  z-index: 999;
+  background-color: hsl(var(--nf, var(--n)) / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.4;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: transform, opacity, visibility;
+  overflow-y: hidden;
+  overscroll-behavior: contain;
+}
+:where(.modal) {
+  align-items: center;
+}
+.modal-open,
+.modal:target,
+.modal-toggle:checked + .modal {
+  pointer-events: auto;
+  visibility: visible;
+  opacity: 1;
+}
 .navbar {
   display: flex;
   align-items: center;
@@ -1166,21 +1196,6 @@ html {
 .navbar-end {
   width: 50%;
   justify-content: flex-end;
-}
-.range {
-  height: 1.5rem;
-  width: 100%;
-  cursor: pointer;
-  -moz-appearance: none;
-       appearance: none;
-  -webkit-appearance: none;
-  --range-shdw: var(--bc);
-  overflow: hidden;
-  background-color: transparent;
-  border-radius: var(--rounded-box, 1rem);
-}
-.range:focus {
-  outline: none;
 }
 .select {
   display: inline-flex;
@@ -2175,6 +2190,14 @@ html {
   border-radius: 40px;
   margin-top: -25px;
 }
+.modal-open .modal-box,
+.modal-toggle:checked + .modal .modal-box,
+.modal:target .modal-box {
+  --tw-translate-y: 0px;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 @keyframes progress-loading {
 
   50% {
@@ -2194,53 +2217,6 @@ html {
   100% {
     box-shadow: 0 0 0 4px hsl(var(--b1)) inset, 0 0 0 4px hsl(var(--b1)) inset;
   }
-}
-.range:focus-visible::-webkit-slider-thumb {
-  --focus-shadow: 0 0 0 6px hsl(var(--b1)) inset, 0 0 0 2rem hsl(var(--range-shdw)) inset;
-}
-.range:focus-visible::-moz-range-thumb {
-  --focus-shadow: 0 0 0 6px hsl(var(--b1)) inset, 0 0 0 2rem hsl(var(--range-shdw)) inset;
-}
-.range::-webkit-slider-runnable-track {
-  height: 0.5rem;
-  width: 100%;
-  border-radius: var(--rounded-box, 1rem);
-  background-color: hsla(var(--bc) / 0.1);
-}
-.range::-moz-range-track {
-  height: 0.5rem;
-  width: 100%;
-  border-radius: var(--rounded-box, 1rem);
-  background-color: hsla(var(--bc) / 0.1);
-}
-.range::-webkit-slider-thumb {
-  background-color: hsl(var(--b1));
-  position: relative;
-  height: 1.5rem;
-  width: 1.5rem;
-  border-style: none;
-  border-radius: var(--rounded-box, 1rem);
-  appearance: none;
-  -webkit-appearance: none;
-  top: 50%;
-  color: hsl(var(--range-shdw));
-  transform: translateY(-50%);
-  --filler-size: 100rem;
-  --filler-offset: 0.6rem;
-  box-shadow: 0 0 0 3px hsl(var(--range-shdw)) inset, var(--focus-shadow, 0 0), calc(var(--filler-size) * -1 - var(--filler-offset)) 0 0 var(--filler-size);
-}
-.range::-moz-range-thumb {
-  background-color: hsl(var(--b1));
-  position: relative;
-  height: 1.5rem;
-  width: 1.5rem;
-  border-style: none;
-  border-radius: var(--rounded-box, 1rem);
-  top: 50%;
-  color: hsl(var(--range-shdw));
-  --filler-size: 100rem;
-  --filler-offset: 0.5rem;
-  box-shadow: 0 0 0 3px hsl(var(--range-shdw)) inset, var(--focus-shadow, 0 0), calc(var(--filler-size) * -1 - var(--filler-offset)) 0 0 var(--filler-size);
 }
 @keyframes rating-pop {
 
@@ -2507,6 +2483,14 @@ html {
   height: 4rem;
   width: 4rem;
   padding: 0px;
+}
+.kbd-sm {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  min-height: 1.6em;
+  min-width: 1.6em;
 }
 .btn-group .btn:not(:first-child):not(:last-child), .btn-group.btn-group-horizontal .btn:not(:first-child):not(:last-child) {
   border-top-left-radius: 0;
@@ -3256,6 +3240,9 @@ article .link-mono {
 .mt-8 {
   margin-top: 2rem;
 }
+.block {
+  display: block;
+}
 .inline-block {
   display: inline-block;
 }
@@ -3523,6 +3510,12 @@ article .link-mono {
 }
 .font-semibold {
   font-weight: 600;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
 }
 .normal-case {
   text-transform: none;
@@ -4151,7 +4144,7 @@ pre[class*="language-"] {
 <body
   class="bg-cover bg-fixed bg-center"
   
-    style="background-image: url(https://images.unsplash.com/photo-1505238680356-667803448bb6?w=360);"
+    style="background-image: url(https://images.unsplash.com/photo-1589994965851-a8f479c573a9?w=360);"
   
 >
   <div class="drawer drawer-end">
@@ -4195,20 +4188,20 @@ pre[class*="language-"] {
 <header
   class="hero relative min-h-[20rem] font-serif"
   
-    style="background-image: url(https://images.unsplash.com/photo-1505238680356-667803448bb6?w=1280);"
+    style="background-image: url(https://images.unsplash.com/photo-1589994965851-a8f479c573a9?w=1280);"
   
 >
   <div class="hero-overlay bg-opacity-75 shadow-inner"></div>
   <div class="hero-content text-center">
     <div class="my-16">
-      <h1 class="text-2xl font-bold sm:text-4xl">CLI, TUI và GUI</h1>
+      <h1 class="text-2xl font-bold sm:text-4xl">Flappy Bird</h1>
       
     </div>
     <div class="absolute bottom-0 w-full items-end justify-between gap-4 p-2 text-left sm:text-2xl md:flex">
       <a href=".">
         <span class="link-mono lg:group-hover:opacity-100">
-  <time datetime="2023-12-26T00:00:00.000Z">
-    26/12/2023
+  <time datetime="2024-01-30T00:00:00.000Z">
+    30/01/2024
   </time>
   
 </span>
@@ -4218,13 +4211,13 @@ pre[class*="language-"] {
         
   <a
     class="link-mono"
-    href="/blog/vi/tags/os_rice/"
-  >#os_rice</a>
+    href="/blog/vi/tags/game_dev/"
+  >#game_dev</a>
 
   <a
     class="link-mono"
-    href="/blog/vi/tags/tty/"
-  >#tty</a>
+    href="/blog/vi/tags/story/"
+  >#story</a>
 
 
       </p>
@@ -4242,10 +4235,34 @@ pre[class*="language-"] {
   <div class="w-full bg-base-100 bg-opacity-90">
     <div class="mt-16 mb-24 px-4">
       <main class="prose mx-auto min-w-0 max-w-3xl">
-        <p>TODO</p>
-<!--
-https://github.com/NNBnh/dotfiles/wiki/which#-terminal-emulator
--->
+        <p><a href="https://www.google.com/search?q=flappy%20bird%20plagiarism">https://www.google.com/search?q=flappy bird plagiarism</a></p>
+<p><a href="https://www.plagiarismtoday.com/2014/02/11/flappy-bird-teaches-us-content-creation/">https://www.plagiarismtoday.com/2014/02/11/flappy-bird-teaches-us-content-creation/</a></p>
+<p><a href="https://bearpursuit.wordpress.com/2014/02/08/flappy-bird-proves-that-plagiarism-should-be-punished/">https://bearpursuit.wordpress.com/2014/02/08/flappy-bird-proves-that-plagiarism-should-be-punished/</a></p>
+<p><a href="https://www.kotaku.com.au/2014/02/flappy-bird-is-making-50000-a-day-off-ripped-art/">https://www.kotaku.com.au/2014/02/flappy-bird-is-making-50000-a-day-off-ripped-art/</a></p>
+<p><a href="https://kotaku.com/flappy-bird-is-making-50-000-a-day-off-ripped-art-1517498140">https://kotaku.com/flappy-bird-is-making-50-000-a-day-off-ripped-art-1517498140</a></p>
+<p><a href="https://thatshelf.com/thought-bubble-flappy-bird-copyright-and-rip-offs-in-the-app-market/">https://thatshelf.com/thought-bubble-flappy-bird-copyright-and-rip-offs-in-the-app-market/</a></p>
+<p><a href="https://www.forbes.com/sites/lananhnguyen/2014/02/11/exclusive-flappy-bird-creator-dong-nguyen-says-app-gone-forever-because-it-was-an-addictive-product/?sh=24bc05ab6476">https://www.forbes.com/sites/lananhnguyen/2014/02/11/exclusive-flappy-bird-creator-dong-nguyen-says-app-gone-forever-because-it-was-an-addictive-product/?sh=24bc05ab6476</a></p>
+<p><a href="https://www.forbes.com/sites/insertcoin/2014/02/11/the-bird-lord-speaks-why-we-should-believe-in-flappy-bird-creator-dong-nguyen/?sh=1bcc15143f6c">https://www.forbes.com/sites/insertcoin/2014/02/11/the-bird-lord-speaks-why-we-should-believe-in-flappy-bird-creator-dong-nguyen/?sh=1bcc15143f6c</a></p>
+<p><a href="https://news.ycombinator.com/item?id=7192265">https://news.ycombinator.com/item?id=7192265</a></p>
+<p><a href="https://www.theguardian.com/technology/2014/feb/10/flappy-bird-is-dead-but-brilliant-mechanics-made-it-fly">https://www.theguardian.com/technology/2014/feb/10/flappy-bird-is-dead-but-brilliant-mechanics-made-it-fly</a></p>
+<p><a href="https://www.faunaadvice.com/why-did-flappy-bird-get-banned/">https://www.faunaadvice.com/why-did-flappy-bird-get-banned/</a></p>
+<hr>
+<ul>
+<li><a href="https://trends.google.com/trends/explore?date=2014-01-01%202014-06-01&amp;q=%2Fm%2F0_gzt9y&amp;hl=en">Google Trends</a>
+<ul>
+<li><a href="https://www.google.com/search?q=flappy+bird&amp;sca_esv=595080543&amp;sxsrf=AM9HkKmzeN1DG-gHQB1FRdCFhdMBT4fRgw%3A1704208325092&amp;source=lnt&amp;tbs=cdr%3A1%2Ccd_min%3A1%2F30%2F2014%2Ccd_max%3A2%2F2%2F2014&amp;tbm=#ip=1">30/24/2014 – 01/30/2014</a>
+<ul>
+<li><a href="https://toucharcade.com/2014/01/28/is-flappy-bird-a-genre-now/">https://toucharcade.com/2014/01/28/is-flappy-bird-a-genre-now/</a></li>
+</ul>
+</li>
+<li><a href="https://www.google.com/search?q=flappy+bird&amp;sca_esv=595080543&amp;sxsrf=AM9HkKmzeN1DG-gHQB1FRdCFhdMBT4fRgw%3A1704208325092&amp;source=lnt&amp;tbs=cdr%3A1%2Ccd_min%3A1%2F30%2F2014%2Ccd_max%3A2%2F2%2F2014&amp;tbm=#ip=1">30/01/2014 – 02/02/2014</a>
+<ul>
+<li><a href="https://vnreview.vn/thread-old/danh-gia-flappy-birds-game-viet-dang-cuc-hot.940873">https://vnreview.vn/thread-old/danh-gia-flappy-birds-game-viet-dang-cuc-hot.940873</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
       </main>
       <div class="mx-auto mt-32 max-w-3xl">
@@ -4394,7 +4411,7 @@ https://github.com/NNBnh/dotfiles/wiki/which#-terminal-emulator
       >JSON</a>
     
   </div>
-  <p class="font-serif">Copyright &copy; 2022 - 2023</p>
+  <p class="font-serif">Copyright &copy; 2022 - 2024</p>
 </footer>
 
 
