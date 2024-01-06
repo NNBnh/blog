@@ -7,7 +7,7 @@
     min-height: calc(100vh - 12rem);
   }
   .btn-cool {
-    @apply normal-case drop-shadow lg:hover:rotate-3 lg:hover:scale-110 lg:hover:drop-shadow-xl;
+    @apply drop-shadow lg:hover:rotate-3 lg:hover:scale-110 lg:hover:drop-shadow-xl;
   }
   .link-mono {
     @apply font-mono font-bold no-underline opacity-50 duration-200 lg:hover:opacity-100;
@@ -20,8 +20,5 @@
   }
   .toc {
     @apply menu font-serif;
-  }
-  .toc > ul ul {
-    @apply ml-4;
   }
 }
