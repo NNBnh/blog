@@ -23,6 +23,8 @@
     <meta property="article:author" content="NNB" />
     <meta property="article:published_time" content="2023-08-12T00:00:00.000Z" />
     
+      <meta property="article:modified_time" content="2024-02-08T00:00:00.000Z" />
+    
     <meta property="article:section" content="os_rice" />
     
       <meta property="article:tag" content="os_rice" />
@@ -863,6 +865,86 @@ html {
   visibility: visible;
   min-height: -moz-fit-content;
   min-height: fit-content;
+}
+.diff {
+  position: relative;
+  display: grid;
+  width: 100%;
+  overflow: hidden;
+  container-type: inline-size;
+  grid-template-columns: auto 1fr;
+}
+.diff-resizer {
+  position: relative;
+  top: 50%;
+  z-index: 1;
+  height: 3rem;
+  width: 25rem;
+  min-width: 1rem;
+  max-width: calc(100cqi - 1rem);
+  resize: horizontal;
+  overflow: hidden;
+  opacity: 0;
+  transform-origin: 100% 100%;
+  scale: 4;
+  translate: 1.5rem -1.5rem;
+  -webkit-clip-path: inset(calc(100% - 0.75rem) 0 0 calc(100% - 0.75rem));
+          clip-path: inset(calc(100% - 0.75rem) 0 0 calc(100% - 0.75rem));
+}
+.diff-resizer,
+.diff-item-1,
+.diff-item-2 {
+  position: relative;
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+.diff-item-1:after {
+  pointer-events: none;
+  position: absolute;
+  bottom: 0px;
+  right: 1px;
+  top: 50%;
+  z-index: 1;
+  height: 2rem;
+  width: 2rem;
+  --tw-content: '';
+  content: var(--tw-content);
+  translate: 50% -50%;
+  border-radius: 9999px;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-border-opacity)));
+  background-color: var(--fallback-b1,oklch(var(--b1)/0.5));
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  outline-style: solid;
+  outline-offset: -3px;
+  outline-color: var(--fallback-bc,oklch(var(--bc)/0.05));
+  --tw-backdrop-blur: blur(8px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+.diff-item-2 {
+  overflow: hidden;
+  border-right-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-border-opacity)));
+}
+.diff-item-1 > *,
+.diff-item-2 > * {
+  pointer-events: none;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100cqi;
+  max-width: none;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 .drawer {
   position: relative;
@@ -2040,6 +2122,21 @@ details.collapse summary::-webkit-details-marker {
   outline: 2px solid currentColor;
   outline-offset: 2px;
 }
+.loading {
+  pointer-events: none;
+  display: inline-block;
+  aspect-ratio: 1 / 1;
+  width: 1.5rem;
+  background-color: currentColor;
+  -webkit-mask-size: 100%;
+          mask-size: 100%;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' stroke='%23000' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E.spinner_V8m1%7Btransform-origin:center;animation:spinner_zKoa 2s linear infinite%7D.spinner_V8m1 circle%7Bstroke-linecap:round;animation:spinner_YpZS 1.5s ease-out infinite%7D%40keyframes spinner_zKoa%7B100%25%7Btransform:rotate(360deg)%7D%7D%40keyframes spinner_YpZS%7B0%25%7Bstroke-dasharray:0 150;stroke-dashoffset:0%7D47.5%25%7Bstroke-dasharray:42 150;stroke-dashoffset:-16%7D95%25%2C100%25%7Bstroke-dasharray:42 150;stroke-dashoffset:-59%7D%7D%3C%2Fstyle%3E%3Cg class='spinner_V8m1'%3E%3Ccircle cx='12' cy='12' r='9.5' fill='none' stroke-width='3'%3E%3C%2Fcircle%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+          mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' stroke='%23000' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E.spinner_V8m1%7Btransform-origin:center;animation:spinner_zKoa 2s linear infinite%7D.spinner_V8m1 circle%7Bstroke-linecap:round;animation:spinner_YpZS 1.5s ease-out infinite%7D%40keyframes spinner_zKoa%7B100%25%7Btransform:rotate(360deg)%7D%7D%40keyframes spinner_YpZS%7B0%25%7Bstroke-dasharray:0 150;stroke-dashoffset:0%7D47.5%25%7Bstroke-dasharray:42 150;stroke-dashoffset:-16%7D95%25%2C100%25%7Bstroke-dasharray:42 150;stroke-dashoffset:-59%7D%7D%3C%2Fstyle%3E%3Cg class='spinner_V8m1'%3E%3Ccircle cx='12' cy='12' r='9.5' fill='none' stroke-width='3'%3E%3C%2Fcircle%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
 :where(.menu li:empty) {
   --tw-bg-opacity: 1;
   background-color: var(--fallback-bc,oklch(var(--bc)/var(--tw-bg-opacity)));
@@ -2223,6 +2320,9 @@ details.collapse summary::-webkit-details-marker {
   100% {
     transform: translateY(0);
   }
+}
+.select-bordered {
+  border-color: var(--fallback-bc,oklch(var(--bc)/0.2));
 }
 .select:focus {
   box-shadow: none;
@@ -3359,6 +3459,9 @@ article .link-mono {
 .m-4 {
   margin: 1rem;
 }
+.m-0 {
+  margin: 0px;
+}
 .mx-4 {
   margin-left: 1rem;
   margin-right: 1rem;
@@ -3420,6 +3523,15 @@ article .link-mono {
 .aspect-square {
   aspect-ratio: 1 / 1;
 }
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+.aspect-\[3\/4\] {
+  aspect-ratio: 3/4;
+}
+.aspect-\[4\/3\] {
+  aspect-ratio: 4/3;
+}
 .h-6 {
   height: 1.5rem;
 }
@@ -3433,8 +3545,20 @@ article .link-mono {
 .h-full {
   height: 100%;
 }
+.h-64 {
+  height: 16rem;
+}
 .max-h-screen {
   max-height: 100vh;
+}
+.max-h-64 {
+  max-height: 16rem;
+}
+.max-h-96 {
+  max-height: 24rem;
+}
+.max-h-48 {
+  max-height: 12rem;
 }
 .min-h-\[1\.25rem\] {
   min-height: 1.25rem;
@@ -3475,6 +3599,15 @@ article .link-mono {
 .max-w-sm {
   max-width: 24rem;
 }
+.max-w-md {
+  max-width: 28rem;
+}
+.flex-1 {
+  flex: 1 1 0%;
+}
+.grow {
+  flex-grow: 1;
+}
 .origin-\[6rem_50\%\] {
   transform-origin: 6rem 50%;
 }
@@ -3491,11 +3624,50 @@ article .link-mono {
   --tw-translate-y: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+.-translate-y-4 {
+  --tw-translate-y: -1rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.-translate-y-8 {
+  --tw-translate-y: -2rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.rotate-90 {
+  --tw-rotate: 90deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.-rotate-90 {
+  --tw-rotate: -90deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.rotate-45 {
+  --tw-rotate: 45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.scale-95 {
+  --tw-scale-x: .95;
+  --tw-scale-y: .95;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.scale-90 {
+  --tw-scale-x: .9;
+  --tw-scale-y: .9;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 .resize {
   resize: both;
 }
 .grid-flow-col {
   grid-auto-flow: column;
+}
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 .flex-col {
   flex-direction: column;
@@ -3540,6 +3712,16 @@ article .link-mono {
   -moz-column-gap: 1rem;
        column-gap: 1rem;
 }
+.gap-x-8 {
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+.gap-y-4 {
+  row-gap: 1rem;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
 .overflow-x-auto {
   overflow-x: auto;
 }
@@ -3552,6 +3734,9 @@ article .link-mono {
 .rounded-3xl {
   border-radius: 1.5rem;
 }
+.rounded-xl {
+  border-radius: 0.75rem;
+}
 .bg-base-100 {
   --tw-bg-opacity: 1;
   background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
@@ -3563,6 +3748,10 @@ article .link-mono {
 .bg-base-300 {
   --tw-bg-opacity: 1;
   background-color: var(--fallback-b3,oklch(var(--b3)/var(--tw-bg-opacity)));
+}
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 .bg-opacity-60 {
   --tw-bg-opacity: 0.6;
@@ -3585,8 +3774,34 @@ article .link-mono {
 .fill-current {
   fill: currentColor;
 }
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.object-center {
+  -o-object-position: center;
+     object-position: center;
+}
+.object-left {
+  -o-object-position: left;
+     object-position: left;
+}
+.object-\[40\%_center\] {
+  -o-object-position: 40% center;
+     object-position: 40% center;
+}
 .p-2 {
   padding: 0.5rem;
+}
+.p-8 {
+  padding: 2rem;
+}
+.p-4 {
+  padding: 1rem;
 }
 .px-4 {
   padding-left: 1rem;
@@ -3611,6 +3826,9 @@ article .link-mono {
 }
 .pt-4 {
   padding-top: 1rem;
+}
+.pt-0 {
+  padding-top: 0px;
 }
 .text-left {
   text-align: left;
@@ -3922,6 +4140,32 @@ pre[class*="language-"] {
   }
 }
 
+@media not all and (min-width: 768px) {
+
+  .max-md\:max-w-xs {
+    max-width: 20rem;
+  }
+
+  .max-md\:max-w-\[8rem\] {
+    max-width: 8rem;
+  }
+}
+
+@media not all and (min-width: 640px) {
+
+  .max-sm\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
+  .max-sm\:row-span-2 {
+    grid-row: span 2 / span 2;
+  }
+
+  .max-sm\:max-w-\[8rem\] {
+    max-width: 8rem;
+  }
+}
+
 @media (min-width: 640px) {
 
   .sm\:mx-auto {
@@ -3941,8 +4185,36 @@ pre[class*="language-"] {
     display: none;
   }
 
+  .sm\:aspect-\[4\/3\] {
+    aspect-ratio: 4/3;
+  }
+
+  .sm\:h-full {
+    height: 100%;
+  }
+
+  .sm\:h-64 {
+    height: 16rem;
+  }
+
+  .sm\:max-h-96 {
+    max-height: 24rem;
+  }
+
   .sm\:w-96 {
     width: 24rem;
+  }
+
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sm\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .sm\:flex-row {
+    flex-direction: row;
   }
 
   .sm\:justify-center {
@@ -3955,6 +4227,11 @@ pre[class*="language-"] {
 
   .sm\:gap-8 {
     gap: 2rem;
+  }
+
+  .sm\:bg-black {
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 0 0 / var(--tw-bg-opacity));
   }
 
   .sm\:text-2xl {
@@ -3990,6 +4267,10 @@ pre[class*="language-"] {
 
   .md\:flex {
     display: flex;
+  }
+
+  .md\:flex-1 {
+    flex: 1 1 0%;
   }
 
   .md\:-translate-y-2 {
@@ -4040,6 +4321,10 @@ pre[class*="language-"] {
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
@@ -4050,6 +4335,10 @@ pre[class*="language-"] {
 
   .md\:gap-8 {
     gap: 2rem;
+  }
+
+  .md\:gap-4 {
+    gap: 1rem;
   }
 
   .md\:text-right {
@@ -4121,6 +4410,14 @@ pre[class*="language-"] {
   .lg\:translate-x-0 {
     --tw-translate-x: 0px;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .lg\:flex-row {
@@ -4284,6 +4581,14 @@ pre[class*="language-"] {
   .xl\:hidden {
     display: none;
   }
+
+  .xl\:gap-8 {
+    gap: 2rem;
+  }
+
+  .xl\:gap-4 {
+    gap: 1rem;
+  }
 }
 
   
@@ -4357,6 +4662,13 @@ pre[class*="language-"] {
     12/08/2023
   </time>
   
+    <p class="inline-block">
+      -&gt;
+      <time datetime="2024-02-08T00:00:00.000Z">
+        08/02/2024
+      </time>
+    </p>
+  
 </span>
 
       </a>
@@ -4378,7 +4690,7 @@ pre[class*="language-"] {
   <div class="hidden w-80 bg-base-200 bg-opacity-90 xl:block">
     <div class="sticky top-0 h-fit max-h-screen overflow-y-auto">
       <nav class="toc" >
-        <ul><li><a href="#why-linux-in-the-first-place"># Why Linux in the first place?</a></li><li><a href="#base-distro"># Base Distro</a></li><li><a href="#desktop-environment"># Desktop Environment</a></li><li><a href="#other-requirements"># Other requirements</a></li><li><a href="#my-ideal-distro"># My ideal distro</a><ul><li><a href="#honorable-mention"># Honorable Mention</a></li></ul></li></ul>
+        <ul><li><a href="#why-linux-in-the-first-place"># Why Linux in the first place?</a></li><li><a href="#base-distro"># Base Distro</a></li><li><a href="#desktop-environment"># Desktop Environment</a></li><li><a href="#other-requirements"># Other requirements</a></li><li><a href="#my-ideal-distro"># My ideal distro</a></li></ul>
       </nav>
     </div>
   </div>
@@ -4394,7 +4706,7 @@ pre[class*="language-"] {
 <li>And most importantly it's customizability is endless.</li>
 </ul>
 <h2 id="base-distro" tabindex="-1"><a class="link-mono" href="#base-distro" aria-hidden="true">#</a> Base Distro</h2>
-<p>My dotfiles is quite flexible, it can be easily adapted to almost any distro. But I still have preferences (in order): Arch-based &gt; Ubuntu-based &gt; Fedora-based &gt; other.</p>
+<p>My dotfiles is quite flexible, it can be easily adapted to almost any distro. But I still have preferences (in order): Arch-based &gt; Ubuntu-based &gt; Ubuntu/Debian-based &gt; other.</p>
 <p><a href="https://fedoraproject.org">Fedora</a> seems to be more stable and up-to-date than <a href="https://ubuntu.com">Ubuntu</a>, but it doesn't have packages that aren't strictly open source, a few can still be installed but it's annoying.</p>
 <p><a href="https://archlinux.org">Arch</a> has the most packages <em>if</em> including the AUR, which can sometimes be quite janky. Arch has a reputation for being easier to break than other distros, but I find all distros to break equally easy...</p>
 <p><a href="https://nixos.org">NixOS</a> is very competitive to Arch in terms of package quantity and quality. But I find Nix to be is quite janky after ricing it!</p>
@@ -4412,27 +4724,22 @@ pre[class*="language-"] {
 <ul>
 <li><a href="https://www.flatpak.org">Flatpak</a>.</li>
 <li><a href="https://wikipedia.org/wiki/CJK_characters">A CJK font</a>.</li>
-<li>All type of video codex and firmware.</li>
+<li>Necessary video codex and firmware.</li>
 <li>Archive format like <a href="https://7-zip.org">7-Zip</a>, <a href="https://www.rarlab.com">Rar</a>.</li>
-<li>CLI tools: <a href="https://git-scm.com">Git</a>, <a href="https://ffmpeg.org">FFmpeg</a>, <a href="https://curl.se">Curl</a> and <a href="https://github.com/bugaevc/wl-clipboard">WL-clipboard</a>.</li>
+<li>CLI tools: <a href="https://git-scm.com">Git</a> and <a href="https://curl.se">Curl</a>.</li>
 <li>Vietnamese input method like <a href="https://www.unikey.org/en">Unikey</a> or better.</li>
 <li>Tools to tweaks the DE:
 <ul>
-<li>If it's Gnome then it should have <a href="https://gitlab.gnome.org/GNOME/gnome-tweaks">Gnome Tweaks</a>, <a href="https://github.com/mjakeman/extension-manager">Extension Manager</a>.</li>
+<li>If it's Gnome then it should have <a href="https://gitlab.gnome.org/GNOME/gnome-tweaks">Gnome Tweaks</a> and <a href="https://wiki.gnome.org/Projects/GnomeShellIntegration"><code>gnome-browser-connector</code></a>.</li>
 <li>If KDE then it's <a href="https://store.kde.org/p/1005410">Kvantum</a>.</li>
 </ul>
 </li>
-<li>A Good <a href="https://www.winehq.org">Wine</a> preset.</li>
 </ul>
 </li>
-<li>Distro shouldn't have <a href="https://askubuntu.com/questions/93109/cant-write-to-ntfs-formatted-drives">partition problem when dual-booting Windows</a>.</li>
 </ul>
 <h2 id="my-ideal-distro" tabindex="-1"><a class="link-mono" href="#my-ideal-distro" aria-hidden="true">#</a> My ideal distro</h2>
-<p>And finally my pick is: <a href="https://nobaraproject.org">Nobara</a>!</p>
-<p>Nobara is a gaming-focused distro, it doesn't check all the list and it's a bit janky at times. But it has the best out-of-the-box experience of all the distros I've ever used.</p>
-<h3 id="honorable-mention" tabindex="-1"><a class="link-mono" href="#honorable-mention" aria-hidden="true">#</a> Honorable Mention</h3>
-<p><a href="https://vanillaos.org">Vanilla OS</a> is a distro that allows users to install applications from any Linux distro from Arch, Fedora to NixOS. It checks a lot on the list but when I tried it earlier this year, it didn't seem to be ready yet... Vanilla was very janky, it freezes when I wake it up after suspend...</p>
-<p><a href="https://blendos.co">Blend OS</a> is similar to vanilla but It's Arch-based and I hope it will become my favorite choice when I try it out in the near future.</p>
+<p><a href="https://vanillaos.org">Vanilla OS</a> is a immutable distro that allows users to install applications from any Linux distro from Arch, Fedora to NixOS. It checks a lot on the list but when I tried it early 2023, it didn't seem to be ready yet... Vanilla was very janky, it freezes when I wake it up after suspend...</p>
+<p><a href="https://blendos.co">Blend OS</a> is similar to vanilla but It's Arch-based, it's a bit bloater than Vanilla but also more stable. It also allows users to choose other DE than Gnome and Users can easily access CLI tools inside a container by write <code>command-name.container-name</code> in the terminal.</p>
 
       </main>
       <div class="mx-auto mt-32 max-w-3xl">
@@ -4599,7 +4906,7 @@ pre[class*="language-"] {
       <label for="main-drawer" class="drawer-overlay" aria-label="Close drawer"></label>
       <div class="h-full w-80 bg-base-300 bg-opacity-75 shadow backdrop-blur">
         <nav class="toc" >
-        <ul><li><a href="#why-linux-in-the-first-place"># Why Linux in the first place?</a></li><li><a href="#base-distro"># Base Distro</a></li><li><a href="#desktop-environment"># Desktop Environment</a></li><li><a href="#other-requirements"># Other requirements</a></li><li><a href="#my-ideal-distro"># My ideal distro</a><ul><li><a href="#honorable-mention"># Honorable Mention</a></li></ul></li></ul>
+        <ul><li><a href="#why-linux-in-the-first-place"># Why Linux in the first place?</a></li><li><a href="#base-distro"># Base Distro</a></li><li><a href="#desktop-environment"># Desktop Environment</a></li><li><a href="#other-requirements"># Other requirements</a></li><li><a href="#my-ideal-distro"># My ideal distro</a></li></ul>
       </nav>
       </div>
     </div>
