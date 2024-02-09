@@ -1303,6 +1303,12 @@ html {
   --tw-bg-opacity: 1;
   background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
 }
+.input[type="number"]::-webkit-inner-spin-button,
+.input-md[type="number"]::-webkit-inner-spin-button {
+  margin-top: -1rem;
+  margin-bottom: -1rem;
+  margin-inline-end: -1rem;
+}
 .kbd {
   display: inline-flex;
   align-items: center;
@@ -1987,7 +1993,7 @@ details.collapse summary::-webkit-details-marker {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   transition-duration: 150ms;
   transition-duration: 0.2s;
-  top: 50%;
+  top: 1.9rem;
   inset-inline-end: 1.4rem;
   content: "";
   transform-origin: 75% 75%;
@@ -2330,6 +2336,7 @@ details.collapse summary::-webkit-details-marker {
   border-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-border-opacity)));
   --tw-bg-opacity: 1;
   background-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-bg-opacity)));
+  color: var(--fallback-bc,oklch(var(--bc)/var(--tw-text-opacity)));
   --tw-text-opacity: 0.2;
 }
 .select-disabled::-moz-placeholder, .select:disabled::-moz-placeholder, .select[disabled]::-moz-placeholder {
@@ -3446,11 +3453,11 @@ article .link-mono {
 .z-50 {
   z-index: 50;
 }
-.m-4 {
-  margin: 1rem;
-}
 .m-0 {
   margin: 0px;
+}
+.m-4 {
+  margin: 1rem;
 }
 .mx-4 {
   margin-left: 1rem;
@@ -3516,12 +3523,6 @@ article .link-mono {
 .aspect-video {
   aspect-ratio: 16 / 9;
 }
-.aspect-\[3\/4\] {
-  aspect-ratio: 3/4;
-}
-.aspect-\[4\/3\] {
-  aspect-ratio: 4/3;
-}
 .h-6 {
   height: 1.5rem;
 }
@@ -3535,11 +3536,8 @@ article .link-mono {
 .h-full {
   height: 100%;
 }
-.h-64 {
-  height: 16rem;
-}
-.max-h-screen {
-  max-height: 100vh;
+.max-h-48 {
+  max-height: 12rem;
 }
 .max-h-64 {
   max-height: 16rem;
@@ -3547,8 +3545,8 @@ article .link-mono {
 .max-h-96 {
   max-height: 24rem;
 }
-.max-h-48 {
-  max-height: 12rem;
+.max-h-screen {
+  max-height: 100vh;
 }
 .min-h-\[1\.25rem\] {
   min-height: 1.25rem;
@@ -3589,9 +3587,6 @@ article .link-mono {
 .max-w-sm {
   max-width: 24rem;
 }
-.max-w-md {
-  max-width: 28rem;
-}
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -3614,29 +3609,12 @@ article .link-mono {
   --tw-translate-y: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
-.-translate-y-4 {
-  --tw-translate-y: -1rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
 .-translate-y-8 {
   --tw-translate-y: -2rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .rotate-90 {
   --tw-rotate: 90deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-.-rotate-90 {
-  --tw-rotate: -90deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-.rotate-45 {
-  --tw-rotate: 45deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-.scale-95 {
-  --tw-scale-x: .95;
-  --tw-scale-y: .95;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .scale-90 {
@@ -3655,9 +3633,6 @@ article .link-mono {
 }
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 .flex-col {
   flex-direction: column;
@@ -3772,23 +3747,16 @@ article .link-mono {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.object-center {
-  -o-object-position: center;
-     object-position: center;
-}
-.object-left {
-  -o-object-position: left;
-     object-position: left;
-}
 .object-\[40\%_center\] {
   -o-object-position: 40% center;
      object-position: 40% center;
 }
+.object-center {
+  -o-object-position: center;
+     object-position: center;
+}
 .p-2 {
   padding: 0.5rem;
-}
-.p-8 {
-  padding: 2rem;
 }
 .p-4 {
   padding: 1rem;
@@ -3816,9 +3784,6 @@ article .link-mono {
 }
 .pt-4 {
   padding-top: 1rem;
-}
-.pt-0 {
-  padding-top: 0px;
 }
 .text-left {
   text-align: left;
@@ -4130,29 +4095,10 @@ pre[class*="language-"] {
   }
 }
 
-@media not all and (min-width: 768px) {
-
-  .max-md\:max-w-xs {
-    max-width: 20rem;
-  }
-
-  .max-md\:max-w-\[8rem\] {
-    max-width: 8rem;
-  }
-}
-
 @media not all and (min-width: 640px) {
 
   .max-sm\:col-span-2 {
     grid-column: span 2 / span 2;
-  }
-
-  .max-sm\:row-span-2 {
-    grid-row: span 2 / span 2;
-  }
-
-  .max-sm\:max-w-\[8rem\] {
-    max-width: 8rem;
   }
 }
 
@@ -4177,10 +4123,6 @@ pre[class*="language-"] {
 
   .sm\:aspect-\[4\/3\] {
     aspect-ratio: 4/3;
-  }
-
-  .sm\:h-full {
-    height: 100%;
   }
 
   .sm\:h-64 {
@@ -4217,11 +4159,6 @@ pre[class*="language-"] {
 
   .sm\:gap-8 {
     gap: 2rem;
-  }
-
-  .sm\:bg-black {
-    --tw-bg-opacity: 1;
-    background-color: rgb(0 0 0 / var(--tw-bg-opacity));
   }
 
   .sm\:text-2xl {
@@ -4327,10 +4264,6 @@ pre[class*="language-"] {
     gap: 2rem;
   }
 
-  .md\:gap-4 {
-    gap: 1rem;
-  }
-
   .md\:text-right {
     text-align: right;
   }
@@ -4400,14 +4333,6 @@ pre[class*="language-"] {
   .lg\:translate-x-0 {
     --tw-translate-x: 0px;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  }
-
-  .lg\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .lg\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .lg\:flex-row {
@@ -4570,14 +4495,6 @@ pre[class*="language-"] {
 
   .xl\:hidden {
     display: none;
-  }
-
-  .xl\:gap-8 {
-    gap: 2rem;
-  }
-
-  .xl\:gap-4 {
-    gap: 1rem;
   }
 }
 

@@ -408,10 +408,24 @@
   &lt;div class=&quot;aspect-video overflow-hidden sm:aspect-[4/3]&quot;&gt;&lt;img class=&quot;m-0 h-full w-full object-cover object-center&quot; src=&quot;https://codeberg.org/NNB/blog-images/raw/branch/main/16/green_pipe_irl3.jpg&quot; alt=&quot;Green pipe IRL 4&quot; /&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Pipes that are big, bright green, and has thick edges like Mario exist in real life, not just a brainchild of Nintendo. But if you think about it, the concept of &amp;quot;green water pipes&amp;quot; is very general and has existed or been applied in many fields. It itself cannot be copyrighted by any individual or organization. But just to be sure, let&#39;s compare the pipes in Flappy Bird with Mario:&lt;/p&gt;
-&lt;p&gt;| In Flappy Bird                   | In Mario                                                | &lt;!-- TODO --&gt;
-| -------------------------------- | ------------------------------------------------------- |
-| Player character dies on contact | Blocks the player&#39;s movement                            |
-| Can&#39;t be interacted with         | Can sometimes go into and out of or warp between worlds |&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;In Flappy Bird&lt;/th&gt;
+&lt;th&gt;In Mario&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Player character dies on contact&lt;/td&gt;
+&lt;td&gt;Blocks the player&#39;s movement&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Can&#39;t be interacted with&lt;/td&gt;
+&lt;td&gt;Can sometimes go into and out of or warp between worlds&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;p&gt;Once again, the way pipes are used is very different between the two games. So why did Mr. Dong use pipes like Mario and not something else like a brick wall or laser?&lt;/p&gt;
 &lt;p&gt;No art exists in a vacuum, neither does Flappy Bird. Flappy Bird is a video game, video game is art, and art is a conversation. A conversation between artists, from generation to generation, to learn, cultivate, grow. Nguyen Ha Dong used the image of a green pipe like in Mario not to piggyback of Mario&#39;s popularity or because he was lazy to create another image. He uses it precisely because it is a symbol of video games in general in the childhood of his generation. He seems to want to give players a ticket back to childhood, taking them back to simpler times. Simple like the design of Flappy Bird it&#39;s self. Remember, simplicity is what he really aims for.&lt;/p&gt;
 &lt;h3 id=&quot;nintendo-and-inspired-games&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnb.codeberg.page/blog/en/posts/16/#nintendo-and-inspired-games&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Nintendo and inspired games&lt;/h3&gt;
