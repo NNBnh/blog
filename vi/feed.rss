@@ -7,6 +7,22 @@
     <description>Blog that SuperB</description>
     <language>vi</language>
     <item>
+      <title>Kết thúc việc Linux bị đơ</title>
+      <link>https://nnb.codeberg.page/blog/en/posts/17/</link>
+      <description>&lt;h2 id=&quot;story&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnb.codeberg.page/blog/en/posts/17/#story&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Story&lt;/h2&gt;
+&lt;p&gt;Since I first switched to Linux, my computer always freezes every time I do heavy work. At the beginning, it froze a few times a month. When the laptop froze, I have to turn it off, no different from when I used Windows. Then its became more and more frequent, to the point that my computer froze almost daily. After researching, I found that my computer seems to freeze every time the RAM is nearly or completely full. My laptop have 2GB of RAM, I tried adding a 4GB swap partition, but it doesn&#39;t seem help. &amp;quot;Maybe it&#39;s because my laptop is so old&amp;quot; I thought to myself.&lt;/p&gt;
+&lt;p&gt;I got a better laptop when I go to college. With 8GB of RAM, the condition no longer occurs daily, but its frequency is still every week... Quite annoying, I can&#39;t open a lot of tabs on the web browser because I fear that will cause freezing. When I want to play 3D heavy game, I have to turn off every thing else. Et cetera...&lt;/p&gt;
+&lt;p&gt;I saved up money from competitions prizes, and finally bought a laptop myself! The device still has 8GB of ram, but the CPU and GPU are much more powerful. The condition was improved... It freezes about 2-3 time a month. There are times when I often play heavy games, and it quickly freezes every week...&lt;/p&gt;
+&lt;p&gt;Things really got worse when I switched to &lt;a href=&quot;https://blendos.co/&quot;&gt;BlendOS&lt;/a&gt;, it freezes almost every day, for the first week I installed Blend. I quickly checked the system monitor, and realized that: For some reason BlendOS doesn&#39;t install any swap partition!&lt;/p&gt;
+&lt;h2 id=&quot;solution&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnb.codeberg.page/blog/en/posts/17/#solution&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Solution&lt;/h2&gt;
+&lt;p&gt;I decided to add a swap partition, this time I gave it 16GB just to be sure. Like a dream come true! Since then, my PC never freezes ever again! Now I can open more than 20 browser tabs with game and heavy application, all at the same time. In the past, I had to use my laptop carefully because I was afraid it would freeze, Now Now I can freely open as many applications as I want!&lt;/p&gt;
+&lt;p&gt;The lesson here is: If Linux often freezes due to full RAM, try increase swap, &lt;strong&gt;lot of swap&lt;/strong&gt;! It seems like I almost solved the problem a while ago when I tried increasing the swap a bit, If I tried to increase it more, I might not have to upgrade my laptop~&lt;/p&gt;
+</description>
+      <pubDate>Fri, 09 Feb 2024 00:00:00 +0000</pubDate>
+      <dc:creator>NNB</dc:creator>
+      <guid>https://nnb.codeberg.page/blog/en/posts/17/</guid>
+    </item>
+    <item>
       <title>Bác bỏ những cáo buộc về Flappy Bird</title>
       <link>https://nnb.codeberg.page/blog/en/posts/16/</link>
       <description>&lt;p&gt;A decade ago, at the end of 2013, the world witnessed the rise of Flappy Bird - a mobile game with simple design yet a high skill ceiling, piquing the desire to overcome challenges in many players. Thanks to that, Flappy Bird became a worldwide phenomenon and trend at the start of 2014. However, not long after, on the same date as today (February 8th) 10 years ago, Nguyen Ha Dong - the father of Flappy Bird - couldn&#39;t handle the overwhelming negative public opinion anymore, and took the billion-dollar game off all app stores.&lt;/p&gt;
