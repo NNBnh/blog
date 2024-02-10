@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="vi" />
   
     <meta property="article:author" content="NNB" />
-    <meta property="article:published_time" content="2024-02-09T00:00:00.000Z" />
+    <meta property="article:published_time" content="2024-02-10T00:00:00.000Z" />
     
     <meta property="article:section" content="os_rice" />
     
@@ -1319,6 +1319,61 @@ html {
   margin-bottom: -1rem;
   margin-inline-end: -1rem;
 }
+.join {
+  display: inline-flex;
+  align-items: stretch;
+  border-radius: var(--rounded-btn, 0.5rem);
+}
+.join :where(.join-item) {
+  border-start-end-radius: 0;
+  border-end-end-radius: 0;
+  border-end-start-radius: 0;
+  border-start-start-radius: 0;
+}
+.join .join-item:not(:first-child):not(:last-child),
+  .join *:not(:first-child):not(:last-child) .join-item {
+  border-start-end-radius: 0;
+  border-end-end-radius: 0;
+  border-end-start-radius: 0;
+  border-start-start-radius: 0;
+}
+.join .join-item:first-child:not(:last-child),
+  .join *:first-child:not(:last-child) .join-item {
+  border-start-end-radius: 0;
+  border-end-end-radius: 0;
+}
+.join .dropdown .join-item:first-child:not(:last-child),
+  .join *:first-child:not(:last-child) .dropdown .join-item {
+  border-start-end-radius: inherit;
+  border-end-end-radius: inherit;
+}
+.join :where(.join-item:first-child:not(:last-child)),
+  .join :where(*:first-child:not(:last-child) .join-item) {
+  border-end-start-radius: inherit;
+  border-start-start-radius: inherit;
+}
+.join .join-item:last-child:not(:first-child),
+  .join *:last-child:not(:first-child) .join-item {
+  border-end-start-radius: 0;
+  border-start-start-radius: 0;
+}
+.join :where(.join-item:last-child:not(:first-child)),
+  .join :where(*:last-child:not(:first-child) .join-item) {
+  border-start-end-radius: inherit;
+  border-end-end-radius: inherit;
+}
+@supports not selector(:has(*)) {
+
+  :where(.join *) {
+    border-radius: inherit;
+  }
+}
+@supports selector(:has(*)) {
+
+  :where(.join *:has(.join-item)) {
+    border-radius: inherit;
+  }
+}
 .kbd {
   display: inline-flex;
   align-items: center;
@@ -2120,6 +2175,11 @@ details.collapse summary::-webkit-details-marker {
 .input::-webkit-date-and-time-value {
   text-align: inherit;
 }
+.join > :where(*:not(:first-child)) {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-inline-start: -1px;
+}
 .link:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -2657,6 +2717,40 @@ details.collapse summary::-webkit-details-marker {
   pointer-events: auto;
   visibility: visible;
 }
+.join.join-vertical {
+  flex-direction: column;
+}
+.join.join-vertical .join-item:first-child:not(:last-child),
+  .join.join-vertical *:first-child:not(:last-child) .join-item {
+  border-end-start-radius: 0;
+  border-end-end-radius: 0;
+  border-start-start-radius: inherit;
+  border-start-end-radius: inherit;
+}
+.join.join-vertical .join-item:last-child:not(:first-child),
+  .join.join-vertical *:last-child:not(:first-child) .join-item {
+  border-start-start-radius: 0;
+  border-start-end-radius: 0;
+  border-end-start-radius: inherit;
+  border-end-end-radius: inherit;
+}
+.join.join-horizontal {
+  flex-direction: row;
+}
+.join.join-horizontal .join-item:first-child:not(:last-child),
+  .join.join-horizontal *:first-child:not(:last-child) .join-item {
+  border-end-end-radius: 0;
+  border-start-end-radius: 0;
+  border-end-start-radius: inherit;
+  border-start-start-radius: inherit;
+}
+.join.join-horizontal .join-item:last-child:not(:first-child),
+  .join.join-horizontal *:last-child:not(:first-child) .join-item {
+  border-end-start-radius: 0;
+  border-start-start-radius: 0;
+  border-end-end-radius: inherit;
+  border-start-end-radius: inherit;
+}
 .kbd-sm {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -2736,6 +2830,16 @@ details.collapse summary::-webkit-details-marker {
 .drawer-open > .drawer-toggle ~ .drawer-side > .drawer-overlay {
   cursor: default;
   background-color: transparent;
+}
+.join.join-vertical > :where(*:not(:first-child)) {
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: -1px;
+}
+.join.join-horizontal > :where(*:not(:first-child)) {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-inline-start: -1px;
 }
 .tooltip {
   position: relative;
@@ -4575,8 +4679,8 @@ pre[class*="language-"] {
     <div class="absolute bottom-0 w-full items-end justify-between gap-4 p-2 text-left sm:text-2xl md:flex">
       <a href=".">
         <span class="link-mono lg:group-hover:opacity-100">
-  <time datetime="2024-02-09T00:00:00.000Z">
-    09/02/2024
+  <time datetime="2024-02-10T00:00:00.000Z">
+    10/02/2024
   </time>
   
 </span>
