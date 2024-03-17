@@ -77,15 +77,15 @@
     <lastmod>23/01/2024</lastmod>
   </url>
   <url>
-    <loc>/https:/nnb.codeberg.page/blog/blog/en/tags/os_rice/</loc>
-    <lastmod>23/01/2024</lastmod>
-  </url>
-  <url>
     <loc>/https:/nnb.codeberg.page/blog/blog/en/tags/update/</loc>
     <lastmod>23/01/2024</lastmod>
   </url>
   <url>
     <loc>/https:/nnb.codeberg.page/blog/blog/en/tags/web_dev/</loc>
+    <lastmod>23/01/2024</lastmod>
+  </url>
+  <url>
+    <loc>/https:/nnb.codeberg.page/blog/blog/en/tags/os_rice/</loc>
     <lastmod>23/01/2024</lastmod>
   </url>
   <url>
@@ -101,15 +101,11 @@
     <lastmod>23/01/2024</lastmod>
   </url>
   <url>
-    <loc>/https:/nnb.codeberg.page/blog/blog/en/tags/ruby/</loc>
-    <lastmod>23/01/2024</lastmod>
-  </url>
-  <url>
     <loc>/https:/nnb.codeberg.page/blog/blog/en/tags/story/</loc>
     <lastmod>23/01/2024</lastmod>
   </url>
   <url>
-    <loc>/https:/nnb.codeberg.page/blog/blog/vi/tags/os_rice/</loc>
+    <loc>/https:/nnb.codeberg.page/blog/blog/en/tags/ruby/</loc>
     <lastmod>23/01/2024</lastmod>
   </url>
   <url>
@@ -118,6 +114,10 @@
   </url>
   <url>
     <loc>/https:/nnb.codeberg.page/blog/blog/vi/tags/web_dev/</loc>
+    <lastmod>23/01/2024</lastmod>
+  </url>
+  <url>
+    <loc>/https:/nnb.codeberg.page/blog/blog/vi/tags/os_rice/</loc>
     <lastmod>23/01/2024</lastmod>
   </url>
   <url>
@@ -133,11 +133,11 @@
     <lastmod>23/01/2024</lastmod>
   </url>
   <url>
-    <loc>/https:/nnb.codeberg.page/blog/blog/vi/tags/ruby/</loc>
+    <loc>/https:/nnb.codeberg.page/blog/blog/vi/tags/story/</loc>
     <lastmod>23/01/2024</lastmod>
   </url>
   <url>
-    <loc>/https:/nnb.codeberg.page/blog/blog/vi/tags/story/</loc>
+    <loc>/https:/nnb.codeberg.page/blog/blog/vi/tags/ruby/</loc>
     <lastmod>23/01/2024</lastmod>
   </url>
   <url>

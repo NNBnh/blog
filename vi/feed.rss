@@ -21,7 +21,7 @@
 &lt;pre class=&quot;language-rb&quot;&gt;&lt;code class=&quot;language-rb&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;$null&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;open&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;token double-colon punctuation&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string-literal&quot;&gt;&lt;span class=&quot;token string&quot;&gt;&#39;w&#39;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&amp;lt;3&lt;/p&gt;
 </description>
-      <pubDate>Sun, 11 Feb 2024 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 11 Feb 2024 07:00:00 +0000</pubDate>
       <dc:creator>NNB</dc:creator>
       <guid>https://nnb.codeberg.page/blog/en/posts/18/</guid>
     </item>
@@ -37,7 +37,7 @@
 &lt;p&gt;I decided to add a swap partition, this time I gave it 16GB just to be sure. Like a dream come true! Since then, my PC never freezes ever again! Now I can open more than 20 browser tabs with game and heavy application, all at the same time. In the past, I had to use my laptop carefully because I was afraid it would freeze, Now Now I can freely open as many applications as I want!&lt;/p&gt;
 &lt;p&gt;The lesson here is: If Linux often freezes due to full RAM, try increase swap, &lt;strong&gt;lot of swap&lt;/strong&gt;! It seems like I almost solved the problem a while ago when I tried increasing the swap a bit, If I tried to increase it more, I might not have to upgrade my laptop~&lt;/p&gt;
 </description>
-      <pubDate>Sat, 10 Feb 2024 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 10 Feb 2024 07:00:00 +0000</pubDate>
       <dc:creator>NNB</dc:creator>
       <guid>https://nnb.codeberg.page/blog/en/posts/17/</guid>
     </item>
@@ -683,7 +683,7 @@
 &lt;/blockquote&gt;
 &lt;p&gt;Flappy Bird wasn&#39;t chosen by Pewdiepie by dumb luck. It was chosen because it was a famous rage game and many of his fans wanted him to play. PewDiePie&#39;s video, more or less, made Flappy Bird even more famous. But it is not the main or direct cause, and certainly not the core reason why Flappy Bird became a phenomenon.&lt;/p&gt;
 </description>
-      <pubDate>Thu, 08 Feb 2024 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 08 Feb 2024 07:00:00 +0000</pubDate>
       <dc:creator>NNB</dc:creator>
       <guid>https://nnb.codeberg.page/blog/en/posts/16/</guid>
     </item>
@@ -721,7 +721,7 @@
 [✔] Copied 336B
 &lt;/code&gt;&lt;/pre&gt;
 </description>
-      <pubDate>Sat, 30 Dec 2023 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 30 Dec 2023 07:00:00 +0000</pubDate>
       <dc:creator>NNB</dc:creator>
       <guid>https://nnb.codeberg.page/blog/en/posts/15/</guid>
     </item>
@@ -872,7 +872,7 @@
     &amp;gt; now that is a rare &lt;code class=&quot;text-success&quot;&gt;$EDITOR&lt;/code&gt; hopping&lt;br /&gt;
   &lt;/p&gt;
 </description>
-      <pubDate>Mon, 25 Dec 2023 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 25 Dec 2023 07:00:00 +0000</pubDate>
       <dc:creator>NNB</dc:creator>
       <guid>https://nnb.codeberg.page/blog/en/posts/14/</guid>
     </item>
@@ -923,7 +923,7 @@
 &lt;p&gt;&lt;a href=&quot;https://vanillaos.org/&quot;&gt;Vanilla OS&lt;/a&gt; is a immutable distro that allows users to install applications from any Linux distro from Arch, Fedora to NixOS. It checks a lot on the list but when I tried it early 2023, it didn&#39;t seem to be ready yet... Vanilla was very janky, it freezes when I wake it up after suspend...&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://blendos.co/&quot;&gt;Blend OS&lt;/a&gt; is similar to vanilla but It&#39;s Arch-based, it&#39;s a bit bloater than Vanilla but also more stable. It also allows users to choose other DE than Gnome and Users can easily access CLI tools inside a container by write &lt;code&gt;command-name.container-name&lt;/code&gt; in the terminal.&lt;/p&gt;
 </description>
-      <pubDate>Sat, 12 Aug 2023 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 12 Aug 2023 07:00:00 +0000</pubDate>
       <dc:creator>NNB</dc:creator>
       <guid>https://nnb.codeberg.page/blog/en/posts/13/</guid>
     </item>
@@ -975,7 +975,7 @@ TTY == Hackerman&lt;/span&gt;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;Credit to &lt;a href=&quot;https://github.com/K4zoku&quot;&gt;Kazoku&lt;/a&gt; for the Rice images!&lt;/p&gt;
 </description>
-      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 10 Aug 2023 07:00:00 +0000</pubDate>
       <dc:creator>NNB</dc:creator>
       <guid>https://nnb.codeberg.page/blog/en/posts/12/</guid>
     </item>
@@ -1186,7 +1186,7 @@ TTY == Hackerman&lt;/span&gt;&lt;/p&gt;
 &lt;/table&gt;
   &lt;/div&gt;
 </description>
-      <pubDate>Wed, 09 Aug 2023 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 09 Aug 2023 07:00:00 +0000</pubDate>
       <dc:creator>NNB</dc:creator>
       <guid>https://nnb.codeberg.page/blog/en/posts/11/</guid>
     </item>
@@ -1205,7 +1205,7 @@ TTY == Hackerman&lt;/span&gt;&lt;/p&gt;
 &lt;h2 id=&quot;performance-skeptical&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnb.codeberg.page/blog/en/posts/10/#performance-skeptical&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Performance skeptical&lt;/h2&gt;
 &lt;p&gt;Many people when they hear &amp;quot;web-based&amp;quot; immediately doubt the project&#39;s performance, don&#39;t know if it will run on the Thinkpad with 0.5gb ram... I recommend you take a look at the &lt;a href=&quot;https://desktop.kerahq.com/faq&quot;&gt;project&#39;s FAQ&lt;/a&gt;. I guarantee it will answer most of your skeptical.&lt;/p&gt;
 </description>
-      <pubDate>Wed, 09 Aug 2023 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 09 Aug 2023 07:00:00 +0000</pubDate>
       <dc:creator>NNB</dc:creator>
       <guid>https://nnb.codeberg.page/blog/en/posts/10/</guid>
     </item>
@@ -1228,7 +1228,7 @@ TTY == Hackerman&lt;/span&gt;&lt;/p&gt;
 &lt;h2 id=&quot;honorable-mention&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnb.codeberg.page/blog/en/posts/9/#honorable-mention&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; 📢 Honorable Mention&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://imageglass.org/&quot;&gt;Image Glass&lt;/a&gt;: It&#39;s only run on Windows but it&#39;s is the best image viewer for Windows, it&#39;s well design with enough feature to even do some light modification but not too bloat.&lt;/p&gt;
 </description>
-      <pubDate>Mon, 07 Aug 2023 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 07 Aug 2023 07:00:00 +0000</pubDate>
       <dc:creator>NNB</dc:creator>
       <guid>https://nnb.codeberg.page/blog/en/posts/9/</guid>
     </item>
@@ -1310,7 +1310,7 @@ hook -group &#39;clipboard&#39; global RegisterModified &#92;&amp;quot; %{ nop %
 &lt;/li&gt;
 &lt;/ul&gt;
 </description>
-      <pubDate>Sun, 06 Aug 2023 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 06 Aug 2023 07:00:00 +0000</pubDate>
       <dc:creator>NNB</dc:creator>
       <guid>https://nnb.codeberg.page/blog/en/posts/8/</guid>
     </item>
@@ -1351,7 +1351,7 @@ hook -group &#39;clipboard&#39; global RegisterModified &#92;&amp;quot; %{ nop %
 &lt;p&gt;I&#39;m also occasionally peeking &lt;a href=&quot;https://crystal-lang.org/&quot;&gt;Crystal&lt;/a&gt;, its syntax is ~90% similar to Ruby but faster and has some better design than Ruby, but scripting on it isn&#39;t as convenient.&lt;/p&gt;
 &lt;p&gt;And that&#39;s all, I will continue my adventure on making a perfect scripting environment. See you in the next blogs.&lt;/p&gt;
 </description>
-      <pubDate>Sun, 06 Aug 2023 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 06 Aug 2023 07:00:00 +0000</pubDate>
       <dc:creator>NNB</dc:creator>
       <guid>https://nnb.codeberg.page/blog/en/posts/7/</guid>
     </item>
@@ -1382,7 +1382,7 @@ hook -group &#39;clipboard&#39; global RegisterModified &#92;&amp;quot; %{ nop %
 &lt;li&gt;You can bookmark any websites and use a unified bookmark manager instead of using the save feature to save posts scattered in each social medias.&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-      <pubDate>Mon, 13 Feb 2023 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 13 Feb 2023 07:00:00 +0000</pubDate>
       <dc:creator>NNB</dc:creator>
       <guid>https://nnb.codeberg.page/blog/en/posts/6/</guid>
     </item>
@@ -1404,7 +1404,7 @@ The exception is if the WM has a whole widget&#39;s system like &lt;a href=&quot
 (&lt;a href=&quot;https://github.com/baskerville/sxhkd&quot;&gt;SXHKD&lt;/a&gt;, &lt;a href=&quot;https://github.com/jtroo/kanata&quot;&gt;Kanata&lt;/a&gt;, &lt;a href=&quot;https://github.com/kmonad/kmonad&quot;&gt;KMonad&lt;/a&gt;).
 The only exception are to config mouse buttons (with mod keys) to focus, move and resize windows.&lt;/p&gt;
 </description>
-      <pubDate>Sat, 11 Feb 2023 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 11 Feb 2023 07:00:00 +0000</pubDate>
       <dc:creator>NNB</dc:creator>
       <guid>https://nnb.codeberg.page/blog/en/posts/5/</guid>
     </item>
@@ -1431,7 +1431,7 @@ The only exception are to config mouse buttons (with mod keys) to focus, move an
 &lt;h2 id=&quot;further-readings&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnb.codeberg.page/blog/en/posts/4/#further-readings&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Further readings&lt;/h2&gt;
 &lt;p&gt;I highly recommend everyone to read &lt;a href=&quot;https://clig.dev/&quot;&gt;Command Line Interface Guidelines&lt;/a&gt;, the article is not only have a guide but also gives philosophy when designing CLI.&lt;/p&gt;
 </description>
-      <pubDate>Thu, 02 Feb 2023 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 02 Feb 2023 07:00:00 +0000</pubDate>
       <dc:creator>NNB</dc:creator>
       <guid>https://nnb.codeberg.page/blog/en/posts/4/</guid>
     </item>
@@ -1474,7 +1474,7 @@ The only exception are to config mouse buttons (with mod keys) to focus, move an
 &lt;p&gt;Although it&#39;s not very private and secure, Vivaldi is the most feature-rich browser (kitchen-sink included!). It has calendar, email, contacts, split screen feature... Vivaldi is also very easy to customize, although it is not as advanced as Firefox CSS, it has a lot of customizations available out of the box.&lt;/p&gt;
 &lt;p&gt;At first, I quite liked it. But later on, I found it cumbersome. And although it is pretty customizable, I still do not find it as satisfying as to customize Firefox.&lt;/p&gt;
 </description>
-      <pubDate>Mon, 30 Jan 2023 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 30 Jan 2023 07:00:00 +0000</pubDate>
       <dc:creator>NNB</dc:creator>
       <guid>https://nnb.codeberg.page/blog/en/posts/3/</guid>
     </item>
@@ -1571,7 +1571,7 @@ with
 &lt;p&gt;Here is the clandestine command you can give to your friends 😈:&lt;/p&gt;
 &lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-sL&lt;/span&gt; http://bit.ly/10hA8iC &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;bash&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 </description>
-      <pubDate>Tue, 24 Jan 2023 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 24 Jan 2023 07:00:00 +0000</pubDate>
       <dc:creator>NNB</dc:creator>
       <guid>https://nnb.codeberg.page/blog/en/posts/2/</guid>
     </item>
@@ -1604,7 +1604,7 @@ with
 &lt;li&gt;&lt;a href=&quot;https://wiki.archlinux.org/title/Xrandr&quot;&gt;Display&lt;/a&gt; (&lt;a href=&quot;https://sr.ht/~emersion/wlr-randr&quot;&gt;for Wayland&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-      <pubDate>Mon, 23 Jan 2023 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 23 Jan 2023 07:00:00 +0000</pubDate>
       <dc:creator>NNB</dc:creator>
       <guid>https://nnb.codeberg.page/blog/en/posts/1/</guid>
     </item>
@@ -1624,7 +1624,7 @@ with
 &lt;pre class=&quot;language-liquid&quot;&gt;&lt;code class=&quot;language-liquid&quot;&gt;---&lt;br /&gt;title:&lt;br /&gt;  en: &quot;*First post!&quot;&lt;br /&gt;  vi: Blog post &quot;đầu tiên&quot;!&lt;br /&gt;description:&lt;br /&gt;  en: Made with 11ty&lt;br /&gt;  vi: Khai bút đầu năm bằng 11ty&lt;br /&gt;tags:&lt;br /&gt;  - update&lt;br /&gt;  - web_dev&lt;br /&gt;date: 2023-01-22&lt;br /&gt;image: https://images.unsplash.com/photo-1674240660273-a3496c4604fd&lt;br /&gt;---&lt;br /&gt;&lt;br /&gt;&lt;span class=&quot;token liquid language-liquid&quot;&gt;&lt;span class=&quot;token delimiter punctuation&quot;&gt;{%&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; lang &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;vi&#39;&lt;/span&gt; &lt;span class=&quot;token delimiter punctuation&quot;&gt;%}&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;  Xin chào!&lt;br /&gt;&lt;span class=&quot;token liquid language-liquid&quot;&gt;&lt;span class=&quot;token delimiter punctuation&quot;&gt;{%&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token delimiter punctuation&quot;&gt;%}&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;  Hello!&lt;br /&gt;&lt;span class=&quot;token liquid language-liquid&quot;&gt;&lt;span class=&quot;token delimiter punctuation&quot;&gt;{%&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;endif&lt;/span&gt; &lt;span class=&quot;token delimiter punctuation&quot;&gt;%}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;That&#39;s all folks, I hope you all look forward to reading my next blog posts, bye!&lt;/p&gt;
 </description>
-      <pubDate>Sun, 22 Jan 2023 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 22 Jan 2023 07:00:00 +0000</pubDate>
       <dc:creator>NNB</dc:creator>
       <guid>https://nnb.codeberg.page/blog/en/posts/0/</guid>
     </item>
