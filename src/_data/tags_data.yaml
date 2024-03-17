@@ -54,8 +54,3 @@ godot:
     en: Godot game engine
     vi: Phần mềm làm game Godot
   image: https://images.unsplash.com/photo-1549905314-a716f4556858
-svelte:
-  description:
-    en: Cybernetically enhanced web apps
-    vi: Web framework Svelte / SvelteKit
-  image: https://images.unsplash.com/photo-1530774487274-f41219acc4f3
