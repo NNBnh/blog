@@ -27,7 +27,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-      target_branch: pages
+      ref: pages
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
