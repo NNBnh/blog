@@ -32,9 +32,14 @@
 &lt;p&gt;Since I first switched to Linux, my computer always freezes every time I do heavy work. At the beginning, it froze a few times a month. When the laptop froze, I have to turn it off, no different from when I used Windows. Then its became more and more frequent, to the point that my computer froze almost daily. After researching, I found that my computer seems to freeze every time the RAM is nearly or completely full. My laptop have 2GB of RAM, I tried adding a 4GB swap partition, but it doesn&#39;t seem help. &amp;quot;Maybe it&#39;s because my laptop is so old&amp;quot; I thought to myself.&lt;/p&gt;
 &lt;p&gt;I got a better laptop when I go to college. With 8GB of RAM, the condition no longer occurs daily, but its frequency is still every week... Quite annoying, I can&#39;t open a lot of tabs on the web browser because I fear that will cause freezing. When I want to play 3D heavy game, I have to turn off every thing else. Et cetera...&lt;/p&gt;
 &lt;p&gt;I saved up money from competitions prizes, and finally bought a laptop myself! The device still has 8GB of ram, but the CPU and GPU are much more powerful. The condition was improved... It freezes about 2-3 time a month. There are times when I often play heavy games, and it quickly freezes every week...&lt;/p&gt;
-&lt;p&gt;Things really got worse when I switched to &lt;a href=&quot;https://blendos.co/&quot;&gt;BlendOS&lt;/a&gt;, it freezes almost every day, for the first week I installed Blend. I quickly checked the system monitor, and realized that: For some reason BlendOS doesn&#39;t install any swap partition!&lt;/p&gt;
+&lt;p&gt;Things really got worse when I switched to &lt;a href=&quot;https://blendos.co/&quot;&gt;BlendOS&lt;/a&gt;, it freezes almost every day, for the first week I installed Blend. I quickly checked the system monitor, and realized that: For some reason BlendOS doesn&#39;t have swap!&lt;/p&gt;
 &lt;h2 id=&quot;solution&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnb.codeberg.page/blog/en/posts/17/#solution&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Solution&lt;/h2&gt;
-&lt;p&gt;I decided to add a swap partition, this time I gave it 16GB just to be sure. Like a dream come true! Since then, my PC never freezes ever again! Now I can open more than 20 browser tabs with game and heavy application, all at the same time. In the past, I had to use my laptop carefully because I was afraid it would freeze, Now Now I can freely open as many applications as I want!&lt;/p&gt;
+&lt;p&gt;I decided to add a swap, this time I gave it 16GB just to be sure:&lt;/p&gt;
+&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;btrfs filesystem mkswapfile &lt;span class=&quot;token parameter variable&quot;&gt;--size&lt;/span&gt; 16G ~/.cache/swapfile&lt;br /&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;swapon&lt;/span&gt; ~/.cache/swapfile&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then add this to &lt;code&gt;/etc/fstab&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/var/home/USERNAME/.cache/swapfile	swap    swap    defaults 0 0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Since then, my PC never freezes ever again, like a dream come true! Now I can open more than 20 browser tabs with game and heavy application, all at the same time. In the past, I had to use my laptop carefully because I was afraid it would freeze, Now I can freely open as many applications as I want!&lt;/p&gt;
 &lt;p&gt;The lesson here is: If Linux often freezes due to full RAM, try increase swap, &lt;strong&gt;lot of swap&lt;/strong&gt;! It seems like I almost solved the problem a while ago when I tried increasing the swap a bit, If I tried to increase it more, I might not have to upgrade my laptop~&lt;/p&gt;
 </description>
       <pubDate>Sat, 10 Feb 2024 07:00:00 +0000</pubDate>
@@ -871,6 +876,9 @@
     &amp;gt; emacs -&amp;gt; neovim -&amp;gt; kakoune -&amp;gt; helix -&amp;gt; pepper -&amp;gt; vscode&lt;br /&gt;
     &amp;gt; now that is a rare &lt;code class=&quot;text-success&quot;&gt;$EDITOR&lt;/code&gt; hopping&lt;br /&gt;
   &lt;/p&gt;
+&lt;h2 id=&quot;zed&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnb.codeberg.page/blog/en/posts/14/#zed&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; &lt;a href=&quot;https://zed.dev/&quot;&gt;Zed&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Update!&lt;/strong&gt; After writing this blog for a while, Zed was released.&lt;/p&gt;
+&lt;p&gt;Zed is a GUI editor written in Rust. Compared to VScode, it is fast, minimalist, and at the same time has many built-in features that in VScode must be installed through extensions. Not only that, it also comes with Vim bindings! I don&#39;t care about Vim, what matters is that Zed has first-class modal editing that we can personalize, once again opening the door to the Bmap saga! That said, I&#39;m pretty exhausted with making a massive system like Bmap, maybe I&#39;ll do something simpler...&lt;/p&gt;
 </description>
       <pubDate>Mon, 25 Dec 2023 07:00:00 +0000</pubDate>
       <dc:creator>NNB</dc:creator>
@@ -912,7 +920,7 @@
 &lt;li&gt;Vietnamese input method like &lt;a href=&quot;https://www.unikey.org/en&quot;&gt;Unikey&lt;/a&gt; or better.&lt;/li&gt;
 &lt;li&gt;Tools to tweaks the DE:
 &lt;ul&gt;
-&lt;li&gt;If it&#39;s Gnome then it should have &lt;a href=&quot;https://gitlab.gnome.org/GNOME/gnome-tweaks&quot;&gt;Gnome Tweaks&lt;/a&gt; and &lt;a href=&quot;https://wiki.gnome.org/Projects/GnomeShellIntegration&quot;&gt;&lt;code&gt;gnome-browser-connector&lt;/code&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;If it&#39;s Gnome then it should have &lt;a href=&quot;https://gitlab.gnome.org/GNOME/gnome-tweaks&quot;&gt;Gnome Tweaks&lt;/a&gt; and &lt;a href=&quot;https://wiki.gnome.org/Projects/GnomeShellIntegration&quot;&gt;&lt;code&gt;gnome-browser-connector&lt;/code&gt;&lt;/a&gt; or &lt;a href=&quot;https://mattjakeman.com/apps/extension-manager&quot;&gt;Extension Manager&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;If KDE then it&#39;s &lt;a href=&quot;https://store.kde.org/p/1005410&quot;&gt;Kvantum&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -922,6 +930,11 @@
 &lt;h2 id=&quot;my-ideal-distro&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnb.codeberg.page/blog/en/posts/13/#my-ideal-distro&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; My ideal distro&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://vanillaos.org/&quot;&gt;Vanilla OS&lt;/a&gt; is a immutable distro that allows users to install applications from any Linux distro from Arch, Fedora to NixOS. It checks a lot on the list but when I tried it early 2023, it didn&#39;t seem to be ready yet... Vanilla was very janky, it freezes when I wake it up after suspend...&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://blendos.co/&quot;&gt;Blend OS&lt;/a&gt; is similar to vanilla but It&#39;s Arch-based, it&#39;s a bit bloater than Vanilla but also more stable. It also allows users to choose other DE than Gnome and Users can easily access CLI tools inside a container by write &lt;code&gt;command-name.container-name&lt;/code&gt; in the terminal.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://bazzite.gg/&quot;&gt;Bazzite&lt;/a&gt; has all the goods of Blend OS, but it is &lt;a href=&quot;https://fedoraproject.org/atomic-desktops&quot;&gt;Fedora Atomic Desktop&lt;/a&gt;, and it is much more stable because it is based on Fedora. At the moment, I find Bazzite to be the closest thing to &lt;a href=&quot;https://www.zdnet.com/article/why-dont-more-people-use-desktop-linux-i-have-a-theory-you-might-not-like&quot;&gt;&amp;quot;the representative distro&amp;quot;&lt;/a&gt; because it meets all the criteria I set, except for a few:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It&#39;s still a bit bloat, Firefox is pre-installed, but it is Flatpak and can be easily removed.&lt;/li&gt;
+&lt;li&gt;It does not have a quality input method for Vietnamese.&lt;/li&gt;
+&lt;/ul&gt;
 </description>
       <pubDate>Sat, 12 Aug 2023 07:00:00 +0000</pubDate>
       <dc:creator>NNB</dc:creator>
@@ -1443,36 +1456,36 @@ The only exception are to config mouse buttons (with mod keys) to focus, move an
 &lt;p&gt;If you are using Windows, using Edge is better than Chrome because Edge is also a Chromium-based browser, and it comes pre-installed anyway. Although, I wouldn&#39;t recommend using Edge because there are so many better options like:&lt;/p&gt;
 &lt;h2 id=&quot;firefox&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnb.codeberg.page/blog/en/posts/3/#firefox&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; &lt;a href=&quot;https://www.mozilla.org/firefox/new&quot;&gt;Firefox&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/8HtSanJ.webp&quot; alt=&quot;Firefox&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.privacyguides.org/desktop-browsers/#firefox&quot;&gt;Firefox is the best privacy and security desktop browser&lt;/a&gt; &lt;a href=&quot;https://www.privacyguides.org/desktop-browsers/#recommended-configuration&quot;&gt;(but you can harden it more)&lt;/a&gt;. Not only that, it also has the best &lt;a href=&quot;https://youtu.be/a-V8GFtwjos&quot;&gt;dev-tools&lt;/a&gt;, anyone who does web-dev should also use Firefox.&lt;/p&gt;
-&lt;p&gt;Firefox is also the best in terms of customization:&lt;/p&gt;
+&lt;p&gt;Firefox-based browsers &lt;a href=&quot;https://www.privacytools.io/private-browser&quot;&gt;are the most secure&lt;/a&gt;. But more importantly, Firefox is extremely customizable:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Unlike most Chromium-based browsers, Firefox allows you to change the position of toolbar buttons.&lt;/li&gt;
 &lt;li&gt;You can easily create themes with &lt;a href=&quot;https://color.firefox.com/&quot;&gt;Firefox Color&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;If you want to change more advanced stuff, you can &lt;a href=&quot;https://www.reddit.com/r/firefox/wiki/userchrome&quot;&gt;customize Firefox with CSS&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Or use one of &lt;a href=&quot;https://github.com/topics/userchrome&quot;&gt;the beautiful themes developed by the community&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;a href=&quot;https://github.com/akshat46/FlyingFox&quot;&gt;
-  &lt;figure&gt;
-    &lt;img class=&quot;w-full&quot; src=&quot;https://raw.githubusercontent.com/akshat46/FlyingFox/master/img/demo-hover.gif&quot; alt=&quot;FlyingFox&quot; /&gt;
-    &lt;figcaption class=&quot;text-center&quot;&gt;FlyingFox&lt;/figcaption&gt;
-  &lt;/figure&gt;
-&lt;/a&gt;
-&lt;a href=&quot;https://github.com/Etesam913/slick-fox&quot;&gt;
-  &lt;figure&gt;
-    &lt;img class=&quot;w-full&quot; src=&quot;https://i.imgur.com/h4DxrhC.gif&quot; alt=&quot;Slick-Fox&quot; /&gt;
-    &lt;figcaption class=&quot;text-center&quot;&gt;Slick-Fox&lt;/figcaption&gt;
-  &lt;/figure&gt;
-&lt;/a&gt;
+&lt;h2 id=&quot;zen&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnb.codeberg.page/blog/en/posts/3/#zen&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; &lt;a href=&quot;https://www.zen-browser.app/&quot;&gt;Zen&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/xowuE7A.webp&quot; alt=&quot;Zen&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Zen is also Firefox-based but has been heavily modified to increase performance, privacy and security. It has good default settings, without the need to spend a lot of time configuring like Firefox. Zen takes all the best of Firefox&#39;s customizability and x10s it: It has vertical tabs like &lt;a href=&quot;https://arc.net/&quot;&gt;Arc&lt;/a&gt;, and accent colors... But Zen&#39;s killer feature, the thing that makes Zen stand out from other browsers, is its theme system:&lt;/p&gt;
+&lt;p&gt;In Firefox, users can personalize it further by writing CSS to intervene deeply in the browser, these are quite complicated to install, but then it is still quite limited. In contrast, Zen has a JS and CSS theme system built into the browser, even allowing users to upload themes to &lt;a href=&quot;https://www.zen-browser.app/themes&quot;&gt;Zen&#39;s theme store&lt;/a&gt; so that anyone who wants it can download and use it. Furthermore, Zen also allows users to use multiple themes at the same time, each of which can customize individual components so that the user can choose and combine them to create the best experience for themselves.&lt;/p&gt;
 &lt;h2 id=&quot;some-chromium-based-alternatives&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnb.codeberg.page/blog/en/posts/3/#some-chromium-based-alternatives&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; Some Chromium-based alternatives&lt;/h2&gt;
-&lt;p&gt;Firefox is the best in many ways, but it&#39;s not a Chromium-based browser. This can be seen as a good thing because it breaks the monopoly that Chrome and Google hold in the web browser market. But some still need to use Chromium-based browser for a variety of reasons.&lt;/p&gt;
+&lt;p&gt;Zen is the best in many ways, but it&#39;s not a Chromium-based browser. This can be seen as a good thing because it breaks the monopoly that Chrome and Google hold in the web browser market. But some still need to use Chromium-based browser for a variety of reasons.&lt;/p&gt;
 &lt;h3 id=&quot;brave&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnb.codeberg.page/blog/en/posts/3/#brave&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; &lt;a href=&quot;https://brave.com/&quot;&gt;Brave&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/ba0rBQ6.webp&quot; alt=&quot;Firefox&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;Brave is &lt;a href=&quot;https://www.privacyguides.org/desktop-browsers/#brave&quot;&gt;second in terms of privacy and security&lt;/a&gt;, but its default setting is the most secure (it has a built-in ad-blocker), which is great for those who want security without the hassle of setting up.&lt;/p&gt;
+&lt;p&gt;Brave is &lt;a href=&quot;https://www.privacytools.io/private-browser&quot;&gt;second in terms of privacy and security&lt;/a&gt;, but its default setting is the most secure (it has a built-in ad-blocker), which is great for those who want security without the hassle of setting up.&lt;/p&gt;
 &lt;p&gt;Unlike Firefox on mobile, Brave on mobile is also very secure, using the same browser on all platforms is also very convenient for data synchronization, open tabs, etc.&lt;/p&gt;
-&lt;h3 id=&quot;vivaldi&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;link-mono&quot; href=&quot;https://nnb.codeberg.page/blog/en/posts/3/#vivaldi&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt; &lt;a href=&quot;https://vivaldi.com/&quot;&gt;Vivaldi&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/Qs9lalF.webp&quot; alt=&quot;Vivaldi&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;Although it&#39;s not very private and secure, Vivaldi is the most feature-rich browser (kitchen-sink included!). It has calendar, email, contacts, split screen feature... Vivaldi is also very easy to customize, although it is not as advanced as Firefox CSS, it has a lot of customizations available out of the box.&lt;/p&gt;
-&lt;p&gt;At first, I quite liked it. But later on, I found it cumbersome. And although it is pretty customizable, I still do not find it as satisfying as to customize Firefox.&lt;/p&gt;
+&lt;!--
+
+### [Vivaldi](https://vivaldi.com)
+
+![Vivaldi](https://i.imgur.com/Qs9lalF.webp)
+
+
+  Although it&#39;s not very private and secure, Vivaldi is the most feature-rich browser (kitchen-sink included!). It has calendar, email, contacts, split screen feature... Vivaldi is also very easy to customize, although it is not as advanced as Firefox CSS, it has a lot of customizations available out of the box.
+
+  At first, I quite liked it. But later on, I found it cumbersome. And although it is pretty customizable, I still do not find it as satisfying as to customize Firefox.
+
+
+--&gt;
 </description>
       <pubDate>Mon, 30 Jan 2023 07:00:00 +0000</pubDate>
       <dc:creator>NNB</dc:creator>

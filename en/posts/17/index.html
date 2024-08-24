@@ -23,6 +23,8 @@
     <meta property="article:author" content="NNB" />
     <meta property="article:published_time" content="2024-02-10T00:00:00.000Z" />
     
+      <meta property="article:modified_time" content="2024-08-24T00:00:00.000Z" />
+    
     <meta property="article:section" content="os_rice" />
     
       <meta property="article:tag" content="os_rice" />
@@ -4686,6 +4688,13 @@ pre[class*="language-"] {
     10/02/2024
   </time>
   
+    <p class="inline-block">
+      -&gt;
+      <time datetime="2024-08-24T00:00:00.000Z">
+        24/08/2024
+      </time>
+    </p>
+  
 </span>
 
       </a>
@@ -4723,9 +4732,14 @@ pre[class*="language-"] {
 <p>Since I first switched to Linux, my computer always freezes every time I do heavy work. At the beginning, it froze a few times a month. When the laptop froze, I have to turn it off, no different from when I used Windows. Then its became more and more frequent, to the point that my computer froze almost daily. After researching, I found that my computer seems to freeze every time the RAM is nearly or completely full. My laptop have 2GB of RAM, I tried adding a 4GB swap partition, but it doesn't seem help. &quot;Maybe it's because my laptop is so old&quot; I thought to myself.</p>
 <p>I got a better laptop when I go to college. With 8GB of RAM, the condition no longer occurs daily, but its frequency is still every week... Quite annoying, I can't open a lot of tabs on the web browser because I fear that will cause freezing. When I want to play 3D heavy game, I have to turn off every thing else. Et cetera...</p>
 <p>I saved up money from competitions prizes, and finally bought a laptop myself! The device still has 8GB of ram, but the CPU and GPU are much more powerful. The condition was improved... It freezes about 2-3 time a month. There are times when I often play heavy games, and it quickly freezes every week...</p>
-<p>Things really got worse when I switched to <a href="https://blendos.co">BlendOS</a>, it freezes almost every day, for the first week I installed Blend. I quickly checked the system monitor, and realized that: For some reason BlendOS doesn't install any swap partition!</p>
+<p>Things really got worse when I switched to <a href="https://blendos.co">BlendOS</a>, it freezes almost every day, for the first week I installed Blend. I quickly checked the system monitor, and realized that: For some reason BlendOS doesn't have swap!</p>
 <h2 id="solution" tabindex="-1"><a class="link-mono" href="#solution" aria-hidden="true">#</a> Solution</h2>
-<p>I decided to add a swap partition, this time I gave it 16GB just to be sure. Like a dream come true! Since then, my PC never freezes ever again! Now I can open more than 20 browser tabs with game and heavy application, all at the same time. In the past, I had to use my laptop carefully because I was afraid it would freeze, Now Now I can freely open as many applications as I want!</p>
+<p>I decided to add a swap, this time I gave it 16GB just to be sure:</p>
+<pre class="language-sh"><code class="language-sh">btrfs filesystem mkswapfile <span class="token parameter variable">--size</span> 16G ~/.cache/swapfile<br><span class="token function">sudo</span> <span class="token function">swapon</span> ~/.cache/swapfile</code></pre>
+<p>Then add this to <code>/etc/fstab</code>:</p>
+<pre><code>/var/home/USERNAME/.cache/swapfile	swap    swap    defaults 0 0
+</code></pre>
+<p>Since then, my PC never freezes ever again, like a dream come true! Now I can open more than 20 browser tabs with game and heavy application, all at the same time. In the past, I had to use my laptop carefully because I was afraid it would freeze, Now I can freely open as many applications as I want!</p>
 <p>The lesson here is: If Linux often freezes due to full RAM, try increase swap, <strong>lot of swap</strong>! It seems like I almost solved the problem a while ago when I tried increasing the swap a bit, If I tried to increase it more, I might not have to upgrade my laptop~</p>
 
       </main>

@@ -23,6 +23,8 @@
     <meta property="article:author" content="NNB" />
     <meta property="article:published_time" content="2024-02-10T00:00:00.000Z" />
     
+      <meta property="article:modified_time" content="2024-08-24T00:00:00.000Z" />
+    
     <meta property="article:section" content="os_rice" />
     
       <meta property="article:tag" content="os_rice" />
@@ -4686,6 +4688,13 @@ pre[class*="language-"] {
     10/02/2024
   </time>
   
+    <p class="inline-block">
+      -&gt;
+      <time datetime="2024-08-24T00:00:00.000Z">
+        24/08/2024
+      </time>
+    </p>
+  
 </span>
 
       </a>
@@ -4725,7 +4734,11 @@ pre[class*="language-"] {
 <p>Mình để dành tiền từ nhiều lần tham gia các cuộc thi, rồi cuối cùng tự mình mua được một con laptop! Máy vẫn 8GB ram nhưng chíp và GPU mạnh hơn hẳn. Tình trạng nó đỡ hơn... Tầm 2-3 lần một tháng. Xong có những lúc mình hay chơi game nặng thì nó lại nhanh chóng về như cũ...</p>
 <p>Chuyện thật sự trở nên tệ hơn khi mình chuyển sang <a href="https://blendos.co">BlendOS</a>, máy đơ gần như mỗi ngày trong vòng một tuần mình dùng thử distro. Mình nhanh chóng kiểm tra, và nhận ra rằng: vì lý do nào đấy BlendOS không tự cài thêm ổ swap!</p>
 <h2 id="giai-phap" tabindex="-1"><a class="link-mono" href="#giai-phap" aria-hidden="true">#</a> Giải pháp</h2>
-<p>Mình quyết định cài thêm ổ swap vào trong máy, lần này mình cho nó hẳn 16GB luôn cho chắc. Như một giấc mơ trở thành hiện thực! Kể từ khi mình nâng swap xong, máy mình không bao giờ bị đơ nữa! Giờ mình có thể mở hơn 20 tabs trình duyệt với game và phần mềm nặng, tất cả cùng một lúc. Hồi trước dùng máy cứ phải cẩn thận sợ nó đơ, giờ thì mình đã có thể thoải mái chơi liều mở nhiều ứng dụng!</p>
+<p>Mình quyết định cài thêm swap vào trong máy, lần này mình cho nó hẳn 16GB luôn cho chắc:</p>
+<pre class="language-sh"><code class="language-sh">btrfs filesystem mkswapfile <span class="token parameter variable">--size</span> 16G ~/.cache/swapfile<br><span class="token function">sudo</span> <span class="token function">swapon</span> ~/.cache/swapfile</code></pre>
+<p>Rồi thêm dòng này vào <code>/etc/fstab</code>:</p>
+<p><code>    /var/home/USERNAME/.cache/swapfile	swap    swap    defaults 0 0    </code></p>
+<p>Như một giấc mơ trở thành hiện thực: Kể từ khi mình nâng swap xong, máy mình không bao giờ bị đơ nữa! Giờ mình có thể mở hơn 20 tabs trình duyệt với game và phần mềm nặng, tất cả cùng một lúc. Hồi trước dùng máy cứ phải cẩn thận sợ nó đơ, giờ thì mình đã có thể thoải mái chơi liều mở nhiều ứng dụng!</p>
 <p>Bài học ở đây là: Nếu Linux hay đơ do đầy ram, hãy tăng <strong>thật nhiều</strong> swap! Có vẻ như hồi trước mình đã suýt nữa giải quyết được vấn đề khi mình thử tăng swap một chút, nếu mình thử tăng thêm tí nữa thì có khi đã chả có nhu cầu đổi máy~</p>
 
       </main>
