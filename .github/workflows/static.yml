@@ -27,6 +27,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+      target_branch: pages
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -38,7 +39,6 @@ jobs:
         with:
           # Upload entire repository
           path: '.'
-          target_branch: pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
