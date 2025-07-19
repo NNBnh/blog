@@ -39,6 +39,11 @@ input_device:
     vi: Mọi thứ từ bàn phím công thái học đến touchpad
   image: https://images.unsplash.com/photo-1653786146466-9ac4d30a47f1
 
+gleam:
+  description:
+    en: Gleam programming language
+    vi: Ngôn ngũ lập trình Gleam
+  image: https://images.unsplash.com/photo-1719778532447-8938ad258a5f
 ruby:
   description:
     en: Ruby programming language
