@@ -1,79 +1,74 @@
 <!DOCTYPE html>
 {% set meta_lang = lang or 'en' %}
 <html lang="{{ meta_lang }}">
-<head>
-  {% set description = description | lang_string or metadata.description %}
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ɴɴBlog{% if title %} | {{ title | lang_string }}{% endif %}</title>
-  <meta name="description" content="{{ description }}" />
-  <link rel="icon" href="https://codeberg.org/NNB/pages/raw/branch/master/static/favicon.ico" />
+  <head>
+    {% set description = description | lang_string or metadata.description %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ɴɴBlog{% if title %} | {{ title | lang_string }}{% endif %}</title>
+    <meta name="description" content="{{ description }}" />
+    <link rel="icon" href="https://codeberg.org/NNB/pages/raw/branch/master/static/favicon.ico" />
 
-  <meta property="og:site_name" content="ɴɴBlog" />
-  <meta property="og:title" content="{{ title | lang_string }}" />
-  <meta property="og:description" content="{{ description }}" />
-  {% if image %}
-    <meta property="og:image" content="{% img image %}" />
-  {% endif %}
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="{{ page.url | url }}" />
-  <meta property="og:locale" content="{{ meta_lang }}" />
-  <meta property="og:locale:alternate" content="{% if meta_lang == 'vi' %}en{% else %}vi{% endif %}" />
-  {% if layout == "layouts/post.njk" %}
-    <meta property="article:author" content="{{ metadata.author.name }}" />
-    <meta property="article:published_time" content="{{ date.toISOString() }}" />
-    {% if updated %}
-      <meta property="article:modified_time" content="{{ updated.toISOString() }}" />
+    <meta property="og:site_name" content="ɴɴBlog" />
+    <meta property="og:title" content="{{ title | lang_string }}" />
+    <meta property="og:description" content="{{ description }}" />
+    {% if image %}
+      <meta property="og:image" content="{% img image %}" />
     {% endif %}
-    <meta property="article:section" content="{{ tags | filter_tags | first }}" />
-    {% for tag in tags | filter_tags %}
-      <meta property="article:tag" content="{{ tag }}" />
-    {% endfor %}
-  {% endif %}
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{ page.url | url }}" />
+    <meta property="og:locale" content="{{ meta_lang }}" />
+    <meta property="og:locale:alternate" content="{% if meta_lang == 'vi' %}en{% else %}vi{% endif %}" />
+    {% if layout == "layouts/post.njk" %}
+      <meta property="article:author" content="{{ metadata.author.name }}" />
+      <meta property="article:published_time" content="{{ date.toISOString() }}" />
+      {% if updated %}
+        <meta property="article:modified_time" content="{{ updated.toISOString() }}" />
+      {% endif %}
+      <meta property="article:section" content="{{ tags | filter_tags | first }}" />
+      {% for tag in tags | filter_tags %}
+        <meta property="article:tag" content="{{ tag }}" />
+      {% endfor %}
+    {% endif %}
 
-  {% set css %}
-    {% include "src/styles/index.css" %}
-    {% include "src/styles/prism.css" %}
-  {% endset %}
-  <style>
-    {{ css | postcss | safe }}
-  </style>
-  <link
-    href="https://fonts.googleapis.com/css?family=Be+Vietnam+Pro:100,200,300,400,500,600,700,800,900&display=swap"
-    rel="stylesheet"
-  />
-  <link href="https://fonts.googleapis.com/css?family=JetBrains+Mono&display=swap" rel="stylesheet" />
-</head>
-<body
-  class="bg-cover bg-fixed bg-center"
-  {% if image %}
-    style="background-image: url({% img image, 360 %});"
-  {% endif %}
->
-  <div class="drawer drawer-end">
-    <input id="main-drawer" type="checkbox" class="drawer-toggle" aria-label="Drawer toggle" />
-    <div class="drawer-content relative">
-      {% include "navbar.njk" %}
-      {{ content | safe }}
-      {% include "footer.njk" %}
-    </div>
-    {% if content | toc %}
-      <label
-        for="main-drawer"
-        class="btn btn-square fixed bottom-0 right-0 m-4 shadow lg:hover:btn-primary xl:hidden"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6"><path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm8.25 5.25a.75.75 0 01.75-.75h8.25a.75.75 0 010 1.5H12a.75.75 0 01-.75-.75z" clip-rule="evenodd" /></svg>
-      </label>
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/prism.css">
+    <link
+      href="https://fonts.googleapis.com/css?family=Be+Vietnam+Pro:100,200,300,400,500,600,700,800,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css?family=JetBrains+Mono&display=swap" rel="stylesheet" />
+  </head>
+  <body
+    class="bg-cover bg-fixed bg-center"
+    {% if image %}
+      style="background-image: url({% img image, 360 %});"
     {% endif %}
-    <div class="drawer-side z-50">
-      <label for="main-drawer" class="drawer-overlay" aria-label="Close drawer"></label>
-      <div class="h-full w-80 bg-base-300 bg-opacity-75 shadow backdrop-blur">
-        {{ content | toc | safe }}
+  >
+    <div class="drawer drawer-end">
+      <input id="main-drawer" type="checkbox" class="drawer-toggle" aria-label="Drawer toggle" />
+      <div class="drawer-content relative">
+        {% include "navbar.njk" %}
+        {{ content | safe }}
+        {% include "footer.njk" %}
+      </div>
+      {% if content | toc %}
+        <label
+          for="main-drawer"
+          class="btn btn-square fixed bottom-0 right-0 m-4 shadow lg:hover:btn-primary xl:hidden"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6"><path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm8.25 5.25a.75.75 0 01.75-.75h8.25a.75.75 0 010 1.5H12a.75.75 0 01-.75-.75z" clip-rule="evenodd" /></svg>
+        </label>
+      {% endif %}
+      <div class="drawer-side z-50">
+        <label for="main-drawer" class="drawer-overlay" aria-label="Close drawer"></label>
+        <div class="h-full w-80 bg-base-300 bg-opacity-75 shadow backdrop-blur">
+          {{ content | toc | safe }}
+        </div>
       </div>
     </div>
-  </div>
-</body>
-{% if alpine %}
-  <script defer>{% include "node_modules/alpinejs/dist/cdn.js" %}</script>
-{% endif %}
+  </body>
+  {% if alpine %}
+    <script defer>{% include "node_modules/alpinejs/dist/cdn.js" %}</script>
+  {% endif %}
 </html>

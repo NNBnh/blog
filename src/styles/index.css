@@ -1,24 +1,58 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@plugin "daisyui";
+@plugin "daisyui/theme" {
+    name: "NNB";
+    default: true;
+    prefersdark: true;
+    color-scheme: dark;
 
-@layer components {
-  .min-h-body {
-    min-height: calc(100vh - 12rem);
-  }
-  .btn-cool {
-    @apply drop-shadow lg:hover:rotate-3 lg:hover:scale-110 lg:hover:drop-shadow-xl;
-  }
-  .link-mono {
-    @apply font-mono font-bold no-underline opacity-50 duration-200 lg:hover:opacity-100;
-  }
-  article .link-mono {
-    @apply opacity-75;
-  }
-  .prose > p > img {
-    @apply mx-auto;
-  }
-  .toc {
-    @apply menu font-serif;
-  }
+    --color-primary: "#99d1db";
+    --color-primary-content: "#004955";
+    --color-secondary: "#babbf1";
+    --color-secondary-content: "#000262";
+    --color-accent: "#f2d5cf";
+    --color-accent-content: "#601707";
+    --color-neutral: "#232634";
+    --color-neutral-content: "#c6d0f5";
+    --color-base-100: "#303446";
+    --color-base-200: "#292c3c";
+    --color-base-300: "#232634";
+    --color-base-content: "#c6d0f5";
+    --color-info: "#8caaee";
+    --color-success: "#a6d189";
+    --color-warning: "#ef9f76";
+    --color-error: "#ea999c";
+}
+
+@theme {
+    --font-serif:
+        "Be Vietnam Pro", "ui-sans-serif", "system-ui", "-apple-system",
+        "BlinkMacSystemFont", '"Segoe UI"', "Roboto", '"Helvetica Neue"',
+        "Arial", '"Noto Sans"', "sans-serif", '"Apple Color Emoji"',
+        '"Segoe UI Emoji"', '"Segoe UI Symbol"', '"Noto Color Emoji"';
+    --font-mono:
+        "JetBrains Mono", "ui-monospace", "SFMono-Regular", "Menlo", "Monaco",
+        "Consolas", '"Liberation Mono"', '"Courier New"', "monospace";
+}
+
+@utility components {
+    .min-h-body {
+        min-height: calc(100vh - 12rem);
+    }
+    .btn-cool {
+        @apply drop-shadow lg:hover:rotate-3 lg:hover:scale-110 lg:hover:drop-shadow-xl;
+    }
+    .link-mono {
+        @apply font-mono font-bold no-underline opacity-50 duration-200 lg:hover:opacity-100;
+    }
+    article .link-mono {
+        @apply opacity-75;
+    }
+    .prose > p > img {
+        @apply mx-auto;
+    }
+    .toc {
+        @apply menu font-serif;
+    }
 }

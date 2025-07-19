@@ -7,20 +7,21 @@
     "deploy": "gh-pages --dist dist --branch pages"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-plugin-rss": "^1.2.0",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
-    "@tailwindcss/typography": "^0.5.14",
-    "alpinejs": "^3.14.1",
-    "autoprefixer": "^10.4.20",
-    "daisyui": "^4.12.10",
-    "postcss": "^8.4.41",
-    "tailwindcss": "^3.4.10",
-    "vite": "^2.9.18"
+    "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-plugin-rss": "^2.0.4",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.1",
+    "@tailwindcss/typography": "^0.5.16",
+    "alpinejs": "^3.14.9",
+    "autoprefixer": "^10.4.21",
+    "daisyui": "^5.0.46",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.11",
+    "vite": "^7.0.5"
   },
   "dependencies": {
+    "@tailwindcss/postcss": "^4.1.11",
     "eleventy-plugin-toc": "^1.1.5",
-    "gh-pages": "^6.1.1",
+    "gh-pages": "^6.3.0",
     "js-yaml": "^4.1.0",
     "markdown-it": "^13.0.2",
     "markdown-it-anchor": "^8.6.7"
