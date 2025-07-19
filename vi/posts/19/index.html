@@ -29,6 +29,8 @@
     
       <meta property="article:tag" content="godot" />
     
+      <meta property="article:tag" content="game_dev" />
+    
   
 
   
@@ -4809,6 +4811,11 @@ pre[class*="language-"] {
     href="/blog/vi/tags/godot/"
   >#godot</a>
 
+  <a
+    class="link-mono"
+    href="/blog/vi/tags/game_dev/"
+  >#game_dev</a>
+
 
       </p>
     </div>
@@ -4820,7 +4827,7 @@ pre[class*="language-"] {
   <div class="hidden w-80 bg-base-200 bg-opacity-90 xl:block">
     <div class="sticky top-0 h-fit max-h-screen overflow-y-auto">
       <nav class="toc" >
-        <ul><li><a href="#what"># What?</a></li><li><a href="#who"># Who?</a></li><li><a href="#when-where"># When/where?</a></li><li><a href="#why"># Why?</a></li><li><a href="#how"># How?</a><ul><li><a href="#phia-gleam"># Phía Gleam</a></li><li><a href="#phia-godot"># Phía Godot</a></li></ul></li></ul>
+        <ul><li><a href="#what"># What?</a></li><li><a href="#who"># Who?</a></li><li><a href="#when-where"># When/where?</a></li><li><a href="#why"># Why?</a></li><li><a href="#how"># How?</a><ul><li><a href="#phia-gleam"># Phía Gleam</a></li><li><a href="#phia-godot"># Phía Godot</a></li><li><a href="#xuat-ra-web"># Xuất ra web</a></li><li><a href="#mot-so-bo-sung"># Một số bổ sung</a></li><li><a href="#mot-glodot-khac"># Một Glodot khác?</a></li></ul></li></ul>
       </nav>
     </div>
   </div>
@@ -4834,7 +4841,7 @@ pre[class*="language-"] {
 <p><em>&quot;Glodot phù hợp cho ai?&quot;</em> - Cho nhưng người thích <a href="https://vi.wikipedia.org/wiki/L%E1%BA%ADp_tr%C3%ACnh_h%C3%A0m">FP (Functional programming)</a> và muốn dùng nó cho gamedev.</p>
 <h2 id="when-where" tabindex="-1"><a class="link-mono" href="#when-where" aria-hidden="true">#</a> When/where?</h2>
 <p>Việc sử dụng Glodot trở nên rất lý tưởng khi ta cần viết thuật toán và xử lý các thứ bên trong <a href="https://en.wikipedia.org/wiki/Business_logic">Domain logic</a>, sử dụng Gleam kể cả khi viết code đơn giản như xứ lí hành động vuốt cho <a href="https://play2048.co">game 2048</a> cũng trở nên dễ thở hơn chán vạn so với GDscript.</p>
-<p>Tuy nhiên, như mọi thứ liên quan đến FP, nó chỉ tốt cho Domain logic, chứ nó sẽ không tiện lắm khi dùng code để tương tác nhiều với &quot;thế giới thực&quot;, như xử lý vật lý chẳng hạn...</p>
+<p>Tuy nhiên, chứ nó khá là khó để tương tác trực tiếp với &quot;thế giới thực&quot; bên ngoài domain logic, như cập nhật node tree hay xử lý vật lý chẳng hạn...</p>
 <h2 id="why" tabindex="-1"><a class="link-mono" href="#why" aria-hidden="true">#</a> Why?</h2>
 <p>Godot là một game engine xịn nhưng GDscript thì không hẳn, nó không tốt bên trong domain logic. Và C# có tốt hơn nhưng không đủ tốt như một ngôn ngữ FP hẳn hoi.</p>
 <p>Gleam là một sự cứu thế, là mảnh ghép hoàn hảo cho sự thiếu hụt của Godot. Syntax của nó đẹp, hiện đại mà lại quen thuộc, nó dễ đọc, dễ quản lý và dễ học (có thể học chỉ trong một ngày), không chỉ thế tooling của nó còn rất tiện, tiện hơn của Lua, Python, C#...</p>
@@ -4894,6 +4901,7 @@ import core<span class="token operator">/</span>b_stuffs
 <pre class="language-sh"><code class="language-sh"><span class="token builtin class-name">cd</span> ./core
 bun build ./build/dev/javascript/core/core/core.mjs <span class="token parameter variable">--outfile</span> <span class="token punctuation">..</span>/core.txt</code></pre>
 <p>Đúng vấy, để đuôi của file nó là <code>.txt</code> chứ không phải <code>.js</code> để Godot có thể nhận dạng là file chữ và đọc nội dung bên trong đấy.</p>
+<p>Và hãy nhớ bỏ phần <code>export</code> bên trong file đã bundle để V8 không báo lỗi.</p>
 <h3 id="phia-godot" tabindex="-1"><a class="link-mono" href="#phia-godot" aria-hidden="true">#</a> Phía Godot</h3>
 <p>Đầu tiên cài <a href="https://github.com/Microsoft/ClearScript">ClearScript</a> trong máy:</p>
 <pre class="language-sh"><code class="language-sh">nuget <span class="token function">install</span> Microsoft.ClearScript.Complete</code></pre>
@@ -4946,7 +4954,7 @@ bun build ./build/dev/javascript/core/core/core.mjs <span class="token parameter
 <span class="token keyword">func</span> <span class="token function">_invoke</span><span class="token punctuation">(</span>funcName<span class="token punctuation">:</span> <span class="token class-name">String</span><span class="token punctuation">,</span> argument<span class="token punctuation">:</span> <span class="token class-name">Variant</span><span class="token punctuation">)</span> <span class="token operator">-></span> <span class="token class-name">Variant</span><span class="token punctuation">:</span>
     <span class="token keyword">var</span> code<span class="token punctuation">:</span> <span class="token class-name">Variant</span> <span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token string">"{funcName}(\"{argument}\")"</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
         <span class="token operator">&amp;</span><span class="token string">"funcName"</span><span class="token punctuation">:</span> funcName<span class="token punctuation">,</span>
-        <span class="token operator">&amp;</span><span class="token string">"argument"</span><span class="token punctuation">:</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>argument<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token string">"\\"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span><span class="token string">"\\\\"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token string">"\""</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span><span class="token string">"\\\""</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token operator">&amp;</span><span class="token string">"argument"</span><span class="token punctuation">:</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>argument<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">json_escape</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
     <span class="token keyword">var</span> result<span class="token punctuation">:</span> <span class="token class-name">Variant</span> <span class="token operator">=</span> _v8<span class="token punctuation">.</span><span class="token function">eval</span><span class="token punctuation">(</span>code<span class="token punctuation">)</span>
@@ -4961,7 +4969,26 @@ bun build ./build/dev/javascript/core/core/core.mjs <span class="token parameter
         <span class="token keyword">return</span> <span class="token keyword">null</span>
 
     <span class="token keyword">return</span> json<span class="token punctuation">.</span>data</code></pre>
-<p><em>That's all fork, stay gleamy~!</em></p>
+<h3 id="xuat-ra-web" tabindex="-1"><a class="link-mono" href="#xuat-ra-web" aria-hidden="true">#</a> Xuất ra web</h3>
+<p>Như đã đề cập trong <a href="https://docs.godotengine.org/en/4.4/tutorials/export/exporting_for_web.html">doc của Godot</a>:</p>
+<blockquote>
+<p>Dự án viết bằng C# với Godot 4 hiện tại không thể xuất ra web. Đọc <a href="https://godotengine.org/article/platform-state-in-csharp-for-godot-4-2/#web">blog này</a> để biết thêm chi tiết.</p>
+</blockquote>
+<p>Tuy nhiên bạn có thể fallback về dùng <a href="https://docs.godotengine.org/en/stable/tutorials/platform/web/javascript_bridge.html#doc-web-javascript-bridge"><code>JavaScriptBridge</code></a> để chạy code JS thay cho C# + ClearScript khi xuất lên web.</p>
+<h3 id="mot-so-bo-sung" tabindex="-1"><a class="link-mono" href="#mot-so-bo-sung" aria-hidden="true">#</a> Một số bổ sung</h3>
+<p>Dưới đây là một số thư viện Gleam hưu dụng cho việc làm game:</p>
+<ul>
+<li><a href="https://hexdocs.pm/gleam_community_maths"><code>gleam_community_maths</code></a>: Thư viện toán cơ bản chứa các functions and utilities toán học cơ bản.</li>
+<li><a href="https://hexdocs.pm/prng"><code>prng</code></a>: Thư viện xử lý số và các loại thứ ngẫu nhiên PRNG.</li>
+<li><a href="https://hexdocs.pm/vec"><code>vec</code></a>: Thư viện xử lý vectors, có hầu hết các thứ có thể làm được như trong Godot.</li>
+<li><a href="https://hexdocs.pm/vec_dict"><code>vec_dict</code></a>: Thư viện này dùng để thể hiện và xử lý grid 2D, 3D và cả 4D.</li>
+</ul>
+<h3 id="mot-glodot-khac" tabindex="-1"><a class="link-mono" href="#mot-glodot-khac" aria-hidden="true">#</a> Một Glodot khác?</h3>
+<p>Phương pháp Godot Mono - ClearScript được đề cập ở trên có vẻ khá vòng vèo nhưng đấy hiện tại là cách &quot;chính thức nhất&quot;. Godot Mono là một phiên bản chính thức của Godot và ClearScript là thư viện của Microsoft (nhà sáng lập ra C#) chính vì thế nên nó khá là ổn định.</p>
+<p>Glodot <em><strong>có thể</strong></em> được thực thi được bằng cách Dùng <a href="https://godotjs.github.io">GodotJS</a> để thay thế cho cách trên, Nối từ Godot đến Gleam code đã được complie chỉ qua JS/TS.</p>
+<p>Tuy nhiên ở thời điểm đã viết bài viết này GodotJS khá là buggy/janky, mình mong là nó có thể trở nên tốt hơn vì nếu GodotJS trở nên ổn định và cài đặt tiện được như Godot Mono thì đấy sẽ là một cách rất lý tưởng.</p>
+<p>Mà được voi dòi tiên, mình ước là có một cái Godot plugin mà có thể tự complie package Gleam được chỉ định rồi cho một cái API để dễ dàng chạy nó.</p>
+<p><em>Well that's all fork, stay gleamy~!</em></p>
 
       </main>
       <div class="mx-auto mt-32 max-w-3xl">
@@ -5090,7 +5117,7 @@ bun build ./build/dev/javascript/core/core/core.mjs <span class="token parameter
       <label for="main-drawer" class="drawer-overlay" aria-label="Close drawer"></label>
       <div class="h-full w-80 bg-base-300 bg-opacity-75 shadow backdrop-blur">
         <nav class="toc" >
-        <ul><li><a href="#what"># What?</a></li><li><a href="#who"># Who?</a></li><li><a href="#when-where"># When/where?</a></li><li><a href="#why"># Why?</a></li><li><a href="#how"># How?</a><ul><li><a href="#phia-gleam"># Phía Gleam</a></li><li><a href="#phia-godot"># Phía Godot</a></li></ul></li></ul>
+        <ul><li><a href="#what"># What?</a></li><li><a href="#who"># Who?</a></li><li><a href="#when-where"># When/where?</a></li><li><a href="#why"># Why?</a></li><li><a href="#how"># How?</a><ul><li><a href="#phia-gleam"># Phía Gleam</a></li><li><a href="#phia-godot"># Phía Godot</a></li><li><a href="#xuat-ra-web"># Xuất ra web</a></li><li><a href="#mot-so-bo-sung"># Một số bổ sung</a></li><li><a href="#mot-glodot-khac"># Một Glodot khác?</a></li></ul></li></ul>
       </nav>
       </div>
     </div>

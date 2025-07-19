@@ -29,6 +29,8 @@
     
       <meta property="article:tag" content="godot" />
     
+      <meta property="article:tag" content="game_dev" />
+    
   
 
   
@@ -4809,6 +4811,11 @@ pre[class*="language-"] {
     href="/blog/en/tags/godot/"
   >#godot</a>
 
+  <a
+    class="link-mono"
+    href="/blog/en/tags/game_dev/"
+  >#game_dev</a>
+
 
       </p>
     </div>
@@ -4820,7 +4827,7 @@ pre[class*="language-"] {
   <div class="hidden w-80 bg-base-200 bg-opacity-90 xl:block">
     <div class="sticky top-0 h-fit max-h-screen overflow-y-auto">
       <nav class="toc" >
-        <ul><li><a href="#what"># What?</a></li><li><a href="#who"># Who?</a></li><li><a href="#when-where"># When/where?</a></li><li><a href="#why"># Why?</a></li><li><a href="#how"># How?</a><ul><li><a href="#gleam-side"># Gleam side</a></li><li><a href="#godot-side"># Godot side</a></li></ul></li></ul>
+        <ul><li><a href="#what"># What?</a></li><li><a href="#who"># Who?</a></li><li><a href="#when-where"># When/where?</a></li><li><a href="#why"># Why?</a></li><li><a href="#how"># How?</a><ul><li><a href="#gleam-side"># Gleam side</a></li><li><a href="#godot-side"># Godot side</a></li><li><a href="#export-to-web"># Export to web</a></li><li><a href="#additional"># Additional</a></li><li><a href="#alternatives-route"># Alternatives route?</a></li></ul></li></ul>
       </nav>
     </div>
   </div>
@@ -4834,7 +4841,7 @@ pre[class*="language-"] {
 <p><em>&quot;Glodot is for whom?&quot;</em> - It's for people who like <a href="https://en.wikipedia.org/wiki/Functional_programming">FP (Functional programming)</a> and want to use it for gamedev.</p>
 <h2 id="when-where" tabindex="-1"><a class="link-mono" href="#when-where" aria-hidden="true">#</a> When/where?</h2>
 <p>Glodot is ideal for <a href="https://en.wikipedia.org/wiki/Business_logic">the domain logic</a> (like writing complex algorithms). Even for simple stuff like handling result from swipe gestures in a <a href="https://play2048.co">2048 game</a>, writing in Gleam is way more breathable compared to GDScript.</p>
-<p>However, like everything FP, its only good inside domain logic. It will be quite inconvenient to interacts heavily with the &quot;real world,&quot; like handling physics for exmaple...</p>
+<p>However, it's hard to interacts directly outside of domain logic from the Gleam code (like interacts heavily with the &quot;real world,&quot; like update node tree or handling physics for exmaple)...</p>
 <h2 id="why" tabindex="-1"><a class="link-mono" href="#why" aria-hidden="true">#</a> Why?</h2>
 <p>Godot is a great game engine but GDscript is not a good language to do domain logic stuffs. And yes, C# is better but not as good as a real FP langauge.</p>
 <p>Gleam is the savior that fill the gap in the Godot ecosystem. Its syntax is beautiful, modern, familiar, easy to read, to manage and to learn (can be learn in a day). Plus Gleam's tooling is convenient, more than its of Lua, Python, C#...</p>
@@ -4894,6 +4901,7 @@ import core<span class="token operator">/</span>b_stuffs
 <pre class="language-sh"><code class="language-sh"><span class="token builtin class-name">cd</span> ./core
 bun build ./build/dev/javascript/core/core/core.mjs <span class="token parameter variable">--outfile</span> <span class="token punctuation">..</span>/core.txt</code></pre>
 <p>Yep it's end with <code>.txt</code> so that Godot can detect and read the texts inside that file.</p>
+<p>And remember to remove the <code>export</code> part inside the bundled file so that V8 don't warning.</p>
 <h3 id="godot-side" tabindex="-1"><a class="link-mono" href="#godot-side" aria-hidden="true">#</a> Godot side</h3>
 <p>First install <a href="https://github.com/Microsoft/ClearScript">ClearScript</a> to your system:</p>
 <pre class="language-sh"><code class="language-sh">nuget <span class="token function">install</span> Microsoft.ClearScript.Complete</code></pre>
@@ -4946,7 +4954,7 @@ bun build ./build/dev/javascript/core/core/core.mjs <span class="token parameter
 <span class="token keyword">func</span> <span class="token function">_invoke</span><span class="token punctuation">(</span>funcName<span class="token punctuation">:</span> <span class="token class-name">String</span><span class="token punctuation">,</span> argument<span class="token punctuation">:</span> <span class="token class-name">Variant</span><span class="token punctuation">)</span> <span class="token operator">-></span> <span class="token class-name">Variant</span><span class="token punctuation">:</span>
     <span class="token keyword">var</span> code<span class="token punctuation">:</span> <span class="token class-name">Variant</span> <span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token string">"{funcName}(\"{argument}\")"</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
         <span class="token operator">&amp;</span><span class="token string">"funcName"</span><span class="token punctuation">:</span> funcName<span class="token punctuation">,</span>
-        <span class="token operator">&amp;</span><span class="token string">"argument"</span><span class="token punctuation">:</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>argument<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token string">"\\"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span><span class="token string">"\\\\"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token string">"\""</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span><span class="token string">"\\\""</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token operator">&amp;</span><span class="token string">"argument"</span><span class="token punctuation">:</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>argument<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">json_escape</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
     <span class="token keyword">var</span> result<span class="token punctuation">:</span> <span class="token class-name">Variant</span> <span class="token operator">=</span> _v8<span class="token punctuation">.</span><span class="token function">eval</span><span class="token punctuation">(</span>code<span class="token punctuation">)</span>
@@ -4961,7 +4969,26 @@ bun build ./build/dev/javascript/core/core/core.mjs <span class="token parameter
         <span class="token keyword">return</span> <span class="token keyword">null</span>
 
     <span class="token keyword">return</span> json<span class="token punctuation">.</span>data</code></pre>
-<p><em>That's all fork, stay gleamy~!</em></p>
+<h3 id="export-to-web" tabindex="-1"><a class="link-mono" href="#export-to-web" aria-hidden="true">#</a> Export to web</h3>
+<p>As said in <a href="https://docs.godotengine.org/en/4.4/tutorials/export/exporting_for_web.html">the Godot document</a>:</p>
+<blockquote>
+<p>Projects written in C# using Godot 4 currently cannot be exported to the web. See <a href="https://godotengine.org/article/platform-state-in-csharp-for-godot-4-2/#web">this blog post</a> for more information.</p>
+</blockquote>
+<p>However you can fallback to use <a href="https://docs.godotengine.org/en/stable/tutorials/platform/web/javascript_bridge.html#doc-web-javascript-bridge"><code>JavaScriptBridge</code></a> to run JS code instate of C# + ClearScript when export to web.</p>
+<h3 id="additional" tabindex="-1"><a class="link-mono" href="#additional" aria-hidden="true">#</a> Additional</h3>
+<p>Here are some Gleam libraries that are useful for gamedev:</p>
+<ul>
+<li><a href="https://hexdocs.pm/gleam_community_maths"><code>gleam_community_maths</code></a>: A basic mathematics library that contains some of the most fundamental mathematics functions and utilities.</li>
+<li><a href="https://hexdocs.pm/prng"><code>prng</code></a>: A lib to handle PRNG (Pure Random Number Generator).</li>
+<li><a href="https://hexdocs.pm/vec"><code>vec</code></a>: A vector library, has almost everything that can be done in Godot.</li>
+<li><a href="https://hexdocs.pm/vec_dict"><code>vec_dict</code></a>: This is to represent and handle a 2D, 3D  and even 4D grid.</li>
+</ul>
+<h3 id="alternatives-route" tabindex="-1"><a class="link-mono" href="#alternatives-route" aria-hidden="true">#</a> Alternatives route?</h3>
+<p>The Godot Mono - ClearScript route mentioned above seems quite roundabout, but it's currently the most &quot;official&quot; way. Godot Mono is an official version of Godot, and ClearScript is a library from Microsoft (the creator of C#), make this approach quite stable.</p>
+<p>Glodot <em><strong>could</strong></em> potentially be made by using <a href="https://godotjs.github.io">GodotJS</a> to replace the route above, connecting Godot to compiled Gleam code purely through JS/TS.</p>
+<p>But that is a shortcut, because at the time of writing, GodotJS is quite buggy/janky. I hope it will improve soon, because if GodotJS becomes as stable and easy to set up as Godot Mono, it would be an ideal method.</p>
+<p>But if I could wish, I want a Godot plugin that could automatically compile a specified Gleam package and then provide an API to easily run it.</p>
+<p><em>Well that's all fork, stay gleamy~!</em></p>
 
       </main>
       <div class="mx-auto mt-32 max-w-3xl">
@@ -5090,7 +5117,7 @@ bun build ./build/dev/javascript/core/core/core.mjs <span class="token parameter
       <label for="main-drawer" class="drawer-overlay" aria-label="Close drawer"></label>
       <div class="h-full w-80 bg-base-300 bg-opacity-75 shadow backdrop-blur">
         <nav class="toc" >
-        <ul><li><a href="#what"># What?</a></li><li><a href="#who"># Who?</a></li><li><a href="#when-where"># When/where?</a></li><li><a href="#why"># Why?</a></li><li><a href="#how"># How?</a><ul><li><a href="#gleam-side"># Gleam side</a></li><li><a href="#godot-side"># Godot side</a></li></ul></li></ul>
+        <ul><li><a href="#what"># What?</a></li><li><a href="#who"># Who?</a></li><li><a href="#when-where"># When/where?</a></li><li><a href="#why"># Why?</a></li><li><a href="#how"># How?</a><ul><li><a href="#gleam-side"># Gleam side</a></li><li><a href="#godot-side"># Godot side</a></li><li><a href="#export-to-web"># Export to web</a></li><li><a href="#additional"># Additional</a></li><li><a href="#alternatives-route"># Alternatives route?</a></li></ul></li></ul>
       </nav>
       </div>
     </div>
