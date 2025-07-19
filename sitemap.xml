@@ -77,79 +77,99 @@
     <lastmod>11/02/2024</lastmod>
   </url>
   <url>
+    <loc>/https:/nnb.codeberg.page/blog/blog/en/posts/19/</loc>
+    <lastmod>19/07/2025</lastmod>
+  </url>
+  <url>
     <loc>/https:/nnb.codeberg.page/blog/blog/404.html</loc>
-    <lastmod>24/08/2024</lastmod>
+    <lastmod>19/07/2025</lastmod>
   </url>
   <url>
     <loc>/https:/nnb.codeberg.page/blog/blog/en/</loc>
-    <lastmod>24/08/2024</lastmod>
+    <lastmod>19/07/2025</lastmod>
   </url>
   <url>
     <loc>/https:/nnb.codeberg.page/blog/blog/</loc>
-    <lastmod>24/08/2024</lastmod>
+    <lastmod>19/07/2025</lastmod>
   </url>
   <url>
     <loc>/https:/nnb.codeberg.page/blog/blog/en/tags/os_rice/</loc>
-    <lastmod>24/08/2024</lastmod>
+    <lastmod>19/07/2025</lastmod>
   </url>
   <url>
     <loc>/https:/nnb.codeberg.page/blog/blog/en/tags/tty/</loc>
-    <lastmod>24/08/2024</lastmod>
+    <lastmod>19/07/2025</lastmod>
   </url>
   <url>
     <loc>/https:/nnb.codeberg.page/blog/blog/en/tags/update/</loc>
-    <lastmod>24/08/2024</lastmod>
+    <lastmod>19/07/2025</lastmod>
   </url>
   <url>
     <loc>/https:/nnb.codeberg.page/blog/blog/en/tags/web_dev/</loc>
-    <lastmod>24/08/2024</lastmod>
-  </url>
-  <url>
-    <loc>/https:/nnb.codeberg.page/blog/blog/en/tags/game_dev/</loc>
-    <lastmod>24/08/2024</lastmod>
-  </url>
-  <url>
-    <loc>/https:/nnb.codeberg.page/blog/blog/en/tags/ruby/</loc>
-    <lastmod>24/08/2024</lastmod>
+    <lastmod>19/07/2025</lastmod>
   </url>
   <url>
     <loc>/https:/nnb.codeberg.page/blog/blog/en/tags/input_device/</loc>
-    <lastmod>24/08/2024</lastmod>
+    <lastmod>19/07/2025</lastmod>
   </url>
   <url>
     <loc>/https:/nnb.codeberg.page/blog/blog/en/tags/story/</loc>
-    <lastmod>24/08/2024</lastmod>
+    <lastmod>19/07/2025</lastmod>
+  </url>
+  <url>
+    <loc>/https:/nnb.codeberg.page/blog/blog/en/tags/ruby/</loc>
+    <lastmod>19/07/2025</lastmod>
+  </url>
+  <url>
+    <loc>/https:/nnb.codeberg.page/blog/blog/en/tags/gleam/</loc>
+    <lastmod>19/07/2025</lastmod>
+  </url>
+  <url>
+    <loc>/https:/nnb.codeberg.page/blog/blog/en/tags/godot/</loc>
+    <lastmod>19/07/2025</lastmod>
+  </url>
+  <url>
+    <loc>/https:/nnb.codeberg.page/blog/blog/en/tags/game_dev/</loc>
+    <lastmod>19/07/2025</lastmod>
   </url>
   <url>
     <loc>/https:/nnb.codeberg.page/blog/blog/vi/tags/os_rice/</loc>
-    <lastmod>24/08/2024</lastmod>
+    <lastmod>19/07/2025</lastmod>
   </url>
   <url>
     <loc>/https:/nnb.codeberg.page/blog/blog/vi/tags/tty/</loc>
-    <lastmod>24/08/2024</lastmod>
+    <lastmod>19/07/2025</lastmod>
   </url>
   <url>
     <loc>/https:/nnb.codeberg.page/blog/blog/vi/tags/update/</loc>
-    <lastmod>24/08/2024</lastmod>
+    <lastmod>19/07/2025</lastmod>
   </url>
   <url>
     <loc>/https:/nnb.codeberg.page/blog/blog/vi/tags/web_dev/</loc>
-    <lastmod>24/08/2024</lastmod>
-  </url>
-  <url>
-    <loc>/https:/nnb.codeberg.page/blog/blog/vi/tags/game_dev/</loc>
-    <lastmod>24/08/2024</lastmod>
-  </url>
-  <url>
-    <loc>/https:/nnb.codeberg.page/blog/blog/vi/tags/ruby/</loc>
-    <lastmod>24/08/2024</lastmod>
+    <lastmod>19/07/2025</lastmod>
   </url>
   <url>
     <loc>/https:/nnb.codeberg.page/blog/blog/vi/tags/input_device/</loc>
-    <lastmod>24/08/2024</lastmod>
+    <lastmod>19/07/2025</lastmod>
   </url>
   <url>
     <loc>/https:/nnb.codeberg.page/blog/blog/vi/tags/story/</loc>
-    <lastmod>24/08/2024</lastmod>
+    <lastmod>19/07/2025</lastmod>
+  </url>
+  <url>
+    <loc>/https:/nnb.codeberg.page/blog/blog/vi/tags/ruby/</loc>
+    <lastmod>19/07/2025</lastmod>
+  </url>
+  <url>
+    <loc>/https:/nnb.codeberg.page/blog/blog/vi/tags/gleam/</loc>
+    <lastmod>19/07/2025</lastmod>
+  </url>
+  <url>
+    <loc>/https:/nnb.codeberg.page/blog/blog/vi/tags/godot/</loc>
+    <lastmod>19/07/2025</lastmod>
+  </url>
+  <url>
+    <loc>/https:/nnb.codeberg.page/blog/blog/vi/tags/game_dev/</loc>
+    <lastmod>19/07/2025</lastmod>
   </url>
 </urlset>
